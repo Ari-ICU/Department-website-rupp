@@ -1,11 +1,15 @@
 import React from "react";
-import SlideShowSection from "../components/Sildeshow";
-import ServiceSection from "../components/ServiceSection";
-import AboutSection from "../components/AboutSection";
-import AcademicSection from "../components/AcademicSection"
-import StatisticsSection from "../components/StatisticsSection";
-import ContactSection from "../components/ContactSection"
-import Research from "../components/ResearchSection";
+import SlideShowSection from "../components/home/Sildeshow";
+import ServiceSection from "../components/home/ServiceSection";
+import AboutSection from "../components/home/AboutSection";
+import AcademicSection from "../components/home/AcademicSection";
+import StatisticsSection from "../components/home/StatisticsSection";
+import ContactSection from "../components/home/ContactSection";
+import Research from "../components/home/ResearchSection";
+import FacultyCarousel from "../components/home/FacultyCarousel";
+import EventsNews from "../components/home/EventsNews";
+import PartnershipSection from  "../components/home/PartnershipSection";
+import DepartmentHeader from "../components/home/DepartmentHeader";
 
 const Homepages = () => {
   return (
@@ -38,6 +42,14 @@ const Homepages = () => {
         <ContactSection />
         <Research />
       </div>
+      <div className="*:py-10">
+        <FacultyCarousel />
+        <EventsNews />
+        <PartnershipSection />
+        <DepartmentHeader />
+      </div>
+
+
     </div>
   );
 };

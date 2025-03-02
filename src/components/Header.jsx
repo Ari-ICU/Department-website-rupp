@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion } from "framer-motion"; 
 import SearchButton from "./SearchBtn";
-import LanguageSwitcherButton from "./LanguageSwitcherButton";
+import LanguageSwitcherButton from "./home/LanguageSwitcherButton";
 import Navbar from "./Navbar";
 
 // Logo import

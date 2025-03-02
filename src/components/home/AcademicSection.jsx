@@ -4,24 +4,16 @@ import React from 'react';
 import { MdSchool } from 'react-icons/md';
 
 // Image imports
-import image1 from '../assets/img/dr-heng-sovanrith.jpg';
+import image1 from '../../assets/img/dr-heng-sovanrith.jpg';
 
 const AboutSection = () => {
     return (
         <div className=''>
-            <div className='container mx-auto'>
+            <div className=''>
                 <section className="flex flex-col lg:flex-row items-center justify-center py-10 px-4 gap-6">
-                    {/* Image Section */}
-                    <div className=" p-4">
-                        <img
-                            src={image1}
-                            alt="About Us"
-                            className="w-full h-auto rounded-lg shadow-lg"
-                        />
-                    </div>
-
+                   
                     {/* Text Section */}
-                    <div className="order-1 lg:w-1/2 p-4">
+                    <div className="order-2 lg:order-1 lg:w-1/2 p-4">
                         <h2 className="text-3xl font-bold mb-4">Academics</h2>
                         <p className="text-md text-gray-500 mb-6">
                             The Computer Science Department offers a comprehensive undergraduate program designed to provide students with a strong foundation in computing principles, programming, and modern technologies.
@@ -51,6 +43,16 @@ const AboutSection = () => {
                             </button>
                         </div>
                     </div>
+
+                     {/* Image Section */}
+                     <div className="order-1 lg:order-2 p-4">
+                        <img
+                            src={image1}
+                            alt="About Us"
+                            className="w-full h-auto rounded-lg shadow-lg"
+                        />
+                    </div>
+
                 </section>
             </div>
         </div>

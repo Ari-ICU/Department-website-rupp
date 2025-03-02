@@ -4,9 +4,9 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { MdArrowOutward } from "react-icons/md";
 import "swiper/css";
 import "swiper/css/pagination";
-import image1 from "../assets/img/1.jpg"
-import image2 from "../assets/img/2.jpg"
-import image3 from "../assets/img/123.jpg"
+import image1 from "../../assets/img/1.jpg"
+import image2 from "../../assets/img/2.jpg"
+import image3 from "../../assets/img/123.jpg"
 
 
 const researchTopics = [

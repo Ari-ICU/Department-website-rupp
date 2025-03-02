@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { FcAbout } from "react-icons/fc";
 
 // Image imports
-import heroImage1 from "../assets/img/univ3.jpg";
-import heroImage2 from "../assets/img/univ2.jpg";
-import heroImage3 from "../assets/img/univ4.jpg";
-import logo from "../assets/img/rupp.png";
+import heroImage1 from "../../assets/img/univ3.jpg";
+import heroImage2 from "../../assets/img/univ2.jpg";
+import heroImage3 from "../../assets/img/univ4.jpg";
+import logo from "../../assets/img/rupp.png";
 
 const SlideShowSection = () => {
   const slides = [

@@ -2,8 +2,8 @@ import React from 'react';
 import { FaCheck } from 'react-icons/fa';
 
 // Image imports
-import image1 from '../assets/img/dr-heng-sovanrith.jpg';
-import image2 from '../assets/img/event-image-1.jpg';
+import image1 from '../../assets/img/dr-heng-sovanrith.jpg';
+import image2 from '../../assets/img/event-image-1.jpg';
 
 const AboutSection = () => {
     return (
@@ -11,7 +11,7 @@ const AboutSection = () => {
             <div className='container mx-auto'>
                 <section className="flex flex-col lg:flex-row items-center justify-center p-8">
                     {/* Text Section */}
-                    <div className="lg:w-1/2 p-4 order-2 lg:order-1"> {/* Apply order for mobile and desktop */}
+                    <div className="lg:w-1/2 p-4 order-1 lg:order-2"> {/* Apply order for mobile and desktop */}
                         <h2 className="text-3xl font-bold mb-4">Department of Computer Science</h2>
                         <p className="text-sm text-gray-500">
                             Offers the first Computer Science degree program, designed to provide students with a strong foundation in both theory and practical skills. We ensure that our curriculum aligns with industry standards, equipping graduates with the knowledge needed to succeed in the competitive job market. With a team of highly skilled professors who bring both academic expertise and real-world experience, we prepare students for careers in technology and innovation. We offer:
@@ -63,7 +63,7 @@ const AboutSection = () => {
                     </div>
 
                     {/* Image Section */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:w-1/2 p-4 order-1 lg:order-2"> {/* Use grid for layout */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:w-1/2 p-4  lg:order-1"> {/* Use grid for layout */}
                         {/* Image 1 */}
                         <div className="p-4">
                             <img
