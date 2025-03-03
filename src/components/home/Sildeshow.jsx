@@ -82,7 +82,7 @@ const SlideShowSection = () => {
   };
 
   return (
-    <div className="relative w-full h-screen md:h-[765px] text-white overflow-hidden">
+    <div className="relative max-w-8xl h-[650px] text-white overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <motion.img
@@ -90,9 +90,9 @@ const SlideShowSection = () => {
           alt="Background"
           className="object-cover object-center w-full h-full"
           key={currentSlide}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+         
+          whileInView={{ opacity: 1, x: 0 }}
+         
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>

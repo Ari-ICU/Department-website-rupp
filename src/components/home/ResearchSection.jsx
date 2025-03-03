@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { MdArrowOutward } from "react-icons/md";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,26 +16,26 @@ const researchTopics = [
 
 const Research = () => {
   return (
-    <div className="max-w-[1460px] h-[481px] bg-red-900 text-white">
+    <div className="max-w-[1460px] h-[481px] mx-auto bg-red-900 text-white">
       <div className="max-w-[1374px] h-[381px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Right Side - Swiper Slider (First on Mobile, Second on Desktop) */}
         <div className="order-1 md:order-2 w-[817px] h-[339px] gap-[40px] relative justify-end right-0">
           <Swiper
-            modules={[Autoplay, Pagination]}
+            modules={[Autoplay]}
             spaceBetween={30}
-            slidesPerView={1.2} // Display 1.2 images at once for a peek effect
-            centeredSlides={true} // Center the active slide
-            loop={true} // Enable looping
+            slidesPerView={1.2} 
+            centeredSlides={true} 
+            loop={true} 
             autoplay={{ delay: 3000, disableOnInteraction: false }}
-            pagination={{ clickable: true }}
+            pagination={{ clickable: true}}
             className="w-[817px] h-[339px]"
           >
             {researchTopics.map((item, index) => (
-              <SwiperSlide key={index} className="p-6 rounded-lg shadow-lg">
+              <SwiperSlide key={index} className="p-6 rounded-lg ">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-[339px] h-[266px] object-cover rounded-lg mb-4" // Increased image height
+                  className="w-[339px] h-[266px] mx-auto object-cover rounded-lg mb-4" // Increased image height
                 />
                 <h3 className="text-xl font-bold mb-2 flex items-center justify-center"> {/* Centered text */}
                   {item.title}

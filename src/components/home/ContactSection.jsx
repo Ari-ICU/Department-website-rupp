@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import contactImage from "../../assets/img/contact.png";
+import contactImage from "../../assets/img/c1.png";
 
 const ContactUs = () => {
     return (
@@ -10,7 +10,7 @@ const ContactUs = () => {
             transition={{ duration: 0.8 }} 
             className=" relative"
         >
-            <div className="max-w-[1328px] h-[663px] mx-auto">
+            <div className="max-w-8xl h-[663px] flex justify-center">
                 <div className="flex flex-col md:flex-row items-center gap-8 relative">
                     {/* Image Section */}
                     <motion.div 

@@ -42,7 +42,7 @@ const StrategicPillarsSection = () => {
             viewport={{ once: true }}
             className="bg-gradient-to-r from-blue-50 to-purple-50 "
         >
-            <div className="container mx-auto">
+            <div className="max-w-[1330px] h-[663px] mx-auto">
                 <motion.h2
                     initial={{ opacity: 0, y: -50 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -61,7 +61,7 @@ const StrategicPillarsSection = () => {
                 >
                     Strengthening Human Resources, Governance, Curriculum, and Infrastructure to Drive Innovation and Quality Education.
                 </motion.p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="max-w-[1330px] h-[546px] grid grid-cols-1 md:grid-cols-2 gap-8">
                     {strategicPillars.map((pillar, index) => (
                         <motion.div
                             key={index}

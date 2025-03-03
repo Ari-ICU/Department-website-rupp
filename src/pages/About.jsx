@@ -15,27 +15,31 @@ const About = () => {
   return (
     <div>
       {/* CSAboutSection (Background Section) */}
-      <div className="relative h-[539px]">
-        <CSAboutSection />
-        <motion.div 
+      {/* <div className="relative h-[539px]"> */}
+      <CSAboutSection />
+      {/* <motion.div 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className=" bottom-0 relative"
         >
             <StatisticsSection />
-        </motion.div>
-      </div>
+        </motion.div> */}
+      {/* </div> */}
       <div className="*:py-16">
-        <RUPPIntroduction />
-        <InnovationSection />
+        <StatisticsSection />
+      
+          <RUPPIntroduction />
+          <InnovationSection />
+      
         <EducationSection />
+
         <StrategicPillarsSection />
         <FacultyCarousel />
         <FAQSection />
-        <DepartmentHeader />
+        
       </div>
-
+      <DepartmentHeader />
     </div>
   );
 };

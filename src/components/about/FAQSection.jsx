@@ -40,7 +40,7 @@ const FAQSection = () => {
             viewport={{ once: true }}
             className="bg-gradient-to-r from-blue-50 to-purple-50 "
         >
-            <div className='container mx-auto'>
+            <div className='max-w-[1326px] h-[476px] mx-auto'>
             <div className=" grid grid-cols-1 md:grid-cols-2 gap-6">
                <div className='text-start'>
                <motion.h1
@@ -62,7 +62,7 @@ const FAQSection = () => {
                     Professor: Inspiring Minds, Nurturing Curiosity, and Shaping the Future <br /> of Knowledge and Innovation
                 </motion.p>
                </div>
-                <div className="">
+                <div className="max-w-[720px] h-[476px]">
                     {faqItems.map((faq, index) => (
                         <motion.div
                             key={index}

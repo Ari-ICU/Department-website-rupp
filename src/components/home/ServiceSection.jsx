@@ -35,7 +35,7 @@ const cardVariants = {
 const ServiceSection = () => {
   return (
     <motion.section
-      className="container mx-auto"
+      className="max-w-8xl h-[190px] mx-auto"
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"

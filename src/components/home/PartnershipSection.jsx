@@ -9,7 +9,7 @@ import aws from "../../assets/img/aws.png";
 const PartnershipSection = () => {
   return (
     <div className="bg-white">
-      <div className="max-w-7xl mx-auto ">
+      <div className="max-w-8xl flex justify-center">
         <div className="flex flex-col md:flex-row items-center justify-between mb-6">
           {/* Title and "View All" Link */}
           <div>

@@ -13,7 +13,7 @@ const DepartmentHeader = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="bg-maroon">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between py-4">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between py-4">
           
           {/* Left Section with Logo and Text */}
           <motion.div
