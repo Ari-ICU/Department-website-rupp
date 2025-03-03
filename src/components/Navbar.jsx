@@ -48,7 +48,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
   }, [dropdown]);
 
   return (
-    <nav ref={navRef} className="relative xl:flex xl:space-x-6">
+    <nav ref={navRef} className="relative xl:flex xl:space-x-6 text-xl">
       {/* Desktop Menu */}
       <div className="hidden xl:flex space-x-6">
         <Link to="/" className="hover:text-red-900">

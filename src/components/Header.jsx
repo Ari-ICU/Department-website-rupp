@@ -25,7 +25,7 @@ const Header = () => {
             <span className="sr-only">logo</span>
             <Link to="/" className="flex items-center space-x-2">
               <img src={logo} alt="logo" className="w-14 h-14" />
-              <span className="hidden min-sm:block">
+              <span className="hidden min-sm:block text-xl">
                 Faculty of Science <br /> Department of Computer Science
               </span>
             </Link>

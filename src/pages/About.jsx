@@ -26,7 +26,7 @@ const About = () => {
             <StatisticsSection />
         </motion.div> */}
       {/* </div> */}
-      <div className="*:py-16">
+      <div className="*:py-16 ">
         <StatisticsSection />
       
           <RUPPIntroduction />

@@ -13,7 +13,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             className=' '
         >
-            <div className='max-w-8xl h-[410px] flex justify-center'>
+            <div className=' h-[410px]'>
                 <section className="flex flex-col lg:flex-row gap-8">
                     {/* Text Section */}
                     <motion.div

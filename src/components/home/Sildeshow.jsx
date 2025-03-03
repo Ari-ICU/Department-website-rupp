@@ -82,7 +82,7 @@ const SlideShowSection = () => {
   };
 
   return (
-    <div className="relative max-w-8xl h-[650px] text-white overflow-hidden">
+    <div className="relative h-[650px] text-white overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <motion.img

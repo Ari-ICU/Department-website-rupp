@@ -6,14 +6,14 @@ import rupp from "../../assets/img/rupp1.png";
 
 const InnovationSection = () => {
     return (
-        <div className="max-w-[1334px]  mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center gap-8">
+        <div className="max-w-[1334px] mx-auto px-4 sm:px-6 lg:px-8 py-8"> {/* Added py-8 for padding */}
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-8"> {/* Adjusted flex direction for responsiveness */}
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="w-[679px] h-[414px] mx-auto bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg"
+                    className="w-full lg:w-[679px] h-auto lg:h-[414px] bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg" // Adjusted width and height for responsiveness
                 >
                     <motion.h1
                         initial={{ opacity: 0, x: -50 }}
@@ -29,7 +29,7 @@ const InnovationSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                         viewport={{ once: true }}
-                        className="text-gray-600 mb-4 text-[16px] "
+                        className="text-gray-600 mb-4 text-[16px]"
                     >
                         To be Cambodia’s flagship university with regional standing in teaching and learning, research and innovation, and social engagement.
                     </motion.p>
@@ -85,12 +85,12 @@ const InnovationSection = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className='flex justify-center items-center w-[600px] h-[510px]'
+                    className='w-full lg:w-[600px] h-auto lg:h-[510px]' // Adjusted width and height for responsiveness
                 >
                     <img
                         src={rupp}
                         alt="rupp"
-                        className='w-full h-auto object-cover rounded-3xl'
+                        className='w-full h-full object-cover rounded-3xl'
                     />
                 </motion.div>
             </div>

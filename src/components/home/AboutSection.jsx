@@ -10,7 +10,7 @@ import image2 from '../../assets/img/a2.png';
 const AboutSection = () => {
     return (
         <div className=''>
-            <div className='max-w-8xl h-[655px] mx-auto'>
+            <div className=' h-[655px] '>
                 <section className="flex flex-col lg:flex-row items-center justify-center">
                     {/* Text Section with animation */}
                     <motion.div

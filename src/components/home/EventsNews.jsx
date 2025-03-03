@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -17,52 +17,92 @@ const EventsNews = () => {
         },
         {
             id: 2,
-            title: 'Guest Lecture on Artificial Intelligence',
+            title: 'AI in Healthcare Symposium',
             imageUrl: image1,
-            description: 'Annual university tournament for basketball teams. Come cheer...',
-            date: '22 Aug 2025',
+            description: 'Exploring the latest advancements in AI for medical applications.',
+            date: '15 Sep 2025',
             registerLink: '#',
-            category: 'Hackathons',
+            category: 'Conferences',
         },
         {
             id: 3,
-            title: 'Guest Lecture on Artificial Intelligence',
+            title: 'Web Development Workshop',
             imageUrl: image1,
-            description: 'Annual university tournament for basketball teams. Come cheer...',
-            date: '22 Aug 2025',
+            description: 'Hands-on workshop on building responsive web applications.',
+            date: '05 Oct 2025',
             registerLink: '#',
-            category: 'Hackathons',
+            category: 'Workshops',
         },
         {
             id: 4,
-            title: 'Guest Lecture on Artificial Intelligence',
+            title: 'Data Science Meetup',
             imageUrl: image1,
-            description: 'Annual university tournament for basketball teams. Come cheer...',
-            date: '22 Aug 2025',
+            description: 'Networking event for data science enthusiasts and professionals.',
+            date: '20 Oct 2025',
             registerLink: '#',
-            category: 'Hackathons',
+            category: 'Meetups',
         },
         {
             id: 5,
-            title: 'Guest Lecture on Artificial Intelligence',
+            title: 'Mobile App Development Seminar',
             imageUrl: image1,
-            description: 'Annual university tournament for basketball teams. Come cheer...',
-            date: '22 Aug 2025',
+            description: 'Learn the fundamentals of mobile app development for iOS and Android.',
+            date: '10 Nov 2025',
             registerLink: '#',
-            category: 'Hackathons',
+            category: 'Seminars',
         },
     ];
 
+    const scrollContainerRef = useRef(null);
+    let scrollInterval;
+
+    useEffect(() => {
+        const scrollContainer = scrollContainerRef.current;
+
+        if (scrollContainer) {
+            const scrollWidth = scrollContainer.scrollWidth;
+            const clientWidth = scrollContainer.clientWidth;
+            let currentScroll = 0;
+            const scrollSpeed = 1; // Adjust scroll speed as needed
+
+            const autoScroll = () => {
+                currentScroll += scrollSpeed;
+                if (currentScroll > scrollWidth - clientWidth) {
+                    currentScroll = 0; // Reset scroll when it reaches the end
+                }
+                scrollContainer.scrollTo({
+                    left: currentScroll,
+                    behavior: 'smooth',
+                });
+            };
+
+            scrollInterval = setInterval(autoScroll, 30); // Adjust interval for smoother or faster scrolling
+
+            // Stop scrolling when the user hovers over the container
+            scrollContainer.addEventListener('mouseenter', () => {
+                clearInterval(scrollInterval);
+            });
+
+            // Resume scrolling when the mouse leaves the container
+            scrollContainer.addEventListener('mouseleave', () => {
+                scrollInterval = setInterval(autoScroll, 30);
+            });
+
+            return () => {
+                clearInterval(scrollInterval);
+            };
+        }
+    }, []);
+
     return (
-        <div className="bg-white ">
-            <div className="max-w-7xl mx-auto ">
-                {/* Header Section with Motion */}
+        <div className="bg-white">
+            <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: -50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="flex flex-col md:flex-row justify-between"
+                    className="flex flex-col md:flex-row justify-between items-center mb-8"
                 >
                     <div>
                         <motion.h2
@@ -98,7 +138,6 @@ const EventsNews = () => {
                     </motion.div>
                 </motion.div>
 
-                {/* Horizontal Scrolling Container with Motion */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -106,7 +145,7 @@ const EventsNews = () => {
                     viewport={{ once: true }}
                     className="overflow-x-auto py-2"
                 >
-                    <div className="grid grid-flow-col auto-cols-max gap-8">
+                    <div ref={scrollContainerRef} className="grid grid-flow-col auto-cols-max gap-8">
                         {events.map((event, index) => (
                             <motion.div
                                 key={event.id}
@@ -114,17 +153,16 @@ const EventsNews = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.2 }}
                                 viewport={{ once: true }}
-                                className="bg-white rounded-2xl px-2 shadow-md overflow-hidden flex flex-col md:flex-row w-full"
+                                className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row  min-w-96"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.3 }}
                             >
-                                {/* Image Column with Motion */}
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.5, delay: 0.2 }}
                                     viewport={{ once: true }}
-                                    className="w-full md:w-1/2 mx-auto flex justify-center items-center"
+                                    className="w-full md:w-1/2 flex justify-center items-center"
                                 >
                                     <img
                                         src={event.imageUrl}
@@ -133,7 +171,6 @@ const EventsNews = () => {
                                     />
                                 </motion.div>
 
-                                {/* Content Column with Motion */}
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}

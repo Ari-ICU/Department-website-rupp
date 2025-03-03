@@ -12,69 +12,63 @@ const DepartmentHeader = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="bg-maroon">
-        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between py-4">
-          
-          {/* Left Section with Logo and Text */}
-          <motion.div
-            className="flex items-center mb-4 md:mb-0"
-            initial={{ opacity: 0, x: -50 }}
+      <div className="container mx-auto flex items-center justify-between py-4">
+        {/* Left Section with Logo and Text */}
+        <motion.div
+          className="flex items-center"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <motion.img
+            src={logo}
+            alt="Department Logo"
+            className="h-16 w-16 mr-4"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          />
+          <motion.h2
+            className="text-white text-xl font-semibold"
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }} // Ensures it animates only once
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <motion.img
-              src={logo}
-              alt="Department Logo"
-              className="h-16 w-16 mr-4"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            />
-            <motion.div>
-              <motion.h2
-                className="text-white text-xl font-semibold"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
-                Faculty of Science Department of <br /> Computer Science
-              </motion.h2>
-            </motion.div>
-          </motion.div>
+            Faculty of Science Department of <br /> Computer Science
+          </motion.h2>
+        </motion.div>
 
-          {/* Right Section with Social Media Icons */}
-          <motion.div
-            className="flex space-x-3"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
-            }}
-          >
-            {[FaTelegram, FaFacebookF, FaTimes].map((Icon, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                className="bg-white p-2 rounded-xl shadow-md"
-              >
-                <Link to="#" className="text-red-800">
-                  <Icon className="h-5 w-5" />
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+        {/* Right Section with Social Media Icons */}
+        <motion.div
+          className="flex space-x-3"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
+          }}
+        >
+          {[FaTelegram, FaFacebookF, FaTimes].map((Icon, index) => (
+            <motion.div
+              key={index}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              whileHover={{ scale: 1.2, rotate: 5 }}
+              className="bg-white p-2 rounded-xl shadow-md cursor-pointer"
+              aria-label={`Social Media Icon ${index + 1}`}
+            >
+              <Link to="#" className="text-red-800">
+                <Icon className="h-5 w-5" />
+              </Link>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </motion.div>
   );

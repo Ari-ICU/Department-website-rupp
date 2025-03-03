@@ -6,13 +6,13 @@ import CopyRight from './CopyRight';
 const Footer = () => {
     return (
         <motion.footer
-            className="bg-black text-white py-8 max-w-8xl mx-auto "
+            className="bg-black text-white py-8 "
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
         >
-            <div className="border-b mb-5 pb-10 border-gray-400">
+            <div className="container mx-auto border-b mb-5 pb-10 border-gray-400">
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4'>
                     {/* Location Column with Motion */}
                     <motion.div
