@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FcAbout } from "react-icons/fc";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 // Image imports
 import heroImage1 from "../../assets/img/univ3.jpg";
@@ -14,50 +15,76 @@ const SlideShowSection = () => {
     {
       image: heroImage1,
       title: "Welcome to the Computer Science Department",
-      description:
-        "Join a community of innovators, researchers, and future tech leaders shaping the world of tomorrow.",
+      description: "Join a community of innovators, researchers, and future tech leaders shaping the world of tomorrow.",
       buttonText: "Explore More",
-      buttonLink: "/about", 
-      buttonColor: "bg-red-900", 
+      buttonLink: "/about",
+      buttonColor: "bg-red-900",
       linkIcon: <FcAbout className="ml-2" />,
     },
     {
       image: heroImage2,
       title: "Explore Our Research Programs",
-      description:
-        "Be part of groundbreaking research that shapes the future of technology.",
+      description: "Be part of groundbreaking research that shapes the future of technology.",
       buttonText: "Learn More",
-      buttonLink: "/research", 
-      buttonColor: "bg-blue-900", 
+      buttonLink: "/research",
+      buttonColor: "bg-blue-900",
       linkIcon: <FcAbout className="ml-2" />,
     },
     {
       image: heroImage3,
       title: "Innovating for the Future",
-      description:
-        "Get ready to be a part of the next generation of tech leaders.",
+      description: "Get ready to be a part of the next generation of tech leaders.",
       buttonText: "Get Started",
-      buttonLink: "/start", 
-      buttonColor: "bg-green-900", 
+      buttonLink: "/start",
+      buttonColor: "bg-green-900",
       linkIcon: <FcAbout className="ml-2" />,
     },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
-  // Set up a timer to change slides every 5 seconds
+  // Auto slide every 5 seconds
   useEffect(() => {
+    if (isPaused) return; // Stop auto-slide if user interacts
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000); 
+    }, 5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isPaused, slides.length]);
+
+  // Resume auto-slide after 10 seconds
+  const resumeAutoSlide = () => {
+    setTimeout(() => setIsPaused(false), 10000);
+  };
+
+  // Handle previous slide
+  const goToPrevious = () => {
+    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    setIsPaused(true);
+    resumeAutoSlide();
+  };
+
+  // Handle next slide
+  const goToNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setIsPaused(true);
+    resumeAutoSlide();
+  };
+
+  // Handle dot click
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+    setIsPaused(true);
+    resumeAutoSlide();
+  };
 
   return (
-    <div className="relative  w-full h-screen md:h-[650px] text-white overflow-hidden">
+    <div className="relative w-full h-screen md:h-[765px] text-white overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-0">
         <motion.img
           src={slides[currentSlide].image}
           alt="Background"
@@ -111,6 +138,38 @@ const SlideShowSection = () => {
             {slides[currentSlide].linkIcon}
           </Link>
         </motion.div>
+      </div>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={goToPrevious}
+        className="absolute z-20 left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 cursor-pointer"
+        style={{ pointerEvents: "auto" }}
+      >
+        <FaArrowLeft size={24} />
+      </button>
+      <button
+        onClick={goToNext}
+        className="absolute z-20 right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 cursor-pointer"
+        style={{ pointerEvents: "auto" }}
+      >
+        <FaArrowRight size={24} />
+      </button>
+
+      {/* Navigation Dots */}
+      <div className="absolute z-20 bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-4 h-4 rounded-full transition-all duration-300 ${
+              index === currentSlide
+                ? "bg-white scale-125 shadow-lg"
+                : "bg-gray-500 hover:bg-gray-400"
+            }`}
+            style={{ pointerEvents: "auto" }}
+          ></button>
+        ))}
       </div>
     </div>
   );
