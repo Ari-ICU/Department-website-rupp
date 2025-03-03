@@ -20,7 +20,7 @@ const Homepages = () => {
       </div>
 
       {/* Service Section for Large Screens */}
-      <div className="container mx-auto px-4 py-8 absolute inset-x-0 bottom-0 transform translate-y-1/1 hidden lg:block">
+      <div className="container mx-auto px-4 py-8 absolute inset-x-0 bottom-0 transform translate-y-1/1 hidden xl:block">
         <ServiceSection />
       </div>
 
@@ -29,20 +29,12 @@ const Homepages = () => {
         <h1 className="text-center text-2xl">Our Serivice</h1>
         <ServiceSection />
       </div>
-      <div className="py-16">
+      <div className="*:py-16">
         <AboutSection />
-      </div>
-      <div>
         <AcademicSection />
-      </div>
-      <div>
         <StatisticsSection />
-      </div>
-      <div>
         <ContactSection />
         <Research />
-      </div>
-      <div className="*:py-10">
         <FacultyCarousel />
         <EventsNews />
         <PartnershipSection />

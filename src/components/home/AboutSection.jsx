@@ -3,17 +3,18 @@ import { FaCheck } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 // Image imports
-import image1 from '../../assets/img/dr-heng-sovanrith.jpg';
-import image2 from '../../assets/img/event-image-1.jpg';
+import image1 from '../../assets/img/a1.png';
+import image2 from '../../assets/img/a2.png';
+
 
 const AboutSection = () => {
     return (
         <div className=''>
-            <div className='container mx-auto'>
+            <div className='max-w-[1340px] h-[655px] mx-auto'>
                 <section className="flex flex-col lg:flex-row items-center justify-center">
                     {/* Text Section with animation */}
                     <motion.div
-                        className="lg:w-1/2 p-4 order-1 lg:order-2"
+                        className="max-w-[621px] h-[599px] p-4 order-1 lg:order-2"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
@@ -71,26 +72,26 @@ const AboutSection = () => {
 
                     {/* Image Section with animation */}
                     <motion.div
-                        className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:w-1/2 p-4 lg:order-1"
+                        className="max-w-[660px] h-[655px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6  p-4 lg:order-1"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
                         viewport={{ once: true }}
                     >
                         {/* Image 1 */}
-                        <motion.div className="p-4" initial={{ scale: 0.8 }} whileInView={{ scale: 1 }} transition={{ duration: 0.5 }}>
+                        <motion.div className="p-4 w-[320px] h-[516px] " initial={{ scale: 0.8 }} whileInView={{ scale: 1 }} transition={{ duration: 0.5 }}>
                             <img
                                 src={image1}
                                 alt="About Us"
-                                className="w-full h-auto rounded-lg shadow-lg"
+                                className="w-full h-full rounded-lg shadow-lg"
                             />
                         </motion.div>
                         {/* Image 2 - Hidden on small screens */}
-                        <motion.div className="p-4 lg:block hidden" initial={{ scale: 0.8 }} whileInView={{ scale: 1 }} transition={{ duration: 0.5 }}>
+                        <motion.div className="p-4 w-[320px] h-[655px] lg:block hidden" initial={{ scale: 0.8 }} whileInView={{ scale: 1 }} transition={{ duration: 0.5 }}>
                             <img
                                 src={image2}
                                 alt="About Us"
-                                className="w-full h-auto rounded-lg shadow-lg"
+                                className="w-full h-full rounded-lg shadow-lg"
                             />
                         </motion.div>
                     </motion.div>

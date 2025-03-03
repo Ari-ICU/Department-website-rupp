@@ -3,15 +3,15 @@ import StatisticCard from "./StatisticCard";
 
 const StatisticsSection = () => {
     const stats = [
-        { value:  "2,000" , rank: "students" },
+        { value: "2,000", rank: "students" },
         { value: 50, rank: "increase enrollment" },
-        { value: "No.1",  rank: "university" },
+        { value: "No.1", rank: "university" },
     ];
 
     return (
         <div className="">
-            <div className="max-w-[1000px] mx-auto rounded-3xl bg-red-900">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="max-w-[1,036px] h-[162px] flex items-center justify-center rounded-3xl bg-red-900">
+                <div className="w-[767px] h-[82px] grid grid-cols-1 xl:grid-cols-3 items-center gap-6">
                     {stats.map((stat, index) => (
                         <StatisticCard
                             key={index}
@@ -22,6 +22,7 @@ const StatisticsSection = () => {
                     ))}
                 </div>
             </div>
+
         </div>
     );
 };

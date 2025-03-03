@@ -37,10 +37,12 @@ const contactData = {
 
 const GetInTouchSection = ({ data = contactData }) => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className='max-w-[1440px] h-[585px]'>
+
+        <div className="max-w-[1360px] h-[565px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Image Column */}
             <motion.div
-                className="w-full h-full"
+                className="w-[636px] h-full"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
@@ -55,7 +57,7 @@ const GetInTouchSection = ({ data = contactData }) => {
 
             {/* Contact Section Column */}
             <motion.section
-                className="px-4 sm:px-6 lg:px-8"
+                className="px-4 max-w-[634px] h-[310px]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -107,6 +109,7 @@ const GetInTouchSection = ({ data = contactData }) => {
                     </div>
                 </div>
             </motion.section>
+        </div>
         </div>
     );
 };

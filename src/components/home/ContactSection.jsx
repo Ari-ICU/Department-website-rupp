@@ -10,7 +10,7 @@ const ContactUs = () => {
             transition={{ duration: 0.8 }} 
             className=" relative"
         >
-            <div className="container mx-auto">
+            <div className="max-w-[1328px] h-[663px] mx-auto">
                 <div className="flex flex-col md:flex-row items-center gap-8 relative">
                     {/* Image Section */}
                     <motion.div 
