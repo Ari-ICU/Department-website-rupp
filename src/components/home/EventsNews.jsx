@@ -96,7 +96,7 @@ const EventsNews = () => {
 
     return (
         <div className="bg-white">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: -50 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ const EventsNews = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
                             viewport={{ once: true }}
-                            className="text-3xl font-extrabold text-gray-900"
+                            className="xl:text-3xl text-xl font-extrabold text-gray-900"
                         >
                             Events & News
                         </motion.h2>
@@ -119,7 +119,7 @@ const EventsNews = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.4 }}
                             viewport={{ once: true }}
-                            className="mt-1 text-base text-gray-500"
+                            className="mt-1 xl:text-sm text-[12px] text-gray-500"
                         >
                             Engage with cutting-edge workshops, conferences, and networking opportunities.
                         </motion.p>
@@ -132,7 +132,7 @@ const EventsNews = () => {
                         className="w-full md:w-auto mt-4 md:mt-0"
                     >
                         <Link to='' className='flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1'>
-                            <span className="mr-2">View All</span>
+                            <span className="mr-2 xl:text-sm text-[12px]">View All</span>
                             <FaArrowRight className="text-red-800" />
                         </Link>
                     </motion.div>
@@ -153,7 +153,7 @@ const EventsNews = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.2 }}
                                 viewport={{ once: true }}
-                                className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row  min-w-96"
+                                className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-row min-w-96"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.3 }}
                             >
@@ -162,7 +162,7 @@ const EventsNews = () => {
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.5, delay: 0.2 }}
                                     viewport={{ once: true }}
-                                    className="w-full md:w-1/2 flex justify-center items-center"
+                                    className="w-[200px] xl:w-1/2 flex justify-center items-center"
                                 >
                                     <img
                                         src={event.imageUrl}

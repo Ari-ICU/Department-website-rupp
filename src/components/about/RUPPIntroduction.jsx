@@ -4,30 +4,33 @@ import rupp from "../../assets/img/rupp1.png";
 
 const RUPPIntroduction = () => {
     return (
-        <div className="container mx-auto px-4"> {/* Added container for better responsiveness */}
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+        <div className="container mx-auto"> {/* Added container for better responsiveness */}
+            <div className='flex flex-col xl:flex-row gap-10'>
                 {/* Image Section with Motion */}
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    viewport={{ once: true }}
-                    className=' relative w-[600px] mx-auto h-[510px]' // Adjusted image container for responsiveness
-                >
+                <motion.div className='relative container  xl:h-[510px] md:h-[350px] xl:w-[600px] w-full h-auto'>
                     <img
                         src={rupp}
                         alt="rupp"
-                        className='w-full h-full object-cover rounded-3xl '
+                        className='w-full h-full object-cover rounded-3xl'
                     />
-                    <div className=" absolute bottom-8 right-[-50px]">
-                        <div className='w-[270px] bg-amber-50 p-4 border-t-5 border-red-900'>
-                            <h1 className='text-[18px]'>Established in January 13, 1960</h1>
-                            <p>The country's largest university. It hosts around 30,000 students in undergraduate and postgraduate programmes.</p>
-                        </div>
-                    </div>
+                    <motion.div
+                        className="absolute inset-0 bg-black opacity-50"
+                        initial={{ opacity: 0 }}
+                        whileHover={{ opacity: 1 }}
+                        transition={{ duration: 0.3 }}
+                    />
+                    <motion.div
+                        className='absolute inset-0 p-4 flex flex-col justify-end rounded-3xl'
+                        initial={{ opacity: 0 }}
+                        whileHover={{ opacity: 1 }}
+                        transition={{ duration: 0.3 }}
+                    >
+                        <h1 className='xl:text-[18px] text-[14px] text-white'>Established on January 13, 1960</h1>
+                        <p className='xl:text-[18px] text-[12px] text-white'>
+                            The country's largest university, hosting around 30,000 students in undergraduate and postgraduate programmes.
+                        </p>
+                    </motion.div>
                 </motion.div>
-
-
 
                 {/* Text Section with Motion */}
                 <motion.div
@@ -35,18 +38,18 @@ const RUPPIntroduction = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className="bg-white shadow-md rounded-lg p-6 max-w-[635px] h-[520px]" // Adjusted text container for responsiveness
+                    className="bg-white shadow-md rounded-lg px-2 xl:max-w-[700px] w-auto mx-auto h-auto xl:h-[520px]" // Adjusted text container for responsiveness
                 >
                     <motion.h1
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                         viewport={{ once: true }}
-                        className="text-2xl font-bold mb-4" // Added mb-4 for spacing
+                        className="text-lg xl:text-3xl font-bold p-4" // Added mb-4 for spacing
                     >
                         Introduction
                     </motion.h1>
-                    <div className='space-y-4 text-sm font-normal'> {/* Used space-y-4 for consistent spacing */}
+                    <div className='space-y-4 text-[12px] xl:text-[14px] font-normal'> {/* Used space-y-4 for consistent spacing */}
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}

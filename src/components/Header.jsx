@@ -25,8 +25,8 @@ const Header = () => {
             <span className="sr-only">logo</span>
             <Link to="/" className="flex items-center space-x-2">
               <img src={logo} alt="logo" className="w-14 h-14" />
-              <span className="hidden min-sm:block text-xl">
-                Faculty of Science <br /> Department of Computer Science
+              <span className="hidden min-sm:block text-[12px] xl:text-[16px] 2xl:text-[22px]">
+                Faculty of Science Department <br /> Of Computer Science
               </span>
             </Link>
           </motion.div>
@@ -45,7 +45,7 @@ const Header = () => {
             {/* Mobile Menu Button with motion */}
             <motion.button
               className="xl:hidden text-gray-800"
-              onClick={() => setIsOpen(!isOpen)} // Toggle isOpen state on click
+              onClick={() => setIsOpen(!isOpen)} 
               aria-label="Toggle mobile menu"
             >
               {isOpen ? (

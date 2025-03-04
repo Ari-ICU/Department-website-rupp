@@ -16,10 +16,10 @@ const researchTopics = [
 
 const Research = () => {
   return (
-    <div className="h-[481px] flex justify-center items-center bg-red-900 text-white py-12">
-      <div className="max-w-[1374px] w-full grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div className=" flex justify-center items-center bg-red-900 text-white py-12">
+      <div className="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Right Side - Swiper Slider (First on Mobile, Second on Desktop) */}
-        <div className="order-1 md:order-2 w-full h-[339px] relative">
+        <div className="order-1 md:order-2 w-full xl:h-[339px] h-auto relative">
           <Swiper
             modules={[Autoplay]}
             spaceBetween={10}
@@ -39,7 +39,7 @@ const Research = () => {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-[266px] mx-auto object-cover rounded-lg mb-4"
+                  className="w-full xl:h-[266px] h-auto mx-auto object-cover rounded-lg mb-4"
                 />
                 <h3 className="text-xl font-bold mb-2 flex items-center justify-center">
                   {item.title}
@@ -50,9 +50,9 @@ const Research = () => {
           </Swiper>
         </div>
         {/* Left Side - Research Text (Second on Mobile, First on Desktop) */}
-        <div className="order-2 md:order-1 ">
-          <h2 className="text-4xl font-bold mb-6">Research</h2>
-          <p className="text-sm font-normal leading-relaxed">
+        <div className="order-2 md:order-1 p-4 ">
+          <h2 className="font-bold mb-6 xl:text-3xl text-xl">Research</h2>
+          <p className="text-sm font-normal leading-relaxed xl:text-sm text-[12px]">
             At the forefront of technological advancement, our research focuses
             on solving real-world problems. From artificial intelligence to
             cybersecurity, our faculty and students are driving innovation.

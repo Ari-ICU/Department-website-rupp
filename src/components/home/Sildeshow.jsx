@@ -108,7 +108,7 @@ const SlideShowSection = () => {
           className="w-24 h-24"
         />
         <motion.h1
-          className="text-4xl md:text-5xl font-bold leading-tight mb-4 max-w-2xl"
+          className="xl:text-4xl text-lg md:text-5xl font-bold leading-tight mb-4 max-w-2xl"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -146,14 +146,14 @@ const SlideShowSection = () => {
         className="absolute z-20 left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 cursor-pointer"
         style={{ pointerEvents: "auto" }}
       >
-        <FaArrowLeft size={24} />
+        <FaArrowLeft className="xl:w-14" />
       </button>
       <button
         onClick={goToNext}
         className="absolute z-20 right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 cursor-pointer"
         style={{ pointerEvents: "auto" }}
       >
-        <FaArrowRight size={24} />
+        <FaArrowRight className="xl:w-14" />
       </button>
 
       {/* Navigation Dots */}

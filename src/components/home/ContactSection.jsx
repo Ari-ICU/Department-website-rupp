@@ -10,14 +10,14 @@ const ContactUs = () => {
             transition={{ duration: 0.8 }} 
             className="relative min-h-[800px] py-16" // Ensure container has enough height
         >
-            <div className="container mx-auto px-4 relative h-full">
+            <div className="container mx-auto relative h-full">
                 {/* Contact Form (Left Side) */}
                 <motion.div 
                     initial={{ opacity: 0, x: -50 }} 
                     whileInView={{ opacity: 1, x: 0 }} 
                     transition={{ duration: 0.8 }} 
                     viewport={{ once: true }}
-                    className="absolute top-8 left-28 mx-auto w-[836px] h-[568px] px-4 z-10"
+                    className="xl:absolute top-8 2xl:left-0 mx-auto 2xl:w-[1000px] w-auto lg:w-[800px] 2xl:h-[568px] h-auto z-10 order-2  "
                 >
                     <div className="bg-white bg-opacity-80 p-8 rounded-lg shadow-md">
                         <motion.h2 
@@ -29,8 +29,8 @@ const ContactUs = () => {
                         >
                             Contact Us If You Have Any Questions
                         </motion.h2>
-                        <form className="space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <form className="space-y-6 px-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4  ">
                                 <motion.div 
                                     initial={{ opacity: 0, y: 20 }} 
                                     whileInView={{ opacity: 1, y: 0 }} 
@@ -42,9 +42,9 @@ const ContactUs = () => {
                                     </label>
                                     <input
                                         type="text"
-                                        placeholder="Enter First Name"
+                                        placeholder=""
                                         required
-                                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                        className="mt-1 block w-full px-3 py-2 bg-gray-300 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                                     />
                                 </motion.div>
                                 <motion.div 
@@ -58,9 +58,9 @@ const ContactUs = () => {
                                     </label>
                                     <input
                                         type="text"
-                                        placeholder="Enter Last Name"
+                                        placeholder=""
                                         required
-                                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                        className="mt-1 block w-full px-3 py-2 border bg-gray-300 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                                     />
                                 </motion.div>
                             </div>
@@ -75,9 +75,9 @@ const ContactUs = () => {
                                 </label>
                                 <input
                                     type="email"
-                                    placeholder="Enter Email"
+                                    placeholder=""
                                     required
-                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                    className="mt-1 block w-full px-3 py-2 border bg-gray-300 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                                 />
                             </motion.div>
                             <motion.div 
@@ -91,8 +91,8 @@ const ContactUs = () => {
                                 </label>
                                 <textarea
                                     rows="4"
-                                    placeholder="Enter Description"
-                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                    placeholder=""
+                                    className="mt-1 block w-full px-3 py-2 border bg-gray-300 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                                 ></textarea>
                             </motion.div>
                             <motion.div 
@@ -119,7 +119,7 @@ const ContactUs = () => {
                     whileInView={{ opacity: 1, x: 0 }} 
                     transition={{ duration: 0.8 }} 
                     viewport={{ once: true }}
-                    className="absolute right-28 mx-auto w-[611px] h-[663px] px-4 z-0"
+                    className="xl:absolute right-0 mx-auto xl:w-[611px] w-auto xl:h-[663px] px-4 z-0 order-1"
                 >
                     <img
                         src={contactImage}

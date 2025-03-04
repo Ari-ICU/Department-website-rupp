@@ -15,19 +15,24 @@ const Homepages = () => {
   return (
     <div className="*:max-w-8xl mx-auto">
       <SlideShowSection />
-      <div className="*:py-16 *:max-w-8xl *:justify-center *:flex ">
-      <ServiceSection />
+      <div className="*:py-16 *:max-w-8xl *:justify-center *:flex lg:px-20 px-4 ">
+        <ServiceSection />
         <AboutSection />
         <AcademicSection />
         <StatisticsSection />
         <ContactSection />
-        <Research />
-        <FacultyCarousel />
-        <EventsNews />
-        <PartnershipSection />
        
       </div>
-      <div className="*:max-w-8xl *:justify-center *:flex ">
+      <div className="*:py-16 *:max-w-8xl *:justify-center *:flex">
+         <Research />
+      </div>
+      <div className="*:py-16 *:max-w-8xl *:justify-center *:flex lg:px-20 px-4 ">
+      <FacultyCarousel />
+        <EventsNews />
+        <PartnershipSection />
+        </div>
+     
+      <div className="*:max-w-8xl *:justify-center *:flex pt-16">
         <DepartmentHeader />
       </div>
       

@@ -26,19 +26,27 @@ const About = () => {
             <StatisticsSection />
         </motion.div> */}
       {/* </div> */}
-      <div className="*:py-16 ">
+      <div className="*:py-16 *:max-w-8xl lg:px-20 px-4 ">
         <StatisticsSection />
-      
-          <RUPPIntroduction />
-          <InnovationSection />
-      
-        <EducationSection />
 
+        <RUPPIntroduction />
+        <InnovationSection />
+
+
+
+
+
+      </div>
+      <div className="*:py-16 *:max-w-8xl ">
+        <EducationSection />
+      </div>
+
+      <div className="*:py-16 *:max-w-8xl lg:px-20 px-4 ">
         <StrategicPillarsSection />
         <FacultyCarousel />
         <FAQSection />
-        
       </div>
+    
       <DepartmentHeader />
     </div>
   );

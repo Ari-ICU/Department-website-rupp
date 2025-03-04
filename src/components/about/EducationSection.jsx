@@ -7,7 +7,7 @@ const EducationSection = () => {
         <div>
 
             <motion.div
-                className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center"
+                className="relative h-[500px] bg-cover bg-center flex items-center justify-center"
                 style={{ backgroundImage: `url(${edu})` }}
             >
                 {/* Dark overlay */}
@@ -20,7 +20,7 @@ const EducationSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="text-4xl font-bold text-white mb-6"
+                        className="text-lg xl:text-3xl font-bold text-white mb-6"
                     >
                         We Believe That Education Is An
                     </motion.h2>
@@ -29,7 +29,7 @@ const EducationSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                         viewport={{ once: true }}
-                        className="text-4xl font-bold text-white mb-6"
+                        className="text-lg xl:text-3xl  font-bold text-white mb-6"
                     >
                         Important Aspect In Every
                     </motion.h2>
@@ -38,7 +38,7 @@ const EducationSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                         viewport={{ once: true }}
-                        className="text-4xl font-bold text-white mb-6"
+                        className="text-lg xl:text-3xl  font-bold text-white mb-6"
                     >
                         Person's Life
                     </motion.h2>
@@ -47,7 +47,7 @@ const EducationSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.8 }}
                         viewport={{ once: true }}
-                        className="text-gray-200 text-lg"
+                        className="text-gray-200 xl:text-lg text-[14px]"
                     >
                         Education is the key that unlocks the door to endless possibilities and personal growth.
                     </motion.p>

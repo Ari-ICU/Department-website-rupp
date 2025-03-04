@@ -35,24 +35,24 @@ const cardVariants = {
 const ServiceSection = () => {
   return (
     <motion.section
-      className=" h-[190px] flex justify-center"
+      className="container mx-auto "
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
     >
-      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 justify-items-center">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-lg w-[427px] "
+            className="bg-white p-6 rounded-lg shadow-lg xl:w-[427px] w-auto "
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }} // Trigger animation when 50% of the card is in view
+            viewport={{ once: true, amount: 0.5 }} 
             transition={{ delay: index * 0.2 }}
           >
-            <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
+            <div className="flex flex-col md:flex-row gap-10 items-center justify-center">
               {/* Icon */}
               <div
                 className="text-5xl w-16 h-16 flex items-center justify-center bg-red-100 text-red-900 rounded-full"

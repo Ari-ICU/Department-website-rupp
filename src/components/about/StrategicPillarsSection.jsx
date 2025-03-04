@@ -40,15 +40,15 @@ const StrategicPillarsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-blue-50 to-purple-50 "
+            className=""
         >
-            <div className="max-w-[1330px] h-[663px] mx-auto">
+            <div className="container  mx-auto">
                 <motion.h2
                     initial={{ opacity: 0, y: -50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="text-4xl font-bold text-gray-800 mb-6"
+                    className="text-xl xl:text-3xl font-bold text-gray-800 mb-6"
                 >
                     RUPP Strategic Pillars for Growth & Excellence
                 </motion.h2>
@@ -57,11 +57,11 @@ const StrategicPillarsSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className="text-gray-600 text-lg mb-12 "
+                    className="text-gray-600  xl:text-lg text-[12px]  mb-12 "
                 >
                     Strengthening Human Resources, Governance, Curriculum, and Infrastructure to Drive Innovation and Quality Education.
                 </motion.p>
-                <div className="max-w-[1330px] h-[546px] grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="max-w-[1330px]  mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                     {strategicPillars.map((pillar, index) => (
                         <motion.div
                             key={index}
@@ -81,8 +81,8 @@ const StrategicPillarsSection = () => {
                                 {pillar.icon}
                             </motion.div>
                             <div>
-                                <h3 className="text-xl font-bold text-gray-800 mb-2">{pillar.title}</h3>
-                                <p className="text-gray-600">{pillar.description}</p>
+                                <h3 className="text-lg xl:text-xl font-bold text-gray-800 mb-2">{pillar.title}</h3>
+                                <p className="text-gray-600 xl:text-md text-[12px]">{pillar.description}</p>
                             </div>
                         </motion.div>
                     ))}

@@ -48,7 +48,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
   }, [dropdown]);
 
   return (
-    <nav ref={navRef} className="relative xl:flex xl:space-x-6 text-xl">
+    <nav ref={navRef} className="relative xl:flex xl:space-x-6 text-[12px] lg:text-[16px] 2xl:text-[24px]">
       {/* Desktop Menu */}
       <div className="hidden xl:flex space-x-6">
         <Link to="/" className="hover:text-red-900">
@@ -71,8 +71,8 @@ const Navbar = ({ isOpen, setIsOpen }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
-              onMouseEnter={() => handleMouseEnter("academics")} // Keep dropdown open when hovering over it
-              onMouseLeave={handleMouseLeave} // Close dropdown when mouse leaves
+              onMouseEnter={() => handleMouseEnter("academics")}
+              onMouseLeave={handleMouseLeave} 
             >
               <Link
                 to="/undergraduate"

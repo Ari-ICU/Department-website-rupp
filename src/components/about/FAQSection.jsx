@@ -38,9 +38,9 @@ const FAQSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-blue-50 to-purple-50 "
+            className=" "
         >
-            <div className='max-w-[1326px] h-[476px] mx-auto'>
+            <div className='container  mx-auto'>
             <div className=" grid grid-cols-1 md:grid-cols-2 gap-6">
                <div className='text-start'>
                <motion.h1
@@ -48,7 +48,7 @@ const FAQSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="text-4xl font-bold text-gray-800 mb-6 text-start "
+                    className="text-xl xl:text-3xl font-bold text-gray-800 mb-6 text-start "
                 >
                     Frequently Asked <br /> Questions
                 </motion.h1>
@@ -57,12 +57,12 @@ const FAQSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className="text-gray-600 text-lg mb-12 text-start"
+                    className="text-gray-600 xl:text-lg text-[12px] mb-12 text-start"
                 >
                     Professor: Inspiring Minds, Nurturing Curiosity, and Shaping the Future <br /> of Knowledge and Innovation
                 </motion.p>
                </div>
-                <div className="max-w-[720px] h-[476px]">
+                <div className="max-w-[720px] ">
                     {faqItems.map((faq, index) => (
                         <motion.div
                             key={index}
@@ -74,7 +74,7 @@ const FAQSection = () => {
                             onClick={() => toggleFAQ(index)}
                         >
                             <div className="flex justify-between items-center">
-                                <h3 className="text-xl font-bold text-gray-800">
+                                <h3 className="text-md xl:text-2xl font-bold text-gray-800">
                                     {faq.question}
                                 </h3>
                                 <motion.div

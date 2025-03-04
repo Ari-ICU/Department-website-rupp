@@ -7,12 +7,12 @@ import logo from "../../assets/img/rupp.png";
 const DepartmentHeader = () => {
   return (
     <motion.div
-      className="bg-red-900"
+      className="bg-red-900 py-4"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto flex items-center justify-between py-4">
+      <div className="container mx-auto flex flex-col xl:flex-row py-4 items-center justify-between px-4">
         {/* Left Section with Logo and Text */}
         <motion.div
           className="flex items-center"
@@ -31,19 +31,20 @@ const DepartmentHeader = () => {
             transition={{ duration: 0.5 }}
           />
           <motion.h2
-            className="text-white text-xl font-semibold"
+            className="text-white xl:text-xl text-sm font-semibold"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Faculty of Science Department of <br /> Computer Science
+            Faculty of Science Department of <br className='xl:block hidden'/> Computer Science
           </motion.h2>
         </motion.div>
 
         {/* Right Section with Social Media Icons */}
+        <div className='flex justify-end'>
         <motion.div
-          className="flex space-x-3"
+          className="flex  space-x-3"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -69,6 +70,7 @@ const DepartmentHeader = () => {
             </motion.div>
           ))}
         </motion.div>
+        </div>
       </div>
     </motion.div>
   );

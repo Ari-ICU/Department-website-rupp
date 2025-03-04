@@ -10,15 +10,19 @@ const Contact = () => {
         <div>
             <div>
                 <CSAboutSection />
-                <div className="*:py-16">
-                <ContactSection />
-                    <div className="bg-red-900 ">
+                <div className="py-16">
+                        <ContactSection />  
+                        <div className="">
                         <GetInTouchSection />
                     </div>
-                    <PartnershipSection />
-                    <DepartmentHeader />
                 </div>
-               
+                <div className="py-16">
+                    <PartnershipSection />  
+                </div>
+                
+                <div className="pt-16">
+                <DepartmentHeader />
+               </div>
             </div>
         </div>
     );
