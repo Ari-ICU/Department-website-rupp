@@ -8,7 +8,7 @@ const ResearchInnovations = () => {
   return (
     <div className="bg-gray-100">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8">
+        <h2 className="xl:text-3xl text-2xl font-bold mb-8">
           Research & Innovations
         </h2>
 
@@ -52,7 +52,7 @@ const ResearchInnovations = () => {
 
                 {/* Explore Button */}
                 <div className="mt-4 flex justify-start">
-                  <button className="bg-red-900 hover:bg-red-800 text-white py-2 px-6 rounded-4xl flex items-center">
+                  <button className="bg-red-900 hover:bg-red-800 xl:text-[16px] text-[12px] text-white py-2 px-6 rounded-4xl flex items-center">
                     <MdExplore className="mr-2" />
                     Explore
                   </button>
@@ -92,7 +92,7 @@ const ResearchInnovations = () => {
                 <p className="mb-4 xl:text-[16px] text-[12px]">
                   Investigating the Role of Network Diagnostics, Cloud-Based Repair Tools, and Remote Assistance in Shaping the Future of Efficient Computer Repair, Data Recovery, and System Optimization.
                 </p>
-                <button className="bg-red-900 hover:bg-red-800 text-white py-2 px-6 rounded-4xl flex items-center">
+                <button className="bg-red-900 hover:bg-red-800 xl:text-[16px] text-[12px] text-white py-2 px-6 rounded-4xl flex items-center">
                   <MdExplore className="mr-2" />
                   Explore
                 </button>
@@ -127,7 +127,7 @@ const ResearchInnovations = () => {
                 <p className="mb-4 xl:text-[16px] text-[12px]">
                   Investigating the Role of Network Diagnostics, Cloud-Based Repair Tools, and Remote Assistance in Shaping the Future of Efficient Computer Repair, Data Recovery, and System Optimization.
                 </p>
-                <button className="bg-red-900 hover:bg-red-800 text-white py-2 px-6 rounded-4xl flex items-center">
+                <button className="bg-red-900 hover:bg-red-800 text-white xl:text-[16px] text-[12px] py-2 px-6 rounded-4xl flex items-center">
                   <MdExplore className="mr-2" />
                   Explore
                 </button>
