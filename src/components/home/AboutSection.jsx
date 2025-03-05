@@ -17,17 +17,26 @@ const AboutSection = () => {
                     <motion.div
                         className="text-[16px] h-auto p-4 order-1 lg:order-2"
                         initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        whileInView={{ opacity: 1, scale: 1}}
                         transition={{ duration: 1 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                        <motion.h2  initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1 }}
+                        viewport={{ once: true }}
+                        className="text-lg xl:text-3xl font-bold mb-4">
                             Department of Computer Science
-                        </h2>
-                        <p className="text-sm md:text-base lg:text-lg text-gray-500">
+                        </motion.h2>
+                        <motion.p
+                         initial={{ opacity: 0, scale: 0.8 }}
+                         whileInView={{ opacity: 1, scale: 1 }}
+                         transition={{ duration: 0.5, delay: 0.6 }}
+                         viewport={{ once: true }}
+                          className="text-[12px] xl:text-[16px] text-gray-500">
                             Offers the first Computer Science degree program, designed to provide students with a strong foundation in both theory and practical skills. We ensure that our curriculum aligns with industry standards, equipping graduates with the knowledge needed to succeed in the competitive job market. With a team of highly skilled professors who bring both academic expertise and real-world experience, we prepare students for careers in technology and innovation. We offer:
-                        </p>
-                        <ul className="list-none space-y-4 mt-4">
+                        </motion.p>
+                        <ul className="list-none space-y-4 mt-4 ">
                             {[
                                 'Programming (Desktop, Mobile, and Web Application)',
                                 'System Analysis & Design and Development',
@@ -37,12 +46,17 @@ const AboutSection = () => {
                                 'Artificial Intelligence',
                                 'Computer Architecture and Embedded Systems',
                             ].map((item, index) => (
-                                <li key={index} className="flex items-center text-base sm:text-lg md:text-xl">
+                                <motion.li 
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.5, delay: 0.6 }}
+                                viewport={{ once: true }}
+                                key={index} className="flex items-center text-[12px] xl:text-[16px]">
                                     <div className="border border-red-800 p-2 rounded-4xl mr-2">
                                         <FaCheck className="text-red-800" />
                                     </div>
                                     {item}
-                                </li>
+                                </motion.li>
                             ))}
                         </ul>
                         <motion.div

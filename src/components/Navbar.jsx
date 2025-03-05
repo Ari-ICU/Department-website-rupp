@@ -10,7 +10,8 @@ const Navbar = ({ isOpen, setIsOpen }) => {
   const [dropdown, setDropdown] = useState(null);
   const navRef = useRef();
   const mobileMenuRef = useRef();
-  const dropdownRef = useRef(null);
+  const academicsDropdownRef = useRef(null); // Separate ref for Academics dropdown
+  const peopleDropdownRef = useRef(null); // Separate ref for People dropdown
   const location = useLocation();
 
   // Close dropdown when location changes
@@ -23,20 +24,28 @@ const Navbar = ({ isOpen, setIsOpen }) => {
     setDropdown(menu);
   };
 
-  const handleMouseLeave = () => {
-    setDropdown(null);
+  const handleMouseLeave = (event) => {
+    // Check if the mouse is leaving the dropdown area
+    if (
+      (dropdown === "academics" && !academicsDropdownRef.current?.contains(event.relatedTarget)) ||
+      (dropdown === "people" && !peopleDropdownRef.current?.contains(event.relatedTarget))
+    ) {
+      setDropdown(null);
+    }
   };
 
   // Handle click for dropdown items
   const handleDropdownItemClick = () => {
-    setDropdown(null); // Close dropdown after clicking an item
-    setIsOpen(false); // Close mobile menu (if open)
+    setIsOpen(false); // Close mobile menu only
   };
 
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      if (
+        (academicsDropdownRef.current && !academicsDropdownRef.current.contains(event.target)) &&
+        (peopleDropdownRef.current && !peopleDropdownRef.current.contains(event.target))
+      ) {
         setDropdown(null);
       }
     };
@@ -48,7 +57,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
   }, [dropdown]);
 
   return (
-    <nav ref={navRef} className="relative xl:flex xl:space-x-6 text-[12px] lg:text-[16px] 2xl:text-[24px]">
+    <nav ref={navRef} className="container mx-auto relative xl:flex xl:space-x-6 text-[12px] lg:text-[16px] 2xl:text-[24px]">
       {/* Desktop Menu */}
       <div className="hidden xl:flex space-x-6">
         <Link to="/" className="hover:text-red-900">
@@ -58,21 +67,21 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         {/* Dropdown: Academics */}
         <div
           className="relative"
-          ref={dropdownRef}
           onMouseEnter={() => handleMouseEnter("academics")}
           onMouseLeave={handleMouseLeave}
+          ref={academicsDropdownRef}
         >
           <button className="flex items-center">
             Academics <FiChevronDown className="ml-1" />
           </button>
           {dropdown === "academics" && (
             <motion.div
-              className="absolute left-0 mt-0 bg-white shadow-md rounded-md py-2 w-40"
+              className="absolute left-0 mt-0 bg-white shadow-md rounded-md py-2 w-46 z-50"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
               onMouseEnter={() => handleMouseEnter("academics")}
-              onMouseLeave={handleMouseLeave} 
+              onMouseLeave={handleMouseLeave}
             >
               <Link
                 to="/undergraduate"
@@ -95,9 +104,9 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         {/* Dropdown: People */}
         <div
           className="relative"
-          ref={dropdownRef}
           onMouseEnter={() => handleMouseEnter("people")}
           onMouseLeave={handleMouseLeave}
+          ref={peopleDropdownRef}
         >
           <button className="flex items-center">
             People <FiChevronDown className="ml-1" />
@@ -108,8 +117,8 @@ const Navbar = ({ isOpen, setIsOpen }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
-              onMouseEnter={() => handleMouseEnter("people")} // Keep dropdown open when hovering over it
-              onMouseLeave={handleMouseLeave} // Close dropdown when mouse leaves
+              onMouseEnter={() => handleMouseEnter("people")}
+              onMouseLeave={handleMouseLeave}
             >
               <Link
                 to="/faculty"
@@ -150,102 +159,152 @@ const Navbar = ({ isOpen, setIsOpen }) => {
       {isOpen && (
         <motion.div
           ref={mobileMenuRef}
-          className="xl:hidden fixed top-0 left-0 w-full h-screen bg-white shadow-lg border-t z-50"
+          className="fixed top-0 left-0 w-full h-screen bg-white shadow-lg border-t z-50 overflow-y-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="p-4 space-y-2">
-            {/* Logo */}
-            <div className="flex justify-between items-center">
-              <div className="not-italic font-medium text-gray-800 cursor-pointer">
-                <span className="sr-only">logo</span>
-                <Link to="/" className="flex items-center space-x-2">
-                  <img src={logo} alt="logo" className="w-14 h-14" />
-                  <span className="hidden min-sm:block">
-                    Faculty of Science <br /> Department of Computer Science
-                  </span>
-                </Link>
-              </div>
-
-              {/* Close Button */}
+          <div className="p-6"> {/* Increased padding for better spacing */}
+            {/* Logo and Close Button */}
+            <div className="flex justify-between items-center mb-6"> {/* Added margin bottom */}
+              <Link to="/" className="flex items-center space-x-3">
+                <img src={logo} alt="logo" className="w-12 h-12" /> {/* Adjusted logo size */}
+                <div className="text-lg font-semibold text-gray-800">
+                  <span className="block">Faculty of Science</span>
+                  <span className="block text-sm text-gray-600">Department of Computer Science</span>
+                </div>
+              </Link>
               <button
-                className="absolute top-4 right-6 p-2"
+                className="p-2 text-gray-600 hover:text-gray-800"
                 onClick={() => setIsOpen(false)}
                 aria-label="Close mobile menu"
               >
-                <FiX size={30} />
+                <FiX size={28} /> {/* Adjusted close icon size */}
               </button>
             </div>
 
-            <div className="shadow-md px-2 py-4">
-              <Link to="/" className="block px-4 py-2" onClick={() => setIsOpen(false)}>
+            {/* Menu Items */}
+            <nav className="space-y-3"> {/* Increased space between items */}
+              <Link
+                to="/"
+                className="block py-2 px-4 rounded-md hover:bg-gray-100 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
                 Home
               </Link>
 
-              {/* Mobile Dropdown: Academics */}
-              <button
-                className="flex justify-between w-full px-4 py-2 text-left"
-                onClick={() => setDropdown(dropdown === "academics" ? null : "academics")}
-              >
-                Academics <FiChevronDown />
-              </button>
-              {dropdown === "academics" && (
-                <motion.div
-                  className="pl-6"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <Link to="/undergraduate" className="block px-4 py-2" onClick={() => setIsOpen(false)}>
-                    Undergraduate
-                  </Link>
-                  <Link to="/graduate" className="block px-4 py-2" onClick={() => setIsOpen(false)}>
-                    Graduate
-                  </Link>
-                </motion.div>
-              )}
+              {/* Academics Dropdown */}
+              <div className="relative"
+                onMouseEnter={() => handleMouseEnter("academics")}
+                onMouseLeave={handleMouseLeave}
+                ref={academicsDropdownRef}>
+                <button
+                  className="flex items-center justify-between w-full py-2 px-4 rounded-md hover:bg-gray-100 transition-colors"
 
-              {/* Mobile Dropdown: People */}
-              <button
-                className="flex justify-between w-full px-4 py-2 text-left"
-                onClick={() => setDropdown(dropdown === "people" ? null : "people")}
-              >
-                People <FiChevronDown />
-              </button>
-              {dropdown === "people" && (
-                <motion.div
-                  className="pl-6"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
                 >
-                  <Link to="/faculty" className="block px-4 py-2" onClick={() => setIsOpen(false)}>
-                    Faculty
-                  </Link>
-                  <Link to="/staff" className="block px-4 py-2" onClick={() => setIsOpen(false)}>
-                    Staff
-                  </Link>
-                </motion.div>
-              )}
+                  Academics <FiChevronDown className={`ml-2 transition-transform ${dropdown === "academics" ? "transform rotate-180" : ""}`} />
+                </button>
+                {dropdown === "academics" && (
+                  <motion.div
+                    className="mt-2 bg-white shadow-md rounded-md overflow-hidden"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Link
+                      to="/undergraduate"
+                      className="block py-2 px-6 hover:bg-gray-100  hover:text-red-900 transition-colors"
+                      onClick={handleDropdownItemClick}
+                    >
+                      Undergraduate
+                    </Link>
+                    <Link
+                      to="/graduate"
+                      className="block py-2 px-6 hover:bg-gray-100 hover:text-red-900 transition-colors"
+                      onClick={handleDropdownItemClick}
+                    >
+                      Graduate
+                    </Link>
+                  </motion.div>
+                )}
+              </div>
 
-              <Link to="/research" className="block px-4 py-2" onClick={() => setIsOpen(false)}>
+              {/* People Dropdown */}
+              <div
+                onMouseEnter={() => handleMouseEnter("people")}
+                onMouseLeave={handleMouseLeave}
+                ref={peopleDropdownRef}
+                className="relative">
+                <button
+                  className="flex items-center justify-between w-full py-2 px-4 rounded-md  hover:bg-gray-100 transition-colors"
+
+                >
+                  People <FiChevronDown className={`ml-2 transition-transform ${dropdown === "people" ? "transform rotate-180" : ""}`} />
+                </button>
+                {dropdown === "people" && (
+                  <motion.div
+                    className="mt-2 bg-white  shadow-md rounded-md overflow-hidden"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Link
+                      to="/faculty"
+                      className="block py-2 px-6 hover:bg-gray-100 hover:text-red-900 transition-colors"
+                      onClick={handleDropdownItemClick}
+                    >
+                      Faculty
+                    </Link>
+                    <Link
+                      to="/staff"
+                      className="block py-2 px-6 hover:bg-gray-100 hover:text-red-900 transition-colors"
+                      onClick={handleDropdownItemClick}
+                    >
+                      Staff
+                    </Link>
+                  </motion.div>
+                )}
+              </div>
+
+              <Link
+                to="/research"
+                className="block py-2 px-4 rounded-md hover:bg-gray-100 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
                 Research
               </Link>
-              <Link to="/facilities" className="block px-4 py-2" onClick={() => setIsOpen(false)}>
+              <Link
+                to="/facilities"
+                className="block py-2 px-4 rounded-md hover:bg-gray-100 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
                 Facilities
               </Link>
-              <Link to="/news" className="block px-4 py-2" onClick={() => setIsOpen(false)}>
+              <Link
+                to="/news"
+                className="block py-2 px-4 rounded-md hover:bg-gray-100 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
                 News
               </Link>
-              <Link to="/about" className="block px-4 py-2" onClick={() => setIsOpen(false)}>
+              <Link
+                to="/about"
+                className="block py-2 px-4 rounded-md hover:bg-gray-100 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
                 About
               </Link>
-              <Link to="/contact" className="block px-4 py-2" onClick={() => setIsOpen(false)}>
+              <Link
+                to="/contact"
+                className="block py-2 px-4 rounded-md hover:bg-gray-100 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
                 Contact
               </Link>
-            </div>
+            </nav>
           </div>
         </motion.div>
       )}

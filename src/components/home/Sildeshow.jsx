@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FcAbout } from "react-icons/fc";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft  } from "react-icons/md";
 
 // Image imports
 import heroImage1 from "../../assets/img/univ3.jpg";
@@ -146,23 +146,23 @@ const SlideShowSection = () => {
         className="absolute z-20 left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 cursor-pointer"
         style={{ pointerEvents: "auto" }}
       >
-        <FaArrowLeft className="xl:w-14" />
+        <MdKeyboardArrowLeft />
       </button>
       <button
         onClick={goToNext}
         className="absolute z-20 right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 cursor-pointer"
         style={{ pointerEvents: "auto" }}
       >
-        <FaArrowRight className="xl:w-14" />
+        <MdKeyboardArrowRight  />
       </button>
 
       {/* Navigation Dots */}
-      <div className="absolute z-20 bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute z-20 bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-4 h-4 rounded-full transition-all duration-300 ${
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide
                 ? "bg-white scale-125 shadow-lg"
                 : "bg-gray-500 hover:bg-gray-400"

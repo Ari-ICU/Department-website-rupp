@@ -23,36 +23,40 @@ const services = [
 // Animation variants for the section
 const sectionVariants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 1 } },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      when: 'beforeChildren', 
+      staggerChildren: 0.2, 
+    },
+  },
 };
 
 // Animation variants for individual service cards
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  visible: { opacity: 1, y: 0 },
 };
 
 const ServiceSection = () => {
   return (
     <motion.section
-      className="container mx-auto "
+      className="container mx-auto py-12"
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the section is in view
     >
-      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-lg xl:w-[427px] w-auto "
+            className="bg-white p-6 rounded-lg shadow-lg xl:w-[427px] w-auto"
             variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }} 
-            transition={{ delay: index * 0.2 }}
+            transition={{ duration: 0.6 }} // Animation duration for each card
           >
-            <div className="flex flex-col md:flex-row gap-10 items-center justify-center">
+            <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
               {/* Icon */}
               <div
                 className="text-5xl w-16 h-16 flex items-center justify-center bg-red-100 text-red-900 rounded-full"

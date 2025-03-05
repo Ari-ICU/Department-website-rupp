@@ -42,7 +42,7 @@ const PartnershipSection = () => {
 
           {/* Partner Logos with Animation */}
           <motion.div
-            className="flex flex-wrap justify-end xl:justify-start items-center gap-6"
+            className="flex flex-wrap justify-center xl:justify-start items-center gap-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
