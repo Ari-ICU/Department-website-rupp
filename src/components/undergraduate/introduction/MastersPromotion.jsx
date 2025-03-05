@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import m from '../../../assets/model/web-sample-6.png';
 
 const MastersPromotion = () => {
   // Motion variants for animation
@@ -9,28 +10,41 @@ const MastersPromotion = () => {
   };
 
   return (
-    <motion.div
-      className="bg-blue-500 text-white p-12 rounded-lg shadow-lg"
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-    >
-      <h2 className="text-3xl font-bold mb-4">
-        Unlock Your Future with a Master's Degree
-      </h2>
-      <p className="mb-6">
-        Gain advanced skills in AI, cybersecurity, and software engineering. A
-        master's degree in Computer Science opens doors to high-paying jobs,
-        leadership roles, and groundbreaking innovation. Take your expertise to
-        the next level!
-      </p>
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        className="bg-white text-red-900 font-bold py-2 px-4 rounded-lg"
-      >
-        View Detail
-      </motion.button>
-    </motion.div>
+    <div className="bg-black"> {/* Added padding */}
+      <div className="container mx-auto">
+        <motion.div
+          className="flex flex-col xl:flex-row items-center justify-center gap-6"
+          variants={containerVariants} // Added variants to the outer container
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }} // Added viewport option
+        >
+          <div class="xl:w-[514px] w-full p-6 relative ">
+            <div class="absolute inset-0 border p-2 bg-sky-600 rounded-full w-4 h-4 top-24 left-10"></div>
+            <div class="absolute  border p-2 bg-red-300 rounded-full w-12 h-12 top-0 left-32"></div>
+            <div class="absolute  border p-2 bg-red-800 rounded-full w-18 h-18 top-26 right-20"></div>
+            <img src={m} alt="" class="w-full h-full mx-auto object-cover rounded-lg" />
+          </div>
+          <motion.div className="text-white p-6 rounded-lg shadow-lg xl:w-[641px] mx-auto"> {/* Added background color and padding */}
+            <h2 className="text-3xl font-bold mb-4">
+              Unlock Your Future with a Master's Degree
+            </h2>
+            <p className="mb-6">
+              Gain advanced skills in AI, cybersecurity, and software engineering. A
+              master's degree in Computer Science opens doors to high-paying jobs,
+              leadership roles, and groundbreaking innovation. Take your expertise to
+              the next level!
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              className="bg-white text-red-900 font-bold py-2 px-4 rounded-lg"
+            >
+              View Detail
+            </motion.button>
+          </motion.div>
+        </motion.div>
+      </div>
+    </div>
   );
 };
 

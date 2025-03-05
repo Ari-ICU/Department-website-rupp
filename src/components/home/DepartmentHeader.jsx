@@ -7,7 +7,7 @@ import logo from "../../assets/img/rupp.png";
 const DepartmentHeader = () => {
   return (
     <motion.div
-      className="bg-red-900 py-4"
+      className="bg-red-900 "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
