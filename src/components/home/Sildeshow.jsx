@@ -157,7 +157,7 @@ const SlideShowSection = () => {
       </button>
 
       {/* Navigation Dots */}
-      <div className="absolute z-20 bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute z-20 bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
