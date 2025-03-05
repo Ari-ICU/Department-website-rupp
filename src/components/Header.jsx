@@ -26,7 +26,7 @@ const Header = () => {
             <Link to="/" className="flex items-center space-x-2">
               <img src={logo} alt="logo" className="w-14 h-14" />
               <span className="hidden min-sm:block text-[12px] xl:text-[14px] 2xl:text-[20px]">
-               <span className="text-lg"> Faculty of Science </span> <br /> Department  Of Computer Science
+               <span className="text-lg xl:text-2xl"> Faculty of Science </span> <br /> Department  Of Computer Science
               </span>
             </Link>
           </motion.div>
