@@ -57,9 +57,9 @@ const Navbar = ({ isOpen, setIsOpen }) => {
   }, [dropdown]);
 
   return (
-    <nav ref={navRef} className="container mx-auto relative xl:flex xl:space-x-6 text-[12px] lg:text-[16px] 2xl:text-[24px]">
+    <nav ref={navRef} className="container mx-auto relative xl:flex xl:space-x-6 text-[12px] md:text-[14px] 2xl:text-[18px]">
       {/* Desktop Menu */}
-      <div className="hidden xl:flex space-x-6">
+      <div className="hidden xl:flex space-x-6 uppercase">
         <Link to="/" className="hover:text-red-900">
           Home
         </Link>
@@ -71,12 +71,12 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           onMouseLeave={handleMouseLeave}
           ref={academicsDropdownRef}
         >
-          <button className="flex items-center">
+          <button className="flex items-center  uppercase">
             Academics <FiChevronDown className="ml-1" />
           </button>
           {dropdown === "academics" && (
             <motion.div
-              className="absolute left-0 mt-0 bg-white shadow-md rounded-md py-2 w-46 z-50"
+              className="absolute left-0 mt-0 bg-white shadow-md rounded-md py-2 xl:w-52 w-full z-50"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
@@ -108,7 +108,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           onMouseLeave={handleMouseLeave}
           ref={peopleDropdownRef}
         >
-          <button className="flex items-center">
+          <button className="flex  uppercase items-center">
             People <FiChevronDown className="ml-1" />
           </button>
           {dropdown === "people" && (

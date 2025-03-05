@@ -28,7 +28,7 @@ const LanguageSwitcherButton = () => {
     >
       <motion.button
         onClick={toggleDropdown}
-        className="flex items-center space-x-2 px-4 py-2 bg-white shadow-md text-gray-500 rounded-lg focus:outline-none"
+        className="flex items-center space-x-2 px-4 py-2 bg-white text-gray-500 rounded-lg focus:outline-none"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
