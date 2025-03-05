@@ -28,23 +28,23 @@ const ResearchInnovations = () => {
             {/* Content Section */}
             <div className="flex justify-center items-center xl:w-[580px] w-full text-left">
               <div className="text-white mx-auto">
-                <h3 className="text-2xl font-semibold mb-2">
+                <h3 className="xl:text-2xl text-lg font-semibold mb-2">
                   Advancing Computer Repair Frontiers:
                 </h3>
-                <h3 className="text-2xl font-semibold mb-4">
+                <h3 className="xl:text-2xl text-lg font-semibold mb-4">
                   Innovations and Challenges in Modern Technology Maintenance
                 </h3>
-                <p className="mb-4 text-lg">
+                <p className="mb-4 xl:text-lg text-[12px]">
                   Exploring Innovative Diagnostic Techniques, Emerging Repair Technologies, and Advanced Troubleshooting Methods to Enhance Efficiency, Reliability, and Longevity in Modern Digital Devices.
                 </p>
 
                 {/* Buttons Section */}
                 <div className="flex flex-col xl:flex-row justify-start items-start gap-3">
-                  <button className="text-white py-2 px-4 shadow-md rounded-4xl flex items-center bg-gray-700 hover:bg-gray-600">
+                  <button className="text-white xl:text-[16px] text-[12px] py-2 px-4 shadow-md rounded-4xl flex items-center bg-gray-700 hover:bg-gray-600">
                     <MdComputer className="mr-2" />
                     Computational Advancements
                   </button>
-                  <button className="text-white py-2 px-4 shadow-md rounded-4xl flex items-center bg-gray-700 hover:bg-gray-600">
+                  <button className="text-white xl:text-[16px] text-[12px] py-2 px-4 shadow-md rounded-4xl flex items-center bg-gray-700 hover:bg-gray-600">
                     <AiOutlineRobot className="mr-2" />
                     AI & Systems Optimization
                   </button>
@@ -76,20 +76,20 @@ const ResearchInnovations = () => {
             <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
             <div className="absolute inset-0 p-6 flex flex-col justify-between text-white"> {/* Changed to justify-between */}
               <div className="flex flex-col justify-center items-end py-4"> {/* Added padding */}
-                <button className="text-black bg-gray-400 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"> {/* Added margin-bottom */}
+                <button className="text-black xl:text-[16px] text-[12px] bg-gray-400 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"> {/* Added margin-bottom */}
                   <MdComputer className="mr-2" />
                   Computational Advancements
                 </button>
-                <button className="text-black bg-gray-400 py-2 px-4 shadow-md rounded-4xl flex items-center">
+                <button className="text-black xl:text-[16px] text-[12px] bg-gray-400 py-2 px-4 shadow-md rounded-4xl flex items-center">
                   <AiOutlineRobot className="mr-2" />
                   AI & Systems Optimization
                 </button>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">
+                <h3 className="xl:text-xl text-lg font-semibold mb-2">
                   Revolutionizing Digital Infrastructure Maintenance
                 </h3>
-                <p className="mb-4">
+                <p className="mb-4 xl:text-[16px] text-[12px]">
                   Investigating the Role of Network Diagnostics, Cloud-Based Repair Tools, and Remote Assistance in Shaping the Future of Efficient Computer Repair, Data Recovery, and System Optimization.
                 </p>
                 <button className="bg-red-900 hover:bg-red-800 text-white py-2 px-6 rounded-4xl flex items-center">
@@ -111,20 +111,20 @@ const ResearchInnovations = () => {
             <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
             <div className="absolute inset-0 p-6 flex flex-col justify-between text-white"> {/* Changed to justify-between */}
               <div className="flex flex-col justify-center items-end py-4"> {/* Added padding */}
-                <button className="text-black bg-gray-400 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"> {/* Added margin-bottom */}
+                <button className="text-black xl:text-[16px] text-[12px] bg-gray-400 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"> {/* Added margin-bottom */}
                   <MdComputer className="mr-2" />
                   Computational Advancements
                 </button>
-                <button className="text-black bg-gray-400 py-2 px-4 shadow-md rounded-4xl flex items-center">
+                <button className="text-black xl:text-[16px] text-[12px] bg-gray-400 py-2 px-4 shadow-md rounded-4xl flex items-center">
                   <AiOutlineRobot className="mr-2" />
                   AI & Systems Optimization
                 </button>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">
+                <h3 className="xl:text-xl text-lg font-semibold mb-2">
                   Exploring the Intersection of Data, Systems, and Smart Technologies
                 </h3>
-                <p className="mb-4">
+                <p className="mb-4 xl:text-[16px] text-[12px]">
                   Investigating the Role of Network Diagnostics, Cloud-Based Repair Tools, and Remote Assistance in Shaping the Future of Efficient Computer Repair, Data Recovery, and System Optimization.
                 </p>
                 <button className="bg-red-900 hover:bg-red-800 text-white py-2 px-6 rounded-4xl flex items-center">

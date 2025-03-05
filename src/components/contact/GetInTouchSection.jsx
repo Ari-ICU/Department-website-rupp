@@ -39,8 +39,6 @@ const GetInTouchSection = ({ data = contactData }) => {
     return (
         <div className='py-16 '>
             <div className='bg-red-900 '>
-
-
                 <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     {/* Image Column */}
                     <motion.div
