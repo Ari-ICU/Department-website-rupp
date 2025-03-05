@@ -17,7 +17,7 @@ const ContactUs = () => {
                     whileInView={{ opacity: 1, x: 0 }} 
                     transition={{ duration: 0.8 }} 
                     viewport={{ once: true }}
-                    className="xl:absolute top-8 2xl:left-0 mx-auto 2xl:w-[1000px] w-auto lg:w-[800px] 2xl:h-[568px] h-auto z-10 order-2  "
+                    className="xl:absolute top-8 2xl:left-0 mx-auto 2xl:w-[1000px] md:w-[836px] w-full  xl:h-[568px] h-full z-10  "
                 >
                     <div className="bg-white bg-opacity-80 p-8 rounded-lg shadow-md">
                         <motion.h2 
@@ -119,7 +119,7 @@ const ContactUs = () => {
                     whileInView={{ opacity: 1, x: 0 }} 
                     transition={{ duration: 0.8 }} 
                     viewport={{ once: true }}
-                    className="xl:absolute right-0 mx-auto xl:w-[611px] w-auto xl:h-[663px] px-4 z-0 order-1"
+                    className="xl:absolute right-0 mx-auto  lg:w-[611px]  w-full xl:h-[663px] h-auto px-4 z-0 "
                 >
                     <img
                         src={contactImage}
