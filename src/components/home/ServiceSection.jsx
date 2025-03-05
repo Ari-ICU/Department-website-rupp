@@ -27,8 +27,8 @@ const sectionVariants = {
     opacity: 1,
     transition: {
       duration: 1,
-      when: 'beforeChildren', 
-      staggerChildren: 0.2, 
+      when: 'beforeChildren',
+      staggerChildren: 0.2,
     },
   },
 };
@@ -46,13 +46,13 @@ const ServiceSection = () => {
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }} 
+      viewport={{ once: true, amount: 0.5 }}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-lg xl:w-[427px] w-auto"
+            className="bg-white p-6 rounded-lg shadow-lg w-full" // Removed xl:w-[427px] and added w-full for responsiveness
             variants={cardVariants}
             transition={{ duration: 0.6 }}
           >
@@ -67,7 +67,7 @@ const ServiceSection = () => {
               {/* Title and Description */}
               <div className="text-center md:text-left">
                 <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                <p className="text-sm text-gray-600">{service.description}</p>
+                <p className="text-sm md:text-base text-gray-600">{service.description}</p>
               </div>
             </div>
           </motion.div>

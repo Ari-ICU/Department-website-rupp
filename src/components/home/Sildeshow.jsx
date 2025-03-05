@@ -108,7 +108,7 @@ const SlideShowSection = () => {
           className="w-24 h-24"
         />
         <motion.h1
-          className="xl:text-4xl text-lg md:text-5xl font-bold leading-tight mb-4 max-w-2xl"
+          className="xl:text-3xl text-lg font-bold leading-tight mb-4 max-w-2xl"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -117,7 +117,7 @@ const SlideShowSection = () => {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg"
+          className="xl:text-lg text-[12px] text-gray-300 mb-8 max-w-lg"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
@@ -132,7 +132,7 @@ const SlideShowSection = () => {
         >
           <Link
             to={slides[currentSlide].buttonLink}
-            className={`${slides[currentSlide].buttonColor} text-white py-3 px-6 text-md md:text-xl rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg flex items-center justify-center`}
+            className={`${slides[currentSlide].buttonColor} text-white py-2 px-6 xl:text-md text-[12px] xl:text-lg rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg flex items-center justify-center`}
           >
             {slides[currentSlide].buttonText}
             {slides[currentSlide].linkIcon}
@@ -143,14 +143,14 @@ const SlideShowSection = () => {
       {/* Navigation Arrows */}
       <button
         onClick={goToPrevious}
-        className="absolute z-20 left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 cursor-pointer"
+        className="absolute z-20 left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white xl:p-3 p-1 rounded-full hover:bg-opacity-75 cursor-pointer"
         style={{ pointerEvents: "auto" }}
       >
         <MdKeyboardArrowLeft />
       </button>
       <button
         onClick={goToNext}
-        className="absolute z-20 right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 cursor-pointer"
+        className="absolute z-20 right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white  xl:p-3 p-1 rounded-full hover:bg-opacity-75 cursor-pointer"
         style={{ pointerEvents: "auto" }}
       >
         <MdKeyboardArrowRight  />

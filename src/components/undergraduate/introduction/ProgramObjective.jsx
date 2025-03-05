@@ -4,7 +4,16 @@ const ProgramObjective = () => {
     return (
         <div>
             <div>
-                <h1>Program Objectives</h1>
+
+                <motion.h2
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="xl:text-3xl text-xl font-extrabold text-gray-900"
+                >
+                    Program Objectives
+                </motion.h2>
                 <motion.p
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}

@@ -36,7 +36,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 
   // Handle click for dropdown items
   const handleDropdownItemClick = () => {
-    setIsOpen(false); // Close mobile menu only
+    setIsOpen(false); 
   };
 
   // Close dropdown when clicking outside

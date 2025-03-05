@@ -7,6 +7,7 @@ import Footer from './components/footer/Footer';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Undergraduate from './pages/Undergraduate';
+import Program from './pages/Program';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/undergraduate' element={<Undergraduate />} /> 
         <Route path="/about" element={<About />} />
         <Route path='contact' element={<Contact />} />
+        <Route path='/programs' element={<Program />} />
         </Routes>
       <Footer />
     </Router>
