@@ -37,82 +37,82 @@ const contactData = {
 
 const GetInTouchSection = ({ data = contactData }) => {
     return (
-        <div className=' '>
-<div className='bg-red-900 '>
+        <div className='py-16 '>
+            <div className='bg-red-900 '>
 
 
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            {/* Image Column */}
-            <motion.div
-                className="container  mx-auto h-[500px]"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true, amount: 0.5 }}
-            >
-                <img
-                    src={world}
-                    alt="World Map"
-                    className="w-full h-full mx-auto object-cover rounded-lg "
-                />
-            </motion.div>
+                <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    {/* Image Column */}
+                    <motion.div
+                        className="container  mx-auto h-[500px]"
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                    >
+                        <img
+                            src={world}
+                            alt="World Map"
+                            className="w-full h-full mx-auto object-cover rounded-lg "
+                        />
+                    </motion.div>
 
-            {/* Contact Section Column */}
-            <motion.section
-                className="px-4 max-w-[634px] mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true, amount: 0.5 }}
-            >
-                <div className="text-center">
-                    {/* Heading */}
-                    <motion.h2
-                        className="text-3xl sm:text-4xl font-bold text-gray-300 mb-6"
+                    {/* Contact Section Column */}
+                    <motion.section
+                        className="px-4 max-w-[634px] mx-auto"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2, duration: 0.8 }}
-                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true, amount: 0.5 }}
                     >
-                        {data.heading}
-                    </motion.h2>
-
-                    {/* Description */}
-                    <motion.p
-                        className="text-lg text-gray-400 mb-12"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4, duration: 0.8 }}
-                        viewport={{ once: true }}
-                    >
-                        {data.description}
-                    </motion.p>
-
-                    {/* Contact Details */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {data.contactDetails.map((contact, index) => (
-                            <motion.div
-                                key={contact.id}
-                                className="flex flex-col items-center"
+                        <div className="text-center">
+                            {/* Heading */}
+                            <motion.h2
+                                className="text-3xl sm:text-4xl font-bold text-gray-300 mb-6"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.6 + index * 0.2, duration: 0.8 }}
+                                transition={{ delay: 0.2, duration: 0.8 }}
                                 viewport={{ once: true }}
                             >
-                                {/* Icon */}
-                                <div className={`${contact.bgColor} p-4 rounded-full ${contact.iconColor}`}>
-                                    {contact.icon}
-                                </div>
-                                {/* Title and Content */}
-                                <h3 className="mt-4 text-xl font-semibold text-gray-900">{contact.title}</h3>
-                                <p className="mt-2 text-gray-400">{contact.content}</p>
-                            </motion.div>
-                        ))}
-                    </div>
+                                {data.heading}
+                            </motion.h2>
+
+                            {/* Description */}
+                            <motion.p
+                                className="text-lg text-gray-400 mb-12"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.4, duration: 0.8 }}
+                                viewport={{ once: true }}
+                            >
+                                {data.description}
+                            </motion.p>
+
+                            {/* Contact Details */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {data.contactDetails.map((contact, index) => (
+                                    <motion.div
+                                        key={contact.id}
+                                        className="flex flex-col items-center"
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.6 + index * 0.2, duration: 0.8 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        {/* Icon */}
+                                        <div className={`${contact.bgColor} p-4 rounded-full ${contact.iconColor}`}>
+                                            {contact.icon}
+                                        </div>
+                                        {/* Title and Content */}
+                                        <h3 className="mt-4 text-xl font-semibold text-gray-900">{contact.title}</h3>
+                                        <p className="mt-2 text-gray-400">{contact.content}</p>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    </motion.section>
                 </div>
-            </motion.section>
-        </div>
-        </div>
+            </div>
         </div>
     );
 };

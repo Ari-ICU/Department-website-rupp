@@ -36,7 +36,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 
   // Handle click for dropdown items
   const handleDropdownItemClick = () => {
-    setIsOpen(false); 
+    setIsOpen(false);
   };
 
   // Close dropdown when clicking outside
@@ -60,7 +60,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
     <nav ref={navRef} className="container mx-auto relative xl:flex xl:space-x-6 text-[12px] md:text-[14px] 2xl:text-[18px]">
       {/* Desktop Menu */}
       <div className="hidden xl:flex space-x-6 uppercase">
-        <Link to="/" className="hover:text-red-900">
+        <Link to="/" className={`hover:text-red-900 ${location.pathname === "/" ? "text-red-900 font-bold" : ""}`}>
           Home
         </Link>
 
@@ -71,7 +71,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           onMouseLeave={handleMouseLeave}
           ref={academicsDropdownRef}
         >
-          <button className="flex items-center  uppercase">
+          <button className="flex items-center space-y-3  uppercase">
             Academics <FiChevronDown className="ml-1" />
           </button>
           {dropdown === "academics" && (
@@ -85,14 +85,14 @@ const Navbar = ({ isOpen, setIsOpen }) => {
             >
               <Link
                 to="/undergraduate"
-                className="block px-4 py-2 hover:text-red-900"
+                className={`hover:text-red-900 block text-start px-4 py-2 ${location.pathname === '/undergraduate' ? 'text-red-900 font-bold' : ""} `}
                 onClick={handleDropdownItemClick}
               >
                 Undergraduate
               </Link>
               <Link
                 to="/graduate"
-                className="block px-4 py-2 hover:text-red-900"
+                className={`hover:text-red-900 block text-start px-4 py-2 ${location.pathname === '/graduate' ? 'text-red-900 font-bold' : ""} `}
                 onClick={handleDropdownItemClick}
               >
                 Graduate
@@ -122,14 +122,14 @@ const Navbar = ({ isOpen, setIsOpen }) => {
             >
               <Link
                 to="/faculty"
-                className="block px-4 py-2 hover:text-red-900"
+                className={`hover:text-red-900 block text-start px-4 py-2 ${location.pathname === '/faculty' ? 'text-red-900 font-bold' : ""} `}
                 onClick={handleDropdownItemClick}
               >
                 Faculty
               </Link>
               <Link
                 to="/staff"
-                className="block px-4 py-2 hover:text-red-900"
+                className={`hover:text-red-900 block text-start px-4 py-2 ${location.pathname === '/staff' ? 'text-red-900 font-bold' : ""} `}
                 onClick={handleDropdownItemClick}
               >
                 Staff
@@ -138,19 +138,19 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           )}
         </div>
 
-        <Link to="/research" className="hover:text-red-900">
+        <Link to="/research" className={`hover:text-red-900 ${location.pathname === "/research" ? "text-red-900 font-bold" : ""}`}>
           Research
         </Link>
-        <Link to="/facilities" className="hover:text-red-900">
+        <Link to="/facilities" className={`hover:text-red-900 ${location.pathname === "/facilities" ? "text-red-900 font-bold" : ""}`}>
           Facilities
         </Link>
-        <Link to="/news" className="hover:text-red-900">
+        <Link to="/news" className={`hover:text-red-900 ${location.pathname === "/news" ? "text-red-900 font-bold" : ""}`}>
           News
         </Link>
-        <Link to="/about" className="hover:text-red-900">
+        <Link to="/about" className={`hover:text-red-900 ${location.pathname === "/about" ? "text-red-900 font-bold" : ""}`}>
           About
         </Link>
-        <Link to="/contact" className="hover:text-red-900">
+        <Link to="/contact" className={`hover:text-red-900 ${location.pathname === "/contact" ? "text-red-900 font-bold" : ""}`}>
           Contact
         </Link>
       </div>

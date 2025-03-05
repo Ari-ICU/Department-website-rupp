@@ -78,10 +78,6 @@ const FacultyCarousel = () => {
                         </motion.p>
                     </div>
                     <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.6 }}
-                        viewport={{ once: true }}
                         className="w-full md:w-auto mt-4 md:mt-0"
                     >
                         <Link to='' className='flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1'>
@@ -107,7 +103,7 @@ const FacultyCarousel = () => {
                                 transition={{ duration: 0.5, delay: index * 0.2 }}
                                 className="w-96 min-w-96 h-full bg-white rounded-lg shadow-lg p-4 flex flex-col items-center justify-center"
                                 whileHover={{ scale: 1.05 }}
-                                transition={{ duration: 0.3 }}
+                             
                             >
                                 <div className="relative w-72 h-72 mb-4 group">
                                     <img

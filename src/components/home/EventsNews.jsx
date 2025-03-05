@@ -155,7 +155,6 @@ const EventsNews = () => {
                                 viewport={{ once: true }}
                                 className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-row min-w-96"
                                 whileHover={{ scale: 1.05 }}
-                                transition={{ duration: 0.3 }}
                             >
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}

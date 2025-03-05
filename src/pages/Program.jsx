@@ -13,7 +13,7 @@ const Program = () => {
     <div>
       <div>
         <ProgramBanner />
-        <div className='*:py-16 *:px-10'>
+        <div className='*:py-16 '>
           <Overview />
           <Programs />
           <ProgramObjectives />

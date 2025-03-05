@@ -1,89 +1,144 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import { MdArrowOutward } from "react-icons/md";
-import { motion } from "framer-motion";
-import "swiper/css";
-import "swiper/css/pagination";
-import image1 from "../../assets/img/1.jpg"; // Replace with your actual image paths
-import image2 from "../../assets/img/2.jpg";
-import image3 from "../../assets/img/123.jpg";
+import React from 'react';
+import { MdComputer, MdExplore } from 'react-icons/md';
+import { AiOutlineRobot } from 'react-icons/ai';
+import image from '../../assets/image.png';
+import image1 from '../../assets/1.png';
 
-const researchTopics = [
-  { title: "Advancing Technology", image: image1 },
-  { title: "Innovating Tomorrow", image: image2 },
-  { title: "Cybersecurity Research", image: image3 },
-];
-
-const Research = () => {
+const ResearchInnovations = () => {
   return (
-    <div className="flex justify-center items-center bg-red-900 text-white py-12">
-      <div className="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* Right Side - Swiper Slider (First on Mobile, Second on Desktop) */}
-        <div className="order-1 md:order-2 w-full xl:h-[339px] h-auto relative">
-          <Swiper
-            modules={[Autoplay]}
-            spaceBetween={10}
-            slidesPerView="auto"
-            centeredSlides={true}
-            loop={true}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
-            className="w-full h-full"
-          >
-            {researchTopics.map((item, index) => (
-              <SwiperSlide
-                key={index}
-                className={`p-6 rounded-lg ${index === 0 ? "w-full" : "w-auto"}`}
-              >
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 * index }}
-                  viewport={{ once: true }}
-                >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full xl:h-[266px] h-auto mx-auto object-cover rounded-lg mb-4"
-                  />
-                  <h3 className="text-xl font-bold mb-2 flex items-center justify-center">
-                    {item.title}
-                    <MdArrowOutward className="ml-2" />
-                  </h3>
-                </motion.div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+    <div className="bg-gray-100">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-8">
+          Research & Innovations
+        </h2>
+
+        {/* Top Section */}
+        <div className="bg-black rounded-4xl w-full flex flex-col xl:flex-row justify-center items-center mx-auto overflow-hidden">
+          <div className="xl:h-[505px] h-full flex flex-col xl:flex-row gap-10 px-4 py-6 items-center justify-center w-full">
+
+            {/* Image Section */}
+            <div className="xl:w-[615px] xl:h-[505px] w-full flex justify-center items-center">
+              <img
+                src={image}
+                alt="Advancing Computer Repair Frontiers"
+                className="w-full h-full object-cover rounded-xl"
+              />
+            </div>
+
+            {/* Content Section */}
+            <div className="flex justify-center items-center xl:w-[580px] w-full text-left">
+              <div className="text-white mx-auto">
+                <h3 className="text-2xl font-semibold mb-2">
+                  Advancing Computer Repair Frontiers:
+                </h3>
+                <h3 className="text-2xl font-semibold mb-4">
+                  Innovations and Challenges in Modern Technology Maintenance
+                </h3>
+                <p className="mb-4 text-lg">
+                  Exploring Innovative Diagnostic Techniques, Emerging Repair Technologies, and Advanced Troubleshooting Methods to Enhance Efficiency, Reliability, and Longevity in Modern Digital Devices.
+                </p>
+
+                {/* Buttons Section */}
+                <div className="flex flex-col xl:flex-row justify-start items-start gap-3">
+                  <button className="text-white py-2 px-4 shadow-md rounded-4xl flex items-center bg-gray-700 hover:bg-gray-600">
+                    <MdComputer className="mr-2" />
+                    Computational Advancements
+                  </button>
+                  <button className="text-white py-2 px-4 shadow-md rounded-4xl flex items-center bg-gray-700 hover:bg-gray-600">
+                    <AiOutlineRobot className="mr-2" />
+                    AI & Systems Optimization
+                  </button>
+                </div>
+
+                {/* Explore Button */}
+                <div className="mt-4 flex justify-start">
+                  <button className="bg-red-900 hover:bg-red-800 text-white py-2 px-6 rounded-4xl flex items-center">
+                    <MdExplore className="mr-2" />
+                    Explore
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
-        {/* Left Side - Research Text (Second on Mobile, First on Desktop) */}
-        <div className="order-2 md:order-1 p-4">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="font-bold mb-6 xl:text-3xl text-xl"
-          >
-            Research
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-sm font-normal leading-relaxed xl:text-sm text-[12px]"
-          >
-            At the forefront of technological advancement, our research focuses
-            on solving real-world problems. From artificial intelligence to
-            cybersecurity, our faculty and students are driving innovation.
-            Collaborating with industry leaders and academic partners, we push
-            the boundaries of knowledge. Join us in shaping the future of
-            technology through groundbreaking discoveries.
-          </motion.p>
+
+
+        {/* Bottom Sections */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+          {/* Bottom Left Section */}
+          <div className="xl:h-[505px] h-full bg-white rounded-lg shadow-md overflow-hidden relative group">
+            <img
+              src={image1}
+              alt="Revolutionizing Digital Infrastructure Maintenance"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 p-6 flex flex-col justify-between text-white"> {/* Changed to justify-between */}
+              <div className="flex flex-col justify-center items-end py-4"> {/* Added padding */}
+                <button className="text-black bg-gray-400 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"> {/* Added margin-bottom */}
+                  <MdComputer className="mr-2" />
+                  Computational Advancements
+                </button>
+                <button className="text-black bg-gray-400 py-2 px-4 shadow-md rounded-4xl flex items-center">
+                  <AiOutlineRobot className="mr-2" />
+                  AI & Systems Optimization
+                </button>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">
+                  Revolutionizing Digital Infrastructure Maintenance
+                </h3>
+                <p className="mb-4">
+                  Investigating the Role of Network Diagnostics, Cloud-Based Repair Tools, and Remote Assistance in Shaping the Future of Efficient Computer Repair, Data Recovery, and System Optimization.
+                </p>
+                <button className="bg-red-900 hover:bg-red-800 text-white py-2 px-6 rounded-4xl flex items-center">
+                  <MdExplore className="mr-2" />
+                  Explore
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Right Section */}
+
+          <div className="xl:h-[505px] h-full bg-white rounded-lg shadow-md overflow-hidden relative group">
+            <img
+              src={image1}
+              alt="Revolutionizing Digital Infrastructure Maintenance"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 p-6 flex flex-col justify-between text-white"> {/* Changed to justify-between */}
+              <div className="flex flex-col justify-center items-end py-4"> {/* Added padding */}
+                <button className="text-black bg-gray-400 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"> {/* Added margin-bottom */}
+                  <MdComputer className="mr-2" />
+                  Computational Advancements
+                </button>
+                <button className="text-black bg-gray-400 py-2 px-4 shadow-md rounded-4xl flex items-center">
+                  <AiOutlineRobot className="mr-2" />
+                  AI & Systems Optimization
+                </button>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">
+                  Exploring the Intersection of Data, Systems, and Smart Technologies
+                </h3>
+                <p className="mb-4">
+                  Investigating the Role of Network Diagnostics, Cloud-Based Repair Tools, and Remote Assistance in Shaping the Future of Efficient Computer Repair, Data Recovery, and System Optimization.
+                </p>
+                <button className="bg-red-900 hover:bg-red-800 text-white py-2 px-6 rounded-4xl flex items-center">
+                  <MdExplore className="mr-2" />
+                  Explore
+                </button>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Research;
+export default ResearchInnovations;
