@@ -32,7 +32,7 @@ const Header = () => {
           </motion.div>
 
           {/* Navbar and Actions */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center w-auto space-x-4">
             {/* Desktop Navbar */}
             <div className="hidden xl:flex">
               <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -44,7 +44,7 @@ const Header = () => {
 
             {/* Mobile Menu Button with motion */}
             <motion.button
-              className="xl:hidden text-gray-800"
+              className="xl:hidden w-auto text-gray-800"
               onClick={() => setIsOpen(!isOpen)} 
               aria-label="Toggle mobile menu"
             >

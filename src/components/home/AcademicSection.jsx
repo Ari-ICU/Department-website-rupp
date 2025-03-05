@@ -22,7 +22,7 @@ const AboutSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="container  order-2 lg:order-1 "
+                        className="xl:w-[660px] w-auto mx-auto  order-2 lg:order-1 "
                     >
                         <h2 className="text-3xl font-bold mb-4">Academics</h2>
                         <p className="xl:text-lg text-[12px] text-gray-500 mb-6">
@@ -71,7 +71,7 @@ const AboutSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="order-1 lg:order-2 container mx-auto xl:h-[410px] xl:w-full w-[400px] h-[300px]"
+                        className="order-1 lg:order-2 container mx-auto xl:h-[410px] w-full xl:w-[613px] h-[300px]"
                     >
                         <img
                             src={image1}

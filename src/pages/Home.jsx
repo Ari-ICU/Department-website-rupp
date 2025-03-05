@@ -27,7 +27,7 @@ const Homepages = () => {
          <Research />
       </div>
       <div className="*:py-16 *:max-w-8xl *:justify-center *:flex lg:px-20 px-4 ">
-      <FacultyCarousel />
+        <FacultyCarousel />
         <EventsNews />
         <PartnershipSection />
         </div>
