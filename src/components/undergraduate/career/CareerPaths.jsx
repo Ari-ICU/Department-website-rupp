@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowRight } from 'react-icons/fa'; 
+import { FaArrowRight } from 'react-icons/fa';
 
 const CareerPaths = () => {
   // Motion variants for animation
@@ -14,69 +14,85 @@ const CareerPaths = () => {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
   };
 
+  const careerPaths = [
+    {
+      title: 'Software Development',
+      image: 'path/to/software-development-image.jpg',
+    },
+    {
+      title: 'Data Science and Analytics',
+      image: 'path/to/data-science-image.jpg',
+    },
+    {
+      title: 'Cybersecurity',
+      image: 'path/to/cybersecurity-image.jpg',
+    },
+    {
+      title: 'Cloud Computing',
+      image: 'path/to/cloud-computing-image.jpg',
+    },
+    {
+      title: 'Artificial Intelligence',
+      image: 'path/to/ai-image.jpg',
+    },
+    // Add more career paths here
+  ];
+
   return (
+    <div className="my-16 ">
     <motion.div
-      className="container mx-auto p-8"
+      className="container mx-auto px-4 " // Added padding for smaller screens
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
     >
-      <div className="flex items-start mb-8">
+      <div className='flex flex-col xl:flex-row gap-8'>
+        {/* Text content */}
         <motion.div
-          className="flex-shrink-0 mr-6"
+          className="w-full xl:w-1/2 text-center xl:text-left" // Added text-center for smaller screens
           variants={itemVariants}
         >
-          <h2 className="text-3xl font-semibold mb-2">Career Paths in</h2>
-          <h2 className="text-3xl font-semibold">Computer Science</h2>
-          <p className="mt-4 text-gray-600">
-            Graduates of the Computer Science Undergraduate Program can pursue careers in various fields such as
-          </p>
+          <div className="flex flex-col xl:flex-row items-center xl:items-start mb-8"> {/* Adjusted flex direction and item alignment */}
+            <div className="mr-6">
+              <h2 className="text-2xl xl:text-3xl font-semibold mb-2">Career Paths in</h2> {/* Adjusted font size */}
+              <h2 className="text-2xl xl:text-3xl font-semibold">Computer Science</h2> {/* Adjusted font size */}
+              <p className="mt-4 text-gray-600">
+                Graduates of the Computer Science Undergraduate Program can pursue careers in various fields such as
+              </p>
+            </div>
+            <div className="bg-red-700 text-white p-3 rounded-lg flex items-center justify-center flex-shrink-0 mt-4 xl:mt-0"> {/* Added margin-top for smaller screens */}
+              <FaArrowRight className="h-6 w-6" />
+            </div>
+          </div>
         </motion.div>
+
+        {/* Career paths cards */}
         <motion.div
-          className="bg-red-700 text-white p-3 rounded-lg flex items-center justify-center flex-shrink-0"
-          variants={itemVariants}
+          className="flex space-x-4 w-full xl:w-1/2 overflow-x-auto snap-x snap-mandatory"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
         >
-          <FaArrowRight className="h-6 w-6" /> {/* Use FaArrowRight from react-icons */}
+          {careerPaths.map((path, index) => (
+            <motion.div
+              key={index}
+              className="snap-start relative w-80 flex-shrink-0 rounded-lg overflow-hidden shadow-md"
+              variants={itemVariants}
+            >
+              <img
+                src={path.image}
+                alt={path.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4">
+                <h3 className="text-lg font-semibold">{path.title}</h3>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
-
-      <motion.div
-        className="flex space-x-4 overflow-x-auto"
-        variants={containerVariants}
-      >
-        {/* Software Development Card */}
-        <motion.div
-          className="relative w-80 flex-shrink-0 rounded-lg overflow-hidden shadow-md"
-          variants={itemVariants}
-        >
-          <img
-            src="path/to/software-development-image.jpg"
-            alt="Software Development"
-            className="w-full h-48 object-cover"
-          />
-          <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4">
-            <h3 className="text-lg font-semibold">Software Development</h3>
-          </div>
-        </motion.div>
-
-        {/* Data Science and Analytics Card */}
-        <motion.div
-          className="relative w-80 flex-shrink-0 rounded-lg overflow-hidden shadow-md"
-          variants={itemVariants}
-        >
-          <img
-            src="path/to/data-science-image.jpg"
-            alt="Data Science and Analytics"
-            className="w-full h-48 object-cover"
-          />
-          <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4">
-            <h3 className="text-lg font-semibold">Data Science and Analytics</h3>
-          </div>
-        </motion.div>
-
-        {/* Add more cards here as needed */}
-      </motion.div>
     </motion.div>
+    </div>
   );
 };
 

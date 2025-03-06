@@ -13,7 +13,7 @@ const ProgramObjectives = () => {
             viewport={{ once: true }}
             className="container mx-auto"
         >
-            <div className="flex flex-col xl:flex-row items-center gap-8">
+            <div className="flex flex-col xl:flex-row items-center gap-8 px-4">
                 {/* Left Column - Text Content */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
@@ -61,10 +61,10 @@ const ProgramObjectives = () => {
                 >
                     <div className='flex items-center justify-center'>
                         <div className='lg:h-[211px] lg:w-[325px] w-full h-full'>
-                            <img src={p3} alt="" className='w-full h-full object-cover' />
+                            <img src={p3} alt="" className='w-full h-full rounded-tr-[100px] object-cover' />
                         </div>
                         <div className='lg:w-[309px] lg:h-[418px]'>
-                            <img src={p4} alt="" className='w-full h-full object-cover rounded-2xl' />
+                            <img src={p4} alt="" className='w-full h-full object-cover rounded-tr-[100px]' />
                         </div>
                     </div>
 

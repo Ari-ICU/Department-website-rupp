@@ -21,7 +21,7 @@ const AboutSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="xl:w-[660px] w-full mx-auto order-2 lg:order-1" // Changed w-auto to w-full
+                        className="xl:w-[660px] w-full order-2 lg:order-1" // Changed w-auto to w-full
                     >
                         <h2 className="text-3xl font-bold mb-4">Academics</h2>
                         <p className="text-sm md:text-base text-gray-500 mb-6"> {/* Adjusted text size */}
@@ -71,7 +71,7 @@ const AboutSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="order-1 lg:order-2 w-full xl:w-[613px] xl:h-[410px] h-full" // Removed container mx-auto and h-[300px] and xl:h-[410px]
+                        className="order-1 lg:order-2 w-full xl:w-[613px] mx-auto xl:h-[410px] h-full" // Removed container mx-auto and h-[300px] and xl:h-[410px]
                     >
                         <img
                             src={image1}

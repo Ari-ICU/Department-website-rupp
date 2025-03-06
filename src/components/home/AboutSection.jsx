@@ -11,12 +11,11 @@ import image2 from '../../assets/img/a2.png';
 const AboutSection = () => {
     return (
         <div className=''>
-            <div className='container mx-auto  '>
-                <section className="flex flex-col xl:flex-row items-center justify-center">
+            <div className='container mx-auto '>
+                <section className="flex flex-col xl:flex-row items-center mx-auto justify-center gap-6">
                     {/* Text Section with animation */}
                     <motion.div
-                        className="text-[16px] h-auto p-4 order-1 lg:order-2"
-                        initial={{ opacity: 0, y: 50 }}
+                        className="text-[16px] order-1 lg:order-2"
                         whileInView={{ opacity: 1, scale: 1}}
                         transition={{ duration: 1 }}
                         viewport={{ once: true }}

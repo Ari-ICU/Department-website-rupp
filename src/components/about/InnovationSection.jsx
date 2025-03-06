@@ -7,14 +7,14 @@ import rupp from "../../assets/img/rupp1.png";
 
 const InnovationSection = () => {
     return (
-        <div className="container mx-auto "> {/* Added py-8 for padding */}
+        <div className="container mx-auto py-8"> 
             <div className="flex flex-col xl:flex-row justify-between items-center gap-8"> 
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="max-w-[679px] bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg order-2 xl:order-1" // Adjusted width and height for responsiveness
+                    className="max-w-full xl:max-w-[679px] bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg order-2 xl:order-1"
                 >
                     <motion.h1
                         initial={{ opacity: 0, x: -50 }}
@@ -86,7 +86,7 @@ const InnovationSection = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className='container mx-auto xl:w-[600px] w-full h-auto xl:h-[510px] md:h-[350px] order-1 xl:order-2' // Adjusted width and height for responsiveness
+                    className='container mx-auto w-full xl:w-[600px] h-auto xl:h-[510px] md:h-[350px] order-1 xl:order-2'
                 >
                     <img
                         src={rupp}

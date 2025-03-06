@@ -13,9 +13,9 @@ import DepartmentHeader from "../components/home/DepartmentHeader";
 
 const Homepages = () => {
   return (
-    <div className="*:max-w-8xl mx-auto">
+    <div className="">
       <SlideShowSection />
-      <div className="*:py-16 *:max-w-8xl *:justify-center *:flex lg:px-20 px-4 ">
+      <div className=" *:mb-16 lg:px-20 px-4 ">
         <ServiceSection />
         <AboutSection />
         <AcademicSection />
@@ -23,16 +23,16 @@ const Homepages = () => {
         <ContactSection />
        
       </div>
-      <div className="*:py-16 *:max-w-8xl *:justify-center *:flex">
+      <div className=" *:mb-16">
          <Research />
       </div>
-      <div className="*:py-16 *:max-w-8xl *:justify-center *:flex lg:px-20 px-4 ">
+      <div className="*:mb-16 lg:px-20 px-4 ">
         <FacultyCarousel />
         <EventsNews />
         <PartnershipSection />
         </div>
      
-      <div className="*:max-w-8xl *:justify-center *:flex pt-16">
+      <div className="">
         <DepartmentHeader />
       </div>
       

@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { RiDoubleQuotesR } from "react-icons/ri";
+
 
 const WhyChooseUs = () => {
     const containerVariants = {
@@ -27,7 +29,7 @@ const WhyChooseUs = () => {
             viewport={{ once: true }}
         >
             <div className="container mx-auto px-4">
-                <div className='flex justify-between'>
+                <div className='flex flex-col xl:flex-row justify-between'>
                     <motion.h2
                         className="text-3xl font-bold text-center mb-8"
                         variants={itemVariants}
@@ -56,7 +58,11 @@ const WhyChooseUs = () => {
                         className="bg-red-700 text-white rounded-lg p-6 relative"
                         variants={itemVariants}
                     >
-                        <div className="absolute top-4 right-4 text-6xl opacity-20">"</div>
+                        
+
+                        <div className="absolute top-[-40px] right-4 text-7xl opacity-75 text-red-400">
+                        <RiDoubleQuotesR />
+                        </div>
                         <h3 className="text-xl font-semibold mb-2">
                             Expert Faculty & Cutting-Edge Facilities
                         </h3>
@@ -71,8 +77,8 @@ const WhyChooseUs = () => {
                         className="bg-white rounded-lg p-6 relative"
                         variants={itemVariants}
                     >
-                        <div className="absolute top-4 right-4 text-6xl opacity-20 text-red-700">
-                            "
+                        <div className="absolute top-[-40px] right-4 text-7xl opacity-50 text-red-700">
+                        <RiDoubleQuotesR />
                         </div>
                         <h3 className="text-xl font-semibold mb-2 text-red-700">
                             Strong Industry Connections
@@ -88,8 +94,8 @@ const WhyChooseUs = () => {
                         className="bg-white rounded-lg p-6 relative"
                         variants={itemVariants}
                     >
-                        <div className="absolute top-4 right-4 text-6xl opacity-20 text-red-700">
-                            "
+                       <div className="absolute top-[-40px] right-4 text-7xl opacity-50  text-red-400">
+                        <RiDoubleQuotesR />
                         </div>
                         <h3 className="text-xl font-semibold mb-2 text-red-700">
                             Globally Aligned Curriculum & Research Opportunities
@@ -105,8 +111,8 @@ const WhyChooseUs = () => {
                         className="bg-white rounded-lg p-6 relative"
                         variants={itemVariants}
                     >
-                        <div className="absolute top-4 right-4 text-6xl opacity-20 text-red-700">
-                            "
+                         <div className="absolute top-[-40px] right-4 text-7xl opacity-50  text-red-400">
+                        <RiDoubleQuotesR />
                         </div>
                         <h3 className="text-xl font-semibold mb-2 text-red-700">
                             Dynamic Student Community

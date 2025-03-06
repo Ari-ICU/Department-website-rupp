@@ -10,18 +10,18 @@ const Contact = () => {
         <div>
             <div>
                 <CSAboutSection />
-                <div className="py-16">
+                <div className="pb-4 pt-16">
                         <ContactSection />  
                        
                 </div>
                 <div className="">
                         <GetInTouchSection />
                     </div>
-                <div className="py-16">
+                <div className="pb-4">
                     <PartnershipSection />  
                 </div>
                 
-                <div className="pt-16">
+                <div className="">
                 <DepartmentHeader />
                </div>
             </div>
