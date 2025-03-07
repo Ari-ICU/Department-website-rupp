@@ -85,9 +85,11 @@ const CareerPaths = () => {
                 alt={path.title}
                 className="w-full h-48 object-cover"
               />
-              <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4">
-                <h3 className="text-lg font-semibold">{path.title}</h3>
-              </div>
+              <div style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }} className="absolute bottom-0 left-0 w-full text-white p-4">
+    <h3 className="text-lg font-semibold">{path.title}</h3>
+</div>
+
+
             </motion.div>
           ))}
         </motion.div>

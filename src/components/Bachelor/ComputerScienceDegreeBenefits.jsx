@@ -30,9 +30,9 @@ const ComputerScienceDegreeBenefits = () => {
     return (
         <div className="my-12 bg-white">
             <div className="container mx-auto py-12 px-6 xl:px-12">
-                <div className="flex flex-col-reverse xl:flex-row items-center gap-12">
+                <div className="flex justify-center lg:justify-between">
                     {/* Left Section - Text */}
-                    <div className="w-full xl:w-1/2 text-center xl:text-left">
+                    <div className="w-full p-2 xl:w-1/2 text-start">
                         <h2 className="text-3xl xl:text-4xl font-semibold mb-6 text-red-900">
                             Unlock Your Future with a Computer Science Degree
                         </h2>
@@ -44,12 +44,12 @@ const ComputerScienceDegreeBenefits = () => {
                     </div>
 
                     {/* Middle Section - Image */}
-                    <div className="w-full xl:w-1/2">
-                        <img src={model} alt="Computer Science" className="w-full h-auto object-cover" />
+                    <div className="w-full mx-auto p-2  xl:w-1/2 flex">
+                        <img src={model} alt="Computer Science" className="w-full h-full mx-auto object-cover" />
                     </div>
 
                     {/* Right Section - Benefits */}
-                    <div className="w-full xl:w-1/3">
+                    <div className="w-full xl:w-1/2 p-2 ">
                         {benefitsData.map((benefit, index) => (
                             <div
                                 key={index}
