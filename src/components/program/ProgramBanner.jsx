@@ -5,7 +5,6 @@ import edu from "../../assets/program/p1.png";
 const ProgramBanner = () => {
     return (
         <div>
-
             <motion.div
                 className="relative h-[389px] bg-cover bg-center flex items-center justify-center"
                 style={{ backgroundImage: `url(${edu})` }}
@@ -24,20 +23,18 @@ const ProgramBanner = () => {
                     >
                         Our Program
                     </motion.h2>
-                  
-                  
+
                     <motion.p
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.8 }}
                         viewport={{ once: true }}
-                        className="text-gray-200 xl:text-lg text-[14px]"
+                        className="text-gray-200 text-[14px] xl:text-lg"
                     >
                         Explore our curriculum, admission process, career opportunities, and advanced study options to shape your future.
-                          </motion.p>
+                    </motion.p>
                 </div>
             </motion.div>
-
         </div>
     );
 };

@@ -16,17 +16,17 @@ const Programs = () => {
         {
             title: 'Master Degree',
             image: images,
-            link: "/"
+            link: "/master"
         },
         {
             title: 'Doctoral Degree',
             image: images,
-            link: "/"
+            link: "/doctoral"
         },
         {
             title: 'Diploma Degree',
             image: images,
-            link: "/"
+            link: "/diploma"
         },
     ];
 
@@ -42,7 +42,7 @@ const Programs = () => {
             viewport={{ once: true }}
             className="container mx-auto px-4"
         >
-            <h2 className="text-3xl font-bold text-center mb-8">
+            <h2 className="text-3xl xl:text-4xl font-bold text-center mb-8">
                 Available Programs & Degree
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
@@ -57,7 +57,7 @@ const Programs = () => {
                         whileTap={{ scale: 0.95 }} // 👈 Scale down on click
                     >
                         <Link to={program.link}>
-                            <div className="h-52">
+                            <div className="h-52 sm:h-64 md:h-72 lg:h-80">
                                 <img
                                     src={program.image}
                                     alt={program.title}
@@ -70,7 +70,7 @@ const Programs = () => {
                                         <MdSchool className="text-2xl text-gray-600" />
                                     </div>
                                     <span className="border h-6"></span>
-                                    <div className="2xl:text-lg text-[12px] font-medium text-center">
+                                    <div className="text-sm sm:text-[14px] xl:text-lg font-medium text-center">
                                         {program.title}
                                     </div>
                                 </div>

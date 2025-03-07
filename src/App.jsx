@@ -8,7 +8,8 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Undergraduate from './pages/Undergraduate';
 import Program from './pages/Program';
-import Graduate from './pages/Graduate';
+import Bachelor from './pages/Bachelor';
+import Master from './pages/Master'
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepages />} />
         <Route path='/undergraduate' element={<Undergraduate />} />
-        <Route path='/bachelor' element={<Graduate />} />
+        <Route path='/bachelor' element={<Bachelor />} />
+        <Route path='/master' element={<Master />} />
         <Route path="/about" element={<About />} />
         <Route path='contact' element={<Contact />} />
         <Route path='/programs' element={<Program />} />
