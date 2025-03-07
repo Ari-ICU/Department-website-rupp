@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import contactImage from "../../assets/model/web-sample-1.jpg";
+import contactImage from "../../assets/model/web-sample-1(3).jpg";
 
 const ContactUs = () => {
   return (

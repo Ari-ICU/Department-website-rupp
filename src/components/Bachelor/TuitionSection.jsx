@@ -1,6 +1,6 @@
 import React from 'react';
 import { HiOutlineCurrencyDollar } from "react-icons/hi2";
-import g from '../../assets/graduate1.png';
+import g from '../../assets/bachelor/1.png';
 
 const TuitionSection = () => {
     return (
@@ -9,9 +9,8 @@ const TuitionSection = () => {
                 <div className='flex flex-col xl:flex-row items-center justify-between space-y-4 xl:space-y-0'> {/* Removed vertical spacing on larger screens */}
                     <div className='xl:order-2 order-1 w-full xl:w-1/2'> 
                         <div className="relative flex justify-center items-center w-full h-full">
-                            <div className="bg-red-900 h-[200px] w-[300px] rounded-[150px] xl:h-[250px] xl:w-[450px]"> {/* Adjusted size for larger screens */}
-                            </div>
-                            <div className="absolute inset-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[400px] xl:w-[400px] xl:h-[500px] rounded-full overflow-hidden"> {/* Adjusted size for larger screens */}
+                           
+                            <div className="w-[300px] h-[400px] xl:w-[400px] xl:h-[500px] rounded-full "> {/* Adjusted size for larger screens */}
                                 <img
                                     src={g}
                                     alt=""

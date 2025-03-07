@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 
 const Overview = () => {
     return (
+        <div className="bg-amber-50">
         <div className='container mx-auto px-4'>
             <div className='space-y-4'>
                 <motion.h2
@@ -24,6 +25,7 @@ const Overview = () => {
                     The Computer Science Department offers a comprehensive undergraduate program designed to provide students with a strong foundation in computing principles, programming, and modern technologies. Our curriculum emphasizes both theoretical and practical aspects of computer science, equipping graduates with the skills needed for a successful career in the ever-evolving tech industry. Students will engage in hands-on projects, internships, and research initiatives to gain real-world experience.
                 </motion.p>
             </div>
+        </div>
         </div>
     )
 }

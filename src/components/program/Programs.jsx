@@ -35,6 +35,7 @@ const Programs = () => {
     }, [location]);
 
     return (
+        <div className="">
         <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -42,7 +43,7 @@ const Programs = () => {
             viewport={{ once: true }}
             className="container mx-auto px-4"
         >
-            <h2 className="text-3xl xl:text-4xl font-bold text-center mb-8">
+            <h2 className="text-2xl xl:text-4xl font-bold text-center mb-8">
                 Available Programs & Degree
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
@@ -80,6 +81,7 @@ const Programs = () => {
                 ))}
             </div>
         </motion.div>
+        </div>
     );
 };
 

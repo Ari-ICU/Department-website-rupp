@@ -1,16 +1,19 @@
 import React, { useRef, useEffect } from 'react';
+import { useLocation } from 'react-router-dom'; // Import useLocation
 import { motion, AnimatePresence } from 'framer-motion';
 import BreadcrumbSection from '../BreadcrumbSection';
-import { FaSearch, FaChevronLeft, FaChevronRight } from 'react-icons/fa'; // Import icons
+import { FaSearch, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
-//image import 
+// Image imports
 import s1 from "../../assets/graduate.png";
 import s2 from "../../assets/graduate.png";
 import s3 from "../../assets/graduate.png";
 
 function BachelorProgramSlider() {
+    const location = useLocation(); // Get current route
     const [currentIndex, setCurrentIndex] = React.useState(0);
     const sliderRef = useRef(null);
+
     const programImages = [
         { id: 1, src: s1, alt: "Campus Life" },
         { id: 2, src: s2, alt: "Classroom" },
@@ -40,6 +43,17 @@ function BachelorProgramSlider() {
         );
     };
 
+    // Determine title based on page
+    let pageTitle = "Bachelor Degree";
+    if (location.pathname.includes("master")) {
+        pageTitle = "Master's Degree";
+    } else if (location.pathname.includes("doctoral")) {
+        pageTitle = "Doctoral Degree";
+    }
+    else if (location.pathname.includes("diploma")) {
+        pageTitle = "Diploma Degree";
+    }
+
     return (
         <div className="relative bg-white shadow-md overflow-hidden">
             <div className="xl:h-[550px] flex items-center justify-center h-full">
@@ -57,9 +71,8 @@ function BachelorProgramSlider() {
                             <img
                                 src={programImages[currentIndex].src}
                                 alt={programImages[currentIndex].alt}
-                                className="w-full h-full object-cover object-center" // Ensure images cover the area
+                                className="w-full h-full object-cover object-center"
                             />
-                            {/* Optional overlay for better text readability */}
                             <div className="absolute inset-0 bg-black opacity-30"></div>
                         </motion.div>
                     )}
@@ -69,7 +82,7 @@ function BachelorProgramSlider() {
                 <div className="relative z-10 container mx-auto flex justify-center items-center py-6">
                     <div className="flex flex-col w-full justify-center text-center text-white xl:w-[782px] p-2 *:py-4 ">
                         <h2 className="xl:text-3xl text-lg font-semibold drop-shadow-md">
-                            Bachelor Degree
+                            {pageTitle}
                         </h2>
                         <p className="text-md xl:text-xl text-gray-200 drop-shadow-md mb-6">
                             Explore our curriculum, admission process, career opportunities, and advanced study options to shape your future.
@@ -81,7 +94,7 @@ function BachelorProgramSlider() {
                             whileFocus={{ boxShadow: '0 0 0 2px #3b82f6' }}
                             transition={{ duration: 0.2 }}
                         >
-                            <FaSearch className="mr-2 text-gray-600" /> {/* Search Icon */}
+                            <FaSearch className="mr-2 text-gray-600" />
                             <input
                                 type="text"
                                 placeholder="Search programs..."
@@ -92,32 +105,32 @@ function BachelorProgramSlider() {
                         <div className="flex justify-center">
                             <BreadcrumbSection />
                         </div>
-
                     </div>
                 </div>
+
                 {/* Dot indicators */}
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
                     {programImages.map((_, index) => (
                         <button
                             key={index}
-                            className={`w-3 h-3 rounded-full ${currentIndex === index ? 'bg-white' : 'bg-gray-400'
-                                }`}
+                            className={`w-3 h-3 rounded-full ${currentIndex === index ? 'bg-white' : 'bg-gray-400'}`}
                             onClick={() => setCurrentIndex(index)}
                         ></button>
                     ))}
                 </div>
+
                 {/* Arrows */}
                 <button
                     className="absolute top-1/2 transform -translate-y-1/2 left-4 z-20 bg-black bg-opacity-50 text-white p-2 rounded-full"
                     onClick={prevSlide}
                 >
-                    <FaChevronLeft /> {/* Left Arrow Icon */}
+                    <FaChevronLeft />
                 </button>
                 <button
                     className="absolute top-1/2 transform -translate-y-1/2 right-4 z-20 bg-black bg-opacity-50 text-white p-2 rounded-full"
                     onClick={nextSlide}
                 >
-                    <FaChevronRight /> {/* Right Arrow Icon */}
+                    <FaChevronRight />
                 </button>
             </div>
         </div>

@@ -27,7 +27,7 @@ const SlideShowSection = () => {
       description: "Be part of groundbreaking research that shapes the future of technology.",
       buttonText: "Learn More",
       buttonLink: "/research",
-      buttonColor: "bg-blue-900",
+      buttonColor: "bg-red-900",
       linkIcon: <FcAbout className="ml-2" />,
     },
     {
@@ -36,7 +36,7 @@ const SlideShowSection = () => {
       description: "Get ready to be a part of the next generation of tech leaders.",
       buttonText: "Get Started",
       buttonLink: "/start",
-      buttonColor: "bg-green-900",
+      buttonColor: "bg-red-900",
       linkIcon: <FcAbout className="ml-2" />,
     },
   ];

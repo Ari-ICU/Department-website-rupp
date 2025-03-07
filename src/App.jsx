@@ -10,6 +10,8 @@ import Undergraduate from './pages/Undergraduate';
 import Program from './pages/Program';
 import Bachelor from './pages/Bachelor';
 import Master from './pages/Master'
+import Doctoral from './pages/Doctoral'
+import Diploma from './pages/Diploma.jsx'
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
         <Route path='/undergraduate' element={<Undergraduate />} />
         <Route path='/bachelor' element={<Bachelor />} />
         <Route path='/master' element={<Master />} />
+        <Route path='/doctoral' element={<Doctoral />} />
+        <Route path='/diploma' element={<Diploma />}/>
         <Route path="/about" element={<About />} />
         <Route path='contact' element={<Contact />} />
         <Route path='/programs' element={<Program />} />

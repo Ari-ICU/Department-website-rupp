@@ -45,13 +45,16 @@ const ContactAdmissions = () => {
           >
             <strong>admissions page</strong>
           </Link>{' '}
-          or{' '}
+         
+          or
+          contact the 
+          {' '}
           <Link
             to="/contact"
             className="hover:text-red-900 inline-block"
             aria-label="Contact Computer Science Department"
           >
-            <strong>contact the Computer Science Department</strong>
+            <strong> Computer Science Department</strong>
           </Link>{' '}
           for further inquiries.
         </motion.p>

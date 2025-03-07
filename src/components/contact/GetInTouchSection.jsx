@@ -13,7 +13,7 @@ const contactData = {
             icon: <FaMapMarkerAlt className="w-8 h-8" />,
             title: "Location",
             content: "44:20 4164 2541",
-            iconColor: "text-blue-600",
+            iconColor: "text-red-600",
             bgColor: "bg-blue-100",
         },
         {
@@ -21,7 +21,7 @@ const contactData = {
             icon: <FaPhoneAlt className="w-8 h-8" />,
             title: "Phone Number",
             content: "+1 234 567 890",
-            iconColor: "text-green-600",
+            iconColor: "text-red-600",
             bgColor: "bg-green-100",
         },
         {
@@ -29,7 +29,7 @@ const contactData = {
             icon: <FaEnvelope className="w-8 h-8" />,
             title: "Email",
             content: "rtapp.edu@gmail.com",
-            iconColor: "text-purple-600",
+            iconColor: "text-red-600",
             bgColor: "bg-purple-100",
         },
     ],

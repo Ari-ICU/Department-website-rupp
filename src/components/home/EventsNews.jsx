@@ -178,7 +178,7 @@ const EventsNews = () => {
                                     className="p-6 w-full md:w-1/2"
                                 >
                                     {event.category && (
-                                        <span className="text-xs font-semibold text-indigo-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
+                                        <span className="text-xs font-semibold text-red-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
                                             {event.category}
                                         </span>
                                     )}
@@ -192,7 +192,7 @@ const EventsNews = () => {
                                     <div className="mt-4 flex items-center justify-between">
                                         <Link
                                             to={event.registerLink}
-                                            className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full text-sm"
+                                            className="bg-red-800 hover:bg-red-900 text-white font-semibold py-2 px-4 rounded-full text-sm"
                                         >
                                             Register Now
                                         </Link>

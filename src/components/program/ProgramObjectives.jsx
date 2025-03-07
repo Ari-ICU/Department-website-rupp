@@ -32,10 +32,10 @@ const ProgramObjectives = () => {
 
                     <div className='absolute bottom-4 sm:bottom-0 z-10 bg-white p-4 rounded-lg shadow-md w-11/12 sm:w-52 sm:h-34 text-center'>
                         <h2 className="text-md sm:text-lg font-bold flex items-center justify-center mb-4">
-                            <MdVerified className="mr-2 text-xl sm:text-2xl text-green-500" />
+                            <MdVerified className="mr-2 text-xl sm:text-2xl text-red-500" />
                             Key Metrics
                         </h2>
-                        <div className="text-lg sm:text-xl font-bold text-blue-500">2000+</div>
+                        <div className="text-lg sm:text-xl font-bold text-red-500">2000+</div>
                         <p className="text-sm sm:text-md mt-2">Student Enrollments</p>
                     </div>
                 </motion.div>
@@ -54,7 +54,7 @@ const ProgramObjectives = () => {
                     
                     <div className="space-y-6">
                         <div className="flex items-start gap-4">
-                            <MdSchool size={44} className="text-blue-500" />
+                            <MdSchool size={44} className="text-red-500" />
                             <div>
                                 <h3 className="text-lg sm:text-xl font-semibold mb-2">Robust Technical Foundation:</h3>
                                 <p className="text-sm sm:text-base">Gain expertise in computing theories, programming, software development, AI, cybersecurity, web development, and cloud computing.</p>
@@ -62,7 +62,7 @@ const ProgramObjectives = () => {
                         </div>
                         
                         <div className="flex items-start gap-4">
-                            <MdPeople size={44} className="text-blue-500" />
+                            <MdPeople size={44} className="text-red-500" />
                             <div>
                                 <h3 className="text-lg sm:text-xl font-semibold mb-2">Professional and Ethical Growth:</h3>
                                 <p className="text-sm sm:text-base">Develop problem-solving, teamwork, leadership, and ethical awareness to excel in industry, research, and entrepreneurship.</p>
