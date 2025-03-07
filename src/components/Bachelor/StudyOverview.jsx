@@ -111,7 +111,7 @@ const StudyOverview = () => {
                                 {year.courses.map((course, i) => (
                                     <li key={i} className="flex">
                                         <div className="flex mr-2 md:mr-4 mt-2">
-                                            <FaCheck size={18} className={`${selectedYear === year.year ? 'text-gray-300' : 'text-green-500'}`} />
+                                            <FaCheck size={18} className={`${selectedYear === year.year ? 'text-gray-300' : 'text-gray-500'}`} />
                                         </div>
                                         <span className="md:text-base">{course}</span>
                                     </li>
