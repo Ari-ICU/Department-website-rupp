@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
+import b1 from '../../../assets/bachelor/b1.png'
 
 const CareerPaths = () => {
   // Motion variants for animation
@@ -17,23 +18,23 @@ const CareerPaths = () => {
   const careerPaths = [
     {
       title: 'Software Development',
-      image: 'path/to/software-development-image.jpg',
+      image: b1,
     },
     {
       title: 'Data Science and Analytics',
-      image: 'path/to/data-science-image.jpg',
+      image: b1,
     },
     {
       title: 'Cybersecurity',
-      image: 'path/to/cybersecurity-image.jpg',
+      image: b1,
     },
     {
       title: 'Cloud Computing',
-      image: 'path/to/cloud-computing-image.jpg',
+      image: b1,
     },
     {
       title: 'Artificial Intelligence',
-      image: 'path/to/ai-image.jpg',
+      image: b1,
     },
     // Add more career paths here
   ];

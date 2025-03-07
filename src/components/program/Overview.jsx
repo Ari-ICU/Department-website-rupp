@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const Overview = () => {
     return (
 
-            <div className='container mx-auto'>
+            <div className='container mx-auto px-4'>
                 <div className='space-y-4'>
                     <motion.h2
                         initial={{ opacity: 0, scale: 0.9 }}

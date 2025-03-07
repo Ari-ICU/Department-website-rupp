@@ -4,7 +4,7 @@ import { FaCheck } from 'react-icons/fa';
 import { PiCodesandboxLogoDuotone } from "react-icons/pi";
 
 const StudyOverview = () => {
-    const [selectedYear, setSelectedYear] = useState(null);
+    const [selectedYear, setSelectedYear] = useState(1);
     const studyPlan = [
         {
             year: 1,
@@ -54,13 +54,13 @@ const StudyOverview = () => {
     ];
 
     return (
-        <div className="my-16 py-4">
+        <div className="my-16 py-4 bg-white"> {/* Added default background */}
             <motion.div 
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="container mx-auto text-center px-4"
+                className="container mx-auto text-center px-4 cursor-pointer"
             >
                 <motion.h2 
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -93,7 +93,7 @@ const StudyOverview = () => {
                             key={index}
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: 0.2 + index * 0.2 }} // Staggered animation
+                            transition={{ duration: 0.5, delay: 0.2 + index * 0.2 }}
                             viewport={{ once: true }}
                             className={`rounded-xl p-6 shadow-md ${selectedYear === year.year ? 'bg-red-900' : 'bg-white'}`}
                             onClick={() => setSelectedYear(year.year)}
@@ -109,7 +109,7 @@ const StudyOverview = () => {
                             </p>
                             <ul className={`text-left text-sm space-y-6 ${selectedYear === year.year ? 'text-gray-400' : 'text-gray-600'}`}>
                                 {year.courses.map((course, i) => (
-                                    <li key={i} className="flex justify-center">
+                                    <li key={i} className="flex">
                                         <div className="flex mr-2 md:mr-4 mt-2">
                                             <FaCheck size={18} className={`${selectedYear === year.year ? 'text-gray-300' : 'text-green-500'}`} />
                                         </div>

@@ -8,7 +8,7 @@ import s1 from "../../assets/graduate.png";
 import s2 from "../../assets/graduate.png";
 import s3 from "../../assets/graduate.png";
 
-function GraduateProgramSlider() {
+function BachelorProgramSlider() {
     const [currentIndex, setCurrentIndex] = React.useState(0);
     const sliderRef = useRef(null);
     const programImages = [
@@ -124,4 +124,4 @@ function GraduateProgramSlider() {
     );
 }
 
-export default GraduateProgramSlider;
+export default BachelorProgramSlider;

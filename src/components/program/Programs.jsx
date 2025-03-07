@@ -1,27 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MdSchool } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import images from '../../assets/program/p2.png';
+import { Link } from 'react-router-dom';
 
 const Programs = () => {
     const programs = [
         {
             title: 'Bachelor Degree',
             image: images,
+            Link: "/bachelor"
         },
         {
             title: 'Master Degree',
             image: images,
+             Link: "/"
         },
         {
             title: 'Doctoral Degree',
             image: images,
+             Link: "/"
         },
         {
             title: 'Diploma Degree',
             image: images,
+            Link: "/"
         },
     ];
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, [location]);
+
 
     return (
         <motion.div
@@ -44,24 +54,26 @@ const Programs = () => {
                         viewport={{ once: true }}
                         className="relative rounded-lg overflow-hidden"
                     >
-                        <div className="h-52">
-                            <img
-                                src={program.image}
-                                alt={program.title}
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-                        <div className="p-4">
-                            <div className="absolute inset-x-0 bottom-0 bg-white shadow-md rounded-2xl p-2 px-4 flex items-center justify-center gap-6 mb-2 mx-2 sm:mx-4 md:mx-6 lg:mx-8">
-                                <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
-                                    <MdSchool className="text-2xl text-gray-600" />
-                                </div>
-                                <span className="border h-6"></span>
-                                <div className="2xl:text-lg text-[12px] font-medium text-center">
-                                    {program.title}
+                        <Link to={program.Link}>
+                            <div className="h-52">
+                                <img
+                                    src={program.image}
+                                    alt={program.title}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="p-4">
+                                <div className="absolute inset-x-0 bottom-0 bg-white shadow-md rounded-2xl p-2 px-4 flex items-center justify-center gap-6 mb-2 mx-2 sm:mx-4 md:mx-6 lg:mx-8">
+                                    <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
+                                        <MdSchool className="text-2xl text-gray-600" />
+                                    </div>
+                                    <span className="border h-6"></span>
+                                    <div className="2xl:text-lg text-[12px] font-medium text-center">
+                                        {program.title}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     </motion.div>
                 ))}
             </div>

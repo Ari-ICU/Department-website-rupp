@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import CopyRight from './CopyRight';
 
 const Footer = () => {
-    const location = useLocation(); // FIXED: Calling useLocation()
+    const location = useLocation(); 
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, [location]);
 
     return (
         <motion.footer
@@ -14,7 +17,7 @@ const Footer = () => {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
         >
-            <div className="max-w-8xl mx-auto px-4 border-b mb-5 pb-10 border-gray-400">
+            <div className="container mx-auto px-4 border-b mb-5 pb-10 border-gray-400">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
                     {/* Location Column with Motion */}
                     <motion.div
@@ -47,7 +50,7 @@ const Footer = () => {
                         whileHover={{ scale: 1.05 }}
                     >
                         <h3 className="text-lg font-normal mb-4 border-b-2 border-gray-300">Our Pages</h3>
-                        <ul className="text-sm font-light text-gray-400">
+                        <ul className="xl:text-lg text-sm font-light text-gray-400 ">
                             {["/", "/academics", "/research", "/programs", "/people"].map((path, index) => (
                                 <motion.li
                                     key={index}
@@ -72,7 +75,7 @@ const Footer = () => {
                         whileHover={{ scale: 1.05 }}
                     >
                         <h3 className="text-lg font-normal mb-4 border-b-2 border-gray-300">Quick Links</h3>
-                        <ul className="text-sm font-light text-gray-400">
+                        <ul className="xl:text-lg text-sm  font-light text-gray-400">
                             {["/about", "/contact", "/event", "/privacy", "/services"].map((path, index) => (
                                 <motion.li
                                     key={index}

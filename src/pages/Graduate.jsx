@@ -1,13 +1,13 @@
 import React from 'react'
-import GraduateProgramSlider from '../components/graduate/GraduateSlider'
-import Overview from '../components/graduate/Overview'
-import StudyOverview from '../components/graduate/StudyOverview'
-import TuitionSection from '../components/graduate/TuitionSection'
+import GraduateProgramSlider from '../components/Bachelor/BachelorSlider'
+import Overview from '../components/Bachelor/Overview'
+import StudyOverview from '../components/Bachelor/StudyOverview'
+import TuitionSection from '../components/Bachelor/TuitionSection'
 import CareerPaths from '../components/undergraduate/career/CareerPaths'
 import DepartmentHeander from '../components/home/DepartmentHeader'
-import UniverityPartnershups from '../components/graduate/UniversityPartnerships'
-import AdmissionRequirements from '../components/graduate/AdmissionRequirements'
-import ComputerScienceDegreeBenefits from '../components/graduate/ComputerScienceDegreeBenefits'
+import UniverityPartnershups from '../components/Bachelor/UniversityPartnerships'
+import AdmissionRequirements from '../components/Bachelor/AdmissionRequirements'
+import ComputerScienceDegreeBenefits from '../components/Bachelor/ComputerScienceDegreeBenefits'
 
 const Graduate = () => {
   return (
