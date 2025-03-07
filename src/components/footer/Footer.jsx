@@ -14,7 +14,7 @@ const Footer = () => {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
         >
-            <div className="max-w-8xl mx-auto border-b mb-5 pb-10 border-gray-400">
+            <div className="max-w-8xl mx-auto px-4 border-b mb-5 pb-10 border-gray-400">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
                     {/* Location Column with Motion */}
                     <motion.div

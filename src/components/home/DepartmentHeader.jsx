@@ -7,12 +7,12 @@ import logo from "../../assets/img/rupp.png";
 const DepartmentHeader = () => {
   return (
     <motion.div
-      className="bg-red-900 "
+      className="bg-red-900 p-4  "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="max-w-8xl mx-auto flex flex-col xl:flex-row py-4 items-center justify-between px-4">
+      <div className="max-w-8xl mx-auto px-4 flex flex-col xl:flex-row py-4 items-center justify-between ">
         {/* Left Section with Logo and Text */}
         <motion.div
           className="flex items-center"
