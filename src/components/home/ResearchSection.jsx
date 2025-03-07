@@ -6,14 +6,14 @@ import image1 from '../../assets/1.png';
 
 const ResearchInnovations = () => {
   return (
-    <div className="bg-gray-100">
-      <div className="container mx-auto px-4">
+    <div className="">
+      <div className="container mx-auto px-4 py-6">
         <h2 className="xl:text-3xl text-2xl font-bold mb-8">
           Research & Innovations
         </h2>
 
         {/* Top Section */}
-        <div className="bg-black rounded-4xl w-full flex flex-col xl:flex-row justify-center items-center mx-auto overflow-hidden">
+        <div className="bg-black space-y-0 rounded-4xl w-full flex flex-col xl:flex-row justify-center items-center mx-auto overflow-hidden">
           <div className="xl:h-[505px] h-full flex flex-col xl:flex-row gap-10 px-4 py-6 items-center justify-center w-full">
 
             {/* Image Section */}

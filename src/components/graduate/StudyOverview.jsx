@@ -54,7 +54,7 @@ const StudyOverview = () => {
     ];
 
     return (
-        <div className="bg-gray-100 my-16 py-4">
+        <div className="my-16 py-4">
             <motion.div 
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}

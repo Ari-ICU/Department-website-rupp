@@ -4,10 +4,10 @@ import g from '../../assets/graduate1.png';
 
 const TuitionSection = () => {
     return (
-        <div className="bg-gray-100 my-16 "> {/* Added padding for smaller screens */}
-            <div className='container mx-auto px-4 '>
+        <div className=" my-16 "> 
+            <div className='container mx-auto px-4 py-24'>
                 <div className='flex flex-col xl:flex-row items-center justify-between space-y-4 xl:space-y-0'> {/* Removed vertical spacing on larger screens */}
-                    <div className='xl:order-2 order-1 w-full xl:w-1/2'> {/* Added width for responsiveness */}
+                    <div className='xl:order-2 order-1 w-full xl:w-1/2'> 
                         <div className="relative flex justify-center items-center w-full h-full">
                             <div className="bg-red-900 h-[200px] w-[300px] rounded-[150px] xl:h-[250px] xl:w-[450px]"> {/* Adjusted size for larger screens */}
                             </div>
@@ -29,11 +29,11 @@ const TuitionSection = () => {
                             <p className="text-base xl:text-lg text-gray-600 mb-8"> {/* Adjusted font size */}
                                 We accept all types of payments, including cash (hand-to-hand payment) and online transfers via bank for convenience.
                             </p>
-                            <div className="flex flex-col xl:flex-row items-center justify-center xl:justify-start font-bold text-red-600 mb-4 gap-5"> {/* Adjusted flex direction and justification */}
+                            <div className="flex flex-col xl:flex-row items-center justify-center xl:justify-start font-bold text-red-800 mb-4 gap-5"> {/* Adjusted flex direction and justification */}
                                 <div className='p-2 bg-red-900 rounded-2xl'>
                                     <HiOutlineCurrencyDollar size={50} className='text-white' />
                                 </div>
-                                <p className='text-2xl xl:text-3xl'>500$/<span className='text-sm'>year</span></p> {/* Adjusted font size */}
+                                <p className='text-2xl xl:text-3xl'>500$/<span className='text-sm text-gray-500'>year</span></p> {/* Adjusted font size */}
                             </div>
                         </div>
                     </div>

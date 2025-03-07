@@ -39,7 +39,7 @@ const CareerPaths = () => {
   ];
 
   return (
-    <div className="my-16 ">
+    <div className="my-16 py-4">
     <motion.div
       className="container mx-auto px-4 " // Added padding for smaller screens
       variants={containerVariants}

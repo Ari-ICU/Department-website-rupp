@@ -26,7 +26,7 @@ const sectionVariants = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.5,
       when: 'beforeChildren',
       staggerChildren: 0.2,
     },

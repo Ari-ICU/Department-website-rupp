@@ -12,7 +12,7 @@ const DepartmentHeader = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto flex flex-col xl:flex-row py-4 items-center justify-between px-4">
+      <div className="max-w-8xl mx-auto flex flex-col xl:flex-row py-4 items-center justify-between px-4">
         {/* Left Section with Logo and Text */}
         <motion.div
           className="flex items-center"
