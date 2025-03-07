@@ -10,6 +10,11 @@ import tsinghuaLogo from "../../assets/partner/tsinghua-logo.png";
 import dongseoLogo from "../../assets/partner/dongseo-logo.png";
 import hongkongPolyLogo from "../../assets/partner/hongkong-poly-logo.png";
 import southernTechLogo from "../../assets/partner/southern-tech-logo.png";
+import monash from "../../assets/bachelor/4.png";
+import uts from "../../assets/bachelor/p1.png";
+import osaka from "../../assets/bachelor/p2.png";
+
+
 
 const universityLogos = [
     { src: faunaFloraLogo, alt: "Fauna & Flora International" },
@@ -17,6 +22,10 @@ const universityLogos = [
     { src: dongseoLogo, alt: "Dongseo University" },
     { src: hongkongPolyLogo, alt: "The Hong Kong Polytechnic University" },
     { src: southernTechLogo, alt: "Southern University of Science and Technology" },
+    { src: monash , alt: "Monash University"},
+    { src: uts , alt: "UTS University"},
+    { src: osaka , alt: "Osaka University"}
+
 ];
 
 const UniversityPartnerships = () => {
@@ -42,8 +51,8 @@ const UniversityPartnerships = () => {
                 >
                     {universityLogos.map((university, index) => (
                         <SwiperSlide key={index} className="flex justify-center">
-                            <div className="flex flex-col items-center">
-                                <img src={university.src} alt={university.alt} className="h-20" />
+                            <div className="flex flex-col items-center gap-6">
+                                <img src={university.src} alt={university.alt} className=" h-20" />
                             </div>
                         </SwiperSlide>
                     ))}
