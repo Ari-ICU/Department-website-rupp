@@ -214,14 +214,14 @@ const StudyOverview = () => {
                             <h3 className={`text-2xl font-semibold mb-2 text-start ${selectedYear === year.year ? 'text-white' : 'text-black'}`}>
                                 {year.title}
                             </h3>
-                            <p className={`mb-4 text-start ${selectedYear === year.year ? 'text-gray-300' : 'text-black'}`}>
+                            <p className={`mb-4 text-start ${selectedYear === year.year ? 'text-gray-50' : 'text-black'}`}>
                                 {year.subtitle}
                             </p>
                             <ul className={`text-left text-sm space-y-6 ${selectedYear === year.year ? 'text-gray-50' : 'text-gray-600'}`}>
                                 {year.courses.map((course, i) => (
                                     <li key={i} className="flex items-start">
                                         <div className="flex mr-2 md:mr-4 mt-2">
-                                            <FaCheck size={18} className={`${selectedYear === year.year ? 'text-gray-300' : 'text-red-900'}`} />
+                                            <FaCheck size={18} className={`${selectedYear === year.year ? 'text-gray-50' : 'text-red-900'}`} />
                                         </div>
                                         <span className="md:text-base">{course}</span>
                                     </li>

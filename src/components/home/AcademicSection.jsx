@@ -2,9 +2,20 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import { MdSchool } from "react-icons/md";
-import image1 from "../../assets/img/a3.png";
+import image1 from "../../assets/img/a3.png"; // Ensure you import the image
 
-const AboutSection = () => {
+const AcademicSection = () => {
+  const academicsData = {
+    title: "Academics",
+    description: [
+      "The Computer Science Department offers a comprehensive undergraduate program designed to provide students with a strong foundation in computing principles, programming, and modern technologies.",
+      "Our curriculum emphasizes both theoretical and practical aspects of computer science, equipping graduates with the skills needed for a successful career in the ever-evolving tech industry."
+    ],
+    image: image1,
+    programs: ["Undergraduate Program", "Graduate Program"],
+    buttonLabel: "Explore",
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -24,8 +35,8 @@ const AboutSection = () => {
             className="w-full lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2"
           >
             <img
-              src={image1}
-              alt="Academics"
+              src={academicsData.image}
+              alt={academicsData.title}
               className="w-[90%] max-w-[600px] h-full rounded-lg shadow-lg"
             />
           </motion.div>
@@ -38,17 +49,16 @@ const AboutSection = () => {
             viewport={{ once: true }}
             className="w-full lg:w-1/2 text-center lg:text-left order-2 lg:order-1"
           >
-            <h2 className="text-3xl font-bold mb-4">Academics</h2>
-            <p className="text-sm md:text-base text-gray-500 mb-4">
-              The Computer Science Department offers a comprehensive undergraduate program designed to provide students with a strong foundation in computing principles, programming, and modern technologies.
-            </p>
-            <p className="text-sm md:text-base text-gray-500 mb-6">
-              Our curriculum emphasizes both theoretical and practical aspects of computer science, equipping graduates with the skills needed for a successful career in the ever-evolving tech industry.
-            </p>
+            <h2 className="text-3xl font-bold mb-4">{academicsData.title}</h2>
+            {academicsData.description.map((text, index) => (
+              <p key={index} className="text-sm md:text-base text-gray-500 mb-4">
+                {text}
+              </p>
+            ))}
 
             {/* Program Info */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 text-base">
-              {["Undergraduate Program", "Graduate Program"].map((program, index) => (
+              {academicsData.programs.map((program, index) => (
                 <motion.div
                   key={index}
                   initial={{ scale: 0.8 }}
@@ -73,7 +83,7 @@ const AboutSection = () => {
               viewport={{ once: true }}
             >
               <button className="bg-red-800 text-white rounded-full py-2 px-6 flex items-center hover:bg-red-600 transition duration-300">
-                Explore
+                {academicsData.buttonLabel}
                 <FaArrowRight className="ml-2" />
               </button>
             </motion.div>
@@ -84,4 +94,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default AcademicSection;
