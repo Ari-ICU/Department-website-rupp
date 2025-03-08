@@ -217,7 +217,7 @@ const StudyOverview = () => {
                             <p className={`mb-4 text-start ${selectedYear === year.year ? 'text-gray-300' : 'text-black'}`}>
                                 {year.subtitle}
                             </p>
-                            <ul className={`text-left text-sm space-y-6 ${selectedYear === year.year ? 'text-gray-400' : 'text-gray-600'}`}>
+                            <ul className={`text-left text-sm space-y-6 ${selectedYear === year.year ? 'text-gray-50' : 'text-gray-600'}`}>
                                 {year.courses.map((course, i) => (
                                     <li key={i} className="flex items-start">
                                         <div className="flex mr-2 md:mr-4 mt-2">
