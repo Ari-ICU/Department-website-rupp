@@ -8,7 +8,9 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Undergraduate from './pages/Undergraduate';
 import Program from './pages/Program';
-import Graduate from './pages/Degree';
+import Degree from './pages/Degree';
+import Admission from './pages/Admission';
+import Scholarship from './pages/Scholarship'
 
 const App = () => {
   return (
@@ -22,8 +24,9 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/undergraduate" element={<Undergraduate />} />
         <Route path="/programs" element={<Program />} />
-        <Route path="/programs/:degree" element={<Graduate />} />
-
+        <Route path="/programs/:degree" element={<Degree />} />
+        <Route path='/admissions' element={<Admission />} />
+        <Route path='scholars' element={<Scholarship />} />
       </Routes>
       <Footer />
     </Router>

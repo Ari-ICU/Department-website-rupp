@@ -8,12 +8,12 @@ const ScholarshipOpportunities = () => {
     const events = [
         {
             id: 1,
-            title: 'Guest Lecture on Artificial Intelligence',
+            title: 'Scholarship Opportunity with Woori bank',
             imageUrl: image1,
-            description: 'Annual university tournament for basketball teams. Come cheer...',
-            date: '22 Aug 2025',
+            description: 'Woori offers scholarship for students who pursue bachelor degree at Royal University of Ph...',
+            date: 'Deadline : 31 Mar 2025',
             registerLink: '#',
-            category: 'Hackathons',
+            category: 'Woori',
         },
         {
             id: 2,
@@ -22,7 +22,7 @@ const ScholarshipOpportunities = () => {
             description: 'Exploring the latest advancements in AI for medical applications.',
             date: '15 Sep 2025',
             registerLink: '#',
-            category: 'Conferences',
+            category: 'Woori',
         },
         {
             id: 3,
@@ -31,7 +31,7 @@ const ScholarshipOpportunities = () => {
             description: 'Hands-on workshop on building responsive web applications.',
             date: '05 Oct 2025',
             registerLink: '#',
-            category: 'Workshops',
+            category: 'Woori',
         },
         {
             id: 4,
@@ -40,7 +40,7 @@ const ScholarshipOpportunities = () => {
             description: 'Networking event for data science enthusiasts and professionals.',
             date: '20 Oct 2025',
             registerLink: '#',
-            category: 'Meetups',
+            category: 'Woori',
         },
         {
             id: 5,
@@ -76,9 +76,8 @@ const ScholarshipOpportunities = () => {
                 });
             };
 
-            scrollInterval = setInterval(autoScroll, 30); // Adjust interval for smoother or faster scrolling
+            scrollInterval = setInterval(autoScroll, 30); 
 
-            // Stop scrolling when the user hovers over the container
             scrollContainer.addEventListener('mouseenter', () => {
                 clearInterval(scrollInterval);
             });
@@ -95,7 +94,7 @@ const ScholarshipOpportunities = () => {
     }, []);
 
     return (
-        <div className="bg-white">
+        <div className="my-16">
             <div className="container mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: -50 }}
@@ -135,7 +134,7 @@ const ScholarshipOpportunities = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                     viewport={{ once: true }}
-                    className="overflow-x-auto py-2"
+                    className="overflow-x-auto py-2 "
                 >
                     <div ref={scrollContainerRef} className="grid grid-flow-col auto-cols-max gap-8">
                         {events.map((event, index) => (
@@ -145,16 +144,15 @@ const ScholarshipOpportunities = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.2 }}
                                 viewport={{ once: true }}
-                                className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-row min-w-96"
+                                className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-row items-center max-w-[622px]"
                                 whileHover={{ scale: 1.05 }}
-                                transition={{ duration: 0.3 }}
                             >
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.5, delay: 0.2 }}
                                     viewport={{ once: true }}
-                                    className="w-[200px] xl:w-1/2 flex justify-center items-center"
+                                    className="xl:w-[299px] w-full xl:h-[220px] h-full flex justify-center items-center"
                                 >
                                     <img
                                         src={event.imageUrl}
@@ -171,7 +169,7 @@ const ScholarshipOpportunities = () => {
                                     className="p-6 w-full md:w-1/2"
                                 >
                                     {event.category && (
-                                        <span className="text-xs font-semibold text-indigo-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
+                                        <span className="text-xs font-semibold text-red-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
                                             {event.category}
                                         </span>
                                     )}
@@ -185,9 +183,9 @@ const ScholarshipOpportunities = () => {
                                     <div className="mt-4 flex items-center justify-between">
                                         <Link
                                             to={event.registerLink}
-                                            className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full text-sm"
+                                            className="bg-red-800 hover:bg-red-900 text-white font-semibold py-2 px-4 rounded-full text-sm"
                                         >
-                                            Register Now
+                                            View Detail
                                         </Link>
                                     </div>
                                 </motion.div>

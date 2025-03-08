@@ -6,9 +6,9 @@ import StatisticsSection from "../home/StatisticsSection";
 import BreadcrumbSection from '../BreadcrumbSection';
 
 const CSAboutSection = () => {
-  const location = useLocation(); // Get current route
+  const location = useLocation(); 
 
-  const isContactPage = location.pathname.includes("contact"); // Check if on contact page
+  const isContactPage = location.pathname.includes("contact"); 
 
   return (
     <div

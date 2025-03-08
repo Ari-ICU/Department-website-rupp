@@ -143,10 +143,12 @@ const StudyOverview = () => {
     const selectedStudyPlan = studyPlans[degree] || []; // Get the study plan based on degree
 
     useEffect(() => {
-        // Reset year selection when degree changes
-        setSelectedYear(1);
-    }, [degree]);
-
+        // Ensure we set the first available year when the degree changes
+        if (selectedStudyPlan.length > 0) {
+            setSelectedYear(selectedStudyPlan[0].year);
+        }
+    }, [degree, selectedStudyPlan]);
+    
     const getDynamicParagraphText = () => {
         switch (degree) {
             case 'bachelor':
@@ -169,7 +171,7 @@ const StudyOverview = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="container mx-auto text-center px-4 cursor-pointer"
+                className="container mx-auto text-center px-4 "
             >
                 <motion.h2 
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -205,7 +207,7 @@ const StudyOverview = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: 0.2 + index * 0.2 }}
                             viewport={{ once: true }}
-                            className={`rounded-xl p-6 shadow-md cursor-pointer transition-all ${selectedYear === year.year ? 'bg-red-900' : 'bg-white'}`}
+                            className={`rounded-xl p-6 shadow-md transition-all ${selectedYear === year.year ? 'bg-red-900' : 'bg-white'}`}
                             onClick={() => setSelectedYear(year.year)}
                         >
                             <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-4`}>
