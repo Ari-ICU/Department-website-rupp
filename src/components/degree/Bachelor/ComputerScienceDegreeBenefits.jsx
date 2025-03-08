@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
-import model from "../../assets/model/web-sample-4_3_-removebg-preview.png.png";
+import model from "../../../assets/model/web-sample-4_3_-removebg-preview.png.png";
 
 const ComputerScienceDegreeBenefits = () => {
     const benefitsData = [

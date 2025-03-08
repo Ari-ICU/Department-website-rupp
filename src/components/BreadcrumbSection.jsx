@@ -25,7 +25,10 @@ const BreadcrumbSection = () => {
     >
       {breadcrumbs.map((breadcrumb, index) => (
         <span key={breadcrumb.link}>
-          <Link to={breadcrumb.link} className="hover:underline">
+          <Link 
+            to={breadcrumb.link} 
+            className={`hover:underline ${breadcrumb.link === currentPath ? 'font-semibold text-red-800 underline' : ''}`}
+          >
             {breadcrumb.label}
           </Link>
           {/* Add separator only if it's not the last breadcrumb */}

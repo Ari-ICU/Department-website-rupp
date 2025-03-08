@@ -5,14 +5,14 @@ import "swiper/css";
 import "swiper/css/autoplay";
 
 // Import university logos
-import faunaFloraLogo from "../../assets/partner/fauna-flora-logo.png";
-import tsinghuaLogo from "../../assets/partner/tsinghua-logo.png";
-import dongseoLogo from "../../assets/partner/dongseo-logo.png";
-import hongkongPolyLogo from "../../assets/partner/hongkong-poly-logo.png";
-import southernTechLogo from "../../assets/partner/southern-tech-logo.png";
-import monash from "../../assets/bachelor/4.png";
-import uts from "../../assets/bachelor/p1.png";
-import osaka from "../../assets/bachelor/p2.png";
+import faunaFloraLogo from "../../../assets/partner/fauna-flora-logo.png";
+import tsinghuaLogo from "../../../assets/partner/tsinghua-logo.png";
+import dongseoLogo from "../../../assets/partner/dongseo-logo.png";
+import hongkongPolyLogo from "../../../assets/partner/hongkong-poly-logo.png";
+import southernTechLogo from "../../../assets/partner/southern-tech-logo.png";
+import monash from "../../../assets/bachelor/4.png";
+import uts from "../../../assets/bachelor/p1.png";
+import osaka from "../../../assets/bachelor/p2.png";
 
 
 

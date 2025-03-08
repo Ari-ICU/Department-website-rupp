@@ -1,0 +1,83 @@
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import DegreeSlider from '../components/degree/slider/SliderDegree';
+import CareerPaths from '../components/undergraduate/career/CareerPaths';
+import DepartmentHeader from '../components/home/DepartmentHeader';
+import TuitionSection from '../components/degree/Bachelor/TuitionSection';
+import AdmissionRequirements from '../components/degree/Bachelor/AdmissionRequirements';
+import UniversityPartnerships from '../components/degree/Bachelor/UniversityPartnerships'
+import ComputerScienceDegreeBenefits from '../components/degree/Bachelor/ComputerScienceDegreeBenefits';
+import ResearchLabsSection from '../components/degree/master/ResearchLabsSection';
+import ResearchSections from '../components/degree/master/ResearchSection';
+import StudyOverview from '../components/degree/overview/StudyOverview';
+import Overview from '../components/degree/overview/Overview';
+
+
+const degreeComponents = {
+  bachelor: [
+    { component: <DegreeSlider /> },
+    { component: <Overview /> },
+    { component: <StudyOverview /> },
+    { component: <TuitionSection /> },
+    { component: <AdmissionRequirements /> },
+    { component: <UniversityPartnerships /> },
+    { component: <ComputerScienceDegreeBenefits /> },
+    { component: <CareerPaths /> },
+  ],
+  master: [
+    { component: <DegreeSlider /> },
+    { component: <Overview /> },
+    { component: <StudyOverview /> },
+    { component: <TuitionSection /> },
+    { component: <AdmissionRequirements /> },
+    { component: <ResearchLabsSection /> },
+    { component: <CareerPaths /> },
+    { component: <ResearchSections /> },
+  ],
+  doctoral: [
+    { component: <DegreeSlider /> },
+    { component: <Overview /> },
+    { component: <StudyOverview /> },
+    { component: <TuitionSection /> },
+    { component: <AdmissionRequirements /> },
+    { component: <ResearchLabsSection /> },
+    { component: <CareerPaths /> },
+    { component: <ResearchSections /> },
+  ],
+  diploma: [
+    { component: <DegreeSlider /> },
+    { component: <Overview /> },
+    { component: <StudyOverview /> },
+    { component: <TuitionSection /> },
+    { component: <AdmissionRequirements /> },
+    { component: <CareerPaths /> },
+  ], // Added master's degree support
+};
+
+const DegreePage = () => {
+  const { degree } = useParams();
+
+  // Fallback to an empty array if the degree type doesn't exist
+  const selectedComponents = degreeComponents[degree] || [];
+
+  return (
+    <div>
+      <div>
+        {selectedComponents.length === 0 ? (
+          <p>No information available for this program.</p>
+        ) : (
+          selectedComponents.map((item, index) => (
+            <div key={index}>
+              {item.component}
+            </div>
+          ))
+        )}
+        <div className="mt-16">
+          <DepartmentHeader />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default DegreePage;

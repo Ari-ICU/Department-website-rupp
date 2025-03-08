@@ -1,11 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom'; 
+import { useLocation } from 'react-router-dom'; // Import useLocation
 import banner from "../../assets/img/univ2.jpg"; 
 import StatisticsSection from "../home/StatisticsSection";
 import BreadcrumbSection from '../BreadcrumbSection';
 
 const CSAboutSection = () => {
+  const location = useLocation(); // Get current route
+
+  const isContactPage = location.pathname.includes("contact"); // Check if on contact page
+
   return (
     <div
       className="relative w-full h-[450px] bg-cover bg-center"
@@ -22,11 +26,11 @@ const CSAboutSection = () => {
           transition={{ duration: 0.8 }}
           className="text-4xl font-bold mb-4"
         >
-          Innovate, Learn, Succeed: <br /> About Our CS Department
+          {isContactPage ? "Get in Touch: Contact Our CS Department" : "Innovate, Learn, Succeed: About Our CS Department"}
         </motion.h1>
 
-       <BreadcrumbSection />
-       
+        <BreadcrumbSection />
+        
       </div>
     </div>
   );

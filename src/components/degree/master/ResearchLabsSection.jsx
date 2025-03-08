@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFlask, FaUsers, FaDollarSign, FaUserGraduate } from 'react-icons/fa';
-import p1 from '../../assets/master/1.png';
+import p1 from '../../../assets/master/1.png';
 
 const ResearchLabsSection = () => {
   const researchLabs = [

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion"
-import CSAboutSection from "../components/about/CSAboutSection";
+import CSAboutSection from "../components/banner/CSAboutSection";
 import RUPPIntroduction from "../components/about/RUPPIntroduction";
 import InnovationSection from "../components/about/InnovationSection";
 import EducationSection from "../components/about/EducationSection";
@@ -14,18 +14,8 @@ import StatisticsSection from "../components/home/StatisticsSection"
 const About = () => {
   return (
     <div>
-      {/* CSAboutSection (Background Section) */}
-      {/* <div className="relative h-[539px]"> */}
+      
       <CSAboutSection />
-      {/* <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className=" bottom-0 relative"
-        >
-            <StatisticsSection />
-        </motion.div> */}
-      {/* </div> */}
       <div className="*:py-16 *:max-w-8xl lg:px-20 px-4 ">
         <StatisticsSection />
 

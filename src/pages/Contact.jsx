@@ -1,5 +1,5 @@
 import React from "react";
-import CSAboutSection from "../components/about/CSAboutSection";
+import CSAboutSection from "../components/banner/CSAboutSection";
 import ContactSection from "../components/home/ContactSection"
 import PartnershipSection from "../components/home/PartnershipSection";
 import DepartmentHeader from "../components/home/DepartmentHeader";

@@ -1,6 +1,6 @@
 import React from 'react';
 import { HiOutlineCurrencyDollar } from "react-icons/hi2";
-import g from '../../assets/bachelor/1.png';
+import g from '../../../assets/bachelor/1.png';
 
 const TuitionSection = () => {
     return (

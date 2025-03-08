@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaCheck } from "react-icons/fa";
-import p3 from "../../assets/bachelor/2.png";
-import p4 from "../../assets/bachelor/3.png";
+import p3 from "../../../assets/bachelor/2.png";
+import p4 from "../../../assets/bachelor/3.png";
 
 const AdmissionRequirements = () => {
   const requirements = [

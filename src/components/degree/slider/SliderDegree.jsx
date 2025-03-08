@@ -1,24 +1,51 @@
 import React, { useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom'; // Import useLocation
 import { motion, AnimatePresence } from 'framer-motion';
-import BreadcrumbSection from '../BreadcrumbSection';
+import BreadcrumbSection from '../../BreadcrumbSection';
 import { FaSearch, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
-// Image imports
-import s1 from "../../assets/graduate.png";
-import s2 from "../../assets/graduate.png";
-import s3 from "../../assets/graduate.png";
+// Image imports for different programs
+import s1 from "../../../assets/graduate.png";
+import s2 from "../../../assets/graduate.png";
+import s3 from "../../../assets/graduate.png";
 
-function BachelorProgramSlider() {
+// Program data
+const programData = {
+    bachelor: {
+        title: "Bachelor Degree",
+        description: "Explore the foundational curriculum of our Bachelor's degree program in Computer Science. Gain the skills to kickstart your career in tech.",
+        images: [s1, s2, s3]
+    },
+    master: {
+        title: "Master's Degree",
+        description: "Our Master's degree offers an advanced curriculum to deepen your expertise in fields like AI, cybersecurity, and software engineering.",
+        images: [s1, s2, s3]
+    },
+    doctoral: {
+        title: "Doctoral Degree",
+        description: "Dive deep into research with our Doctoral program. Focus on areas like AI, machine learning, and cybersecurity to lead innovation.",
+        images: [s1, s2, s3]
+    },
+    diploma: {
+        title: "Diploma Degree",
+        description: "Our Diploma program provides focused training on key topics in computer science to give you industry-ready skills in a shorter time frame.",
+        images: [s1, s2, s3]
+    }
+};
+
+function DegreeProgramSlider() {
     const location = useLocation(); // Get current route
     const [currentIndex, setCurrentIndex] = React.useState(0);
     const sliderRef = useRef(null);
 
-    const programImages = [
-        { id: 1, src: s1, alt: "Campus Life" },
-        { id: 2, src: s2, alt: "Classroom" },
-        { id: 3, src: s3, alt: "Graduation" },
-    ];
+    // Determine the program type from the URL
+    const programType = location.pathname.split("/").pop(); // Assuming the URL ends with the program type (e.g., "/bachelor")
+
+    const currentProgram = programData[programType] || programData.bachelor; // Default to bachelor if program is not found
+
+    const programImages = currentProgram.images; // Get images based on the program
+    const pageTitle = currentProgram.title;
+    const programDescription = currentProgram.description;
 
     // Auto-scroll background images
     useEffect(() => {
@@ -43,17 +70,6 @@ function BachelorProgramSlider() {
         );
     };
 
-    // Determine title based on page
-    let pageTitle = "Bachelor Degree";
-    if (location.pathname.includes("master")) {
-        pageTitle = "Master's Degree";
-    } else if (location.pathname.includes("doctoral")) {
-        pageTitle = "Doctoral Degree";
-    }
-    else if (location.pathname.includes("diploma")) {
-        pageTitle = "Diploma Degree";
-    }
-
     return (
         <div className="relative bg-white shadow-md overflow-hidden">
             <div className="xl:h-[550px] flex items-center justify-center h-full">
@@ -69,8 +85,8 @@ function BachelorProgramSlider() {
                             transition={{ duration: 0.5 }}
                         >
                             <img
-                                src={programImages[currentIndex].src}
-                                alt={programImages[currentIndex].alt}
+                                src={programImages[currentIndex]}
+                                alt={`Program Image ${currentIndex + 1}`}
                                 className="w-full h-full object-cover object-center"
                             />
                             <div className="absolute inset-0 bg-black opacity-30"></div>
@@ -80,12 +96,12 @@ function BachelorProgramSlider() {
 
                 {/* Foreground Content */}
                 <div className="relative z-10 container mx-auto flex justify-center items-center py-6">
-                    <div className="flex flex-col w-full justify-center text-center text-white xl:w-[782px] p-2 *:py-4 ">
+                    <div className="flex flex-col w-full justify-center text-center text-white xl:w-[782px] p-2 space-y-10">
                         <h2 className="xl:text-3xl text-lg font-semibold drop-shadow-md">
                             {pageTitle}
                         </h2>
                         <p className="text-md xl:text-xl text-gray-200 drop-shadow-md mb-6">
-                            Explore our curriculum, admission process, career opportunities, and advanced study options to shape your future.
+                            {programDescription}
                         </p>
 
                         {/* Search Input */}
@@ -137,4 +153,4 @@ function BachelorProgramSlider() {
     );
 }
 
-export default BachelorProgramSlider;
+export default DegreeProgramSlider;
