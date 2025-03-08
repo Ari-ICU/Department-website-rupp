@@ -18,7 +18,7 @@ const Admission = () => {
       </div>
 
       {/* Application Steps Section */}
-      <section id="application-steps" className="w-full ">
+      <section id="application-steps">
         <ApplicationSteps />
       </section>
 
@@ -28,17 +28,17 @@ const Admission = () => {
       </section>
 
       {/* Apply Section */}
-      <section id="apply-now" className="w-full ">
+      <section id="apply-now">
         <ApplySection />
       </section>
 
       {/* Important Dates Section */}
-      <section id="important-dates" className="w-full ">
+      <section id="important-dates">
         <ImportantDates />
       </section>
 
       {/* Scholarship Opportunities Section */}
-      <section id="scholarships" className="w-full ">
+      <section id="scholarships">
         <ScholarshipOpportunities />
       </section>
 

@@ -43,27 +43,20 @@ const ApplySection = () => {
         <div className="flex flex-col xl:flex-row gap-6 items-center justify-between"> {/* Changed md:flex-row to xl:flex-row */}
           {/* Left Side: Steps and Text */}
           <div className="xl:w-1/2 mb-8 xl:mb-0"> {/* Changed md:w-1/2 to xl:w-1/2 */}
-            <h2 className="text-2xl font-semibold mb-4">
+            <h2 className="text-4xl font-semibold mb-6">
               Step By Step: How to Apply to Computer Science Department
             </h2>
             <ul className="list-none space-y-4">
               {steps.map((step, index) => (
                 <li key={index} className="">
-                  <div className="p-4 border rounded-2xl flex items-center justify-between">
-                    <span className="xl:text-lg text-md">{step}</span>
+                  <div className="p-6 border rounded-2xl flex items-center justify-between">
+                    <span className="xl:text-xl text-md">{step}</span>
                     <FaArrowRight className="ml-2" />
                   </div>
                 </li>
               ))}
             </ul>
-            <div className="mt-8">
-              <Link to="/apply">
-                <button className="bg-red-800 text-white py-2 px-4 rounded-md flex items-center">
-                  Start Now
-                  <FaArrowRight className="ml-2" />
-                </button>
-              </Link>
-            </div>
+          
           </div>
 
           {/* Right Side: New Semester and Contact Info */}
