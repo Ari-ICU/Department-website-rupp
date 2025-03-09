@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import DegreeSlider from '../components/degree/slider/SliderDegree';
-import CareerPaths from '../components/undergraduate/career/CareerPaths';
+import CareerPaths from '../components/career/CareerPaths';
 import DepartmentHeader from '../components/home/DepartmentHeader';
 import TuitionSection from '../components/degree/Bachelor/TuitionSection';
-import AdmissionRequirements from '../components/degree/Bachelor/AdmissionRequirements';
+import AdmissionRequirements from '../components/requirements/AdmissionRequirements';
 import UniversityPartnerships from '../components/degree/Bachelor/UniversityPartnerships'
 import ComputerScienceDegreeBenefits from '../components/degree/Bachelor/ComputerScienceDegreeBenefits';
 import ResearchLabsSection from '../components/degree/master/ResearchLabsSection';

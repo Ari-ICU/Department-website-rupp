@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import AdmissionBanner from '../components/banner/AdmissionBanner';
 import ApplicationSteps from '../components/admission/ApplicationSteps';
-import BasicRequirements from '../components/admission/BasicReq';
+import BasicRequirements from '../components/requirements/BasicReq';
 import ApplySection from '../components/admission/ApplySection';
 import ImportantDates from '../components/admission/ImportantDates';
-import ScholarshipOpportunities from '../components/undergraduate/introduction/ScholarshipOpportunities';
+import ScholarshipOpportunities from '../components/scholar/ScholarshipOpportunities';
 
 const Admission = () => {
   console.log("Rendering Admission Page");

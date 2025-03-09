@@ -6,11 +6,11 @@ import Header from './components/Header';
 import Footer from './components/footer/Footer';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Undergraduate from './pages/Undergraduate';
 import Program from './pages/Program';
 import Degree from './pages/Degree';
 import Admission from './pages/Admission';
 import Scholarship from './pages/Scholarship'
+import Facilities from './pages/Facilities';
 
 const App = () => {
   return (
@@ -22,11 +22,11 @@ const App = () => {
         <Route path="/" element={<Homepages />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/undergraduate" element={<Undergraduate />} />
         <Route path="/programs" element={<Program />} />
         <Route path="/programs/:degree" element={<Degree />} />
         <Route path='/admissions' element={<Admission />} />
-        <Route path='scholars' element={<Scholarship />} />
+        <Route path='/scholars' element={<Scholarship />} />
+        <Route path='/facilities' element={<Facilities />}/>
       </Routes>
       <Footer />
     </Router>
