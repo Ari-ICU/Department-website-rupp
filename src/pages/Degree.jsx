@@ -51,13 +51,12 @@ const degreeComponents = {
     { component: <TuitionSection /> },
     { component: <AdmissionRequirements /> },
     { component: <CareerPaths /> },
-  ], // Added master's degree support
+  ], 
 };
 
 const DegreePage = () => {
   const { degree } = useParams();
 
-  // Fallback to an empty array if the degree type doesn't exist
   const selectedComponents = degreeComponents[degree] || [];
 
   return (

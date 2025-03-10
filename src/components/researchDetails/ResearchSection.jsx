@@ -56,6 +56,7 @@ const researchData = [
     },
     {
         title: 'References',
+        tag: 'sources',
         content: (
             <ul className="list-disc ml-6 text-gray-700">
                 <li>Geim, A. K., & Novoselov, K. S. (2007). The rise of graphene. Nature Materials, 6(3), 183-191.</li>
@@ -79,7 +80,12 @@ const ResearchSection = () => {
             <div className="max-w-4xl mx-auto px-4">
                 {researchData.map((section, index) => (
                     <div key={index} className="mb-10">
-                        <h2 className="text-2xl font-semibold mb-4 text-gray-800">{section.title}</h2>
+                        <div className='flex items-center gap-6 '>
+                            <h2 className="text-2xl font-semibold mb-4 text-gray-800">{section.title}</h2>
+                            {section.tag && 
+                            <p className='py-1 px-4 mb-4 border rounded-2xl text-gray-400'>{section.tag}</p>
+                        }
+                        </div>
                         {Array.isArray(section.content) || typeof section.content === 'object' ? (
                             <div className="ml-6">
                                 {Array.isArray(section.content) ? (
