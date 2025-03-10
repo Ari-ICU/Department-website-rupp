@@ -7,7 +7,7 @@ import { FaTelegram, FaFacebookF, FaTimes } from 'react-icons/fa';
 const SocialIcon = () => {
     return (
         <div className='my-16'>
-            <div className='container mx-auto  px-4'>
+            <div className='max-w-4xl mx-auto  px-4'>
                 {/* Right Section with Social Media Icons */}
                 <div className=''>
                     <motion.div

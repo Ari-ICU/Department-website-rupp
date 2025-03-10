@@ -10,10 +10,13 @@ import Program from './pages/Program';
 import Degree from './pages/Degree';
 import Admission from './pages/Admission';
 import Scholarship from './pages/Scholarship'
-import Research from './pages/Research'
 import Facilities from './pages/Facilities';
 import News from './pages/News';
 import ScholarshipDetails from './pages/ScholarshipDetails';
+import ResearchDetails from './pages/ResearchDetails';
+import CareerDetails from './pages/CareerDetails';
+
+
 
 const App = () => {
   return (
@@ -31,8 +34,9 @@ const App = () => {
         <Route path='/scholars' element={<Scholarship />} />
          {/* Scholarship Detail Page (Dynamic) */}
          <Route path="/scholars/:id" element={<ScholarshipDetails />} />
-         <Route path='/research' element={<Research />} />
-        <Route path='/facilities' element={<Facilities />}/>
+         <Route path='/research/:id' element={<ResearchDetails />} />
+         <Route path='/career/:id' element={<CareerDetails />} />
+         <Route path='/facilities' element={<Facilities />}/>
         <Route path='/news' element={<News />} />
       </Routes>
       <Footer />

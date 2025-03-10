@@ -1,11 +1,13 @@
 import React from "react";
 import { MdComputer, MdExplore } from "react-icons/md";
 import { AiOutlineRobot } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 import image from "../../assets/image.png";
 import image1 from "../../assets/1.png";
 
 const researchData = [
   {
+    id: 1, // Add a unique ID for each item
     title: "Advancing Computer Repair Frontiers:",
     subtitle:
       "Innovations and Challenges in Modern Technology Maintenance",
@@ -22,12 +24,14 @@ const researchData = [
 
 const bottomSections = [
   {
+    id: 2, // Add a unique ID for each item
     title: "Revolutionizing Digital Infrastructure Maintenance",
     description:
       "Investigating the Role of Network Diagnostics, Cloud-Based Repair Tools, and Remote Assistance in Shaping the Future of Efficient Computer Repair, Data Recovery, and System Optimization.",
     image: image1,
   },
   {
+    id: 3, // Add a unique ID for each item
     title: "Exploring the Intersection of Data, Systems, and Smart Technologies",
     description:
       "Investigating the Role of Network Diagnostics, Cloud-Based Repair Tools, and Remote Assistance in Shaping the Future of Efficient Computer Repair, Data Recovery, and System Optimization.",
@@ -40,6 +44,9 @@ const buttons = [
 ];
 
 const ResearchInnovations = () => {
+
+  const naviagte = useNavigate()
+
   return (
     <div className="">
       <div className="container mx-auto px-4 py-6">
@@ -49,15 +56,16 @@ const ResearchInnovations = () => {
 
         {researchData.map((item, index) => (
           <div
-            key={index}
+            key={item.id}
+            id={`research-item-${item.id}`} // Add a unique ID for each research item
             className="bg-black space-y-0 rounded-4xl w-full flex flex-col xl:flex-row justify-center items-center mx-auto overflow-hidden"
           >
             <div className="xl:h-[505px] h-full flex flex-col xl:flex-row gap-10 px-4 py-6 items-center justify-center w-full">
-              <div className="xl:w-[615px] xl:h-[505px] w-full flex justify-center items-center">
+              <div className="xl:w-[615px] xl:h-[505px] w-full flex justify-center items-center p-2 ">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover rounded-xl"
+                  className="w-full h-full object-cover rounded-xl shadow-md"
                 />
               </div>
 
@@ -84,7 +92,14 @@ const ResearchInnovations = () => {
                   </div>
 
                   <div className="mt-4 flex justify-start">
-                    <button className="bg-red-900 hover:bg-red-800 xl:text-[16px] text-[12px] text-white py-2 px-6 rounded-4xl flex items-center">
+                    {/* Added id for "Explore" button */}
+                    <button
+                      id={`${item.id}`}
+                      className="bg-red-900 hover:bg-red-800 xl:text-[16px] text-[12px] text-white py-2 px-6 rounded-4xl flex items-center"
+                      onClick={() => {
+                        naviagte(`research/${item.id}`)
+                      }}
+                    >
                       <MdExplore className="mr-2" />
                       {item.exploreText}
                     </button>
@@ -126,7 +141,11 @@ const ResearchInnovations = () => {
                   <p className="mb-4 xl:text-[16px] text-[12px]">
                     {section.description}
                   </p>
-                  <button className="bg-red-900 hover:bg-red-800 xl:text-[16px] text-[12px] text-white py-2 px-6 rounded-4xl flex items-center">
+                  <button
+                  onClick={() => {
+                    naviagte(`research/${section.id}`)
+                  }}
+                   className="bg-red-900 hover:bg-red-800 xl:text-[16px] text-[12px] text-white py-2 px-6 rounded-4xl flex items-center">
                     <MdExplore className="mr-2" />
                     Explore
                   </button>

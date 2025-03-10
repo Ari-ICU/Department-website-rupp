@@ -1,14 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaArrowRight } from 'react-icons/fa';
-import b1 from '../../assets/bachelor/b1.png'
+import { FaArrowRight, FaCalendarAlt } from 'react-icons/fa';
+
+import b1 from '../../assets/bachelor/b1.png';
 
 const CareerPaths = () => {
   const navigate = useNavigate();
-  const handleDetails = () => {
-    navigate('/careerpath'); 
-  };
+
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -21,23 +20,38 @@ const CareerPaths = () => {
 
   const careerPaths = [
     {
+      id: 1,
       title: 'Software Development',
+      description: "Software engineering is one of the most sought-after careers",
+      data: "22 Aug 2025",
       image: b1,
     },
     {
+      id: 2,
       title: 'Data Science and Analytics',
+      description: "Software engineering is one of the most sought-after careers",
+      data: "22 Aug 2025",
       image: b1,
     },
     {
+      id: 3,
       title: 'Cybersecurity',
+      description: "Software engineering is one of the most sought-after careers",
+      data: "22 Aug 2025",
       image: b1,
     },
     {
+      id: 4,
       title: 'Cloud Computing',
+      description: "Software engineering is one of the most sought-after careers",
+      data: "22 Aug 2025",
       image: b1,
     },
     {
+      id: 5,
       title: 'Artificial Intelligence',
+      description: "Software engineering is one of the most sought-after careers",
+      data: "22 Aug 2025",
       image: b1,
     },
     // Add more career paths here
@@ -46,12 +60,12 @@ const CareerPaths = () => {
   return (
     <div className="my-16 py-4">
       <motion.div
-        className="container mx-auto px-4 " // Added padding for smaller screens
+        className="container mx-auto px-4" // Added padding for smaller screens
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
       >
-        <div className='flex flex-col xl:flex-row gap-8'>
+        <div className="flex flex-col xl:flex-row gap-8">
           {/* Text content */}
           <motion.div
             className="w-full xl:w-1/2 text-center xl:text-left" // Added text-center for smaller screens
@@ -65,7 +79,10 @@ const CareerPaths = () => {
                   Graduates of the Computer Science Undergraduate Program can pursue careers in various fields such as
                 </p>
               </div>
-              <button onClick={handleDetails} className="bg-red-700 text-white cursor-pointer p-3 rounded-lg flex items-center justify-center flex-shrink-0 mt-4 xl:mt-0"> {/* Added margin-top for smaller screens */}
+              <button
+                onClick={() => navigate(`/career/${careerPaths[0].id}`)} // Navigate to the first career path (for demonstration)
+                className="bg-red-700 text-white cursor-pointer p-3 rounded-lg flex items-center justify-center flex-shrink-0 mt-4 xl:mt-0"
+              >
                 <FaArrowRight className="h-6 w-6" />
               </button>
             </div>
@@ -80,20 +97,24 @@ const CareerPaths = () => {
           >
             {careerPaths.map((path, index) => (
               <motion.div
+                onClick={() => navigate(`/career/${path.id}`)}
                 key={index}
-                className="snap-start relative w-80 flex-shrink-0 rounded-lg overflow-hidden shadow-md"
+                className="snap-start cursor-pointer relative w-80 flex-shrink-0 rounded-lg overflow-hidden shadow-md"
                 variants={itemVariants}
               >
                 <img
                   src={path.image}
                   alt={path.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-52 object-cover"
                 />
-                <div style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }} className="absolute bottom-0 left-0 w-full text-white p-4">
+                <div style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }} className="absolute bottom-0 left-0 w-full text-white p-4 space-y-2">
                   <h3 className="text-lg font-semibold">{path.title}</h3>
+                  <p className='text-gray-400'>{path.description}</p>
+                  <div className='flex items-center'> 
+                    <FaCalendarAlt className="mr-2" /> {/* Calendar icon */}
+                    <p className="text-gray-400">{path.data}</p>
+                  </div>
                 </div>
-
-
               </motion.div>
             ))}
           </motion.div>

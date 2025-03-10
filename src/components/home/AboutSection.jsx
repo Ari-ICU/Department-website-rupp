@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaCheck } from 'react-icons/fa';
-import {MdExplore} from 'react-icons/md'
+import { MdExplore } from 'react-icons/md'
 import { motion } from 'framer-motion';
 import image1 from '../../assets/img/a1.png';
 import image2 from '../../assets/img/a2.png';
@@ -81,7 +81,7 @@ const AboutSection = () => {
                         >
                             <button className="bg-red-800 text-white rounded-4xl py-2 px-6 flex items-center hover:bg-red-600 transition duration-300">
                                 {aboutData.buttonText}
-                                 <MdExplore className="ml-2" />
+                                <MdExplore className="ml-2" />
                             </button>
                         </motion.div>
                     </motion.div>
@@ -106,8 +106,10 @@ const AboutSection = () => {
                                 <img
                                     src={image}
                                     alt={`About Us ${index + 1}`}
-                                    className="w-full h-full rounded-lg shadow-lg object-cover"
+                                    className={`w-full h-full shadow-lg object-cover ${index % 2 === 0 ? "rounded-tl-[100px]" : "rounded-tr-[100px]"
+                                        }`}
                                 />
+
                             </motion.div>
                         ))}
                     </motion.div>
