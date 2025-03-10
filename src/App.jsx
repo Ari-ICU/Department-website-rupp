@@ -32,12 +32,13 @@ const App = () => {
         <Route path="/programs/:degree" element={<Degree />} />
         <Route path='/admissions' element={<Admission />} />
         <Route path='/scholars' element={<Scholarship />} />
-         {/* Scholarship Detail Page (Dynamic) */}
-         <Route path="/scholars/:id" element={<ScholarshipDetails />} />
-         <Route path='/research/:id' element={<ResearchDetails />} />
-         <Route path='/career/:id' element={<CareerDetails />} />
-         <Route path='/facilities' element={<Facilities />}/>
-        <Route path='/news' element={<News />} />
+        {/* Scholarship Detail Page (Dynamic) */}
+        <Route path="/scholars/:id" element={<ScholarshipDetails />} />
+        <Route path='/research/:id' element={<ResearchDetails />} />
+        <Route path='/career/:id' element={<CareerDetails />} />
+        <Route path='/events&news/:id' />
+        <Route path='/facilities' element={<Facilities />} />
+        <Route path='/events&news' element={<News />} />
       </Routes>
       <Footer />
     </Router>

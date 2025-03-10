@@ -76,7 +76,7 @@ const Footer = () => {
                     >
                         <h3 className="text-lg font-normal mb-4 border-b-2 border-gray-300">Quick Links</h3>
                         <ul className="xl:text-lg text-sm  font-light text-gray-400">
-                            {["/about", "/contact", "/news", "/privacy", "/services"].map((path, index) => (
+                            {["/about", "/contact", "/events&news", "/privacy", "/services"].map((path, index) => (
                                 <motion.li
                                     key={index}
                                     whileHover={{ x: 10 }}

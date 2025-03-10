@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaFilter, FaCalendarAlt } from 'react-icons/fa'; 
-import { useNavigate } from 'react-router-dom'; 
+import { FaFilter,FaSearch, FaCalendarAlt } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import image1 from '../../assets/img/undergraduate/bank/b1.png';
 
 const ScholarshipSection = () => {
@@ -46,14 +46,22 @@ const ScholarshipSection = () => {
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-2xl font-semibold">Available Scholarships</h2>
-                    <div className="flex items-center">
-                        <input
-                            type="text"
-                            placeholder="Search"
-                            className="border rounded-l-md py-2 px-4 focus:outline-none focus:ring focus:border-blue-300"
-                        />
-                        <button className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md ml-2">
-                            <FaFilter /> {/* Filter icon */}
+                    <div className='flex gap-4'>
+                        <div className="relative">
+                            <input
+                                type="text"
+                                placeholder="Search"
+                                className="border rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring focus:border-blue-300"
+                            />
+                            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <FaSearch className="text-gray-400" />
+                            </div>
+                        </div>
+
+                        {/* Filter Button */}
+                        <button className="flex items-center gap-2 bg-red-800 text-white px-4 py-2 rounded-full shadow hover:bg-red-900 cursor-pointer transition">
+                            <FaFilter />
+                            <span>Filter</span>
                         </button>
                     </div>
                 </div>
@@ -73,9 +81,9 @@ const ScholarshipSection = () => {
                                     <FaCalendarAlt className="mr-2" /> {/* Calendar icon */}
                                     Deadline: {scholarship.deadline}
                                 </p>
-                                <button 
+                                <button
                                     className="bg-red-800 hover:bg-red-900 text-white py-2 px-4 rounded-xl cursor-pointer"
-                                    onClick={() => navigate(`/scholars/${scholarship.id}`)} 
+                                    onClick={() => navigate(`/scholars/${scholarship.id}`)}
                                 >
                                     View Detail
                                 </button>

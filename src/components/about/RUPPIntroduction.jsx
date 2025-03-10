@@ -4,33 +4,32 @@ import rupp from "../../assets/img/rupp1.png";
 
 const RUPPIntroduction = () => {
     return (
-        <div className="container mx-auto"> {/* Added container for better responsiveness */}
+        <div className="container mx-auto"> 
             <div className='flex flex-col xl:flex-row gap-10'>
-                {/* Image Section with Motion */}
-                <motion.div className='relative container  xl:h-[510px] md:h-[350px] xl:w-[600px] w-full h-auto'>
-                    <img
-                        src={rupp}
-                        alt="rupp"
-                        className='w-full h-full object-cover rounded-3xl'
-                    />
-                    <motion.div
-                        className="absolute inset-0 bg-black opacity-50"
-                        initial={{ opacity: 0 }}
-                        whileHover={{ opacity: 1 }}
-                        transition={{ duration: 0.3 }}
-                    />
-                    <motion.div
-                        className='absolute inset-0 p-4 flex flex-col justify-end rounded-3xl'
-                        initial={{ opacity: 0 }}
-                        whileHover={{ opacity: 1 }}
-                        transition={{ duration: 0.3 }}
-                    >
-                        <h1 className='xl:text-[18px] text-[14px] text-white'>Established on January 13, 1960</h1>
-                        <p className='xl:text-[18px] text-[12px] text-white'>
-                            The country's largest university, hosting around 30,000 students in undergraduate and postgraduate programmes.
-                        </p>
-                    </motion.div>
-                </motion.div>
+            <motion.div className="relative container w-full h-full md:h-[350px] xl:h-[510px] max-w-[600px]">
+    <img
+        src={rupp}
+        alt="rupp"
+        className="w-full h-full object-cover rounded-3xl"
+    />
+
+    {/* Fixed Text Box */}
+    <motion.div
+        className="absolute w-[90%] sm:w-[300px] bg-white shadow-md bottom-6 sm:bottom-10 right-4 sm:right-[-50px] 
+                   border-t-4 sm:border-t-8 border-t-red-700 p-4 flex flex-col justify-end"
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+    >
+        <h1 className="text-[14px] sm:text-[18px] mb-4 xl:text-[18px] text-black">
+            Established on January 13, 1960
+        </h1>
+        <p className="text-[12px] sm:text-[14px] xl:text-[12px] text-black">
+            The country's largest university, hosting around 30,000 students in undergraduate and postgraduate programmes.
+        </p>
+    </motion.div>
+</motion.div>
+
 
                 {/* Text Section with Motion */}
                 <motion.div
