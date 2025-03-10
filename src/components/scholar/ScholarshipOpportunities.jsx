@@ -1,10 +1,13 @@
 import React, { useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import image1 from '../../assets/img/undergraduate/bank/b1.png';
 
 const ScholarshipOpportunities = () => {
+    const navigate = useNavigate();
+
     const events = [
         {
             id: 1,
@@ -76,7 +79,7 @@ const ScholarshipOpportunities = () => {
                 });
             };
 
-            scrollInterval = setInterval(autoScroll, 30); 
+            scrollInterval = setInterval(autoScroll, 30);
 
             scrollContainer.addEventListener('mouseenter', () => {
                 clearInterval(scrollInterval);
@@ -111,9 +114,9 @@ const ScholarshipOpportunities = () => {
                             viewport={{ once: true }}
                             className="xl:text-3xl text-xl font-extrabold text-gray-900"
                         >
-                           Check Out Scholarship Opportunities
+                            Check Out Scholarship Opportunities
                         </motion.h2>
-                       
+
                     </div>
                     <motion.div
                         initial={{ opacity: 0, y: -50 }}
@@ -181,12 +184,12 @@ const ScholarshipOpportunities = () => {
                                     </p>
                                     <span className="text-sm text-gray-500">{event.date}</span>
                                     <div className="mt-4 flex items-center justify-between">
-                                        <Link
-                                            to={event.registerLink}
-                                            className="bg-red-800 hover:bg-red-900 text-white font-semibold py-2 px-4 rounded-full text-sm"
+                                        <button
+                                            className="bg-red-800 hover:bg-red-900 text-white py-2 px-4 rounded-xl cursor-pointer"
+                                            onClick={() => navigate(`/scholars/${event.id}`)} // Navigate to detail page
                                         >
                                             View Detail
-                                        </Link>
+                                        </button>
                                     </div>
                                 </motion.div>
                             </motion.div>

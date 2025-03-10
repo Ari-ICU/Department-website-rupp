@@ -75,7 +75,7 @@ const ScholarshipSection = () => {
                                 </p>
                                 <button 
                                     className="bg-red-800 hover:bg-red-900 text-white py-2 px-4 rounded-xl cursor-pointer"
-                                    onClick={() => navigate(`/scholars/${scholarship.id}`)} // Navigate to detail page
+                                    onClick={() => navigate(`/scholars/${scholarship.id}`)} 
                                 >
                                     View Detail
                                 </button>
