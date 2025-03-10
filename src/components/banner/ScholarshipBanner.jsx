@@ -1,11 +1,11 @@
 import React from "react";
-import admission from "../../assets/banner/admission.png";
+import scholar from "../../assets/banner/scholar.png";
 
 const ScholarshipBanner = () => {
   const title = "Scholarship Opportunity";
   const subtitle =
     "Find the right scholarship for you—whether based on academic achievement, financial need, or location.";
-  const backgroundImage = admission;
+  const backgroundImage = scholar;
 
   return (
     <div

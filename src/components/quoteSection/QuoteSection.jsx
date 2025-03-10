@@ -6,21 +6,26 @@ const QuoteSection = () => {
     {
       text: "Don't assume you won't qualify! RUPP accepts nearly 200 students each year. You can be one of them!",
     },
-    // Add more quotes here if needed
   ];
 
   return (
-    <div className="bg-white py-12">
-      <div className="container mx-auto px-4 text-center">
-        {quotes.map((quote, index) => (
-          <div key={index} className="inline-block bg-gray-100 p-8 rounded-lg shadow-md">
-            <div className="flex items-center justify-center mb-4">
-              <FaQuoteLeft className="text-red-500 text-2xl mr-2" />
-              <p className="text-lg font-semibold">{quote.text}</p>
-              <FaQuoteRight className="text-red-500 text-2xl ml-2" />
-            </div>
+    <div className="my-16 ">
+      <div className='container mx-auto px-4'>
+        <div className='p-8'>
+          <div className="max-w-2xl text-center relative">
+            {/* Top Quote Icon */}
+            <FaQuoteLeft className="text-red-500 text-4xl md:text-5xl absolute -top-6 left-4 transform -translate-x-1/2" />
+
+            {/* Quote Text */}
+            <p className="text-xl lg:text-3xl ml-14 text-start font-semibold leading-relaxed text-gray-800 ">
+              {quotes[0].text}
+            </p>
+
+            {/* Bottom Quote Icon */}
+            <FaQuoteRight className="text-red-500 text-4xl md:text-5xl absolute -bottom-6 right-0 transform -translate-x-1/2" />
           </div>
-        ))}
+        </div>
+
       </div>
     </div>
   );

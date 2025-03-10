@@ -1,10 +1,10 @@
 import React from "react";
 import admission from "../../assets/banner/facilites.png";
 
-const FacilitiesBanner = () => {
-  const title = "Facilities";
+const NewBanner = () => {
+  const title = "News &Events";
   const subtitle =
-    "Our campus provides state-of-the-art classrooms, fully equipped labs, a rich library, and seamless Wi-Fi to support both academic and student life.";
+    "Get the latest updates on academic schedules, registration deadlines, scholarships, events, and other essential university news.";
   const backgroundImage = admission;
 
   return (
@@ -26,4 +26,4 @@ const FacilitiesBanner = () => {
   );
 };
 
-export default FacilitiesBanner;
+export default NewBanner;

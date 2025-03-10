@@ -1,26 +1,59 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaCheck } from "react-icons/fa";
-import p3 from "../../assets/bachelor/2.png";
-import p4 from "../../assets/bachelor/3.png";
+import p3 from "../../assets/student-life/p1.png";
+import p4 from "../../assets/student-life/p2.png";
 
 const GeneralCriteria = () => {
   const requirements = [
-    "High school diploma (or equivalent) with a strong background in mathematics and science.",
-    "Proficiency in English (TOEFL/IELTS scores may be required for international students).",
-    "Passing entrance exams (if applicable).",
-    "Submission of an application, including a statement of purpose and recommendation letters.",
+    "High school diploma with Minimum C grade or higher in science subjects.",
+    "Passing entrance exams.",
+    "For students who apply Need-Based Scholarship, they have to be categorized as in financial needed with a certain certificate.",
+    "Must reside in a remote area and demonstrate financial need.",
   ];
 
   return (
-    <motion.div
+   <div className="my-16">
+     <motion.div
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
       className="container mx-auto px-4 "
     >
       <div className="xl:h-[479px] h-full flex flex-col xl:flex-row items-center gap-8 py-8 xl:py-0">
-        {/* Left Column - Image Content */}
+        {/* Left Column - Text Content */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="w-full xl:w-1/2 px-4 xl:px-0"
+        >
+          <h2 className="text-2xl xl:text-3xl font-bold mb-4">
+            General Criteria
+          </h2>
+
+          <div className="grid grid-cols-1">
+            {/* Added grid for responsiveness */}
+            {requirements.map((requirement, index) => (
+              <div
+                key={index}
+                className="mb-4 flex gap-4"
+              >
+                <div className="flex items-center justify-center">
+                  <div className="bg-red-300 bg-opacity-35 rounded-full flex items-center justify-center">
+                    <FaCheck size={34} className="text-red-900 p-2" />
+                  </div>
+                </div>
+                <div>
+                  <p className="text-sm xl:text-lg">{requirement}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+         
+        </motion.div>
+
+        {/* Right Column - Image Content */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -72,46 +105,9 @@ const GeneralCriteria = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* Right Column - Text Content */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full xl:w-1/2 px-4 xl:px-0"
-        >
-          <p className="mb-4 text-sm xl:text-lg">
-            To apply for the Bachelor’s Degree in Computer Science, students
-            must meet the following criteria:
-          </p>
-          <h2 className="text-2xl xl:text-3xl font-bold mb-4">
-            Admission Requirements
-          </h2>
-
-          <div className="grid grid-cols-1">
-            {/* Added grid for responsiveness */}
-            {requirements.map((requirement, index) => (
-              <div
-                key={index}
-                className="mb-4 flex gap-4"
-              >
-                <div className="flex items-center justify-center">
-                  <div className="bg-red-300 bg-opacity-35 rounded-full flex items-center justify-center">
-                    <FaCheck size={34} className="text-red-900 p-2" />
-                  </div>
-                </div>
-                <div>
-                  <p className="text-sm xl:text-lg">{requirement}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="">
-            <button className="bg-red-500 p-2 rounded-3xl px-6 text-white">View course curriculum</button>
-          </div>
-        </motion.div>
       </div>
     </motion.div>
+   </div>
   );
 };
 
