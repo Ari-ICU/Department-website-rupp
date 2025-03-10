@@ -44,7 +44,7 @@ const ScholarshipSection = () => {
     return (
         <div className="bg-gray-100 py-12">
             <div className="container mx-auto px-4">
-                <div className="flex justify-between items-center mb-6">
+                <div className="flex flex-col xl:justify-between items-center  gap-8 mb-6">
                     <h2 className="text-2xl font-semibold">Available Scholarships</h2>
                     <div className='flex gap-4'>
                         <div className="relative">

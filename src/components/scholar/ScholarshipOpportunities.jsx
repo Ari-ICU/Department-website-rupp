@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -7,6 +7,8 @@ import image1 from '../../assets/img/undergraduate/bank/b1.png';
 
 const ScholarshipOpportunities = () => {
     const navigate = useNavigate();
+    const scrollContainerRef = useRef(null);
+    let scrollInterval;
 
     const events = [
         {
@@ -56,44 +58,30 @@ const ScholarshipOpportunities = () => {
         },
     ];
 
-    const scrollContainerRef = useRef(null);
-    let scrollInterval;
-
     useEffect(() => {
         const scrollContainer = scrollContainerRef.current;
+        if (!scrollContainer) return;
 
-        if (scrollContainer) {
-            const scrollWidth = scrollContainer.scrollWidth;
-            const clientWidth = scrollContainer.clientWidth;
-            let currentScroll = 0;
-            const scrollSpeed = 1; // Adjust scroll speed as needed
+        let currentScroll = 0;
+        const scrollSpeed = 1.5; // Smooth scroll speed
 
-            const autoScroll = () => {
-                currentScroll += scrollSpeed;
-                if (currentScroll > scrollWidth - clientWidth) {
-                    currentScroll = 0; // Reset scroll when it reaches the end
-                }
-                scrollContainer.scrollTo({
-                    left: currentScroll,
-                    behavior: 'smooth',
-                });
-            };
+        const autoScroll = () => {
+            currentScroll += scrollSpeed;
+            if (currentScroll > scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+                currentScroll = 0; // Reset scrolling when reaching the end
+            }
+            scrollContainer.scrollTo({ left: currentScroll, behavior: 'smooth' });
+        };
 
+        scrollInterval = setInterval(autoScroll, 30);
+
+        // Pause scrolling on hover
+        scrollContainer.addEventListener('mouseenter', () => clearInterval(scrollInterval));
+        scrollContainer.addEventListener('mouseleave', () => {
             scrollInterval = setInterval(autoScroll, 30);
+        });
 
-            scrollContainer.addEventListener('mouseenter', () => {
-                clearInterval(scrollInterval);
-            });
-
-            // Resume scrolling when the mouse leaves the container
-            scrollContainer.addEventListener('mouseleave', () => {
-                scrollInterval = setInterval(autoScroll, 30);
-            });
-
-            return () => {
-                clearInterval(scrollInterval);
-            };
-        }
+        return () => clearInterval(scrollInterval);
     }, []);
 
     return (
@@ -104,28 +92,26 @@ const ScholarshipOpportunities = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="flex flex-col md:flex-row justify-between items-center mb-8"
+                    className="flex flex-col xl:flex-row justify-between items-center mb-8"
                 >
-                    <div>
-                        <motion.h2
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
-                            viewport={{ once: true }}
-                            className="xl:text-3xl text-xl font-extrabold text-gray-900"
-                        >
-                            Check Out Scholarship Opportunities
-                        </motion.h2>
+                    <motion.h2
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        className="xl:text-3xl text-xl font-extrabold text-gray-900"
+                    >
+                        Check Out Scholarship Opportunities
+                    </motion.h2>
 
-                    </div>
                     <motion.div
                         initial={{ opacity: 0, y: -50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
                         viewport={{ once: true }}
-                        className="w-full md:w-auto mt-4 md:mt-0"
+                        className="mt-4 xl:mt-0"
                     >
-                        <Link to='' className='flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1'>
+                        <Link to="#" className="flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1">
                             <span className="mr-2 xl:text-sm text-[12px]">View All</span>
                             <FaArrowRight className="text-red-800" />
                         </Link>
@@ -137,61 +123,40 @@ const ScholarshipOpportunities = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                     viewport={{ once: true }}
-                    className="overflow-x-auto py-2 "
+                    className="overflow-x-auto py-2"
                 >
-                    <div ref={scrollContainerRef} className="grid grid-flow-col auto-cols-max gap-8">
+                    <div ref={scrollContainerRef} className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 gap-6">
                         {events.map((event, index) => (
                             <motion.div
                                 key={event.id}
-                                initial={{ opacity: 0, x: -50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.2 }}
                                 viewport={{ once: true }}
-                                className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-row items-center max-w-[622px]"
+                                className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col xl:flex-row max-w-[600px] w-full"
                                 whileHover={{ scale: 1.05 }}
                             >
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.5, delay: 0.2 }}
-                                    viewport={{ once: true }}
-                                    className="xl:w-[299px] w-full xl:h-[220px] h-full flex justify-center items-center"
-                                >
-                                    <img
-                                        src={event.imageUrl}
-                                        alt={event.title}
-                                        className="w-full h-56 object-cover rounded-2xl"
-                                    />
-                                </motion.div>
+                                <div className="xl:w-[250px] w-full xl:h-[220px] h-auto flex justify-center items-center">
+                                    <img src={event.imageUrl} alt={event.title} className="w-full h-56 object-cover rounded-2xl" />
+                                </div>
 
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5, delay: 0.4 }}
-                                    viewport={{ once: true }}
-                                    className="p-6 w-full md:w-1/2"
-                                >
+                                <div className="p-6 w-full">
                                     {event.category && (
                                         <span className="text-xs font-semibold text-red-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
                                             {event.category}
                                         </span>
                                     )}
-                                    <h3 className="mt-2 text-lg font-semibold text-gray-900">
-                                        {event.title}
-                                    </h3>
-                                    <p className="mt-2 text-sm text-gray-600">
-                                        {event.description}
-                                    </p>
+                                    <h3 className="mt-2 text-lg font-semibold text-gray-900">{event.title}</h3>
+                                    <p className="mt-2 text-sm text-gray-600">{event.description}</p>
                                     <span className="text-sm text-gray-500">{event.date}</span>
-                                    <div className="mt-4 flex items-center justify-between">
+                                    <div className="mt-4">
                                         <button
-                                            className="bg-red-800 hover:bg-red-900 text-white py-2 px-4 rounded-xl cursor-pointer"
-                                            onClick={() => navigate(`/scholars/${event.id}`)} // Navigate to detail page
+                                            className="bg-red-800 hover:bg-red-900 text-white py-2 px-4 rounded-xl"
+                                            onClick={() => navigate(`/scholars/${event.id}`)}
                                         >
                                             View Detail
                                         </button>
                                     </div>
-                                </motion.div>
+                                </div>
                             </motion.div>
                         ))}
                     </div>

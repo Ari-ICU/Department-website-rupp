@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FcAbout } from "react-icons/fc";
+import { MdExplore } from "react-icons/md";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft  } from "react-icons/md";
 
 // Image imports
@@ -19,7 +19,7 @@ const SlideShowSection = () => {
       buttonText: "Explore More",
       buttonLink: "/about",
       buttonColor: "bg-red-900",
-      linkIcon: <FcAbout className="ml-2" />,
+      linkIcon: <MdExplore className="ml-2 text-white" />,
     },
     {
       image: heroImage2,
@@ -28,7 +28,7 @@ const SlideShowSection = () => {
       buttonText: "Learn More",
       buttonLink: "/research",
       buttonColor: "bg-red-900",
-      linkIcon: <FcAbout className="ml-2" />,
+      linkIcon: <MdExplore className="ml-2 text-white" />,
     },
     {
       image: heroImage3,
@@ -37,7 +37,7 @@ const SlideShowSection = () => {
       buttonText: "Get Started",
       buttonLink: "/start",
       buttonColor: "bg-red-900",
-      linkIcon: <FcAbout className="ml-2" />,
+      linkIcon: <MdExplore className="ml-2 text-white" />,
     },
   ];
 

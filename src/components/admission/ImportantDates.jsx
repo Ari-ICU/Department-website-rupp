@@ -31,7 +31,7 @@ const ImportantDates = () => {
     return (
         <div className=" my-16">
             <div className="container mx-auto px-4">
-                <div className='flex gap-6'>
+                <div className='flex flex-col xl:flex-row gap-6'>
                     <div className="mb-8">
                         <h2 className="text-3xl font-semibold mb-4">Important Date & Deadlines For Bachelor Degree</h2>
                         <p className="text-gray-600">

@@ -23,7 +23,6 @@ const BasicRequirements = () => {
                 <div className="xl:h-[479px] h-full flex flex-col xl:flex-row items-center gap-8 py-8 xl:py-0">
                     {/* Left Column - Image Content */}
                     <motion.div
-                        initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="w-full xl:w-1/2 lg:h-[479px] mx-auto h-[360px]"

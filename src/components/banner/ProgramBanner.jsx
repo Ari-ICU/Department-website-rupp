@@ -4,9 +4,9 @@ import edu from "../../assets/program/p1.png";
 
 const ProgramBanner = () => {
     return (
-        <div>
+        <div className='max-w-8xl mx-auto bg-orange-100'>
             <motion.div
-                className="relative h-[389px] bg-cover bg-center flex items-center justify-center"
+                className="relative  h-[389px] bg-cover bg-center flex items-center justify-center"
                 style={{ backgroundImage: `url(${edu})` }}
             >
                 {/* Dark overlay */}

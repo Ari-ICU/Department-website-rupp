@@ -42,7 +42,6 @@ const ProgramObjectives = () => {
             <div className="flex flex-col xl:flex-row items-center gap-8">
                 {/* Right Column - Key Metrics (Image First in Mobile) */}
                 <motion.div
-                    initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="xl:w-1/2 w-full flex flex-col items-center relative order-1 xl:order-2"

@@ -138,8 +138,8 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           )}
         </div>
 
-        <Link to="/research" className={`hover:text-red-900 ${location.pathname === "/research" ? "text-red-900 font-bold" : ""}`}>
-          Research
+        <Link to="/scholars" className={`hover:text-red-900 ${location.pathname === "/research" ? "text-red-900 font-bold" : ""}`}>
+          Scholarship
         </Link>
         <Link to="/facilities" className={`hover:text-red-900 ${location.pathname === "/facilities" ? "text-red-900 font-bold" : ""}`}>
           Facilities
@@ -270,11 +270,11 @@ const Navbar = ({ isOpen, setIsOpen }) => {
               </div>
 
               <Link
-                to="/research"
+                to="/scholars"
                 className="block py-2 px-4 rounded-md hover:bg-gray-100 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Research
+                Scholarship
               </Link>
               <Link
                 to="/facilities"
@@ -284,7 +284,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                 Facilities
               </Link>
               <Link
-                to="/news"
+                to="/events&news"
                 className="block py-2 px-4 rounded-md hover:bg-gray-100 transition-colors"
                 onClick={() => setIsOpen(false)}
               >

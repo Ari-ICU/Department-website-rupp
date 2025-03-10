@@ -51,7 +51,7 @@ const Footer = () => {
                     >
                         <h3 className="text-lg font-normal mb-4 border-b-2 border-gray-300">Our Pages</h3>
                         <ul className="xl:text-lg text-sm font-light text-gray-400 ">
-                            {["/", "/academics", "/research", "/programs", "/people","scholars", "admissions"].map((path, index) => (
+                            {["/", "/academics", "/research", "/programs", "/people", "admissions"].map((path, index) => (
                                 <motion.li
                                     key={index}
                                     whileHover={{ x: 10 }}

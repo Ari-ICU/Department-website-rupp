@@ -17,7 +17,6 @@ const InnovationSection = () => {
                     className="max-w-full xl:max-w-[679px] bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg order-2 xl:order-1"
                 >
                     <motion.h1
-                        initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}

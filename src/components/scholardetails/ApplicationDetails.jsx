@@ -2,6 +2,8 @@ import React from 'react';
 import { TfiPinAlt } from "react-icons/tfi";
 import p1 from '../../assets/bank/app.png';
 import { Link } from 'react-router-dom';
+import { jsPDF } from 'jspdf';
+
 
 const applicationDetails = [
     {
@@ -22,14 +24,28 @@ const applicationDetails = [
     }
 ];
 
+
 const ApplicationDetails = () => {
+
+
+      const viewPdf = (imageUrl) => {
+        const doc = new jsPDF();
+        doc.addImage(imageUrl, 'PNG', 10, 10, 180, 120); // Properly scales image
+        const pdfBlob = doc.output('blob');
+        const pdfUrl = URL.createObjectURL(pdfBlob);
+        window.open(pdfUrl, '_blank');
+      };
+    
     return (
         <div className="my-12 bg-gray-100 py-12 rounded-lg"> {/* Added background color and rounded corners */}
             <div className="container mx-auto px-4">
                 <div className='flex flex-col xl:flex-row gap-12 items-center'>
                     {/* Image */}
-                    <div className=' xl:h-[458px] h-full xl:w-1/2 w-full' >
-                        <img src={p1} alt="Application" className="w-full h-full rounded-lg shadow-md" />
+                    <div className=' xl:h-[458px] h-full xl:w-1/2 w-full cursor-pointer' >
+                        <img src={p1} 
+                        alt="Application"
+                        onClick={() => viewPdf(p1)}
+                        className="w-full h-full rounded-lg shadow-md" />
                     </div>
 
                     {/* Details */}

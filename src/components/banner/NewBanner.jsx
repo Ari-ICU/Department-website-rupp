@@ -9,7 +9,7 @@ const NewBanner = () => {
 
   return (
     <div
-    className="relative w-full xl:h-[530px] h-full flex items-center justify-center text-center text-white bg-cover bg-center"
+    className="relative w-full xl:h-[530px] h-[300px]  flex items-center justify-center text-center text-white bg-cover bg-center"
     style={{ backgroundImage: `url(${backgroundImage})` }}
   >
       {/* Fixed Overlay using RGBA */}
@@ -19,8 +19,8 @@ const NewBanner = () => {
       ></divx>
 
       <div className="relative z-10 lg:max-w-5xl max-w-full px-6">
-        <h1 className="text-3xl sm:text-4xl font-bold drop-shadow-md">{title}</h1>
-        <p className="mt-4 text-lg sm:text-xl drop-shadow-md">{subtitle}</p>
+        <h1 className="text-xl sm:text-4xl font-bold drop-shadow-md">{title}</h1>
+        <p className="mt-4 text-[12px] sm:text-xl drop-shadow-md">{subtitle}</p>
       </div>
     </div>
   );

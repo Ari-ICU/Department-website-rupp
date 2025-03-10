@@ -67,12 +67,12 @@ const UpcomingEvents = () => {
                             Engage in insightful discussions, network with industry experts, and explore career opportunities through our upcoming academic and professional events.
                         </p>
                     </div>
-                    <div className='flex gap-4'>
+                    <div className='flex gap-4 p-2'>
                         <div className="relative">
                             <input
                                 type="text"
                                 placeholder="Search"
-                                className="border rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring focus:border-blue-300"
+                                className="border rounded-full py-2 xl:px-4 px-2 pl-10 focus:outline-none focus:ring focus:border-blue-300"
                             />
                             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <FaSearch className="text-gray-400" />
@@ -80,9 +80,9 @@ const UpcomingEvents = () => {
                         </div>
 
                         {/* Filter Button */}
-                        <button className="flex items-center gap-2 bg-red-800 text-white px-4 py-2 rounded-full shadow hover:bg-red-900 cursor-pointer transition">
-                            <FaFilter />
-                            <span>Filter</span>
+                        <button className="flex items-center gap-2 bg-red-800 text-white xl:px-4 xl:py-2 px-2  rounded-full shadow hover:bg-red-900 cursor-pointer transition">
+                            <FaFilter className='xl:text-lg text-[12px]' />
+                            <span className='text-[12px] xl:text-lg'>Filter</span>
                         </button>
                     </div>
                 </div>

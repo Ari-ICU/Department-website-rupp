@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa";
+import { MdExplore } from 'react-icons/md'
 import { MdSchool } from "react-icons/md";
 import image1 from "../../assets/img/a3.png"; // Ensure you import the image
 
@@ -82,9 +82,9 @@ const AcademicSection = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              <button className="bg-red-800 text-white rounded-full py-2 px-6 flex items-center hover:bg-red-600 transition duration-300">
-                {academicsData.buttonLabel}
-                <FaArrowRight className="ml-2" />
+              <button className="bg-red-800 cursor-pointer text-white rounded-4xl py-2 px-6 flex items-center hover:bg-red-600 transition duration-300">
+                Explore
+                <MdExplore className="ml-2" />
               </button>
             </motion.div>
           </motion.div>

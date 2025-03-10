@@ -79,7 +79,7 @@ const AboutSection = () => {
                             viewport={{ once: true }}
                             className='px-4 py-4'
                         >
-                            <button className="bg-red-800 text-white rounded-4xl py-2 px-6 flex items-center hover:bg-red-600 transition duration-300">
+                            <button className="bg-red-800 cursor-pointer text-white rounded-4xl py-2 px-6 flex items-center hover:bg-red-600 transition duration-300">
                                 {aboutData.buttonText}
                                 <MdExplore className="ml-2" />
                             </button>
