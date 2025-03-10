@@ -1,12 +1,12 @@
 import React from 'react'
-import { MdComputer } from "react-icons/md";
-import { AiOutlineRobot } from "react-icons/ai";
+// import { MdComputer } from "react-icons/md";
+// import { AiOutlineRobot } from "react-icons/ai";
 import { FaCalendarAlt } from "react-icons/fa"; 
 
 import image1 from "../../assets/banner/research.png";
 
 
-const CareerBanner = () => {
+const EventsBanner = () => {
 
     const bottomSections = [
         {
@@ -69,4 +69,4 @@ const CareerBanner = () => {
     )
 }
 
-export default CareerBanner
+export default EventsBanner;
