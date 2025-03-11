@@ -45,7 +45,7 @@ const buttons = [
   // Add more buttons here if necessary
 ];
 
-const RelatedArtical = () => {
+const ResearchSection = () => {
   const navigate = useNavigate();
 
   return (
@@ -111,4 +111,4 @@ const RelatedArtical = () => {
   );
 };
 
-export default RelatedArtical;
+export default ResearchSection;

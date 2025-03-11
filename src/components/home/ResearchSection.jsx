@@ -1,7 +1,7 @@
 import React from "react";
 import { MdComputer, MdExplore } from "react-icons/md";
 import { AiOutlineRobot } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion"; 
 import image from "../../assets/image.png";
 import image1 from "../../assets/1.png";
@@ -47,12 +47,16 @@ const buttons = [
 
 const ResearchInnovations = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+   // Determine if the current path is the research page
+   const isResearchPage = location.pathname.includes("/research");
 
   return (
     <div className="">
       <div className="container mx-auto px-4 py-6">
-        <h2 className="xl:text-3xl text-2xl font-bold mb-8">
-          Research & Innovations
+      <h2 className="xl:text-3xl text-2xl font-bold mb-8">
+          {isResearchPage ? "Current & On-going Research" : "Research & Innovations"}
         </h2>
 
         {researchData.map((item) => (
