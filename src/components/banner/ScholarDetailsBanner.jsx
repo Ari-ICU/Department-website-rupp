@@ -46,7 +46,7 @@ const ScholarDetailsBanner = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="mt-2 text-md flex items-center drop-shadow-md"
+                        className="mt-2 text-md flex items-center text-gray-50 drop-shadow-md"
                     >
                         <FaCalendarAlt className="mr-2 text-lg" /> {date} {/* Calendar icon */}
                     </motion.p>

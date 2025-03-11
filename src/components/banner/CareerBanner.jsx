@@ -53,7 +53,7 @@ const CareerBanner = () => {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.8, delay: 0.6 }}
                                         viewport={{ once: true, amount: 0.5 }}
-                                        className="mb-4 xl:text-[14px] text-[12px] flex gap-2"
+                                        className="mb-4 xl:text-[14px] text-[12px] text-gray-50 flex gap-2"
                                     >
                                         <FaCalendarAlt className="mr-2 text-lg" /> {section.date}
                                     </motion.p>

@@ -55,12 +55,12 @@ const WhyChooseUs = () => {
                 >
                     {/* First Card */}
                     <motion.div
-                        className="bg-red-700 text-white rounded-lg p-6 relative"
+                        className="bg-red-800 text-white rounded-lg p-6 relative"
                         variants={itemVariants}
                     >
                         
 
-                        <div className="absolute top-[-40px] right-4 text-7xl opacity-75 text-red-400">
+                        <div className="absolute top-[-40px] right-4 text-7xl opacity-90 text-red-700">
                         <RiDoubleQuotesR />
                         </div>
                         <h3 className="text-xl font-semibold mb-2">
@@ -77,10 +77,10 @@ const WhyChooseUs = () => {
                         className="bg-white rounded-lg p-6 relative"
                         variants={itemVariants}
                     >
-                        <div className="absolute top-[-40px] right-4 text-7xl opacity-50 text-red-700">
+                        <div className="absolute top-[-40px] right-4 text-7xl opacity-90 text-red-700">
                         <RiDoubleQuotesR />
                         </div>
-                        <h3 className="text-xl font-semibold mb-2 text-red-700">
+                        <h3 className="text-xl font-semibold mb-2 text-red-800">
                             Strong Industry Connections
                         </h3>
                         <p className="text-gray-700">
@@ -94,10 +94,10 @@ const WhyChooseUs = () => {
                         className="bg-white rounded-lg p-6 relative"
                         variants={itemVariants}
                     >
-                       <div className="absolute top-[-40px] right-4 text-7xl opacity-50  text-red-400">
+                       <div className="absolute top-[-40px] right-4 text-7xl opacity-90  text-red-700">
                         <RiDoubleQuotesR />
                         </div>
-                        <h3 className="text-xl font-semibold mb-2 text-red-700">
+                        <h3 className="text-xl font-semibold mb-2 text-red-800">
                             Globally Aligned Curriculum & Research Opportunities
                         </h3>
                         <p className="text-gray-700">
@@ -111,10 +111,10 @@ const WhyChooseUs = () => {
                         className="bg-white rounded-lg p-6 relative"
                         variants={itemVariants}
                     >
-                         <div className="absolute top-[-40px] right-4 text-7xl opacity-50  text-red-400">
+                         <div className="absolute top-[-40px] right-4 text-7xl opacity-90  text-red-700">
                         <RiDoubleQuotesR />
                         </div>
-                        <h3 className="text-xl font-semibold mb-2 text-red-700">
+                        <h3 className="text-xl font-semibold mb-2 text-red-800">
                             Dynamic Student Community
                         </h3>
                         <p className="text-gray-700">

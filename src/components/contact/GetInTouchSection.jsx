@@ -14,7 +14,7 @@ const contactData = {
             title: "Location",
             content: "44:20 4164 2541",
             iconColor: "text-red-800",
-            bgColor: "bg-blue-100",
+            bgColor: "bg-gray-50",
         },
         {
             id: 2,
@@ -22,7 +22,7 @@ const contactData = {
             title: "Phone Number",
             content: "+168 234 567 890",
             iconColor: "text-red-800",
-            bgColor: "bg-green-100",
+            bgColor: "bg-gray-50",
         },
         {
             id: 3,
@@ -30,7 +30,7 @@ const contactData = {
             title: "Email",
             content: "rupp.edu@gmail.com",
             iconColor: "text-red-800",
-            bgColor: "bg-purple-100",
+            bgColor: "bg-gray-50",
         },
     ],
 };

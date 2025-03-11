@@ -33,7 +33,7 @@ const ProgramBanner = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="text-gray-200 text-[14px] xl:text-lg"
+                        className="text-gray-50 text-[14px] xl:text-lg"
                     >
                         Explore our curriculum, admission process, career opportunities, and advanced study options to shape your future.
                     </motion.p>

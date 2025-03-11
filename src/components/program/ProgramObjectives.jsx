@@ -64,10 +64,10 @@ const ProgramObjectives = () => {
 
                     <div className='absolute bottom-4 sm:bottom-0 z-10 bg-white p-4 rounded-lg shadow-md w-11/12 sm:w-52 sm:h-34 text-center'>
                         <h2 className="text-md sm:text-lg font-bold flex items-center justify-center mb-4">
-                            <MdVerified className="mr-2 text-xl sm:text-2xl text-red-500" />
+                            <MdVerified className="mr-2 text-xl sm:text-2xl text-red-700" />
                             Key Metrics
                         </h2>
-                        <div className="text-lg sm:text-xl font-bold text-red-500">{keyMetrics.count}</div>
+                        <div className="text-lg sm:text-xl font-bold text-red-700">{keyMetrics.count}</div>
                         <p className="text-sm sm:text-md mt-2">{keyMetrics.description}</p>
                     </div>
                 </motion.div>
@@ -85,7 +85,7 @@ const ProgramObjectives = () => {
                     <div className="space-y-6">
                         {objectives.map((objective, index) => (
                             <div key={index} className="flex items-start gap-4">
-                                <objective.icon size={44} className="text-red-500" />
+                                <objective.icon size={44} className="text-red-700" />
                                 <div>
                                     <h3 className="text-lg sm:text-xl font-semibold mb-2">{objective.title}</h3>
                                     <p className="text-sm sm:text-base">{objective.description}</p>

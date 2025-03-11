@@ -38,7 +38,7 @@ const FacilitiesBanner = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true, amount: 0.5 }}
-          className="mt-4 text-[12px] sm:text-xl drop-shadow-md"
+          className="mt-4 text-[12px] sm:text-xl text-gray-50 drop-shadow-md"
         >
           {subtitle}
         </motion.p>
