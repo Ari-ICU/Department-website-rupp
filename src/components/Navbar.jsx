@@ -10,8 +10,8 @@ const Navbar = ({ isOpen, setIsOpen }) => {
   const [dropdown, setDropdown] = useState(null);
   const navRef = useRef();
   const mobileMenuRef = useRef();
-  const academicsDropdownRef = useRef(null); // Separate ref for Academics dropdown
-  const peopleDropdownRef = useRef(null); // Separate ref for People dropdown
+  const academicsDropdownRef = useRef(null);
+  const peopleDropdownRef = useRef(null);
   const location = useLocation();
 
   // Close dropdown when location changes
@@ -138,7 +138,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           )}
         </div>
 
-        <Link to="/scholars" className={`hover:text-red-900 ${location.pathname === "/research" ? "text-red-900 font-bold" : ""}`}>
+        <Link to="/scholars" className={`hover:text-red-900 ${location.pathname === "/scholars" ? "text-red-900 font-bold" : ""}`}>
           Scholarship
         </Link>
         <Link to="/facilities" className={`hover:text-red-900 ${location.pathname === "/facilities" ? "text-red-900 font-bold" : ""}`}>
