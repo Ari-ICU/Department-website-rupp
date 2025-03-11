@@ -13,7 +13,7 @@ const contactData = {
             icon: <FaMapMarkerAlt className="w-8 h-8" />,
             title: "Location",
             content: "44:20 4164 2541",
-            iconColor: "text-red-600",
+            iconColor: "text-red-800",
             bgColor: "bg-blue-100",
         },
         {
@@ -21,7 +21,7 @@ const contactData = {
             icon: <FaPhoneAlt className="w-8 h-8" />,
             title: "Phone Number",
             content: "+168 234 567 890",
-            iconColor: "text-red-600",
+            iconColor: "text-red-800",
             bgColor: "bg-green-100",
         },
         {
@@ -29,7 +29,7 @@ const contactData = {
             icon: <FaEnvelope className="w-8 h-8" />,
             title: "Email",
             content: "rupp.edu@gmail.com",
-            iconColor: "text-red-600",
+            iconColor: "text-red-800",
             bgColor: "bg-purple-100",
         },
     ],
@@ -66,7 +66,7 @@ const GetInTouchSection = ({ data = contactData }) => {
                         <div className="text-center">
                             {/* Heading */}
                             <motion.h2
-                                className="text-3xl sm:text-4xl font-bold text-gray-300 mb-6"
+                                className="text-3xl sm:text-4xl font-bold text-gray-50 mb-6"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2, duration: 0.8 }}
@@ -77,7 +77,7 @@ const GetInTouchSection = ({ data = contactData }) => {
 
                             {/* Description */}
                             <motion.p
-                                className="text-lg text-gray-400 mb-12"
+                                className="text-lg text-gray-50 mb-12"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.4, duration: 0.8 }}
@@ -102,8 +102,8 @@ const GetInTouchSection = ({ data = contactData }) => {
                                             {contact.icon}
                                         </div>
                                         {/* Title and Content */}
-                                        <h3 className="mt-4 text-xl font-semibold text-gray-900">{contact.title}</h3>
-                                        <p className="mt-2 text-gray-400">{contact.content}</p>
+                                        <h3 className="mt-4 text-xl font-semibold text-gray-50">{contact.title}</h3>
+                                        <p className="mt-2 text-gray-50">{contact.content}</p>
                                     </motion.div>
                                 ))}
                             </div>
