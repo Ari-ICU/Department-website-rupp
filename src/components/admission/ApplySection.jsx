@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion'; // Import motion from framer-motion
 import {
   FaFacebookF,
   FaTwitter,
@@ -40,28 +41,57 @@ const ApplySection = () => {
   return (
     <div className="my-16">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col xl:flex-row gap-6 items-center justify-between"> {/* Changed md:flex-row to xl:flex-row */}
+        <div className="flex flex-col xl:flex-row gap-6 items-center justify-between">
           {/* Left Side: Steps and Text */}
-          <div className="xl:w-1/2 mb-8 xl:mb-0"> {/* Changed md:w-1/2 to xl:w-1/2 */}
-            <h2 className="text-4xl font-semibold mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
+            className="xl:w-1/2 mb-8 xl:mb-0"
+          >
+            <motion.h2
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className="text-4xl font-semibold mb-6"
+            >
               Step By Step: How to Apply to Computer Science Department
-            </h2>
+            </motion.h2>
             <ul className="list-none space-y-4">
               {steps.map((step, index) => (
-                <li key={index} className="">
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                >
                   <div className="p-6 border rounded-2xl flex items-center justify-between">
                     <span className="xl:text-xl text-md">{step}</span>
                     <FaArrowRight className="ml-2" />
                   </div>
-                </li>
+                </motion.li>
               ))}
             </ul>
-          
-          </div>
+          </motion.div>
 
           {/* Right Side: New Semester and Contact Info */}
-          <div className="flex flex-col-reverse xl:flex-row xl:w-1/2 justify-center items-center"> {/* Changed md:flex-row to xl:flex-row and md:w-1/2 to xl:w-1/2 */}
-            <div className="bg-white p-6 rounded-md space-y-10 xl:w-1/2 xl:order-2 order-1"> {/* Changed md:w-1/2 to xl:w-1/2 */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="flex flex-col-reverse xl:flex-row xl:w-1/2 justify-center items-center"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className="bg-white p-6 rounded-md space-y-10 xl:w-1/2 xl:order-2 order-1"
+            >
               <div className="bg-white p-6 rounded-md shadow-md">
                 <h2 className="text-xl font-semibold mb-4">{contactInfo.semesterInfo.title}</h2>
                 <p className="mb-4">{contactInfo.semesterInfo.text}</p>
@@ -91,11 +121,17 @@ const ApplySection = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="xl:w-1/2 xl:order-1 order-2"> {/* Changed md:w-1/2 to xl:w-1/2 */}
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true, amount: 0.5 }}
+              className="xl:w-1/2 xl:order-1 order-2"
+            >
               <img src={p1} alt="Admission Image" className="rounded-2xl w-full h-full object-cover" />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </div>

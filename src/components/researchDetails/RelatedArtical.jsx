@@ -59,12 +59,12 @@ const RelatedArtical = () => {
             {bottomSections.map((section) => (
               <div
                 key={section.id}
-                className="xl:h-[412px] h-full bg-white rounded-lg shadow-md overflow-hidden relative group flex-shrink-0"
+                className=" bg-white rounded-lg shadow-md overflow-hidden relative group flex-shrink-0"
               >
-                <img
+                 <img
                   src={section.image}
                   alt={section.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
@@ -72,7 +72,7 @@ const RelatedArtical = () => {
                     {buttons.map((button, buttonIndex) => (
                       <button
                         key={buttonIndex}
-                        className="text-black xl:text-[14px] text-[12px] bg-gray-300 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"
+                        className="text-black xl:text-[12px] text-[10px] bg-gray-300 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"
                       >
                         {button.icon}
                         {button.label}

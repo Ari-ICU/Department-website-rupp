@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaCheck } from 'react-icons/fa';
-import { MdExplore } from 'react-icons/md'
+import { MdExplore } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import image1 from '../../assets/img/a1.png';
 import image2 from '../../assets/img/a2.png';
@@ -28,30 +28,31 @@ const aboutData = {
 const AboutSection = () => {
     return (
         <div className=''>
-            <div className='container mx-auto '>
+            <div className='container mx-auto'>
                 <section className="flex flex-col xl:flex-row items-center mx-auto justify-center gap-6">
                     {/* Text Section with animation */}
                     <motion.div
                         className="text-[16px] order-1 lg:order-2"
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1 }}
-                        viewport={{ once: true }}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true, amount: 0.5 }}
                     >
                         <motion.h2
+                            className="text-lg xl:text-3xl font-bold mb-4"
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 1 }}
-                            viewport={{ once: true }}
-                            className="text-lg xl:text-3xl font-bold mb-4"
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            viewport={{ once: true, amount: 0.5 }}
                         >
                             {aboutData.title}
                         </motion.h2>
                         <motion.p
+                            className="text-[12px] xl:text-[16px] text-gray-500"
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: 0.6 }}
-                            viewport={{ once: true }}
-                            className="text-[12px] xl:text-[16px] text-gray-500"
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                            viewport={{ once: true, amount: 0.5 }}
                         >
                             {aboutData.description}
                         </motion.p>
@@ -59,11 +60,11 @@ const AboutSection = () => {
                             {aboutData.features.map((item, index) => (
                                 <motion.li
                                     key={index}
+                                    className="flex items-center text-[12px] xl:text-[16px]"
                                     initial={{ opacity: 0, scale: 0.8 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.5, delay: 0.6 }}
-                                    viewport={{ once: true }}
-                                    className="flex items-center text-[12px] xl:text-[16px]"
+                                    transition={{ duration: 0.8, delay: 0.2 * (index + 1) }}
+                                    viewport={{ once: true, amount: 0.5 }}
                                 >
                                     <div className="border border-red-800 p-2 rounded-4xl mr-2">
                                         <FaCheck className="text-red-800" />
@@ -73,11 +74,11 @@ const AboutSection = () => {
                             ))}
                         </ul>
                         <motion.div
+                            className='px-4 py-4'
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: 0.6 }}
-                            viewport={{ once: true }}
-                            className='px-4 py-4'
+                            transition={{ duration: 0.8, delay: 0.6 }}
+                            viewport={{ once: true, amount: 0.5 }}
                         >
                             <button className="bg-red-800 cursor-pointer text-white rounded-4xl py-2 px-6 flex items-center hover:bg-red-600 transition duration-300">
                                 {aboutData.buttonText}
@@ -91,8 +92,8 @@ const AboutSection = () => {
                         className="container flex items-center gap-6 lg:order-1"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1 }}
-                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true, amount: 0.5 }}
                     >
                         {aboutData.images.map((image, index) => (
                             <motion.div
@@ -101,7 +102,8 @@ const AboutSection = () => {
                                     }`}
                                 initial={{ scale: 0.8 }}
                                 whileInView={{ scale: 1 }}
-                                transition={{ duration: 0.5 }}
+                                transition={{ duration: 0.8, delay: 0.2 * index }}
+                                viewport={{ once: true, amount: 0.5 }}
                             >
                                 <img
                                     src={image}
@@ -109,11 +111,9 @@ const AboutSection = () => {
                                     className={`w-full h-full shadow-lg object-cover ${index % 2 === 0 ? "rounded-tl-[100px]" : "rounded-tr-[100px]"
                                         }`}
                                 />
-
                             </motion.div>
                         ))}
                     </motion.div>
-
                 </section>
             </div>
         </div>

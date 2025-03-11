@@ -15,16 +15,19 @@ const BasicRequirements = () => {
     return (
         <div className="my-16 ">
             <motion.div
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                 initial={{ opacity: 0, y: 50 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 transition={{ duration: 0.8 }}
+                 viewport={{ once: true, amount: 0.5 }} 
                 className="container mx-auto px-4 "
             >
                 <div className="xl:h-[479px] h-full flex flex-col xl:flex-row items-center gap-8 py-8 xl:py-0">
                     {/* Left Column - Image Content */}
                     <motion.div
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true, amount: 0.5 }} 
                         className="w-full xl:w-1/2 lg:h-[479px] mx-auto h-[360px]"
                     >
                         <div className="relative flex flex-col items-center justify-center ">
@@ -75,9 +78,10 @@ const BasicRequirements = () => {
 
                     {/* Right Column - Text Content */}
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true, amount: 0.5 }} 
                         className="w-full xl:w-1/2 px-4 xl:px-0"
                     >
                         <h1 className="lg:text-4xl text-2xl mb-6"> Basic Requirements</h1>

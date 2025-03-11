@@ -1,89 +1,114 @@
-import React from "react";
-import { IoIosArrowRoundForward } from "react-icons/io";
+import React from 'react';
+import { MdExplore } from 'react-icons/md';
+import { MdComputer } from 'react-icons/md';
+import { AiOutlineRobot } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
+import image1 from "../../../assets/1.png";
 
-const ResearchSection = () => {
-  const researchProjects = [
-    {
-      title: "AI-Powered Healthcare Diagnosis Systems",
-      date: "12 Jun 2025",
-      icon: <IoIosArrowRoundForward  size={34}/>,
-      imageUrl:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    },
-    {
-      title: "Enhancing Cybersecurity with Machine Learning",
-      date: "20 Jul 2025",
-      icon: <IoIosArrowRoundForward  size={34}/>,
-      imageUrl:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=815&q=80",
-    },
-    {
-      title: "Data-Driven Solutions for Smart Cities",
-      date: "05 Aug 2025",
-      icon: <IoIosArrowRoundForward  size={34}/>,
-      imageUrl:
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    },
-    {
-      title: "Developing Next-Gen Robotics",
-      date: "15 Sep 2025",
-      icon: <IoIosArrowRoundForward  size={34}/>,
-      imageUrl:
-        "https://images.unsplash.com/photo-1507652313519-d4e917498951?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    },
-  ];
+const bottomSections = [
+  {
+    id: 1,
+    title: 'Software Development',
+    description: 'Software engineering is one of the most sought-after careers.',
+    image: image1,
+  },
+  {
+    id: 2,
+    title: 'Data Science and Analytics',
+    description: 'Data Science is rapidly growing, offering promising opportunities.',
+    image: image1,
+  },
+  {
+    id: 3,
+    title: 'Data Science and Analytics',
+    description: 'Data Science is rapidly growing, offering promising opportunities.',
+    image: image1,
+  },
+  {
+    id: 4,
+    title: 'Data Science and Analytics',
+    description: 'Data Science is rapidly growing, offering promising opportunities.',
+    image: image1,
+  },
+  {
+    id: 5,
+    title: 'Data Science and Analytics',
+    description: 'Data Science is rapidly growing, offering promising opportunities.',
+    image: image1,
+  },
+  // Add more sections here
+];
+
+const buttons = [
+  { icon: <MdComputer className="mr-2" />, label: "Computational Advancements" },
+  { icon: <AiOutlineRobot className="mr-2" />, label: "AI & Systems Optimization" },
+  // Add more buttons here if necessary
+];
+
+const RelatedArtical = () => {
+  const navigate = useNavigate();
 
   return (
-    <div className="bg-white py-16">
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 mb-12">
-          <h2 className="text-3xl font-semibold mb-4">
-            Current & On-going Research
-          </h2>
-          <p className="text-gray-600">
-            Explore groundbreaking research projects across AI, cybersecurity,
-            data science, and more, as we push the boundaries of technology to
-            address real-world challenges.
+    <div className="my-16">
+      <div className='container mx-auto px-4'>
+
+        <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4">
+          <h2 className="text-4xl font-semibold">Current & On-going Research</h2>
+          <p className="xl:max-w-[600px]">
+            Explore groundbreaking research projects across AI, cybersecurity, data science, and more, as we push the boundaries of technology to address real-world challenges.
           </p>
         </div>
 
-        {/* Research Projects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {researchProjects.map((project, index) => (
-            <div
-              key={index}
-              className="border lg:w-[310px] w-full h-full lg:h-[500px] rounded-lg p-6 relative overflow-hidden"
-            >
-              {/* Background image with opacity */}
-              <div className="absolute inset-0 w-full h-full bg-black opacity-75"></div>
-              <img
-                src={project.imageUrl}
-                alt={project.title}
-                className="absolute inset-0 w-full h-full object-cover opacity-50"
-              />
-
-              {/* Content Layer */}
-              <div className="relative z-10 flex flex-col justify-between h-full">
-                {/* Project Title */}
-                <div>
-                  <h3 className="text-xl font-semibold mb-4 text-white">
-                    {project.title}
-                  </h3>
-                </div>
-
-                {/* Date and Icon at the bottom */}
-                <div className="mt-auto flex justify-between items-center text-gray-300">
-                  <p>{project.date}</p>
-                  <div className="p-2 rounded-full border">{project.icon}</div>
+        <div className="overflow-x-auto mt-12">
+          <div className="flex space-x-8">
+            {bottomSections.map((section) => (
+              <div
+                key={section.id}
+                className=" bg-white rounded-lg shadow-md overflow-hidden relative group flex-shrink-0"
+              >
+                <img
+                  src={section.image}
+                  alt={section.title}
+                  className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
+                  <div className="flex flex-col justify-center items-end py-4">
+                    {buttons.map((button, buttonIndex) => (
+                      <button
+                        key={buttonIndex}
+                        className="text-black xl:text-[12px] text-[10px] bg-gray-300 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"
+                      >
+                        {button.icon}
+                        {button.label}
+                      </button>
+                    ))}
+                  </div>
+                  <div>
+                    <h3 className="xl:text-xl text-lg font-semibold mb-2">
+                      {section.title}
+                    </h3>
+                    <p className="mb-4 xl:text-[16px] text-[12px]">
+                      {section.description}
+                    </p>
+                    <button
+                      onClick={() => {
+                        navigate(`/research/${section.id}`);
+                      }}
+                      className="bg-red-900 hover:bg-red-800 xl:text-[14px] text-[12px] text-white py-2 px-6 rounded-4xl flex items-center"
+                    >
+                      <MdExplore className="mr-2" />
+                      Explore
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default ResearchSection;
+export default RelatedArtical;

@@ -46,30 +46,46 @@ const careerPaths = [
 const RelatedArtical = () => {
   const navigate = useNavigate(); // To navigate to the career detail page
 
-  return (
-    <div className="my-16 ">
-      <div className="container mx-auto px-4">
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
 
-        <h2 className='text-4xl mb-6 font-semibold'>Related Artical </h2>
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.2 } },
+  };
+
+  return (
+    <div className="my-16">
+      <div className="container mx-auto px-4">
+        {/* Heading with animation */}
+        <motion.h2
+          className="text-4xl mb-6 font-semibold"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
+        >
+          Related Articles
+        </motion.h2>
+
         {/* Career paths cards */}
         <motion.div
           className="flex space-x-4 w-full overflow-x-auto snap-x snap-mandatory"
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-          }}
+          variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
         >
-          {careerPaths.map((path, index) => (
+          {careerPaths.map((path) => (
             <motion.div
+              key={path.id}
               onClick={() => navigate(`/career/${path.id}`)} // Navigate to the detailed page
-              key={path.id} // Use path.id instead of index for key
-              className="snap-start cursor-pointer relative w-80 flex-shrink-0 rounded-lg overflow-hidden shadow-md"
-              variants={{
-                hidden: { opacity: 0, scale: 0.9 },
-                visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-              }}
+              className="snap-start cursor-pointer relative w-80 flex-shrink-0 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+              variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
             >
               <img
                 src={path.image}

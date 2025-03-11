@@ -125,18 +125,18 @@ const ScholarshipOpportunities = () => {
                     viewport={{ once: true }}
                     className="overflow-x-auto py-2"
                 >
-                    <div ref={scrollContainerRef} className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 gap-6">
+                    <div ref={scrollContainerRef} className="flex space-x-6">
                         {events.map((event, index) => (
                             <motion.div
                                 key={event.id}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.2 }}
                                 viewport={{ once: true }}
-                                className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col xl:flex-row max-w-[600px] w-full"
+                                className="bg-white rounded-2xl shadow-md overflow-hidden flex justify-center items-center flex-shrink-0 max-w-xl "
                                 whileHover={{ scale: 1.05 }}
                             >
-                                <div className="xl:w-[250px] w-full xl:h-[220px] h-auto flex justify-center items-center">
-                                    <img src={event.imageUrl} alt={event.title} className="w-full h-56 object-cover rounded-2xl" />
+                                <div className="w-full h-[200px] p-2 flex justify-center items-center">
+                                    <img src={event.imageUrl} alt={event.title} className="w-full h-full object-cover rounded-2xl" />
                                 </div>
 
                                 <div className="p-6 w-full">

@@ -37,67 +37,67 @@ const FAQSection = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className=" "
+            viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
+            className=""
         >
-            <div className='container  mx-auto'>
-            <div className=" grid grid-cols-1 md:grid-cols-2 gap-6">
-               <div className='text-start'>
-               <motion.h1
-                    initial={{ opacity: 0, y: -50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    viewport={{ once: true }}
-                    className="text-xl xl:text-3xl font-bold text-gray-800 mb-6 text-start "
-                >
-                    Frequently Asked <br /> Questions
-                </motion.h1>
-                <motion.p
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    viewport={{ once: true }}
-                    className="text-gray-600 xl:text-lg text-[12px] mb-12 text-start"
-                >
-                    Professor: Inspiring Minds, Nurturing Curiosity, and Shaping the Future <br /> of Knowledge and Innovation
-                </motion.p>
-               </div>
-                <div className="max-w-[720px] ">
-                    {faqItems.map((faq, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8, delay: index * 0.2 }}
-                            viewport={{ once: true }}
-                            className="bg-white p-6 rounded-lg shadow-md cursor-pointer"
-                            onClick={() => toggleFAQ(index)}
+            <div className='container mx-auto'>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className='text-start'>
+                        <motion.h1
+                            initial={{ opacity: 0, y: -50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                            className="text-xl xl:text-3xl font-bold text-gray-800 mb-6 text-start"
                         >
-                            <div className="flex justify-between items-center">
-                                <h3 className="text-md xl:text-2xl font-bold text-gray-800">
-                                    {faq.question}
-                                </h3>
-                                <motion.div
-                                    animate={{ rotate: openIndex === index ? 180 : 0 }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <FaChevronDown className="text-gray-600" />
-                                </motion.div>
-                            </div>
-                            {openIndex === index && (
-                                <motion.p
-                                    initial={{ opacity: 0, y: -10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.3 }}
-                                    className="text-gray-600 mt-4"
-                                >
-                                    {faq.answer}
-                                </motion.p>
-                            )}
-                        </motion.div>
-                    ))}
+                            Frequently Asked <br /> Questions
+                        </motion.h1>
+                        <motion.p
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                            className="text-gray-600 xl:text-lg text-[12px] mb-12 text-start"
+                        >
+                            Professor: Inspiring Minds, Nurturing Curiosity, and Shaping the Future <br /> of Knowledge and Innovation
+                        </motion.p>
+                    </div>
+                    <div className="max-w-[720px]">
+                        {faqItems.map((faq, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, x: -50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8, delay: index * 0.2 }}
+                                viewport={{ once: true, amount: 0.5 }}
+                                className="bg-white p-6 rounded-lg shadow-md cursor-pointer mb-4"
+                                onClick={() => toggleFAQ(index)}
+                            >
+                                <div className="flex justify-between items-center">
+                                    <h3 className="text-md xl:text-2xl font-bold text-gray-800">
+                                        {faq.question}
+                                    </h3>
+                                    <motion.div
+                                        animate={{ rotate: openIndex === index ? 180 : 0 }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        <FaChevronDown className="text-gray-600" />
+                                    </motion.div>
+                                </div>
+                                {openIndex === index && (
+                                    <motion.p
+                                        initial={{ opacity: 0, y: -10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        className="text-gray-600 mt-4"
+                                    >
+                                        {faq.answer}
+                                    </motion.p>
+                                )}
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
-            </div>
             </div>
         </motion.div>
     );

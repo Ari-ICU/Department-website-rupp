@@ -21,7 +21,7 @@ const BreadcrumbSection = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.3 }}
-      className="xl:text-xl text-lg mb-8"
+      className="xl:text-xl text-md mb-8"
     >
       {breadcrumbs.map((breadcrumb, index) => (
         <span key={breadcrumb.link}>

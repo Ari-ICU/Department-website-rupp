@@ -39,10 +39,10 @@ const GetInTouchSection = ({ data = contactData }) => {
     return (
         <div className='py-16 '>
             <div className='bg-red-900 '>
-                <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center ">
                     {/* Image Column */}
                     <motion.div
-                        className="container  mx-auto h-[500px]"
+                        className="container  mx-auto xl:h-[500px] h-full "
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
@@ -57,7 +57,7 @@ const GetInTouchSection = ({ data = contactData }) => {
 
                     {/* Contact Section Column */}
                     <motion.section
-                        className="px-4 max-w-[634px] mx-auto"
+                        className="px-4 xl:max-w-[634px] max-w-full py-10 mx-auto"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}

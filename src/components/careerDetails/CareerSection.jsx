@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion'; // Import motion from framer-motion
 import image1 from '../../assets/career/1.png';
 
 const careerData = [
@@ -20,7 +21,7 @@ const careerData = [
                 </ul>
             </div>
         ),
-        images: image1
+        images: image1,
     },
     {
         title: 'Skills Required to Become a Software Engineer',
@@ -58,11 +59,11 @@ const careerData = [
                 <ul className="list-disc ml-6 text-gray-700">
                     <li>High Demand and Job Security: With digital transformation across industries, the need for skilled software engineers continues to grow.</li>
                     <li>Competitive Salaries: Software engineers earn attractive salaries, with opportunities for growth.</li>
-                    <li>Remote Work Opportunities: Many companies offer remote work, providing flexibility and better work-life balance</li>
+                    <li>Remote Work Opportunities: Many companies offer remote work, providing flexibility and better work-life balance.</li>
                     <li>Impactful Work: Engineers build applications and systems that improve lives, from healthcare to entertainment and beyond.</li>
                 </ul>
             </div>
-        )
+        ),
     },
     {
         title: 'Career Growth and Opportunities',
@@ -76,11 +77,11 @@ const careerData = [
                     <li>Freelancing or Entrepreneurship: Building independent projects or starting a tech business.</li>
                 </ul>
             </div>
-        )
+        ),
     },
     {
-        title: '5. Conclusion',
-        content: "A career in software engineering is challenging yet rewarding, offering endless learning opportunities, job security, and the chance to make a real impact. Whether you're just starting or looking to advance in your career, being a software engineer opens doors to innovation and growth. If you're passionate about technology and problem-solving, this might just be the perfect career for you!"
+        title: 'Conclusion',
+        content: "A career in software engineering is challenging yet rewarding, offering endless learning opportunities, job security, and the chance to make a real impact. Whether you're just starting or looking to advance in your career, being a software engineer opens doors to innovation and growth. If you're passionate about technology and problem-solving, this might just be the perfect career for you!",
     },
     {
         title: 'References',
@@ -92,47 +93,72 @@ const careerData = [
                 <li>Pressman, R. S. (2019). Software Engineering: A Practitioner's Approach (9th ed.). McGraw-Hill.</li>
                 <li>Brooks, F. P. (1995). The Mythical Man-Month: Essays on Software Engineering. Addison-Wesley.</li>
             </ul>
-
-        )
-    }
+        ),
+    },
 ];
 
 const CareerSection = () => {
+    // Animation variants
+    const containerVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, scale: 0.9 },
+        visible: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.2 } },
+    };
+
     return (
         <div className="my-12">
             <div className="max-w-4xl mx-auto px-4">
                 {careerData.map((section, index) => (
-                    <div key={index} className="mb-10">
-                        <div className='flex items-center gap-6 '>
+                    <motion.div
+                        key={index}
+                        className="mb-10"
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
+                    >
+                        {/* Section Title and Tag */}
+                        <motion.div
+                            className='flex items-center gap-6'
+                            variants={itemVariants}
+                        >
                             <h2 className="text-2xl font-semibold mb-4 text-gray-800">{section.title}</h2>
-                            {section.tag && 
-                            <p className='py-1 px-4 mb-4 border rounded-2xl text-gray-400'>{section.tag}</p>
-                        }
-                        </div>
+                            {section.tag && (
+                                <p className='py-1 px-4 mb-4 border rounded-2xl text-gray-400'>{section.tag}</p>
+                            )}
+                        </motion.div>
 
-                        {Array.isArray(section.content) || typeof section.content === 'object' ? (
-                            <div className="">
-                                {Array.isArray(section.content) ? (
-                                    section.content.map((subContent, subIndex) => (
-                                        typeof subContent === 'string' ? (
-                                            <p key={subIndex} className="text-gray-700 mb-4">{subContent}</p>
-                                        ) : (
-                                            <div key={subIndex}>
-                                                <h3 className="text-xl font-semibold mb-2 text-gray-800">{subContent.subtitle}</h3>
-                                                <p className="text-gray-700 mb-4 text-lg">{subContent.text}</p>
-                                            </div>
-                                        )
-                                    ))
-                                ) : (
-                                    <div className='text-lg'>{section.content}</div>
-
-                                )}
-                            </div>
+                        {/* Section Content */}
+                        {typeof section.content === 'string' ? (
+                            <motion.p
+                                className="text-gray-700 text-lg"
+                                variants={itemVariants}
+                            >
+                                {section.content}
+                            </motion.p>
                         ) : (
-                            <p className="text-gray-700 text-lg">{section.content}</p>
+                            <motion.div
+                                className="text-lg"
+                                variants={itemVariants}
+                            >
+                                {section.content}
+                            </motion.div>
                         )}
-                        {section.images && <img src={section.images} alt="" className="w-full h-96 mt-4" />}
-                    </div>
+
+                        {/* Section Image */}
+                        {section.images && (
+                            <motion.img
+                                src={section.images}
+                                alt={section.title}
+                                className="w-full h-auto mt-4 rounded-lg shadow-md"
+                                variants={itemVariants}
+                            />
+                        )}
+                    </motion.div>
                 ))}
             </div>
         </div>

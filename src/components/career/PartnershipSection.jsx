@@ -19,6 +19,7 @@ const PartnershipSection = () => {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
     >
       <motion.div
         className="container mx-auto text-center"
@@ -31,28 +32,32 @@ const PartnershipSection = () => {
           Meet With Our Partnerships
         </motion.h2>
         <motion.div
-          className="flex justify-center space-x-12"
+          className="flex flex-wrap justify-center gap-8" // Changed to flex-wrap and gap for better responsiveness
           variants={itemVariants}
         >
-          <img
+          <motion.img
             src="/fauna-flora-logo.png"
             alt="Fauna & Flora International"
             className="h-16"
+            variants={itemVariants}
           />
-          <img
+          <motion.img
             src="/aws-logo.png"
             alt="AWS"
             className="h-16"
+            variants={itemVariants}
           />
-          <img
+          <motion.img
             src="/cisco-logo.png"
             alt="Cisco"
             className="h-16"
+            variants={itemVariants}
           />
-          <img
+          <motion.img
             src="/fortinet-logo.png"
             alt="Fortinet"
             className="h-16"
+            variants={itemVariants}
           />
         </motion.div>
       </motion.div>

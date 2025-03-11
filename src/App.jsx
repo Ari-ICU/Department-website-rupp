@@ -15,6 +15,7 @@ import News from './pages/News';
 import ScholarshipDetails from './pages/ScholarshipDetails';
 import ResearchDetails from './pages/ResearchDetails';
 import CareerDetails from './pages/CareerDetails';
+import Research from './pages/Research';
 
 
 
@@ -34,6 +35,7 @@ const App = () => {
         <Route path='/scholars' element={<Scholarship />} />
         {/* Scholarship Detail Page (Dynamic) */}
         <Route path="/scholars/:id" element={<ScholarshipDetails />} />
+        <Route path='/research/' element={<Research/>} />
         <Route path='/research/:id' element={<ResearchDetails />} />
         <Route path='/career/:id' element={<CareerDetails />} />
         <Route path='/events&news/:id' />

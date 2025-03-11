@@ -5,10 +5,13 @@ import edu from "../../assets/img/edu.png";
 const EducationSection = () => {
     return (
         <div>
-
             <motion.div
                 className="relative h-[500px] bg-cover bg-center flex items-center justify-center"
                 style={{ backgroundImage: `url(${edu})` }}
+                initial={{ opacity: 0 }} // Initial state (hidden)
+                whileInView={{ opacity: 1 }} // Animate when in view
+                transition={{ duration: 0.8 }} // Animation duration
+                viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
             >
                 {/* Dark overlay */}
                 <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -19,7 +22,7 @@ const EducationSection = () => {
                         initial={{ opacity: 0, y: -50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, amount: 0.5 }}
                         className="text-lg xl:text-3xl font-bold text-white mb-6"
                     >
                         We Believe That Education Is An
@@ -28,8 +31,8 @@ const EducationSection = () => {
                         initial={{ opacity: 0, y: -50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        viewport={{ once: true }}
-                        className="text-lg xl:text-3xl  font-bold text-white mb-6"
+                        viewport={{ once: true, amount: 0.5 }}
+                        className="text-lg xl:text-3xl font-bold text-white mb-6"
                     >
                         Important Aspect In Every
                     </motion.h2>
@@ -37,8 +40,8 @@ const EducationSection = () => {
                         initial={{ opacity: 0, y: -50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
-                        viewport={{ once: true }}
-                        className="text-lg xl:text-3xl  font-bold text-white mb-6"
+                        viewport={{ once: true, amount: 0.5 }}
+                        className="text-lg xl:text-3xl font-bold text-white mb-6"
                     >
                         Person's Life
                     </motion.h2>
@@ -46,14 +49,13 @@ const EducationSection = () => {
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.8 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, amount: 0.5 }}
                         className="text-gray-200 xl:text-lg text-[14px]"
                     >
                         Education is the key that unlocks the door to endless possibilities and personal growth.
                     </motion.p>
                 </div>
             </motion.div>
-
         </div>
     );
 };
