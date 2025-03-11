@@ -1,5 +1,5 @@
 import React from 'react';
-import image1 from '../../assets/research/1.png';
+import image1 from '../../assets/research/1.png'; // Make sure this path is correct
 
 const researchData = [
     {
@@ -39,16 +39,12 @@ const researchData = [
     },
     {
         title: '4. Future Directions and Solutions',
-        content: (
-            <div>
-                <p className='mb-4'>To overcome these challenges, researchers are exploring various strategies:</p>
-                <ul className="list-disc ml-6 text-gray-700">
-                    <li>Advancements in Quantum Computing: Improving quantum error correction and increasing qubit stability to enhance computational efficiency.</li>
-                    <li>Ethical AI Development: Creating unbiased datasets, improving model interpretability, and establishing ethical AI guidelines.</li>
-                    <li>Enhanced Cybersecurity Measures: Developing AI-driven threat detection systems, blockchain-based security protocols, and zero-trust architectures.</li>
-                </ul>
-            </div>
-        )
+        content: [
+            "- To overcome these challenges, researchers are exploring various strategies:",
+            "Advancements in Quantum Computing: Improving quantum error correction and increasing qubit stability to enhance computational efficiency.",
+            "Ethical AI Development: Creating unbiased datasets, improving model interpretability, and establishing ethical AI guidelines.",
+            "Enhanced Cybersecurity Measures: Developing AI-driven threat detection systems, blockchain-based security protocols, and zero-trust architectures."
+        ]
     },
     {
         title: '5. Conclusion',
@@ -57,20 +53,17 @@ const researchData = [
     {
         title: 'References',
         tag: 'sources',
-        content: (
-            <ul className="list-disc ml-6 text-gray-700">
-                <li>Geim, A. K., & Novoselov, K. S. (2007). The rise of graphene. Nature Materials, 6(3), 183-191.</li>
-                <li>Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep Learning. MIT Press.</li>
-                <li>Kshetri, N. (2021). The economics of AI security. Computer, 54(1), 62-66.</li>
-                <li>Marz, N., & Warren, J. (2015). Big Data: Principles and best practices of scalable real-time data systems. Manning Publications.</li>
-                <li>Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press.</li>
-                <li>O’Neil, C. (2016). Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy. Crown Publishing Group.</li>
-                <li>Preskill, J. (2018). Quantum Computing in the NISQ era and beyond. Quantum, 2, 79.</li>
-                <li>Russell, S., & Norvig, P. (2021). Artificial Intelligence: A Modern Approach. Pearson.</li>
-                <li>Stallings, W. (2018). Cryptography and Network Security: Principles and Practice. Pearson.</li>
-            </ul>
-
-        )
+        content: [
+            "Geim, A. K., & Novoselov, K. S. (2007). The rise of graphene. Nature Materials, 6(3), 183-191.",
+            "Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep Learning. MIT Press.",
+            "Kshetri, N. (2021). The economics of AI security. Computer, 54(1), 62-66.",
+            "Marz, N., & Warren, J. (2015). Big Data: Principles and best practices of scalable real-time data systems. Manning Publications.",
+            "Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information. Cambridge University Press.",
+            "O’Neil, C. (2016). Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy. Crown Publishing Group.",
+            "Preskill, J. (2018). Quantum Computing in the NISQ era and beyond. Quantum, 2, 79.",
+            "Russell, S., & Norvig, P. (2021). Artificial Intelligence: A Modern Approach. Pearson.",
+            "Stallings, W. (2018). Cryptography and Network Security: Principles and Practice. Pearson."
+        ]
     }
 ];
 
@@ -80,18 +73,18 @@ const ResearchSection = () => {
             <div className="max-w-4xl mx-auto px-4">
                 {researchData.map((section, index) => (
                     <div key={index} className="mb-10">
-                        <div className='flex items-center gap-6 '>
+                        <div className="flex items-center gap-6">
                             <h2 className="text-2xl font-semibold mb-4 text-gray-800">{section.title}</h2>
-                            {section.tag && 
-                            <p className='py-1 px-4 mb-4 border rounded-2xl text-gray-400'>{section.tag}</p>
-                        }
+                            {section.tag && <p className="py-1 px-4 mb-4 border rounded-2xl text-gray-400">{section.tag}</p>}
                         </div>
                         {Array.isArray(section.content) || typeof section.content === 'object' ? (
                             <div className="ml-6">
                                 {Array.isArray(section.content) ? (
                                     section.content.map((subContent, subIndex) => (
                                         typeof subContent === 'string' ? (
-                                            <p key={subIndex} className="text-gray-700 mb-4">{subContent}</p>
+                                            <ul key={subIndex} className="list-disc ml-6">
+                                                <li className="text-gray-700 mb-4">{subContent}</li>
+                                            </ul>
                                         ) : (
                                             <div key={subIndex}>
                                                 <h3 className="text-xl font-semibold mb-2 text-gray-800">{subContent.subtitle}</h3>

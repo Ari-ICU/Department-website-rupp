@@ -92,7 +92,7 @@ const ScholarshipOpportunities = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="flex flex-col xl:flex-row justify-between items-center mb-8"
+                    className="flex flex-col xl:flex-row justify-between max-w-2xl items-center mb-8"
                 >
                     <motion.h2
                         initial={{ opacity: 0, scale: 0.9 }}

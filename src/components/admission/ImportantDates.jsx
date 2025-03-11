@@ -78,14 +78,14 @@ const ImportantDates = () => {
                                 viewport={{ once: true, amount: 0.5 }}
                                 className="bg-white rounded-lg shadow-md p-6"
                             >
-                                <div className="grid grid-cols-12 items-center gap-4 justify-center">
-                                    <div className="bg-pink-100 px-4 py-2 flex flex-col items-center col-span-4">
+                                <div className="grid xl:grid-cols-12 grid-rowsitems-center gap-4 justify-center">
+                                    <div className="bg-pink-100 px-4 py-2 flex flex-col items-center xl:col-span-4 col-span-12">
                                         <h3 className="text-lg font-normal mb-2">{item.title}</h3>
                                         <span className="text-pink-700 text-lg text-center rounded-md font-semibold">
                                             {item.date}
                                         </span>
                                     </div>
-                                    <div className='col-span-8'>
+                                    <div className='xl:col-span-8 col-span-12'>
                                         <h1 className="text-xl font-semibold mt-2">{item.subtitle}</h1>
                                         <p className="text-gray-600">{item.description}</p>
                                     </div>
