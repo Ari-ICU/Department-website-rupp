@@ -27,7 +27,7 @@ const BreadcrumbSection = () => {
         <span key={breadcrumb.link}>
           <Link 
             to={breadcrumb.link} 
-            className={`hover:underline ${breadcrumb.link === currentPath ? 'font-semibold text-red-800 underline' : ''}`}
+            className={`hover:underline ${breadcrumb.link === currentPath ? 'font-semibold text-red-400 underline' : ''}`}
           >
             {breadcrumb.label}
           </Link>
