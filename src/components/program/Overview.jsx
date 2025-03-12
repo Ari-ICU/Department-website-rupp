@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const Overview = () => {
     return (
-        <div className="bg-amber-50">
+        <div className="my-16">
         <div className='container mx-auto px-4'>
             <div className='space-y-4'>
                 <motion.h2

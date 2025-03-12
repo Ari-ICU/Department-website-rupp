@@ -52,7 +52,7 @@ const Programs = () => {
                                 <div className="p-4">
                                     <div className="absolute inset-x-0 bottom-0 bg-white shadow-md rounded-2xl p-2 px-4 flex items-center justify-center gap-6 mb-2 mx-2 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-10">
                                         <div className="w-14 h-10 bg-gray-100 rounded-full flex items-center justify-center">
-                                            <MdSchool className="text-2xl text-red-800" />
+                                            <MdSchool className="text-2xl text-red-700" />
                                         </div>
                                         <span className="border h-6"></span>
                                         <div className="text-sm sm:text-[14px] xl:text-lg font-medium text-center">
