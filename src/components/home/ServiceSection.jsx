@@ -59,15 +59,16 @@ const ServiceSection = () => {
             <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
               {/* Icon */}
               <div
-                className="text-5xl w-16 h-16 flex items-center justify-center bg-red-100 text-red-900 rounded-full"
+                className="text-4xl w-18 h-16 flex items-center justify-center bg-red-100 text-red-900 rounded-full"
                 aria-label={service.title}
               >
                 {service.icon}
               </div>
+
               {/* Title and Description */}
               <div className="text-center md:text-left">
-                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                <p className="text-sm md:text-base text-gray-600">{service.description}</p>
+                <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+                <p className="md:text-base text-gray-600">{service.description}</p>
               </div>
             </div>
           </motion.div>

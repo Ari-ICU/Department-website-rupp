@@ -69,7 +69,7 @@ const ResearchInnovations = () => {
             transition={{ duration: 0.8 }} // Animation duration
             viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
           >
-            <div className="xl:h-[505px] h-full flex flex-col xl:flex-row gap-10 px-4 py-6 items-center justify-center w-full">
+            <div className="h-full flex flex-col xl:flex-row gap-10 px-4 py-6 items-center justify-center w-full">
               <div className="xl:w-[615px] xl:h-[505px] w-full flex justify-center items-center p-2">
                 <img
                   src={item.image}

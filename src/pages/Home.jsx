@@ -8,6 +8,7 @@ import ContactSection from "../components/home/ContactSection";
 import Research from "../components/home/ResearchSection";
 import FacultyCarousel from "../components/home/FacultyCarousel";
 import EventsNews from "../components/home/EventsNews";
+import LatestNews from '../components/news/LatestNews'
 import PartnershipSection from  "../components/home/PartnershipSection";
 import DepartmentHeader from "../components/home/DepartmentHeader";
 
@@ -17,6 +18,8 @@ const Homepages = () => {
       <SlideShowSection />
       <div className=" *:mb-16 lg:px-20 px-4 ">
         <ServiceSection />
+        <LatestNews />
+        <EventsNews />
         <AboutSection />
         <AcademicSection />
         <StatisticsSection />

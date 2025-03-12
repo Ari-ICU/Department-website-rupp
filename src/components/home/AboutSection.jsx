@@ -48,7 +48,7 @@ const AboutSection = () => {
                             {aboutData.title}
                         </motion.h2>
                         <motion.p
-                            className="text-[12px] xl:text-[16px] text-gray-500"
+                            className="text-[12px] xl:text-[16px] text-gray-800"
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.4 }}

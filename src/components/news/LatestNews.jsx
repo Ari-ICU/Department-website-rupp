@@ -16,6 +16,18 @@ const LatestNews = () => {
       imageUrl: p1,
       tag: 'News',
     },
+    {
+      title: 'Re-exam schedule for 1st, 2nd students',
+      description: 'Student office has a new announcement regarding re-exam...',
+      imageUrl: p1,
+      tag: 'News',
+    },
+    {
+      title: 'Semester Break & Holiday Notices',
+      description: 'A new semester break for 4th year students will be hosted on 21 Jun...',
+      imageUrl: p1,
+      tag: 'News',
+    }
   ];
 
   const viewPdf = (imageUrl) => {
@@ -29,7 +41,7 @@ const LatestNews = () => {
   return (
     <div className="my-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold mb-8 text-center">Latest News & Announcements</h2>
+        <h2 className="text-3xl font-semibold mb-8">Latest News & Announcements</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6">
           {newsItems.map((item, index) => (
