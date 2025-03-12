@@ -41,8 +41,9 @@ const cardVariants = {
 
 const ServiceSection = () => {
   return (
-    <motion.section
-      className="container mx-auto py-12"
+  <div className='my-16'>
+      <motion.section
+      className="container mx-auto px-4"
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
@@ -75,7 +76,10 @@ const ServiceSection = () => {
         ))}
       </div>
     </motion.section>
+    
+</div>
   );
+  
 };
 
 export default ServiceSection;

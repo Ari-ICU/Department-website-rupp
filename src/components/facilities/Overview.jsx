@@ -23,7 +23,7 @@ const Overview = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-sm xl:text-lg text-gray-600 leading-relaxed max-w-2xl"
+            className="text-sm xl:text-lg text-gray-800 leading-relaxed max-w-2xl"
           >
             We provide a balanced education with classroom sessions for theoretical learning and computer lab activities for hands-on practice. Our fully equipped labs feature desktop computers for student use, ensuring practical exposure to programming, research, and technical skills. Additionally, free Wi-Fi is available across campus, allowing students to stay connected and access learning resources anytime.
           </motion.p>

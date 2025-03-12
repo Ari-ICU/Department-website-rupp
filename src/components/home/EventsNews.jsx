@@ -2,7 +2,12 @@ import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaCalendarAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import image1 from '../../assets/img/dr-heng-sovanrith.jpg';
+import image1 from '../../assets//new/3.jpg';
+import image2 from '../../assets//new/4.jpg';
+import image3 from '../../assets//new/5.jpg';
+
+
+
 
 const EventsNews = () => {
     const events = [
@@ -17,7 +22,7 @@ const EventsNews = () => {
         {
             id: 2,
             title: 'AI in Healthcare Symposium',
-            imageUrl: image1,
+            imageUrl: image2,
             description: 'Exploring the latest advancements in AI for medical applications.',
             date: '15 Sep 2025',
             category: 'Conferences',
@@ -25,7 +30,7 @@ const EventsNews = () => {
         {
             id: 3,
             title: 'Web Development Workshop',
-            imageUrl: image1,
+            imageUrl: image3,
             description: 'Hands-on workshop on building responsive web applications.',
             date: '05 Oct 2025',
             category: 'Workshops',
@@ -141,15 +146,15 @@ const EventsNews = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.2 }}
                                 viewport={{ once: true }}
-                                className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-row min-w-96"
-                                whileHover={{ scale: 1.05 }}
+                                className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col xl:flex-row justify-center min-w-96"
+                               
                             >
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.5, delay: 0.2 }}
                                     viewport={{ once: true }}
-                                    className="w-[200px] xl:w-1/2 flex justify-center items-center"
+                                    className=" mx-auto xl:w-1/2 flex justify-center items-center"
                                 >
                                     <img
                                         src={event.imageUrl}

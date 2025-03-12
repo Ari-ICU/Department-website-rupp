@@ -1,5 +1,8 @@
 import React from 'react';
 import { jsPDF } from 'jspdf';
+import { motion } from 'framer-motion';
+import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import p1 from '../../assets/new/1.png';
 
 const LatestNews = () => {
@@ -41,8 +44,27 @@ const LatestNews = () => {
   return (
     <div className="my-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold mb-8">Latest News & Announcements</h2>
-
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="flex flex-col md:flex-row justify-between items-center mb-8"
+        >
+          <h2 className="text-3xl font-semibold mb-8">Latest News & Announcements</h2>
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="w-full md:w-auto mt-4 md:mt-0"
+          >
+            <Link to='' className='flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1'>
+              <span className="mr-2 xl:text-sm text-[12px]">View All</span>
+              <FaArrowRight className="text-red-800" />
+            </Link>
+          </motion.div>
+        </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6">
           {newsItems.map((item, index) => (
             <div

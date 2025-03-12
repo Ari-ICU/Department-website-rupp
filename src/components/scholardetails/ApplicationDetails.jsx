@@ -37,11 +37,11 @@ const ApplicationDetails = () => {
       };
     
     return (
-        <div className="my-12 bg-gray-100 py-12 rounded-lg"> {/* Added background color and rounded corners */}
+        <div className="my-12 rounded-lg"> {/* Added background color and rounded corners */}
             <div className="container mx-auto px-4">
                 <div className='flex flex-col xl:flex-row gap-12 items-center'>
                     {/* Image */}
-                    <div className=' xl:h-[458px] h-full xl:w-1/2 w-full cursor-pointer' >
+                    <div className=' h-full xl:w-1/2 w-full cursor-pointer' >
                         <img src={p1} 
                         alt="Application"
                         onClick={() => viewPdf(p1)}

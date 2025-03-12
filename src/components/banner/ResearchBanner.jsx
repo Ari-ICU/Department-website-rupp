@@ -2,21 +2,19 @@ import React from 'react';
 import { motion } from 'framer-motion'; // Import motion from framer-motion
 import { MdComputer } from "react-icons/md";
 import { AiOutlineRobot } from "react-icons/ai";
-import { FaCalendarAlt } from "react-icons/fa";
 import image1 from "../../assets/banner/research.png";
 
 const ResearchBanner = () => {
     const bottomSections = [
         {
-            title: "Advancing Computational Frontiers: Innovations and Challenges in Modern Computer Science",
-            date: "Post on : 22 Aug 2025",
+            title: "IoT - Smart Home",
+            description: "Revolutionizing Modern Living: Developing Secure, Scalable, and Intelligent Smart Home Systems that Enhance Comfort, Efficiency, and Safety through Advanced IoT Technologies.",
             image: image1,
         }
     ];
 
     const buttons = [
-        { icon: <MdComputer className="mr-2" />, label: "Computational Advancements" },
-        { icon: <AiOutlineRobot className="mr-2" />, label: "AI & Systems Optimization" },
+        { icon: <MdComputer className="mr-2" />, label: "Led By Asst. Prof. Dr. Heng Sovannarith" },
     ];
 
     return (
@@ -74,7 +72,7 @@ const ResearchBanner = () => {
                                         viewport={{ once: true, amount: 0.5 }}
                                         className="mb-4 xl:text-[14px] text-gray-50 text-[12px] flex gap-2"
                                     >
-                                        <FaCalendarAlt className="mr-2 text-lg" /> {section.date}
+                                      {section.description}
                                     </motion.p>
                                 </motion.div>
                             </div>

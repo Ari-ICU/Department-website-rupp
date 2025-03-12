@@ -1,8 +1,9 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom'
 import { motion } from "framer-motion";
 import { MdExplore } from 'react-icons/md'
 import { MdSchool } from "react-icons/md";
-import image1 from "../../assets/academic/1.png"; // Ensure you import the image
+import image1 from "../../assets/academic/1.png"; 
 
 const AcademicSection = () => {
   const academicsData = {
@@ -15,6 +16,12 @@ const AcademicSection = () => {
     programs: ["Undergraduate Program", "Graduate Program"],
     buttonLabel: "Explore",
   };
+
+  const navigate = useNavigate();
+
+  const handleBtn = () =>{
+    navigate('/programs')
+  }
 
   return (
     <motion.div
@@ -82,7 +89,9 @@ const AcademicSection = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              <button className="bg-red-800 cursor-pointer text-white rounded-4xl py-2 px-6 flex items-center hover:bg-red-600 transition duration-300">
+              <button 
+              onClick={handleBtn}
+              className="bg-red-800 cursor-pointer text-white rounded-4xl py-2 px-6 flex items-center hover:bg-red-600 transition duration-300">
                 Explore
                 <MdExplore className="ml-2" />
               </button>

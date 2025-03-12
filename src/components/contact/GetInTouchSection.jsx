@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import world from "../../assets/img/world.png"; // Import the image
+import world from "../../assets/contact/1.png"; // Import the image
 
 // Dynamic data for the section
 const contactData = {
