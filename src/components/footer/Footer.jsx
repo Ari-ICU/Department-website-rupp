@@ -12,19 +12,13 @@ const Footer = () => {
     return (
         <motion.footer
             className="bg-black text-white py-8"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+           
         >
             <div className="container mx-auto px-4 border-b mb-5 pb-10 border-gray-400">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
                     {/* Location Column with Motion */}
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        viewport={{ once: true }}
+                       
                         whileHover={{ scale: 1.05 }}
                     >
                         <h3 className="text-lg font-normal mb-4 border-b-2 border-gray-300">Our Location</h3>
@@ -43,19 +37,14 @@ const Footer = () => {
 
                     {/* Pages Column with Motion */}
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.4 }}
-                        viewport={{ once: true }}
-                        whileHover={{ scale: 1.05 }}
+                       
                     >
                         <h3 className="text-lg font-normal mb-4 border-b-2 border-gray-300">Our Pages</h3>
                         <ul className="xl:text-lg text-sm font-light text-gray-400 ">
                             {["/", "/academics", "/research", "/programs", "/people", "admissions"].map((path, index) => (
                                 <motion.li
                                     key={index}
-                                    whileHover={{ x: 10 }}
-                                    transition={{ duration: 0.2 }}
+                                    
                                     className="mb-2 hover:text-red-900"
                                 >
                                     <Link to={path} className={`hover:text-red-900 ${location.pathname === path ? "text-red-900 font-bold" : ""}`}>
@@ -68,11 +57,7 @@ const Footer = () => {
 
                     {/* Quick Links Column with Motion */}
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.6 }}
-                        viewport={{ once: true }}
-                        whileHover={{ scale: 1.05 }}
+                      
                     >
                         <h3 className="text-lg font-normal mb-4 border-b-2 border-gray-300">Quick Links</h3>
                         <ul className="xl:text-lg text-sm  font-light text-gray-400">
@@ -91,20 +76,15 @@ const Footer = () => {
 
                     {/* Accreditation Column with Motion */}
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.8 }}
-                        viewport={{ once: true }}
-                        whileHover={{ scale: 1.05 }}
+                       
                     >
-                        <h3 className="text-lg font-normal mb-4 border-b-2 border-gray-300">Accreditation & Affiliations</h3>
-                        <ul className="text-sm font-light text-gray-400">
+                        <h3 className="text-lg font-normal mb-4 border-b-2 border-gray-300 space-y-6">Accreditation & Affiliations</h3>
+                        <ul className="text-xl font-light space-y-6 text-gray-400">
                             {["#", "#"].map((path, index) => (
                                 <motion.li
                                     key={index}
-                                    whileHover={{ x: 10 }}
-                                    transition={{ duration: 0.2 }}
-                                    className="mb-2 hover:text-red-900"
+                                   
+                                    className="mb-2 hover:text-red-900 "
                                 >
                                     <Link to={path}>
                                         {index === 0 ? "Government organizations" : "International university partners"}

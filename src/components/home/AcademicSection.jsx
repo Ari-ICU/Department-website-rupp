@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MdExplore } from 'react-icons/md'
 import { MdSchool } from "react-icons/md";
-import image1 from "../../assets/img/a3.png"; // Ensure you import the image
+import image1 from "../../assets/academic/1.png"; // Ensure you import the image
 
 const AcademicSection = () => {
   const academicsData = {

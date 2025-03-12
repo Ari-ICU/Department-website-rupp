@@ -67,7 +67,7 @@ const TypeScholar = () => {
           <h2 className="text-3xl font-bold">Types of Scholarships & Eligibility</h2>
 
           {/* Description */}
-          <p className="text-gray-600 max-w-2xl">
+          <p className="text-gray-800 max-w-2xl">
             Empowering Students Through Scholarships: Rewarding Excellence & Supporting Those in Need. Our school is committed to making education accessible to all. Whether you excel in academics, face financial challenges, or come from a remote area, we offer scholarships to help you achieve your dreams.
           </p>
         </div>

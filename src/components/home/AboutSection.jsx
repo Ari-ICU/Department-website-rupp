@@ -2,7 +2,7 @@ import React from 'react';
 import { FaCheck } from 'react-icons/fa';
 import { MdExplore } from 'react-icons/md';
 import { motion } from 'framer-motion';
-import image1 from '../../assets/img/a1.png';
+import image1 from '../../assets/academic/3.png';
 import image2 from '../../assets/img/a2.png';
 
 // Dynamic content
@@ -48,7 +48,7 @@ const AboutSection = () => {
                             {aboutData.title}
                         </motion.h2>
                         <motion.p
-                            className="text-[12px] xl:text-[16px] text-gray-800"
+                            className="text-[12px] xl:text-[16px] text-gray-900"
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.4 }}

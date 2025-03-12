@@ -4,3 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
+p{
+    font-size: 18px;
+}

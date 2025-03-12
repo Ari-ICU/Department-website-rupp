@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaCalendarAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import image1 from '../../assets/img/dr-heng-sovanrith.jpg';
 
@@ -12,7 +12,6 @@ const EventsNews = () => {
             imageUrl: image1,
             description: 'Annual university tournament for basketball teams. Come cheer...',
             date: '22 Aug 2025',
-            registerLink: '#',
             category: 'Hackathons',
         },
         {
@@ -21,7 +20,6 @@ const EventsNews = () => {
             imageUrl: image1,
             description: 'Exploring the latest advancements in AI for medical applications.',
             date: '15 Sep 2025',
-            registerLink: '#',
             category: 'Conferences',
         },
         {
@@ -30,7 +28,6 @@ const EventsNews = () => {
             imageUrl: image1,
             description: 'Hands-on workshop on building responsive web applications.',
             date: '05 Oct 2025',
-            registerLink: '#',
             category: 'Workshops',
         },
         {
@@ -39,18 +36,9 @@ const EventsNews = () => {
             imageUrl: image1,
             description: 'Networking event for data science enthusiasts and professionals.',
             date: '20 Oct 2025',
-            registerLink: '#',
             category: 'Meetups',
         },
-        {
-            id: 5,
-            title: 'Mobile App Development Seminar',
-            imageUrl: image1,
-            description: 'Learn the fundamentals of mobile app development for iOS and Android.',
-            date: '10 Nov 2025',
-            registerLink: '#',
-            category: 'Seminars',
-        },
+
     ];
 
     const scrollContainerRef = useRef(null);
@@ -143,9 +131,9 @@ const EventsNews = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                     viewport={{ once: true }}
-                    className="overflow-x-auto py-2"
+                    className=" py-2"
                 >
-                    <div ref={scrollContainerRef} className="grid grid-flow-col auto-cols-max gap-8">
+                    <div ref={scrollContainerRef} className="grid grid-cols-1 xl:grid-cols-2 gap-8">
                         {events.map((event, index) => (
                             <motion.div
                                 key={event.id}
@@ -188,15 +176,11 @@ const EventsNews = () => {
                                     <p className="mt-2 text-sm text-gray-600">
                                         {event.description}
                                     </p>
-                                    <span className="text-sm text-gray-500">{event.date}</span>
-                                    <div className="mt-4 flex items-center justify-between">
-                                        <Link
-                                            to={event.registerLink}
-                                            className="bg-red-800 hover:bg-red-900 text-white font-semibold py-2 px-4 rounded-full text-sm"
-                                        >
-                                            Register Now
-                                        </Link>
-                                    </div>
+                                    <span className="text-sm text-gray-500 flex items-center gap-4 mt-4">
+                                        <FaCalendarAlt />
+                                        {event.date}
+                                    </span>
+                                   
                                 </motion.div>
                             </motion.div>
                         ))}

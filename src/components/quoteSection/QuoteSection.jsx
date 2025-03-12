@@ -17,9 +17,9 @@ const QuoteSection = () => {
             <FaQuoteLeft className="text-red-500 text-4xl md:text-5xl absolute -top-6 left-4 transform -translate-x-1/2" />
 
             {/* Quote Text */}
-            <p className="text-xl lg:text-3xl ml-14 text-start font-semibold leading-relaxed text-gray-800 ">
+            <h1 className="text-xl lg:text-3xl ml-14 text-start font-semibold leading-relaxed text-gray-800 ">
               {quotes[0].text}
-            </p>
+            </h1>
 
             {/* Bottom Quote Icon */}
             <FaQuoteRight className="text-red-500 text-4xl md:text-5xl absolute -bottom-6 right-0 transform -translate-x-1/2" />

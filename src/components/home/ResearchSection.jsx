@@ -3,8 +3,11 @@ import { MdComputer, MdExplore } from "react-icons/md";
 import { AiOutlineRobot } from "react-icons/ai";
 import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion"; 
-import image from "../../assets/image.png";
-import image1 from "../../assets/1.png";
+import image from "../../assets/research/2.png";
+import image1 from "../../assets/research/3.png";
+import image2 from "../../assets/research/4.png";
+
+
 
 const researchData = [
   {
@@ -36,7 +39,7 @@ const bottomSections = [
     title: "Exploring the Intersection of Data, Systems, and Smart Technologies",
     description:
       "Investigating the Role of Network Diagnostics, Cloud-Based Repair Tools, and Remote Assistance in Shaping the Future of Efficient Computer Repair, Data Recovery, and System Optimization.",
-    image: image1,
+    image: image2,
   },
 ];
 
@@ -63,14 +66,14 @@ const ResearchInnovations = () => {
           <motion.div
             key={item.id}
             id={`research-item-${item.id}`}
-            className="bg-black space-y-0 rounded-4xl w-full flex flex-col xl:flex-row justify-center items-center mx-auto overflow-hidden"
+            className="bg-black space-y-0 max-w-8xl rounded-4xl w-full flex flex-col xl:flex-row justify-center items-center mx-auto overflow-hidden"
             initial={{ opacity: 0, y: 50 }} // Initial state (hidden)
             whileInView={{ opacity: 1, y: 0 }} // Animate when in view
             transition={{ duration: 0.8 }} // Animation duration
             viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
           >
-            <div className="h-full flex flex-col xl:flex-row gap-10 px-4 py-6 items-center justify-center w-full">
-              <div className="xl:w-[615px] xl:h-[505px] w-full flex justify-center items-center p-2">
+            <div className="h-full flex flex-col xl:flex-row gap-10 px-4 py-6 items-center justify-between w-full">
+              <div className="xl:max-w-3xl xl:h-[505px] w-full flex items-center p-2">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -78,7 +81,7 @@ const ResearchInnovations = () => {
                 />
               </div>
 
-              <div className="flex justify-center items-center xl:w-[580px] w-full text-left">
+              <div className="flex justify-center items-center xl:max-w-3xl w-full text-left">
                 <div className="text-white mx-auto">
                   <motion.h3
                     className="xl:text-2xl text-lg font-semibold mb-2"

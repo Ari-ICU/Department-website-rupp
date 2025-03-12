@@ -31,7 +31,6 @@ const Homepages = () => {
       </div>
       <div className="*:mb-16 lg:px-20 px-4 ">
         <FacultyCarousel />
-        <EventsNews />
         <PartnershipSection />
         </div>
      

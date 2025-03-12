@@ -89,7 +89,7 @@ function DegreeProgramSlider() {
                                 alt={`Program Image ${currentIndex + 1}`}
                                 className="w-full h-full object-cover object-center"
                             />
-                            <div className="absolute inset-0 bg-black opacity-30"></div>
+                            <div className="absolute inset-0 bg-black opacity-50"></div>
                         </motion.div>
                     )}
                 </AnimatePresence>
