@@ -33,14 +33,15 @@ const FAQSection = () => {
     ];
 
     return (
-        <motion.div
+      <div className='my-16'>
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
             className=""
         >
-            <div className='container mx-auto'>
+            <div className='container mx-auto px-4'>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className='text-start'>
                         <motion.h1
@@ -100,6 +101,7 @@ const FAQSection = () => {
                 </div>
             </div>
         </motion.div>
+      </div>
     );
 };
 

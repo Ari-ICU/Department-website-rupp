@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
-import admission from "../../assets/banner/facilites.png";
+import facilities from "../../assets/banner/news.png";
+
 
 const FacilitiesBanner = () => {
   const title = "Facilities";
   const subtitle =
     "Our campus provides state-of-the-art classrooms, fully equipped labs, a rich library, and seamless Wi-Fi to support both academic and student life.";
-  const backgroundImage = admission;
+  const backgroundImage = facilities;
 
   return (
     <motion.div

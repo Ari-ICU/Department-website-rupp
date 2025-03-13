@@ -47,8 +47,8 @@ const FacultyCarousel = () => {
     }, [scrollPosition]);
 
     return (
-        <div className='relative w-full mx-auto bg-white'>
-            <div className="container mx-auto">
+        <div className='relative w-full mx-auto my-16 bg-white'>
+            <div className="container mx-auto px-4">
                 {/* Header Section with Motion */}
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}

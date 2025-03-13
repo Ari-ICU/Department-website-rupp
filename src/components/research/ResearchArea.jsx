@@ -35,10 +35,7 @@ const ResearchArea = () => {
     return (
         <div className="my-16">
             <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true, amount: 0.5 }}
+               
                 className="container mx-auto px-4"
             >
                
@@ -46,10 +43,7 @@ const ResearchArea = () => {
                 <div className=" h-full flex flex-col xl:flex-row items-center gap-8 py-8 xl:py-0">
                     {/* Left Column - Image Content */}
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true, amount: 0.5 }}
+                       
                         className="w-full xl:w-1/2 lg:h-[479px] mx-auto h-[360px] order-1 xl:order-2"
                     >
                         <div className="relative flex flex-col items-center justify-center">
@@ -76,10 +70,7 @@ const ResearchArea = () => {
 
                     {/* Right Column - Text Content */}
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true, amount: 0.5 }}
+                       
                         className="w-full xl:w-1/2 px-4 xl:px-0 order-2 xl:order-1"
                     >
                         <h3 className="xl:text-4xl text-2xl font-semibold mb-4">

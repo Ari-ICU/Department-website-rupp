@@ -3,11 +3,13 @@ import { motion } from 'framer-motion';
 import { FaCheck } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { MdSchool } from "react-icons/md";
-import rupp from "../../assets/img/rupp1.png";
+import rupp from "../../assets/about/2.png";
 
 const InnovationSection = () => {
     return (
-        <div className="container mx-auto py-8">
+
+     <div className='my-16'>
+           <div className="container mx-auto px-4">
             <div className="flex flex-col xl:flex-row justify-between items-center gap-8">
                 {/* Left Section with Text and Icons */}
                 <motion.div
@@ -15,7 +17,7 @@ const InnovationSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
-                    className="max-w-full xl:max-w-[679px] bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg order-2 xl:order-1"
+                    className="max-w-full xl:max-w-[679px] p-6 rounded-lg order-2 xl:order-1"
                 >
                     <motion.h1
                         initial={{ opacity: 0, x: -50 }}
@@ -110,6 +112,7 @@ const InnovationSection = () => {
                 </motion.div>
             </div>
         </div>
+     </div>
     );
 };
 

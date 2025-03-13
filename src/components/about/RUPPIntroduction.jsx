@@ -4,11 +4,12 @@ import rupp from "../../assets/img/rupp1.png";
 
 const RUPPIntroduction = () => {
     return (
-        <div className="container mx-auto">
-            <div className='flex flex-col xl:flex-row gap-10'>
+      <div className='my-16'>
+          <div className="container mx-auto px-4">
+            <div className='flex flex-col xl:flex-row justify-center items-center gap-10'>
                 {/* Image Section with Fixed Text Box */}
                 <motion.div
-                    className="relative container w-full h-full md:h-[350px] xl:h-[510px] max-w-[600px]"
+                    className="relative w-full h-full max-w-[600px] mx-auto"
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
@@ -17,7 +18,7 @@ const RUPPIntroduction = () => {
                     <img
                         src={rupp}
                         alt="rupp"
-                        className="w-full h-full object-cover rounded-3xl"
+                        className="w-full h-full mx-auto object-cover rounded-3xl"
                     />
 
                     {/* Fixed Text Box */}
@@ -44,7 +45,7 @@ const RUPPIntroduction = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                     viewport={{ once: true, amount: 0.5 }}
-                    className="bg-white shadow-md rounded-lg px-2 xl:max-w-[700px] w-auto mx-auto h-auto xl:h-[520px]"
+                    className="bg-white shadow-md rounded-lg px-2 xl:max-w-[700px] w-auto mx-auto h-auto "
                 >
                     <motion.h1
                         initial={{ opacity: 0, y: -20 }}
@@ -87,6 +88,7 @@ const RUPPIntroduction = () => {
                 </motion.div>
             </div>
         </div>
+      </div>
     );
 };
 

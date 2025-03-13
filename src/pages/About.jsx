@@ -16,7 +16,7 @@ const About = () => {
     <div>
       
       <CSAboutSection />
-      <div className="*:py-16 *:max-w-8xl lg:px-20 px-4 ">
+      <div className=" ">
         <StatisticsSection />
 
         <RUPPIntroduction />
@@ -27,11 +27,11 @@ const About = () => {
 
 
       </div>
-      <div className="*:py-16 *:max-w-8xl ">
+      <div className=" ">
         <EducationSection />
       </div>
 
-      <div className="*:py-16 *:max-w-8xl lg:px-20 px-4 ">
+      <div className=" ">
         <StrategicPillarsSection />
         <FacultyCarousel />
         <FAQSection />

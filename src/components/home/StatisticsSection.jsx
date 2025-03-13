@@ -9,7 +9,8 @@ const StatisticsSection = () => {
     ];
 
     return (
-        <div className="flex justify-center px-6">
+      <div className="my-16">
+          <div className="flex justify-center px-4">
             <div className=" xl:h-[122px] flex p-4 items-center justify-center rounded-3xl bg-red-900">
                 <div className="xl:w-[767px] w-auto xl:h-[82px] h-auto grid grid-cols-1 xl:grid-cols-3 items-center gap-6">
                     {stats.map((stat, index) => (
@@ -24,6 +25,7 @@ const StatisticsSection = () => {
             </div>
 
         </div>
+      </div>
     );
 };
 
