@@ -37,31 +37,8 @@ const LabSection = () => {
           <p className="text-gray-700 font-semibold mb-6">by {data.group}</p>
 
           {/* Image and Video */}
-          <div className="relative mb-8">
-            <img src={data.image} alt="Smart Home Setup" className="w-full rounded-lg shadow-lg" />
-            {data.videoUrl && (
-              <a
-                href={data.videoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white rounded-full p-4"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14.752 11.168l-3.197-2.132a1 1 0 00-1.506.865v6.734a1 1 0 001.506.865l3.197-2.132a1 1 0 000-1.73zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </a>
-            )}
+          <div className="relative mb-8 w-full flex justify-center ">
+            <iframe width="700" height="315" src="https://www.youtube.com/embed/8W_vyS95e4U?si=rhOYj9lsJRCHC-wZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
 
           {/* Weather Integration */}
