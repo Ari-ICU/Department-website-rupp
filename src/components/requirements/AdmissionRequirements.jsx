@@ -13,7 +13,8 @@ const AdmissionRequirements = () => {
   ];
 
   return (
-    <motion.div
+   <div className="my-16">
+     <motion.div
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8 }}
@@ -115,6 +116,7 @@ const AdmissionRequirements = () => {
         </motion.div>
       </div>
     </motion.div>
+   </div>
   );
 };
 

@@ -5,6 +5,7 @@ import { MdComputer } from 'react-icons/md';
 import { AiOutlineRobot } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import image1 from "../../assets/1.png";
+import FilterComponent from './FilterComponent';
 
 const bottomSections = [
     {
@@ -31,18 +32,12 @@ const bottomSections = [
         description: 'Data Science is rapidly growing, offering promising opportunities.',
         image: image1,
     },
-    {
-        id: 5,
-        title: 'Data Science and Analytics',
-        description: 'Data Science is rapidly growing, offering promising opportunities.',
-        image: image1,
-    },
+    
     // Add more sections here
 ];
 
 const buttons = [
-    { icon: <MdComputer className="mr-2" />, label: "Computational Advancements" },
-    { icon: <AiOutlineRobot className="mr-2" />, label: "AI & Systems Optimization" },
+    { icon: <MdComputer className="mr-2" />, label: "Led By Asst. Prof. Dr. Heng Sovannarith" },
     // Add more buttons here if necessary
 ];
 
@@ -80,12 +75,13 @@ const StudentResearch = () => {
                         </button>
                     </div>
                 </div>
-                <div className="overflow-x-auto mt-12">
-                    <div className="flex space-x-8">
+                <FilterComponent />
+                <div className=" mt-12">
+                    <div className="grid grid-cols-1 xl:grid-cols-2 justify-center gap-10">
                         {bottomSections.map((section) => (
                             <div
                                 key={section.id}
-                                className=" bg-white rounded-lg shadow-md overflow-hidden relative group flex-shrink-0"
+                                className=" bg-white rounded-lg shadow-md  relative "
                             >
                                 <img
                                     src={section.image}

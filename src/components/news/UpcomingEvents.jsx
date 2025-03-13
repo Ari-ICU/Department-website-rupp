@@ -1,58 +1,59 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FaSearch, FaFilter, FaCalendarAlt } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import p1 from '../../assets/new/2.png';
 
 const UpcomingEvents = () => {
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
+    const scrollContainerRef = useRef(null);
 
     const events = [
         {
             id: 'event-1',
             title: 'Jobify Career Fair 2025',
-            description: 'Jobify really proudly participated as the co-organizer of the Khmer...',
+            description: 'Jobify proudly participated as the co-organizer of the Khmer...',
             date: '22 Aug 2025',
             imageUrl: p1,
         },
         {
             id: 'event-2',
-            title: 'Jobify Career Fair 2025',
-            description: 'Jobify really proudly participated as the co-organizer of the Khmer...',
-            date: '22 Aug 2025',
+            title: 'Tech Innovation Summit 2025',
+            description: 'Join us for an exciting event showcasing the latest tech trends...',
+            date: '15 Sep 2025',
             imageUrl: p1,
         },
         {
             id: 'event-3',
-            title: 'Jobify Career Fair 2025',
-            description: 'Jobify really proudly participated as the co-organizer of the Khmer...',
-            date: '22 Aug 2025',
+            title: 'AI & Data Science Conference',
+            description: 'Engage with top AI experts and data scientists at this conference...',
+            date: '10 Oct 2025',
             imageUrl: p1,
         },
         {
-            id: 'event-4',
-            title: 'Jobify Career Fair 2025',
-            description: 'Jobify really proudly participated as the co-organizer of the Khmer...',
-            date: '22 Aug 2025',
+            id: 'event-3',
+            title: 'AI & Data Science Conference',
+            description: 'Engage with top AI experts and data scientists at this conference...',
+            date: '10 Oct 2025',
             imageUrl: p1,
         },
         {
-            id: 'event-5',
-            title: 'Jobify Career Fair 2025',
-            description: 'Jobify really proudly participated as the co-organizer of the Khmer...',
-            date: '22 Aug 2025',
+            id: 'event-3',
+            title: 'AI & Data Science Conference',
+            description: 'Engage with top AI experts and data scientists at this conference...',
+            date: '10 Oct 2025',
             imageUrl: p1,
         },
         {
-            id: 'event-6',
-            title: 'Jobify Career Fair 2025',
-            description: 'Jobify really proudly participated as the co-organizer of the Khmer...',
-            date: '22 Aug 2025',
+            id: 'event-3',
+            title: 'AI & Data Science Conference',
+            description: 'Engage with top AI experts and data scientists at this conference...',
+            date: '10 Oct 2025',
             imageUrl: p1,
-        },
+        }
     ];
 
     const handleEventClick = (eventId) => {
-        // Navigate to a detail page with the event's ID
         navigate(`/events&news/${eventId}`);
     };
 
@@ -80,40 +81,66 @@ const UpcomingEvents = () => {
                         </div>
 
                         {/* Filter Button */}
-                        <button className="flex items-center gap-2 bg-red-800 text-white xl:px-4 xl:py-2 px-2  rounded-full shadow hover:bg-red-900 cursor-pointer transition">
+                        <button className="flex items-center gap-2 bg-red-800 text-white xl:px-4 xl:py-2 px-2 rounded-full shadow hover:bg-red-900 transition">
                             <FaFilter className='xl:text-lg text-[12px]' />
                             <span className='text-[12px] xl:text-lg'>Filter</span>
                         </button>
                     </div>
                 </div>
 
-                {/* Events Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
-                    {events.map((event) => (
-                        <div
-                            key={event.id}
-                            id={event.id}
-                            className="rounded-lg shadow-md overflow-hidden relative cursor-pointer"
-                            onClick={() => handleEventClick(event.id)} // Event click handler
-                        >
-                            {/* Image with Overlay and Text */}
-                            <div className="relative group">
-                                <div className="relative group">
-                                    <img src={event.imageUrl} alt="Event" className="w-full h-56 object-cover" />
-                                    <div className="absolute inset-0 bg-black transition duration-300 group-hover:opacity-20" style={{ opacity: 0.5 }}></div>
-                                </div>
+                {/* Events Section */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                    viewport={{ once: true }}
+                    className="py-2"
+                >
+                    <div ref={scrollContainerRef} className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                        {events.map((event, index) => (
+                            <motion.div
+                                key={event.id}
+                                initial={{ opacity: 0, x: -50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.2 }}
+                                viewport={{ once: true }}
+                                className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col xl:flex-row cursor-pointer hover:shadow-lg transition duration-300"
+                                onClick={() => handleEventClick(event.id)}
+                            >
+                                {/* Image Section */}
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.5, delay: 0.2 }}
+                                    viewport={{ once: true }}
+                                    className="w-full xl:w-1/2 flex justify-center items-center"
+                                >
+                                    <img
+                                        src={event.imageUrl}
+                                        alt={event.title}
+                                        className="w-full h-56 object-cover rounded-2xl"
+                                    />
+                                </motion.div>
 
-                                <div className="absolute bottom-4 flex flex-col justify-center px-4 text-white">
-                                    <h3 className="text-lg font-semibold">{event.title}</h3>
-                                    <p className="text-sm mt-2">{event.description}</p>
-                                    <p className="text-sm mt-2 flex items-center gap-2">
-                                        <FaCalendarAlt /> {event.date}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                                {/* Event Details */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: 0.4 }}
+                                    viewport={{ once: true }}
+                                    className="p-6 w-full xl:w-1/2"
+                                >
+                                    <h3 className="text-lg font-semibold text-gray-900">{event.title}</h3>
+                                    <p className="mt-2 text-sm text-gray-600">{event.description}</p>
+                                    <span className="text-sm text-gray-500 flex items-center gap-2 mt-4">
+                                        <FaCalendarAlt />
+                                        {event.date}
+                                    </span>
+                                </motion.div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.div>
             </div>
         </div>
     );
