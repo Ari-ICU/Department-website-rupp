@@ -98,7 +98,7 @@ const RelatedArtical = () => {
                     </p>
                     <button
                       onClick={() => {
-                        navigate(`/research/${section.id}`);
+                        navigate(`/researchlab/${section.id}`);
                       }}
                       className="bg-red-900 hover:bg-red-800 xl:text-[14px] text-[12px] text-white py-2 px-6 rounded-4xl flex items-center"
                     >

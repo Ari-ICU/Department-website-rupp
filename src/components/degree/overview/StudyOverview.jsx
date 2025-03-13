@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaCheck } from 'react-icons/fa';
+import { FaRegGrinBeam } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
-import icon from '../../../assets/icon/1.png';
+// import icon from '../../../assets/icon/1.png';
 
 const StudyOverview = () => {
     const { degree } = useParams();  // Get the selected degree (e.g., bachelor, doctoral, etc.)
@@ -54,7 +55,7 @@ const StudyOverview = () => {
                 ]
             }
         ],
-        
+
         master: [
             {
                 year: 1,
@@ -148,7 +149,7 @@ const StudyOverview = () => {
             setSelectedYear(selectedStudyPlan[0].year);
         }
     }, [degree, selectedStudyPlan]);
-    
+
     const getDynamicParagraphText = () => {
         switch (degree) {
             case 'bachelor':
@@ -165,15 +166,15 @@ const StudyOverview = () => {
     };
 
     return (
-        <div className="my-16 py-4 bg-white">
-            <motion.div 
+        <div className="my-16 py-4">
+            <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
                 className="container mx-auto text-center px-4 "
             >
-                <motion.h2 
+                <motion.h2
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
@@ -182,8 +183,8 @@ const StudyOverview = () => {
                 >
                     What We Will Study ({degree.charAt(0).toUpperCase() + degree.slice(1)})
                 </motion.h2>
-                
-                <motion.p 
+
+                <motion.p
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
@@ -193,12 +194,21 @@ const StudyOverview = () => {
                     {getDynamicParagraphText()}
                 </motion.p>
 
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                     viewport={{ once: true }}
-                    className="grid grid-cols-1 lg:grid-cols-4 justify-center gap-6"
+                    className="grid justify-center gap-6"
+                    style={{
+                        gridTemplateColumns: selectedStudyPlan.length === 1 ? '1fr' :
+                            selectedStudyPlan.length === 2 ? 'repeat(2, 1fr)' :
+                                selectedStudyPlan.length === 3 ? 'repeat(3, 1fr)' :
+                                    'repeat(4, 1fr)', // This sets the number of columns dynamically based on length
+
+                        width: '100%', // Ensure it takes the full width available
+                        margin: '0 auto' // Center the grid horizontally
+                    }}
                 >
                     {selectedStudyPlan.map((year, index) => (
                         <motion.div
@@ -209,9 +219,10 @@ const StudyOverview = () => {
                             viewport={{ once: true }}
                             className={`rounded-xl p-6 shadow-md transition-all ${selectedYear === year.year ? 'bg-red-900' : 'bg-white'}`}
                             onClick={() => setSelectedYear(year.year)}
+                          
                         >
                             <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-4`}>
-                                <img src={icon} alt="" />
+                                <FaRegGrinBeam size={32} className={`${selectedYear === year.year ? 'text-white' : 'text-black'}`} />
                             </div>
                             <h3 className={`text-2xl font-semibold mb-2 text-start ${selectedYear === year.year ? 'text-white' : 'text-black'}`}>
                                 {year.title}
@@ -232,6 +243,8 @@ const StudyOverview = () => {
                         </motion.div>
                     ))}
                 </motion.div>
+
+
             </motion.div>
         </div>
     );

@@ -17,6 +17,8 @@ import ResearchDetails from './pages/ResearchDetails';
 import CareerDetails from './pages/CareerDetails';
 import Research from './pages/Research';
 import EventsNewDetails from './pages/EventsNewDetails';
+import Faculty from './pages/Faculty';
+import LabDetails from './pages/LabDetails';
 
 
 
@@ -30,6 +32,7 @@ const App = () => {
         <Route path="/" element={<Homepages />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path='/faculty'  element={<Faculty />}/>
         <Route path="/programs" element={<Program />} />
         <Route path="/programs/:degree" element={<Degree />} />
         <Route path='/admissions' element={<Admission />} />
@@ -38,6 +41,7 @@ const App = () => {
         <Route path="/scholars/:id" element={<ScholarshipDetails />} />
         <Route path='/research/' element={<Research/>} />
         <Route path='/research/:id' element={<ResearchDetails />} />
+        <Route path='/researchlab/:id' element={<LabDetails />}/>
         <Route path='/career/:id' element={<CareerDetails />} />
         <Route path='/events&news/:id'  element={<EventsNewDetails /> }/>
         <Route path='/facilities' element={<Facilities />} />
