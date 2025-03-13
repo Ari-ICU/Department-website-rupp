@@ -11,7 +11,7 @@ const CSAboutSection = () => {
 
   return (
     <motion.div
-      className="relative w-full h-[450px] bg-cover bg-center"
+      className="relative w-full h-[600px] bg-cover bg-center"
       style={{ backgroundImage: `url(${banner})` }}
       initial={{ opacity: 0, y: 50 }} // Initial state (hidden)
       whileInView={{ opacity: 1, y: 0 }} // Animate when in view

@@ -6,7 +6,7 @@ const ProgramBanner = () => {
     return (
         <div className='max-w-8xl mx-auto bg-orange-100'>
             <motion.div
-                className="relative h-[464px] bg-cover bg-center flex items-center justify-center"
+                className="relative h-[600px] bg-cover bg-center flex items-center justify-center"
                 style={{ backgroundImage: `url(${edu})` }}
                 initial={{ opacity: 0, y: 50 }} // Initial state (hidden)
                 whileInView={{ opacity: 1, y: 0 }} // Animate when in view

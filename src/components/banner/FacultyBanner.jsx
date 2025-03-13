@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
-import news from "../../assets/about/1.jpg";
+import news from "../../assets/banner/faculty.png";
 
 const FacultyBanner = () => {
   const title = "Faculty";
@@ -10,17 +10,17 @@ const FacultyBanner = () => {
 
   return (
     <motion.div
-      className="relative w-full h-[464px] flex items-center justify-center text-center text-white bg-cover bg-center"
+      className="relative w-full h-[600px] flex items-center justify-center text-center text-white bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
-      initial={{ opacity: 0, y: 50 }} // Initial state (hidden)
-      whileInView={{ opacity: 1, y: 0 }} // Animate when in view
-      transition={{ duration: 0.8 }} // Animation duration
-      viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true, amount: 0.5 }} 
     >
       {/* Fixed Overlay using RGBA */}
       <div
         className="absolute inset-0"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }} // 50% opacity
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }} // 50% opacity
       ></div>
 
       <div className="relative z-10 lg:max-w-5xl max-w-full px-6">

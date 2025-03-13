@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
-import scholar from "../../assets/banner/scholar.png";
+import scholar from "../../assets/icon/2.png";
 
 const ScholarshipBanner = () => {
   const title = "Scholarship Opportunity";
@@ -10,7 +10,7 @@ const ScholarshipBanner = () => {
 
   return (
     <motion.div
-      className="relative w-full h-[464px] flex items-center justify-center text-center text-white bg-cover bg-center"
+      className="relative w-full h-[600px] flex items-center justify-center text-center text-white bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
       initial={{ opacity: 0, y: 50 }} // Initial state (hidden)
       whileInView={{ opacity: 1, y: 0 }} // Animate when in view

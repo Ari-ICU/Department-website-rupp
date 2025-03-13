@@ -30,7 +30,7 @@ const ResearchBanner = () => {
                             viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
                             className="h-full overflow-hidden relative group"
                         >
-                            <div className='h-[464px]'>
+                            <div className='h-[600px]'>
                                 <img
                                     src={section.image}
                                     alt={section.title}

@@ -4,7 +4,8 @@ import { MdExplore } from 'react-icons/md';
 import { MdComputer } from 'react-icons/md';
 import { AiOutlineRobot } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
-import image1 from "../../assets/1.png";
+import image1 from "../../assets/research/3.png";
+import image2 from "../../assets/research/4.png";
 import FilterComponent from './FilterComponent';
 
 const bottomSections = [
@@ -18,7 +19,7 @@ const bottomSections = [
         id: 2,
         title: 'Data Science and Analytics',
         description: 'Data Science is rapidly growing, offering promising opportunities.',
-        image: image1,
+        image: image2,
     },
     {
         id: 3,

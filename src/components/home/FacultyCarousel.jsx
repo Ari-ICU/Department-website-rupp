@@ -4,16 +4,19 @@ import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import image1 from '../../assets/img/dr-heng-sovanrith.png';
+import image2 from '../../assets/img/professor/chi-koung.jpg'
+import image3 from '../../assets/img/professor/pok-leakmony.jpg'
+import image4 from '../../assets/img/professor/kim-no.jpg'
+import image5 from '../../assets/img/professor/meak-kamerane.png'
+
 
 const facultyMembers = [
-    { name: 'John Doe', position: 'Professor', image: image1 },
-    { name: 'Jane Smith', position: 'Assistant Professor', image: image1 },
-    { name: 'Albert Lee', position: 'Lecturer', image: image1 },
-    { name: 'Emily White', position: 'Senior Lecturer', image: image1 },
+    { name: 'John Doe', position: 'Professor', image: image2 },
+    { name: 'Jane Smith', position: 'Assistant Professor', image: image3 },
+    { name: 'Albert Lee', position: 'Lecturer', image: image4 },
+    { name: 'Emily White', position: 'Senior Lecturer', image: image5 },
     { name: 'David Brown', position: 'Associate Professor', image: image1 },
-    { name: 'Sarah Green', position: 'Professor Emeritus', image: image1 },
-    { name: 'Michael Black', position: 'Teaching Fellow', image: image1 },
-    { name: 'Olivia Gray', position: 'Research Fellow', image: image1 },
+    
 ];
 
 const FacultyCarousel = () => {

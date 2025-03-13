@@ -4,7 +4,7 @@ import { MdComputer } from 'react-icons/md';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { AiOutlineRobot } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
-import image1 from "../../assets/1.png";
+import image1 from "../../assets/banner/research1.png";
 
 const bottomSections = [
   {
