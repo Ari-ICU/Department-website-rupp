@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { MdExplore } from "react-icons/md";
-import { MdKeyboardArrowRight, MdKeyboardArrowLeft  } from "react-icons/md";
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
 // Image imports
 import heroImage1 from "../../assets/img/univ3.jpg";
@@ -15,27 +15,36 @@ const SlideShowSection = () => {
     {
       image: heroImage1,
       title: "Welcome to the Computer Science Department",
-      description: "Join a community of innovators, researchers, and future tech leaders shaping the world of tomorrow.",
-      buttonText: "Explore More",
-      buttonLink: "/about",
+      description:
+        "Join a community of innovators, researchers, and future tech leaders shaping the world of tomorrow.",
+      buttonText1: "About",
+      buttonText2: "Explore Our Program",
+      buttonLink1: "/about",
+      buttonLink2: "/programs",
       buttonColor: "bg-red-900",
       linkIcon: <MdExplore className="ml-2 text-white" />,
     },
     {
       image: heroImage2,
       title: "Explore Our Research Programs",
-      description: "Be part of groundbreaking research that shapes the future of technology.",
-      buttonText: "Learn More",
-      buttonLink: "/research",
+      description:
+        "Be part of groundbreaking research that shapes the future of technology.",
+      buttonText1: "About",
+      buttonText2: "Explore Our Program",
+      buttonLink1: "/about",
+      buttonLink2: "/programs",
       buttonColor: "bg-red-900",
       linkIcon: <MdExplore className="ml-2 text-white" />,
     },
     {
       image: heroImage3,
       title: "Innovating for the Future",
-      description: "Get ready to be a part of the next generation of tech leaders.",
-      buttonText: "Get Started",
-      buttonLink: "/start",
+      description:
+        "Get ready to be a part of the next generation of tech leaders.",
+      buttonText1: "About",
+      buttonText2: "Explore Our Program",
+      buttonLink1: "/about",
+      buttonLink2: "/programs",
       buttonColor: "bg-red-900",
       linkIcon: <MdExplore className="ml-2 text-white" />,
     },
@@ -90,9 +99,7 @@ const SlideShowSection = () => {
           alt="Background"
           className="object-cover object-center w-full h-full"
           key={currentSlide}
-         
           whileInView={{ opacity: 1, x: 0 }}
-         
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
@@ -125,16 +132,28 @@ const SlideShowSection = () => {
           {slides[currentSlide].description}
         </motion.p>
 
+        {/* Button Group */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
+          className="flex gap-4"
         >
+          {/* About Button */}
           <Link
-            to={slides[currentSlide].buttonLink}
-            className={`${slides[currentSlide].buttonColor} text-white py-2 px-6 xl:text-md text-[12px] xl:text-lg rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg flex items-center justify-center`}
+            to={slides[currentSlide].buttonLink1}
+            className={`${slides[currentSlide].buttonColor} text-white px-8 py-2 xl:text-md text-[12px] xl:text-lg rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg flex items-center justify-center`}
           >
-            {slides[currentSlide].buttonText}
+            {slides[currentSlide].buttonText1}
+            {slides[currentSlide].linkIcon}
+          </Link>
+
+          {/* Explore Program Button */}
+          <Link
+            to={slides[currentSlide].buttonLink2}
+            className={`${slides[currentSlide]} border text-white px-8 py-2 xl:text-md text-[12px] xl:text-lg rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg flex items-center justify-center`}
+          >
+            {slides[currentSlide].buttonText2}
             {slides[currentSlide].linkIcon}
           </Link>
         </motion.div>
@@ -145,15 +164,17 @@ const SlideShowSection = () => {
         onClick={goToPrevious}
         className="absolute z-20 left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white xl:p-3 p-1 rounded-full hover:bg-opacity-75 cursor-pointer"
         style={{ pointerEvents: "auto" }}
+        aria-label="Previous Slide"
       >
         <MdKeyboardArrowLeft />
       </button>
       <button
         onClick={goToNext}
-        className="absolute z-20 right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white  xl:p-3 p-1 rounded-full hover:bg-opacity-75 cursor-pointer"
+        className="absolute z-20 right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white xl:p-3 p-1 rounded-full hover:bg-opacity-75 cursor-pointer"
         style={{ pointerEvents: "auto" }}
+        aria-label="Next Slide"
       >
-        <MdKeyboardArrowRight  />
+        <MdKeyboardArrowRight />
       </button>
 
       {/* Navigation Dots */}
@@ -168,6 +189,7 @@ const SlideShowSection = () => {
                 : "bg-gray-500 hover:bg-gray-400"
             }`}
             style={{ pointerEvents: "auto" }}
+            aria-label={`Go to slide ${index + 1}`}
           ></button>
         ))}
       </div>

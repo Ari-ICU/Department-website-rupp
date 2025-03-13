@@ -22,7 +22,7 @@ const aboutData = {
         image1,
         image2
     ],
-    buttonText: "Explore",
+    // buttonText: "Explore",
 };
 
 const AboutSection = () => {
@@ -73,7 +73,7 @@ const AboutSection = () => {
                                 </motion.li>
                             ))}
                         </ul>
-                        <motion.div
+                        {/* <motion.div
                             className='px-4 py-4'
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
@@ -84,7 +84,7 @@ const AboutSection = () => {
                                 {aboutData.buttonText}
                                 <MdExplore className="ml-2" />
                             </button>
-                        </motion.div>
+                        </motion.div> */}
                     </motion.div>
 
                     {/* Image Section with animation */}
