@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
 import news from "../../assets/banner/faculty.png";
 
-const FacultyBanner = () => {
+const DeveloperTeamBanner = () => {
   const title = "Faculty";
   const subtitle =
     "With a strong emphasis on research, hands-on learning, and industry collaboration, we prepare students to tackle real-world challenges and drive technological advancements.";
@@ -13,9 +13,9 @@ const FacultyBanner = () => {
       className="relative w-full h-[600px] flex items-center justify-center text-center text-white bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
       initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }} 
       transition={{ duration: 0.8 }}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.5 }} 
     >
       {/* Fixed Overlay using RGBA */}
       <div
@@ -47,4 +47,4 @@ const FacultyBanner = () => {
   );
 };
 
-export default FacultyBanner;
+export default DeveloperTeamBanner;

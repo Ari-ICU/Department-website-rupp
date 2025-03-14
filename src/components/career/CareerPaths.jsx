@@ -76,7 +76,7 @@ const CareerPaths = () => {
               <div className="mr-6">
                 <h2 className="text-2xl xl:text-3xl font-semibold mb-2">Career Paths in</h2>
                 <h2 className="text-2xl xl:text-3xl font-semibold">Computer Science</h2>
-                <p className="mt-4 text-gray-600">
+                <p className="mt-4 text-gray-800">
                   Graduates of the Computer Science Undergraduate Program can pursue careers in various fields such as
                 </p>
               </div>
@@ -112,10 +112,10 @@ const CareerPaths = () => {
                   style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
                 >
                   <h3 className="text-lg font-semibold">{path.title}</h3>
-                  <p className="text-gray-400">{path.description}</p>
+                  <p className="text-gray-200">{path.description}</p>
                   <div className="flex items-center">
                     <FaCalendarAlt className="mr-2" />
-                    <p className="text-gray-400">{path.date}</p>
+                    <p className="text-gray-200">{path.date}</p>
                   </div>
                 </div>
               </motion.div>

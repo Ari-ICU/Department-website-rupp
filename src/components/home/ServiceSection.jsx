@@ -60,7 +60,7 @@ const ServiceSection = () => {
               <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
                 {/* Icon Container - Fixed size and consistent styling */}
                 <div
-                  className="min-w-[64px] flex-shrink-0 text-[40px] w-16 h-16 flex items-center justify-center bg-red-100/80 hover:bg-red-200 transition-colors text-red-900 rounded-full border-2 border-red-900/20"
+                  className="min-w-[64px] flex-shrink-0 text-[40px] w-16 h-16 flex items-center justify-center transition-colors text-red-900 rounded-full border-2 border-red-900/20"
                   aria-label={service.title}
                 >
                   {React.cloneElement(service.icon, {
@@ -70,7 +70,7 @@ const ServiceSection = () => {
 
                 {/* Title and Description */}
                 <div className="text-center md:text-left">
-                  <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+                  <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
                   <p className="md:text-base text-gray-600">{service.description}</p>
                 </div>
               </div>

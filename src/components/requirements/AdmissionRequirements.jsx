@@ -111,7 +111,7 @@ const AdmissionRequirements = () => {
             ))}
           </div>
           <div className="">
-            <button className="bg-red-500 p-2 rounded-3xl px-6 text-white">View course curriculum</button>
+            <button className="bg-red-800 p-2 rounded-3xl px-6 text-white">View course curriculum</button>
           </div>
         </motion.div>
       </div>

@@ -58,7 +58,7 @@ const FAQSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
                             viewport={{ once: true, amount: 0.5 }}
-                            className="text-gray-600 xl:text-lg text-[12px] mb-12 text-start"
+                            className="text-gray-800 xl:text-lg text-[12px] mb-12 text-start"
                         >
                             Professor: Inspiring Minds, Nurturing Curiosity, and Shaping the Future <br /> of Knowledge and Innovation
                         </motion.p>
@@ -90,7 +90,7 @@ const FAQSection = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.3 }}
-                                        className="text-gray-600 mt-4"
+                                        className="text-gray-800 mt-4"
                                     >
                                         {faq.answer}
                                     </motion.p>

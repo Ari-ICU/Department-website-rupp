@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import p1 from '../../assets/img/professor/chi-koung.jpg';
 import SocialIcon from '../social/SocialIcon';
 
-const HeadDepartment = () => {
+const TeamLeader = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleOverlayClick = (e) => {
@@ -21,26 +21,26 @@ const HeadDepartment = () => {
             <div className='container mx-auto px-4'>
                 <div className='space-y-10'>
                     <div className=''>
-                        <h1 className='text-3xl font-semibold '>Head of Department</h1>
+                        <h1 className='text-3xl font-semibold '>Team Leader</h1>
                     </div>
                     <div className='max-w-5xl mx-auto shadow-lg rounded-2xl items-center p-4'>
                         <div className="flex flex-col lg:flex-row gap-6 items-center">
                             {/* Image Container */}
                             <div className="relative w-full h-96 mb-4 group">
-                                <img
-                                    src={p1}
-                                    alt={name}
-                                    className="w-full h-full rounded-2xl object-cover group-hover:brightness-90 transition-all duration-300"
-                                />
+                                    <img
+                                        src={p1}
+                                        alt={name}
+                                        className="w-full h-full rounded-2xl object-cover group-hover:brightness-90 transition-all duration-300"
+                                    />
 
-                                {/* Social Media Overlay */}
-                                <motion.div
-                                    initial={{ opacity: 0 }}
-                                    whileHover={{ opacity: 1 }}
-                                    className="absolute inset-0 bg-black/20 rounded-2xl flex items-center justify-center"
-                                >
-                                    {/* Social Icons Container */}
-                                    <div className="absolute top-4 right-4 group-hover:bg-black/10 p-2 transition-all duration-300 rounded-2xl">
+                                    {/* Social Media Overlay */}
+                                    <motion.div
+                                        initial={{ opacity: 0 }}
+                                        whileHover={{ opacity: 1 }}
+                                        className="absolute inset-0 bg-black/20 rounded-2xl flex items-center justify-center"
+                                    >
+                                        {/* Social Icons Container */}
+                                        <div className="absolute top-4 right-4 group-hover:bg-black/10 p-2 transition-all duration-300 rounded-2xl">
                                         <motion.div
                                             initial={{ y: 20 }}
                                             animate={{ y: 0 }}
@@ -66,14 +66,15 @@ const HeadDepartment = () => {
                                                 </Link>
                                             </motion.div>
                                         </motion.div>
-                                    </div>
-                                </motion.div>
-                            </div>
+                                        </div>
+                                    </motion.div>
+                                </div>
                             <div className='space-y-6 max-w-xl relative'>
                                 <div className='absolute right-0 -top-6 flex justify-end text-right'>
                                     <RiDoubleQuotesR className='text-7xl text-red-900' />
                                 </div>
-                                <h1 className='text-2xl font-semibold '>Asst. Prof. Chi Kuong</h1>
+                                <h1 className='text-2xl font-semibold '>Mr. Leang Vakhim</h1>
+                                <p>Backend Lead/Frontend Lead</p>
                                 <p className=''>Asst. Prof. Chi Kuong (1989): B.Sc. (Chemistry), RUPP , 1991; Advanced Tools & Techniques in Computer Applications Development (AIT, Thailand), 1995; 2nd AIT-SIDA, Faculty Development Program for Cambodia Educational Institutions, (AIT, Thailand), 1995; Upgrading Program in Computer Science, (Quezon, Philippines), 1996- 97; M.Sc. (Computer Science), Ateneo de Manila University (Philippines), 2000.</p>
                                 <button onClick={() => setIsOpen(true)} className='bg-red-900 px-6 py-2 text-gray-50 rounded-2xl'>View</button>
                             </div>
@@ -107,4 +108,5 @@ const HeadDepartment = () => {
     );
 }
 
-export default HeadDepartment;
+export default TeamLeader ;
+    ;

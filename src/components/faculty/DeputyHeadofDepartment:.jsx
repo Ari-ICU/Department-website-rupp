@@ -45,40 +45,48 @@ const DeputyHeadofDepartment = () => {
                         {deputyData.map((deputy, index) => (
                             <div key={index} className='shadow-lg rounded-2xl p-4'>
                                 <div className="flex flex-col lg:flex-row gap-6 items-center">
+                                    {/* Image Container */}
                                     <div className="relative h-72 mb-4 group">
                                         <img
                                             src={deputy.image}
                                             alt={deputy.name}
-                                            className="w-full h-full rounded-2xl object-cover"
+                                            className="w-full h-full rounded-2xl object-cover group-hover:brightness-90 transition-all duration-300"
                                         />
+
+                                        {/* Social Media Overlay */}
                                         <motion.div
                                             initial={{ opacity: 0 }}
                                             whileHover={{ opacity: 1 }}
-                                            transition={{ duration: 0.3 }}
-                                            className="absolute top-2 right-2 space-x-2 space-y-4 text-center bg-gray-400/50 py-6 px-2 rounded-2xl flex flex-col justify-center items-center"
+                                            className="absolute inset-0 bg-black/20 rounded-2xl flex items-center justify-center"
                                         >
-                                            {deputy.facebook && (
+                                            {/* Social Icons Container */}
+                                            <div className="absolute top-4 right-4 group-hover:bg-black/10 p-2 transition-all duration-300 rounded-2xl">
                                                 <motion.div
-                                                    whileHover={{ scale: 1.2 }}
-                                                    transition={{ duration: 0.3 }}
-                                                    className="bg-black p-2 rounded-lg text-center"
+                                                    initial={{ y: 20 }}
+                                                    animate={{ y: 0 }}
+                                                    className=" space-y-2"
                                                 >
-                                                    <Link to={deputy.facebook} className="text-white text-xl hover:text-red-600">
-                                                        <FaFacebookF />
-                                                    </Link>
+                                                    {/* Facebook Link */}
+                                                    <motion.div
+                                                        whileHover={{ scale: 1.1 }}
+                                                        className="bg-white p-3 rounded-full shadow-lg"
+                                                    >
+                                                        <Link to="#" className="text-gray-700 hover:text-red-600">
+                                                            <FaFacebookF className="text-xl" />
+                                                        </Link>
+                                                    </motion.div>
+
+                                                    {/* Telegram Link */}
+                                                    <motion.div
+                                                        whileHover={{ scale: 1.1 }}
+                                                        className="bg-white p-3 rounded-full shadow-lg"
+                                                    >
+                                                        <Link to="#" className="text-gray-700 hover:text-red-400">
+                                                            <FaTelegramPlane className="text-xl" />
+                                                        </Link>
+                                                    </motion.div>
                                                 </motion.div>
-                                            )}
-                                            {deputy.telegram && (
-                                                <motion.div
-                                                    whileHover={{ scale: 1.2 }}
-                                                    transition={{ duration: 0.3 }}
-                                                    className="bg-black p-2 rounded-lg text-center"
-                                                >
-                                                    <Link to={deputy.telegram} className="text-white text-xl hover:text-red-400">
-                                                        <FaTelegramPlane />
-                                                    </Link>
-                                                </motion.div>
-                                            )}
+                                            </div>
                                         </motion.div>
                                     </div>
                                     <div className='space-y-6 max-w-md relative'>
@@ -99,7 +107,7 @@ const DeputyHeadofDepartment = () => {
                 </div>
             </div>
             {isOpen && selectedDeputy && (
-                <div 
+                <div
                     className="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
                     onClick={closeModal} // Close modal on clicking outside
                 >

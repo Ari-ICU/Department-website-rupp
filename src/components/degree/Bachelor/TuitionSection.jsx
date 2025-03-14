@@ -55,13 +55,13 @@ const TuitionSection = () => {
                         </motion.h2>
                         <div className="max-w-2xl mx-auto xl:mx-0">
                             <motion.p
-                                className="text-base xl:text-lg text-gray-600 mb-6"
+                                className="text-base xl:text-lg text-gray-800 mb-6"
                                 variants={itemVariants}
                             >
                                 The tuition fee for the Computer Science program is $500 per year, with an additional $5 exam fee.
                             </motion.p>
                             <motion.p
-                                className="text-base xl:text-lg text-gray-600 mb-8"
+                                className="text-base xl:text-lg text-gray-800 mb-8"
                                 variants={itemVariants}
                             >
                                 We accept all types of payments, including cash (hand-to-hand payment) and online transfers via bank for convenience.
@@ -73,7 +73,7 @@ const TuitionSection = () => {
                                 <div className="p-2 bg-red-900 rounded-2xl">
                                     <HiOutlineCurrencyDollar size={50} className="text-white" />
                                 </div>
-                                <p className="text-2xl xl:text-3xl">
+                                <p className="text-3xl xl:text-[30px]">
                                     500$/<span className="text-sm text-gray-500">year</span>
                                 </p>
                             </motion.div>
