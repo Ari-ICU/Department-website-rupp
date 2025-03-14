@@ -86,7 +86,7 @@ const FacultyCarousel = () => {
                     <motion.div
                         className="w-full md:w-auto mt-4 md:mt-0"
                     >
-                        <Link to='' className='flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1'>
+                        <Link to='/faculty' className='flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1'>
                             <span className="mr-2 xl:text-sm text-[12px]">View All</span>
                             <FaArrowRight className="text-red-800" />
                         </Link>

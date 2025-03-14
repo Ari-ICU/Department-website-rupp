@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
-import news from "../../assets/banner/faculty.png";
+import news from "../../assets/banner/1.png";
 
 const DeveloperTeamBanner = () => {
-  const title = "Faculty";
+  const title = "Development Teams";
   const subtitle =
-    "With a strong emphasis on research, hands-on learning, and industry collaboration, we prepare students to tackle real-world challenges and drive technological advancements.";
+    "Dedicated to crafting innovative and efficient solutions, our development team is passionate about creating a seamless digital experience. Through collaboration and cutting-edge technology, we strive to make an impact in the world of computer science.";
   const backgroundImage = news;
 
   return (

@@ -135,7 +135,7 @@ const ScholarshipOpportunities = () => {
                                 className="bg-white rounded-2xl shadow-md overflow-hidden flex justify-center items-center flex-shrink-0 max-w-xl "
                                 whileHover={{ scale: 1.05 }}
                             >
-                                <div className="w-full h-[200px] p-2 flex justify-center items-center">
+                                <div className="w-full h-full p-2 flex justify-center items-center">
                                     <img src={event.imageUrl} alt={event.title} className="w-full h-full object-cover rounded-2xl" />
                                 </div>
 

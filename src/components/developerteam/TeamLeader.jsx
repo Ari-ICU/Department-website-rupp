@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
-import { RiDoubleQuotesR } from "react-icons/ri";
 import { Link } from 'react-router-dom';
-import p1 from '../../assets/img/professor/chi-koung.jpg';
+import { RiDoubleQuotesR } from "react-icons/ri";
+import p1 from '../../assets/img/professor/p1.png';
 import SocialIcon from '../social/SocialIcon';
 
 const TeamLeader = () => {
@@ -75,7 +75,8 @@ const TeamLeader = () => {
                                 </div>
                                 <h1 className='text-2xl font-semibold '>Mr. Leang Vakhim</h1>
                                 <p>Backend Lead/Frontend Lead</p>
-                                <p className=''>Asst. Prof. Chi Kuong (1989): B.Sc. (Chemistry), RUPP , 1991; Advanced Tools & Techniques in Computer Applications Development (AIT, Thailand), 1995; 2nd AIT-SIDA, Faculty Development Program for Cambodia Educational Institutions, (AIT, Thailand), 1995; Upgrading Program in Computer Science, (Quezon, Philippines), 1996- 97; M.Sc. (Computer Science), Ateneo de Manila University (Philippines), 2000.</p>
+                                <p className=''>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. 
+                                </p>
                                 <button onClick={() => setIsOpen(true)} className='bg-red-900 px-6 py-2 text-gray-50 rounded-2xl'>View</button>
                             </div>
                         </div>
