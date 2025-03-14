@@ -22,7 +22,7 @@ const StudentLife = () => {
                 {/* Title & Description */}
                 <div className=" mb-10">
                     <h2 className="text-3xl font-semibold mb-4">Student Life & Recreation</h2>
-                    <p className="text-lg text-gray-600 ">
+                    <p className="text-lg text-gray-800">
                         With sports facilities, dormitories, cafeterias, and lounges, students enjoy a balanced lifestyle in a supportive environment.
                     </p>
                 </div>

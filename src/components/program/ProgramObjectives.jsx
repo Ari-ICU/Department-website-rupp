@@ -85,7 +85,9 @@ const ProgramObjectives = () => {
                     <div className="space-y-6">
                         {objectives.map((objective, index) => (
                             <div key={index} className="flex items-start gap-4">
-                                <objective.icon size={44} className="text-red-700" />
+                               <div className="border border-red-800 rounded-full p-2">
+                                    <objective.icon size={24} className="text-red-800" />
+                                </div>
                                 <div>
                                     <h3 className="text-lg sm:text-xl font-semibold mb-2">{objective.title}</h3>
                                     <p className="text-sm sm:text-base">{objective.description}</p>
