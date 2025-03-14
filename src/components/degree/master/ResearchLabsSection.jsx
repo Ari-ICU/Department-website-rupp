@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaFlask, FaUsers, FaDollarSign, FaUserGraduate } from 'react-icons/fa';
+import { FaUsers, FaDollarSign, FaUserGraduate } from 'react-icons/fa';
+import { MdSchool } from 'react-icons/md'
 import p1 from '../../../assets/master/1.png';
 
 const ResearchLabsSection = () => {
   const researchLabs = [
     {
-      icon: <FaFlask className="text-red-600 text-xl" />,
+      icon: <MdSchool className="text-red-600 text-xl" />,
       title: 'Cutting-Edge Research Labs',
       description: 'Access state-of-the-art labs and high-performance computing to explore AI, cybersecurity, data science, and more.',
       bgColor: 'bg-pink-100',
@@ -82,7 +83,7 @@ const ResearchLabsSection = () => {
                   </div>
                   <div>
                     <h3 className="text-lg xl:text-xl font-semibold mb-1">{lab.title}</h3>
-                    <p className="text-gray-600 xl:text-lg">{lab.description}</p>
+                    <p className="text-gray-800 xl:text-lg">{lab.description}</p>
                   </div>
                 </motion.div>
               ))}

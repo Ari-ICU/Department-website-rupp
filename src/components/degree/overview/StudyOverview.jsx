@@ -199,16 +199,7 @@ const StudyOverview = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                     viewport={{ once: true }}
-                    className="grid justify-center gap-6"
-                    style={{
-                        gridTemplateColumns: selectedStudyPlan.length === 1 ? '1fr' :
-                            selectedStudyPlan.length === 2 ? 'repeat(2, 1fr)' :
-                                selectedStudyPlan.length === 3 ? 'repeat(3, 1fr)' :
-                                    'repeat(4, 1fr)', // This sets the number of columns dynamically based on length
-
-                        width: '100%', // Ensure it takes the full width available
-                        margin: '0 auto' // Center the grid horizontally
-                    }}
+                    className={`grid gap-6 ${selectedStudyPlan.length === 2 ? 'max-w-3xl mx-auto grid grid-cols-2 justify-center' : ''} ${selectedStudyPlan.length === 3 ? 'max-w-6xl mx-auto grid grid-cols-3 justify-center' : ''}  ${selectedStudyPlan.length === 4 ? 'grid grid-cols-4' : ''}`}
                 >
                     {selectedStudyPlan.map((year, index) => (
                         <motion.div
@@ -219,7 +210,7 @@ const StudyOverview = () => {
                             viewport={{ once: true }}
                             className={`rounded-xl p-6 shadow-md transition-all ${selectedYear === year.year ? 'bg-red-900' : 'bg-white'}`}
                             onClick={() => setSelectedYear(year.year)}
-                          
+
                         >
                             <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-4`}>
                                 <FaUserGraduate size={32} className={`${selectedYear === year.year ? 'text-white' : 'text-black'}`} />

@@ -4,88 +4,90 @@ import { motion } from "framer-motion";
 
 const SearchButton = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [query, setQuery] = useState("");
   const inputRef = useRef(null);
-  const buttonRef = useRef(null);
-  const overlayRef = useRef(null);
+  const containerRef = useRef(null);
 
-  const handleButtonClick = () => {
+  const toggleSearch = () => {
     setIsOpen(!isOpen);
-    if (!isOpen && inputRef.current) {
-      inputRef.current.focus();
+    if (!isOpen) {
+      setTimeout(() => inputRef.current?.focus(), 10);
+    } else {
+      setQuery("");
     }
-  };
-
-  const handleCloseClick = () => {
-    setIsOpen(false);
   };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        overlayRef.current &&
-        !overlayRef.current.contains(event.target) &&
-        !inputRef.current.contains(event.target)
-      ) {
+      if (containerRef.current && !containerRef.current.contains(event.target)) {
         setIsOpen(false);
+        setQuery("");
       }
     };
 
-    if (isOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
+    const handleEscape = (e) => {
+      if (e.key === "Escape") {
+        setIsOpen(false);
+        setQuery("");
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
     };
-  }, [isOpen]);
+  }, []);
 
   return (
-    <div className="relative flex items-center space-x-2" ref={buttonRef}>
-      <motion.button
-        className="text-black focus:outline-none"
-        onClick={handleButtonClick}
-        initial={{ opacity: 1 }}
-        animate={{ opacity: isOpen ? 0 : 1 }}
-        transition={{ duration: 0.3 }}
+    <div className="relative flex items-center" ref={containerRef}>
+      <motion.div
+        className="flex items-center gap-2"
+        layout
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
-        {isOpen ? (
-          <FiX
-            className="w-6 h-6 cursor-pointer absolute top-2 right-2"
-            onClick={handleCloseClick}
-          />
-        ) : (
-          <>
-            <FiSearch className="w-6 h-6" />
-            <span className="ml-2 sr-only">Search</span>
-          </>
-        )}
-      </motion.button>
-
-      {isOpen && (
         <motion.div
-          className="fixed inset-0 flex items-center justify-center z-10 p-4 bg-black bg-opacity-50"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
-          transition={{ duration: 0.3 }}
-          ref={overlayRef}
+          className="relative"
+          animate={{
+            width: isOpen ? "200px" : "0px",
+            opacity: isOpen ? 1 : 0,
+          }}
+          transition={{ duration: 0.2 }}
         >
-          <div className="bg-white  rounded-lg shadow-xl w-72 relative">
-            <input
-              ref={inputRef}
-              type="text"
-              placeholder="Search..."
-              className="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-800 w-full"
-            />
-          </div>
-          <FiX
-            className="w-6 h-6 cursor-pointer absolute top-4 right-8 bg-white rounded-full p-1"
-            onClick={handleCloseClick}
+          <input
+            ref={inputRef}
+            type="text"
+            placeholder="Search..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            className="w-full px-3 py-1.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-800"
           />
+          {isOpen && (
+            <FiX
+              className="absolute right-2 top-2.5 w-4 h-4 cursor-pointer text-gray-500 hover:text-red-800"
+              onClick={() => {
+                setIsOpen(false);
+                setQuery("");
+              }}
+            />
+          )}
         </motion.div>
-      )}
+
+        <motion.button
+          onClick={toggleSearch}
+          className="text-gray-600 hover:text-red-800 p-1.5 rounded-full transition-colors"
+          whileTap={{ scale: 0.95 }}
+          aria-label={isOpen ? "Close search" : "Open search"}
+        >
+          {isOpen ? (
+            <FiX className="w-5 h-5" />
+          ) : (
+            <FiSearch className="w-5 h-5" />
+          )}
+        </motion.button>
+      </motion.div>
     </div>
   );
 };

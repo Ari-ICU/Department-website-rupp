@@ -1,29 +1,24 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FiChevronDown, FiX } from "react-icons/fi";
+import { FiChevronDown, FiX, FiMenu } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import logo from "../assets/img/rupp.png";
 
 const Navbar = ({ isOpen, setIsOpen }) => {
   const [dropdown, setDropdown] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navRef = useRef();
   const location = useLocation();
+  const { t } = useTranslation();
 
-  // Refs for desktop dropdowns
+  // Refs for dropdowns
   const aboutDropdownRef = useRef(null);
   const programDropdownRef = useRef(null);
   const campusLifeDropdownRef = useRef(null);
   const academicsResearchDropdownRef = useRef(null);
-  
-  // Refs for mobile dropdowns
-  const academicsMobileRef = useRef(null);
-  const peopleMobileRef = useRef(null);
 
-  useEffect(() => {
-    setDropdown(null);
-  }, [location]);
-
-  // Handle click outside dropdowns
+  // Close dropdown if the user clicks outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       const dropdowns = [
@@ -31,14 +26,10 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         programDropdownRef,
         campusLifeDropdownRef,
         academicsResearchDropdownRef,
-        academicsMobileRef,
-        peopleMobileRef
       ];
-
-      const isOutside = dropdowns.every(ref => 
-        !ref.current?.contains(event.target)
+      const isOutside = dropdowns.every(
+        (ref) => !ref.current?.contains(event.target)
       );
-
       if (isOutside) setDropdown(null);
     };
 
@@ -46,20 +37,23 @@ const Navbar = ({ isOpen, setIsOpen }) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const toggleDropdown = (menu) => 
-    setDropdown(dropdown === menu ? null : menu);
+  // Toggle dropdown visibility
+  const toggleDropdown = (menu) => setDropdown(dropdown === menu ? null : menu);
 
+  // Toggle mobile menu
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
+  // Desktop dropdown menu structure
   const desktopDropdown = (menu, ref, items) => (
     <div
       ref={ref}
-      className="relative"
+      className="relative hidden xl:block"
       onMouseEnter={() => setDropdown(menu)}
       onMouseLeave={() => setDropdown(null)}
     >
       <button className="flex items-center uppercase">
-        {menu} <FiChevronDown className="ml-1" />
+        {t(menu)} <FiChevronDown className="ml-1" />
       </button>
-      
       {dropdown === menu && (
         <motion.div
           className="absolute left-0 mt-0 bg-white shadow-md rounded-md py-2 w-52 z-50"
@@ -75,43 +69,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
               }`}
               onClick={() => setDropdown(null)}
             >
-              {text}
-            </Link>
-          ))}
-        </motion.div>
-      )}
-    </div>
-  );
-
-  const mobileDropdown = (menu, ref, items) => (
-    <div ref={ref} className="relative">
-      <button
-        onClick={() => toggleDropdown(menu)}
-        className="flex justify-between items-center w-full px-4 py-2"
-      >
-        {menu}
-        <FiChevronDown className={`transition-transform ${
-          dropdown === menu ? "rotate-180" : ""
-        }`}/>
-      </button>
-      
-      {dropdown === menu && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="pl-4"
-        >
-          {items.map(([path, text]) => (
-            <Link
-              key={path}
-              to={path}
-              className="block px-4 py-2 hover:text-red-900"
-              onClick={() => {
-                setDropdown(null);
-                setIsOpen(false);
-              }}
-            >
-              {text}
+              {t(text)}
             </Link>
           ))}
         </motion.div>
@@ -121,129 +79,103 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 
   return (
     <nav ref={navRef} className="container mx-auto relative xl:flex xl:space-x-6 text-sm 2xl:text-base">
-      {/* Desktop Menu */}
-      <div className="hidden xl:flex space-x-6 uppercase">
+      {/* Mobile Hamburger Button */}
+      <div className="flex justify-between items-center xl:hidden">
+        <button onClick={toggleMobileMenu} className="text-xl">
+          <FiMenu />
+        </button>
+        <Link to="/" className="ml-4">
+          <img src={logo} alt="RUPP Logo" className="w-10" />
+        </Link>
+      </div>
+
+      {/* Desktop and Mobile Menu */}
+      <div className={`xl:flex space-x-6 uppercase ${isMobileMenuOpen ? "block" : "hidden"}`}>
         <Link to="/" className={`hover:text-red-900 ${location.pathname === "/" ? "text-red-900 font-bold" : ""}`}>
-          Home
+          {t("home")}
         </Link>
 
-        {desktopDropdown("About", aboutDropdownRef, [
-          ["/about", "About Website"],
-          ["/developer", "Developer Team"]
+        {desktopDropdown("about", aboutDropdownRef, [
+          ["/about", "aboutWebsite"],
+          ["/developer", "developerTeam"],
         ])}
 
         <Link to="/contact" className={`hover:text-red-900 ${location.pathname === "/contact" ? "text-red-900 font-bold" : ""}`}>
-          Contact
+          {t("contact")}
         </Link>
 
-        {desktopDropdown("Programs", programDropdownRef, [
-          ["/programs/bachelor", "Bachelor"],
-          ["/programs/master", "Master"],
-          ["/programs/doctoral", "Doctoral"],
-          ["/programs/diploma", "Diploma"]
+        {desktopDropdown("programs", programDropdownRef, [
+          ["/programs/bachelor", "bachelor"],
+          ["/programs/master", "master"],
+          ["/programs/doctoral", "doctoral"],
+          ["/programs/diploma", "diploma"],
         ])}
 
-        <Link to="/admissions" className={`hover:text-red-900 ${location.pathname === "/admission" ? "text-red-900 font-bold" : ""}`}>
-          Admission
+        <Link to="/admissions" className={`hover:text-red-900 ${location.pathname === "/admissions" ? "text-red-900 font-bold" : ""}`}>
+          {t("admission")}
         </Link>
 
         <Link to="/news&events" className={`hover:text-red-900 ${location.pathname === "/news&events" ? "text-red-900 font-bold" : ""}`}>
-          News & Events
+          {t("newsEvents")}
         </Link>
 
-        {desktopDropdown("Campus Life", campusLifeDropdownRef, [
-          ["/facilities", "Facilities"],
-          ["/scholars", "Scholarships & Financial Aid"]
+        {desktopDropdown("campusLife", campusLifeDropdownRef, [
+          ["/facilities", "facilities"],
+          ["/scholars", "scholars"],
         ])}
 
-        {desktopDropdown("Academics", academicsResearchDropdownRef, [
-          ["/faculty", "Faculty Members"],
-          ["/research", "Research Projects"]
+        {desktopDropdown("academics", academicsResearchDropdownRef, [
+          ["/faculty", "faculty"],
+          ["/research", "research"],
         ])}
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <motion.div
-          className="fixed inset-0 bg-white z-50 overflow-y-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          <div className="p-6">
-            <div className="flex justify-between items-center mb-6">
-              <Link to="/" className="flex items-center space-x-3">
-                <img src={logo} alt="logo" className="w-12 h-12" />
-                <div className="text-gray-800">
-                  <div className="font-semibold">Faculty of Science</div>
-                  <div className="text-sm">Department of Computer Science</div>
-                </div>
-              </Link>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-gray-600 hover:text-gray-800"
-              >
-                <FiX size={28} />
-              </button>
+      {/* Mobile Menu Dropdown */}
+      <div className={`xl:hidden ${isMobileMenuOpen ? "block" : "hidden"} absolute top-0 left-0 w-full bg-white shadow-lg`}>
+        <button onClick={toggleMobileMenu} className="absolute top-4 right-4 text-2xl">
+          <FiX />
+        </button>
+
+        <Link to="/" className={`block py-2 px-4 text-gray-800 hover:bg-gray-100 ${location.pathname === "/" ? "text-red-900 font-bold" : ""}`}>
+          {t("home")}
+        </Link>
+
+        <div className="space-y-2">
+          <button className="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-100" onClick={() => toggleDropdown("about")}>
+            {t("about")} <FiChevronDown className="inline ml-2" />
+          </button>
+          {dropdown === "about" && (
+            <div className="pl-4">
+              <Link to="/about" className="block py-1">{t("aboutWebsite")}</Link>
+              <Link to="/developer" className="block py-1">{t("developerTeam")}</Link>
             </div>
+          )}
 
-            <nav className="space-y-2">
-              <Link
-                to="/"
-                className="block px-4 py-2 hover:text-red-900"
-                onClick={() => setIsOpen(false)}
-              >
-                Home
-              </Link>
+          <button className="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-100" onClick={() => toggleDropdown("programs")}>
+            {t("programs")} <FiChevronDown className="inline ml-2" />
+          </button>
+          {dropdown === "programs" && (
+            <div className="pl-4">
+              <Link to="/programs/bachelor" className="block py-1">{t("bachelor")}</Link>
+              <Link to="/programs/master" className="block py-1">{t("master")}</Link>
+              <Link to="/programs/doctoral" className="block py-1">{t("doctoral")}</Link>
+              <Link to="/programs/diploma" className="block py-1">{t("diploma")}</Link>
+            </div>
+          )}
 
-              {mobileDropdown("About", aboutDropdownRef, [
-                ["/about", "About Website"],
-                ["/developer", "Developer Team"]
-              ])}
+          <Link to="/contact" className={`block py-2 px-4 text-gray-800 hover:bg-gray-100 ${location.pathname === "/contact" ? "text-red-900 font-bold" : ""}`}>
+            {t("contact")}
+          </Link>
 
-              <Link
-                to="/contact"
-                className="block px-4 py-2 hover:text-red-900"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </Link>
+          <Link to="/admissions" className={`block py-2 px-4 text-gray-800 hover:bg-gray-100 ${location.pathname === "/admissions" ? "text-red-900 font-bold" : ""}`}>
+            {t("admission")}
+          </Link>
 
-              {mobileDropdown("Programs", programDropdownRef, [
-                ["/programs/bachelor", "Bachelor"],
-                ["/programs/master", "Master"],
-                ["/programs/doctoral", "Doctoral"],
-                ["/programs/diploma", "Diploma"]
-              ])}
-
-              <Link
-                to="/admissions"
-                className="block px-4 py-2 hover:text-red-900"
-                onClick={() => setIsOpen(false)}
-              >
-                Admission
-              </Link>
-
-              <Link
-                to="/news&events"
-                className="block px-4 py-2 hover:text-red-900"
-                onClick={() => setIsOpen(false)}
-              >
-                News & Events
-              </Link>
-
-              {mobileDropdown("Campus Life", campusLifeDropdownRef, [
-                ["/facilities", "Facilities"],
-                ["/scholars", "Scholarships & Financial Aid"]
-              ])}
-
-              {mobileDropdown("Academics", academicsResearchDropdownRef, [
-                ["/faculty", "Faculty Members"],
-                ["/research", "Research Projects"]
-              ])}
-            </nav>
-          </div>
-        </motion.div>
-      )}
+          <Link to="/news&events" className={`block py-2 px-4 text-gray-800 hover:bg-gray-100 ${location.pathname === "/news&events" ? "text-red-900 font-bold" : ""}`}>
+            {t("newsEvents")}
+          </Link>
+        </div>
+      </div>
     </nav>
   );
 };

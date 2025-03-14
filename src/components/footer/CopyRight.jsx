@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 const CopyRight = () => {
     const currentYear = new Date().getFullYear();
     return (
-        <footer className='text-center text-gray-500 py-5'>
+        <footer className='text-center text-gray-200 py-5'>
             <p>
                 &copy; {currentYear} Department of Computer Science. All rights reserved. Developed by 
-                <Link to="/developer" className='text-red-900 hover:underline'> 4th-Year, 25th Generation.</Link>
+                <Link to="/developer" className='text-red-500 hover:underline'> 4th-Year, 25th Generation.</Link>
             </p>
         </footer>
     );
