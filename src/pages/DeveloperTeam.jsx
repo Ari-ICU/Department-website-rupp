@@ -3,6 +3,7 @@ import DeveloperTeamBanner from '../components/banner/DeveloperTeamBanner'
 import Overview from '../components/developerteam/Overview'
 import TeamLeader from '../components/developerteam/TeamLeader'
 import MemberTeam from '../components/developerteam/MemberTeam'
+import DepartmentHeader from '../components/home/DepartmentHeader'
 
 const DeveloperTeam = () => {
   return (
@@ -13,6 +14,7 @@ const DeveloperTeam = () => {
             <TeamLeader />
             <MemberTeam />
         </div>
+        <DepartmentHeader />
     </div>
   )
 }
