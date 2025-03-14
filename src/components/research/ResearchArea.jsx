@@ -85,7 +85,7 @@ const ResearchArea = () => {
                             {requirements.map((requirement, index) => (
                                 <div key={index} className="mb-6 flex gap-4">
                                     <div className="flex items-center justify-center">
-                                        <div className="bg-red-300 bg-opacity-35 rounded-full flex items-center justify-center p-3">
+                                    <div className="border border-red-800 rounded-full p-2">
                                             {requirement.icon}
                                         </div>
                                     </div>

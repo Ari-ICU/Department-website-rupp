@@ -59,7 +59,7 @@ const AcademicFacilities = () => {
                                     className="bg-white rounded-lg p-6 shadow-lg flex items-center gap-4 hover:shadow-xl hover:scale-105 transition duration-300"
                                 >
                                     {/* Icon Section */}
-                                    <div className="p-2 flex items-center justify-center rounded-lg bg-red-700">
+                                    <div className="p-2 flex items-center justify-center rounded-lg bg-red-800">
                                         {facility.icon}
                                     </div>
 
