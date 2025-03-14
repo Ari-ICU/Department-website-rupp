@@ -99,10 +99,10 @@ const UpcomingEvents = () => {
                                         <h3 className="mt-2 text-lg font-semibold text-gray-900">
                                             {event.title}
                                         </h3>
-                                        <p className="mt-2 text-sm text-gray-600">
+                                        <p className="mt-2 text-sm text-gray-800">
                                             {event.description}
                                         </p>
-                                        <span className="text-sm text-gray-500 flex items-center gap-4 mt-4">
+                                        <span className="text-sm text-gray-800 flex items-center gap-4 mt-4">
                                             <FaCalendarAlt />
                                             {event.date}
                                         </span>
