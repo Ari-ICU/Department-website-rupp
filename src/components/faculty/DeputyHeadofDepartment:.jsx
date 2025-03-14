@@ -41,9 +41,18 @@ const DeputyHeadofDepartment = () => {
                     <div>
                         <h1 className='text-3xl font-semibold '>Deputy Head of Department:</h1>
                     </div>
-                    <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                    <div className='flex flex-col xl:flex-row xl:flex-wrap gap-8 justify-center'>
                         {deputyData.map((deputy, index) => (
-                            <div key={index} className='shadow-lg rounded-2xl p-4'>
+                            <div
+                                key={index}
+                                className={`
+        shadow-lg rounded-2xl p-4 
+        xl:w-[calc(50%-1rem)]  // Subtract half of gap (8px = 0.5rem)
+        ${index === deputyData.length - 1 && deputyData.length % 2 !== 0 ?
+                                        'xl:mx-auto' : ''}
+      `}
+                            >
+                                {/* Rest of your card content remains the same */}
                                 <div className="flex flex-col lg:flex-row gap-6 items-center">
                                     {/* Image Container */}
                                     <div className="relative h-72 mb-4 group">

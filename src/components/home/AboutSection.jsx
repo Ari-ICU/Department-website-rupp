@@ -66,9 +66,8 @@ const AboutSection = () => {
                                     transition={{ duration: 0.8, delay: 0.2 * (index + 1) }}
                                     viewport={{ once: true, amount: 0.5 }}
                                 >
-                                 <div className="bg-red-300 bg-opacity-35 rounded-full flex items-center justify-center mr-2">
-
-                                       <FaCheck size={34} className="text-red-900 p-2 " />
+                                    <div className="border border-red-800 p-2 rounded-4xl mr-2">
+                                        <FaCheck className="text-red-800" />
                                     </div>
                                     {item}
                                 </motion.li>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
+import { MdExplore } from "react-icons/md";
 
 // Image imports
 import heroImage1 from "../../assets/img/univ3.jpg";
@@ -154,7 +155,7 @@ const SlideShowSection = () => {
             className={`${slides[currentSlide]} border text-white px-8 py-2 xl:text-md text-[12px] xl:text-lg rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg flex items-center justify-center`}
           >
             {slides[currentSlide].buttonText2}
-            {slides[currentSlide].linkIcon}
+            <MdExplore className="ml-2 items-center" /> 
           </Link>
         </motion.div>
       </div>

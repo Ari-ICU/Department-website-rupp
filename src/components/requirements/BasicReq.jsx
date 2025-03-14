@@ -93,9 +93,9 @@ const BasicRequirements = () => {
                                     className="mb-4 flex gap-4"
                                 >
                                     <div className="flex items-center justify-center">
-                                        <div className="bg-red-300 bg-opacity-35 rounded-full flex items-center justify-center">
-                                            <FaCheck size={34} className="text-red-900 p-2" />
-                                        </div>
+                                       <div className="border border-red-800 p-2 rounded-4xl mr-2">
+                                                            <FaCheck className="text-red-800" />
+                                                          </div>
                                     </div>
                                     <div>
                                         <p className="text-sm xl:text-lg">{requirement}</p>
