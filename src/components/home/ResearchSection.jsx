@@ -168,7 +168,7 @@ const ResearchInnovations = () => {
                   {buttons.map((button, btnIndex) => (
                     <motion.button
                       key={btnIndex}
-                      className="text-black xl:text-[16px] text-[12px] bg-gray-400 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"
+                      className="text-black xl:text-[16px] text-[12px] bg-gray-400/50 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.2 * btnIndex }}

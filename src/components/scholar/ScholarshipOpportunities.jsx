@@ -92,7 +92,7 @@ const ScholarshipOpportunities = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="flex flex-col xl:flex-row justify-between max-w-2xl items-center mb-8"
+                    className="flex flex-col xl:flex-row justify-between items-center mb-8"
                 >
                     <motion.h2
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -111,7 +111,7 @@ const ScholarshipOpportunities = () => {
                         viewport={{ once: true }}
                         className="mt-4 xl:mt-0"
                     >
-                        <Link to="#" className="flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1">
+                        <Link to="/scholars" className="flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1">
                             <span className="mr-2 xl:text-sm text-[12px]">View All</span>
                             <FaArrowRight className="text-red-800" />
                         </Link>

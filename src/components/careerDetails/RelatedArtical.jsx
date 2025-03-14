@@ -97,10 +97,10 @@ const RelatedArtical = () => {
                 className="absolute bottom-0 left-0 w-full text-white p-4 space-y-2"
               >
                 <h3 className="text-lg font-semibold">{path.title}</h3>
-                <p className="text-gray-400">{path.description}</p>
+                <p className=" text-gray-200">{path.description}</p>
                 <div className="flex items-center">
                   <FaCalendarAlt className="mr-2" /> {/* Calendar icon */}
-                  <p className="text-gray-400">{path.data}</p>
+                  <p className=" text-gray-200">{path.data}</p>
                 </div>
               </div>
             </motion.div>

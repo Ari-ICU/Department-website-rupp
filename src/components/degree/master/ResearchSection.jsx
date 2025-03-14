@@ -3,7 +3,8 @@ import { MdExplore } from 'react-icons/md';
 import { MdComputer } from 'react-icons/md';
 import { AiOutlineRobot } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
-import image1 from "../../../assets/1.png";
+import image1 from "../../../assets/banner/research1.png";
+
 
 const bottomSections = [
   {
@@ -77,7 +78,7 @@ const ResearchSection = () => {
                     {buttons.map((button, buttonIndex) => (
                       <button
                         key={buttonIndex}
-                        className="text-black xl:text-[12px] text-[10px] bg-gray-300 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"
+                        className="text-black xl:text-[12px] text-[10px] bg-gray-300/50 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"
                       >
                         {button.icon}
                         {button.label}

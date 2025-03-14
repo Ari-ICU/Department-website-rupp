@@ -128,7 +128,7 @@ const CareerSection = () => {
                         >
                             <h2 className="text-2xl font-semibold mb-4 text-gray-800">{section.title}</h2>
                             {section.tag && (
-                                <p className='py-1 px-4 mb-4 border rounded-2xl text-gray-400'>{section.tag}</p>
+                                <p className='py-1 px-4 mb-4 border rounded-2xl  text-gray-600'>{section.tag}</p>
                             )}
                         </motion.div>
 

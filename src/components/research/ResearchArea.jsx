@@ -77,7 +77,7 @@ const ResearchArea = () => {
                             Research Areas & Specializations
                         </h3>
 
-                        <p>
+                        <p className="text-gray-800">
                             Our department is engaged in diverse research fields, pushing the boundaries of technology. Some of our key areas of focus include:
                         </p>
 

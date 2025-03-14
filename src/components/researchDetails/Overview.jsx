@@ -29,7 +29,7 @@ const Overview = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: 0.6 }}
                             viewport={{ once: true }}
-                            className="text-sm w-full xl:text-lg text-gray-500"
+                            className="text-sm w-full xl:text-lg text-gray-800"
                         >
                             {overviewContent.description} {/* Use overviewContent here */}
                         </motion.p>
