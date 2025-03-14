@@ -12,7 +12,7 @@ const TypeScholar = () => {
       provider: 'Government-funded scholarships (e.g., Fulbright, Chevening, DAAD), ASEAN, or university partnerships.',
       bgColor: 'bg-white border-gray-300', // White with gray border
       textColor: 'text-gray-800',
-      iconColor: 'text-red-500' // Icon color
+      iconColor: ' text-red-800' // Icon color
     },
     {
       type: 'Merit-Based Scholarships',
@@ -30,7 +30,7 @@ const TypeScholar = () => {
       provider: 'Some university discounts, NGO scholarships, or industry-sponsored programs.',
       bgColor: 'bg-white border-gray-300', // White with blue border
       textColor: 'text-gray-800',
-      iconColor: 'text-red-500'
+      iconColor: ' text-red-800'
     },
     {
       type: 'Tuition Fee Scholarships',

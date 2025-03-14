@@ -23,7 +23,7 @@ const Header = () => {
         <div className="max-w-8xl mx-auto px-4">
           <div className="flex justify-between items-center py-2">
             {/* Logo */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
@@ -48,15 +48,17 @@ const Header = () => {
               {/* Search & Language Switch */}
               <SearchButton onToggle={() => setIsSearchOpen(!isSearchOpen)} />
               <LanguageSwitcherButton />
-
-              {/* Mobile Menu Button (Hamburger Icon) */}
-              <motion.button
-                className="xl:hidden text-gray-800"
-                onClick={toggleMobileMenu} // Trigger the mobile menu toggle
-                aria-label="Toggle mobile menu"
-              >
-                 <Navbar isOpen={isMobileMenuOpen} setIsOpen={setIsMobileMenuOpen} /> 
-              </motion.button>
+              
+              {isMobileMenuOpen && (
+                <motion.nav
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  className="xl:hidden absolute top-full left-0 w-full bg-white shadow-lg"
+                >
+                  <Navbar isMobile /> {/* Your existing Navbar component with mobile prop */}
+                </motion.nav>
+              )}
             </div>
           </div>
         </div>
