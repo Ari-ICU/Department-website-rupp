@@ -78,7 +78,7 @@ const ResearchLabsSection = () => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: index * 0.2 }}
                 >
-                  <div className={`p-3 ${lab.bgColor} rounded-full mr-4`}>
+                  <div className={`${lab.bgColor} border border-red-800 rounded-full p-2 mr-4`}>
                     {lab.icon}
                   </div>
                   <div>

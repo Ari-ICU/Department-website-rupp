@@ -199,7 +199,7 @@ const StudyOverview = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                     viewport={{ once: true }}
-                    className={`grid gap-6 ${selectedStudyPlan.length === 2 ? 'max-w-3xl mx-auto grid grid-cols-2 justify-center' : ''} ${selectedStudyPlan.length === 3 ? 'max-w-6xl mx-auto grid grid-cols-3 justify-center' : ''}  ${selectedStudyPlan.length === 4 ? 'grid grid-cols-4' : ''}`}
+                    className={`grid gap-6 ${selectedStudyPlan.length === 2 ? 'max-w-3xl mx-auto grid grid-cols-1 xl:grid-cols-2 justify-center' : ''} ${selectedStudyPlan.length === 3 ? 'max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center' : ''}  ${selectedStudyPlan.length === 4 ? 'grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4' : ''}`}
                 >
                     {selectedStudyPlan.map((year, index) => (
                         <motion.div
