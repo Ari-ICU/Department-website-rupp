@@ -16,9 +16,9 @@ const facultyMembers = [
     { name: 'Asst. Prof. Chi Kuong', position: 'Head of Department', image: image2 },
     { name: 'Mr. Pok LeakMony ', position: 'Deputy Head of Department:', image: image3 },
     { name: 'Asst. Prof. Dr. Chor Chandara ', position: 'Deputy Head of Department:', image: p2 },
-    { name: 'Kim No', position: 'Assistant Professor', image: image4 },
-    { name: 'Meak Kamerane', position: 'Assistant Professor', image: image5 },
-    { name: 'Dr. Heng Sovannrith', position: 'Assistant Professor', image: image1 },
+    { name: 'Asst. Prof. Kim No', position: 'Assistant Professor', image: image4 },
+    { name: 'Asst. Prof. Meak Kamerane', position: 'Assistant Professor', image: image5 },
+    { name: 'Asst. Prof. Heng Sovannrith', position: 'Assistant Professor', image: image1 },
 
 ];
 
