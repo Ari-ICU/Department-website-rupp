@@ -7,6 +7,10 @@ import p3 from '../../assets/developer/3.png';
 import p1 from '../../assets/developer/alian.png';
 import p2 from '../../assets/developer/2.png';
 import p5 from '../../assets/developer/5.png';
+import p4 from '../../assets/developer/me.png';
+import p6 from '../../assets/developer/ryna.png';
+
+
 
 
 
@@ -18,7 +22,7 @@ const MemberTeam = () => {
   const deputyData = [
     {
       name: "Mr. Thoeurn Ratha",
-      image: p1,
+      image: p4,
       position: "Frontend Dev",
       bio: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.  ",
       facebook: "https://facebook.com/example",
@@ -50,7 +54,7 @@ const MemberTeam = () => {
     },
     {
       name: "Ms. Nop Maryna",
-      image: p1,
+      image: p6,
       position: "UX/UI",
       bio: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.  ",
       facebook: "https://facebook.com/example",
