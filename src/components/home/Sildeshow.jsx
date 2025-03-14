@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { MdExplore } from "react-icons/md";
+import { BsFillInfoCircleFill } from "react-icons/bs";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
 // Image imports
@@ -22,7 +22,7 @@ const SlideShowSection = () => {
       buttonLink1: "/about",
       buttonLink2: "/programs",
       buttonColor: "bg-red-900",
-      linkIcon: <MdExplore className="ml-2 text-white" />,
+      linkIcon: <BsFillInfoCircleFill className="ml-2 text-white" />,
     },
     {
       image: heroImage2,
@@ -34,7 +34,7 @@ const SlideShowSection = () => {
       buttonLink1: "/about",
       buttonLink2: "/programs",
       buttonColor: "bg-red-900",
-      linkIcon: <MdExplore className="ml-2 text-white" />,
+      linkIcon: <BsFillInfoCircleFill className="ml-2 text-white" />,
     },
     {
       image: heroImage3,
@@ -46,7 +46,7 @@ const SlideShowSection = () => {
       buttonLink1: "/about",
       buttonLink2: "/programs",
       buttonColor: "bg-red-900",
-      linkIcon: <MdExplore className="ml-2 text-white" />,
+      linkIcon: <BsFillInfoCircleFill className="ml-2 text-white" />,
     },
   ];
 
@@ -124,7 +124,7 @@ const SlideShowSection = () => {
         </motion.h1>
 
         <motion.p
-          className="xl:text-lg text-[12px] text-gray-300 mb-8 max-w-lg"
+          className="xl:text-lg text-[12px] text-gray-100 mb-8 max-w-lg"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}

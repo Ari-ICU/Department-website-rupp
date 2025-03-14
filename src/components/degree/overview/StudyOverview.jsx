@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaCheck } from 'react-icons/fa';
-import { FaRegGrinBeam } from 'react-icons/fa';
+import { FaUserGraduate } from "react-icons/fa6";
 import { useParams } from 'react-router-dom';
 // import icon from '../../../assets/icon/1.png';
 
@@ -222,7 +222,7 @@ const StudyOverview = () => {
                           
                         >
                             <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-4`}>
-                                <FaRegGrinBeam size={32} className={`${selectedYear === year.year ? 'text-white' : 'text-black'}`} />
+                                <FaUserGraduate size={32} className={`${selectedYear === year.year ? 'text-white' : 'text-black'}`} />
                             </div>
                             <h3 className={`text-2xl font-semibold mb-2 text-start ${selectedYear === year.year ? 'text-white' : 'text-black'}`}>
                                 {year.title}

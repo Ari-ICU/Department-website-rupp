@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaTelegram, FaFacebookF, FaTimes } from 'react-icons/fa';
+import { FaTelegramPlane, FaFacebookF } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import logo from "../../assets/img/rupp.png";
 
@@ -39,7 +40,7 @@ const DepartmentHeader = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              Faculty of Science Department of <br className='xl:block hidden' /> Computer Science
+              Faculty of Science <br className='xl:block hidden' /> Department of Computer Science
             </motion.h2>
 
           </motion.div>
@@ -57,7 +58,7 @@ const DepartmentHeader = () => {
               visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
             }}
           >
-            {[FaTelegram, FaFacebookF, FaTimes].map((Icon, index) => (
+            {[FaTelegramPlane, FaFacebookF, FaXTwitter].map((Icon, index) => (
               <motion.div
                 key={index}
                 variants={{

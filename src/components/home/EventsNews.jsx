@@ -54,7 +54,7 @@ const EventsNews = () => {
                         </p>
                     </div>
                     <div className="w-full md:w-auto mt-4 md:mt-0">
-                        <Link to='/events' className='flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1'>
+                        <Link to='/news&events' className='flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1'>
                             <span className="mr-2 xl:text-sm text-[12px]">View All</span>
                             <FaArrowRight className="text-red-800" />
                         </Link>
@@ -64,7 +64,7 @@ const EventsNews = () => {
                 <div className="py-2">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {events.map((event) => (
-                            <Link to={`/events&news/${event.id}`} key={event.id} className="block">
+                            <Link to={`/news&events/${event.id}`} key={event.id} className="block">
                                 <div className="bg-white rounded-2xl shadow-md flex flex-col xl:flex-row justify-center min-w-96 hover:shadow-lg transition-shadow duration-300">
                                     <div className="mx-auto xl:w-1/2 flex justify-center items-center">
                                         <img
@@ -83,7 +83,7 @@ const EventsNews = () => {
                                         <h3 className="mt-2 text-lg font-semibold text-gray-900">
                                             {event.title}
                                         </h3>
-                                        <p className="mt-2 text-sm text-gray-600">
+                                        <p className="mt-2 text-sm text-gray-800">
                                             {event.description}
                                         </p>
                                         <span className="text-sm text-gray-500 flex items-center gap-4 mt-4">

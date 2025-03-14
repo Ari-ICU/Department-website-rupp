@@ -58,7 +58,7 @@ const AcademicSection = () => {
           >
             <h2 className="text-3xl font-bold mb-4">{academicsData.title}</h2>
             {academicsData.description.map((text, index) => (
-              <p key={index} className="text-sm md:text-base text-gray-500 mb-4">
+              <p key={index} className="text-sm md:text-base text-gray-800 mb-4">
                 {text}
               </p>
             ))}

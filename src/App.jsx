@@ -19,6 +19,7 @@ import Research from './pages/Research';
 import EventsNewDetails from './pages/EventsNewDetails';
 import Faculty from './pages/Faculty';
 import LabDetails from './pages/LabDetails';
+import DeveloperTeam from './pages/DeveloperTeam';
 
 
 
@@ -43,9 +44,10 @@ const App = () => {
         <Route path='/research/:id' element={<ResearchDetails />} />
         <Route path='/researchlab/:id' element={<LabDetails />}/>
         <Route path='/career/:id' element={<CareerDetails />} />
-        <Route path='/events&news/:id'  element={<EventsNewDetails /> }/>
+        <Route path='/news&events/:id'  element={<EventsNewDetails /> }/>
         <Route path='/facilities' element={<Facilities />} />
-        <Route path='/events&news' element={<News />} />
+        <Route path='/news&events' element={<News />} />
+        <Route path='/developer' element={<DeveloperTeam />}/>
       </Routes>
       <Footer />
     </Router>

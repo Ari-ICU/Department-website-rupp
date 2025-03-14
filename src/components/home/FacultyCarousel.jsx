@@ -8,14 +8,17 @@ import image2 from '../../assets/img/professor/chi-koung.jpg'
 import image3 from '../../assets/img/professor/pok-leakmony.jpg'
 import image4 from '../../assets/img/professor/kim-no.jpg'
 import image5 from '../../assets/img/professor/meak-kamerane.png'
+import p2 from '../../assets/img/professor/Asst-Prof-Dr-Chor-Chandara.png';
+
 
 
 const facultyMembers = [
-    { name: 'John Doe', position: 'Professor', image: image2 },
-    { name: 'Jane Smith', position: 'Assistant Professor', image: image3 },
-    { name: 'Albert Lee', position: 'Lecturer', image: image4 },
-    { name: 'Emily White', position: 'Senior Lecturer', image: image5 },
-    { name: 'David Brown', position: 'Associate Professor', image: image1 },
+    { name: 'Asst. Prof. Chi Kuong', position: 'Head of Department', image: image2 },
+    { name: 'Mr. Pok LeakMony ', position: 'Deputy Head of Department:', image: image3 },
+    { name: 'Asst. Prof. Dr. Chor Chandara ', position: 'Deputy Head of Department:', image: p2 },
+    { name: 'Albert Lee', position: 'Assistant Professor', image: image4 },
+    { name: 'Emily White', position: 'Assistant Professor', image: image5 },
+    { name: 'Dr. Heng Sovannrith', position: 'Assistant Professor', image: image1 },
     
 ];
 
