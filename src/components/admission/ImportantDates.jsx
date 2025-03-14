@@ -55,7 +55,7 @@ const ImportantDates = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
                             viewport={{ once: true, amount: 0.5 }}
-                            className="text-gray-600"
+                            className="text-gray-800"
                         >
                             Check the important dates and deadlines for bachelor degree enrollment. You don't want to lose the opportunity. Check it out now!
                         </motion.p>
@@ -87,7 +87,7 @@ const ImportantDates = () => {
                                     </div>
                                     <div className='xl:col-span-8 col-span-12'>
                                         <h1 className="text-xl font-semibold mt-2">{item.subtitle}</h1>
-                                        <p className="text-gray-600">{item.description}</p>
+                                        <p className="text-gray-800">{item.description}</p>
                                     </div>
                                 </div>
                             </motion.div>

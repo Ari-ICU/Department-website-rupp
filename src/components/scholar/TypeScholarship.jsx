@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { IoMdCheckboxOutline } from "react-icons/io";
+import { FaSquareCheck } from "react-icons/fa6";
 
 const TypeScholar = () => {
   // Scholarship data with different colors for each type
@@ -90,7 +90,7 @@ const TypeScholar = () => {
                 {/* Coverage */}
                 <div className="flex items-start space-x-3">
                 <div>
-                    <IoMdCheckboxOutline className={`${scholarship.iconColor} mt-1 text-xl`} />
+                    <FaSquareCheck className={`${scholarship.iconColor} mt-1 text-xl`} />
 
                   </div>
                   <p className='text-lg'>
@@ -101,7 +101,7 @@ const TypeScholar = () => {
                 {/* Eligibility */}
                 <div className="flex items-start space-x-3">
                 <div>
-                    <IoMdCheckboxOutline className={`${scholarship.iconColor} mt-1 text-xl`} />
+                    <FaSquareCheck className={`${scholarship.iconColor} mt-1 text-xl`} />
 
                   </div>
                   <p className='text-lg'>
@@ -112,7 +112,7 @@ const TypeScholar = () => {
                 {/* Provider */}
                 <div className="flex items-start space-x-3">
                   <div>
-                    <IoMdCheckboxOutline className={`${scholarship.iconColor} mt-1 text-xl`} />
+                    <FaSquareCheck className={`${scholarship.iconColor} mt-1 text-xl`} />
 
                   </div>
                   <p className='text-lg'>

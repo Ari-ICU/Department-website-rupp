@@ -146,8 +146,8 @@ const ScholarshipOpportunities = () => {
                                         </span>
                                     )}
                                     <h3 className="mt-2 text-lg font-semibold text-gray-900">{event.title}</h3>
-                                    <p className="mt-2 text-sm text-gray-600">{event.description}</p>
-                                    <span className="text-sm text-gray-500">{event.date}</span>
+                                    <p className="mt-2 text-sm text-gray-800">{event.description}</p>
+                                    <span className="text-sm text-gray-800">{event.date}</span>
                                     <div className="mt-4">
                                         <button
                                             className="bg-red-800 hover:bg-red-900 text-white py-2 px-4 rounded-xl"

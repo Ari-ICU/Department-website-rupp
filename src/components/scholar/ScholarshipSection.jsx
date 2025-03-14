@@ -76,8 +76,8 @@ const ScholarshipSection = () => {
                             <div className="p-4">
                                 <p className='text-red-800 mb-4'>{scholarship.tag}</p>
                                 <h3 className="text-lg font-semibold mb-2">{scholarship.title}</h3>
-                                <p className="text-gray-600 mb-2">{scholarship.description}</p>
-                                <p className="text-md py-4 text-gray-500 mb-2 flex items-center">
+                                <p className="text-gray-800 mb-2">{scholarship.description}</p>
+                                <p className="text-md py-4 text-gray-800 mb-2 flex items-center">
                                     <FaCalendarAlt className="mr-2" /> {/* Calendar icon */}
                                     Deadline: {scholarship.deadline}
                                 </p>

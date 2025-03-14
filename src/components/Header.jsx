@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
 import SearchButton from "./SearchBtn";
@@ -8,11 +8,12 @@ import Navbar from "./Navbar";
 import logo from "../assets/img/rupp.png";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false); // Mobile menu state
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile menu state
   const [isSearchOpen, setIsSearchOpen] = useState(false); // Search bar state
+  const location = useLocation(); // To highlight the current route
 
   const toggleMobileMenu = () => {
-    setIsOpen(!isOpen); // Toggle mobile menu visibility
+    setIsMobileMenuOpen(!isMobileMenuOpen); // Toggle mobile menu visibility
   };
 
   return (
@@ -41,36 +42,23 @@ const Header = () => {
             <div className="flex items-center w-auto space-x-4">
               {/* Desktop Navbar */}
               <div className="hidden xl:flex">
-                <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+                <Navbar isOpen={isMobileMenuOpen} setIsOpen={setIsMobileMenuOpen} />
               </div>
 
               {/* Search & Language Switch */}
               <SearchButton onToggle={() => setIsSearchOpen(!isSearchOpen)} />
               <LanguageSwitcherButton />
 
-              {/* Mobile Menu Button */}
+              {/* Mobile Menu Button (Hamburger Icon) */}
               <motion.button
                 className="xl:hidden text-gray-800"
                 onClick={toggleMobileMenu} // Trigger the mobile menu toggle
                 aria-label="Toggle mobile menu"
               >
-                {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+                 <Navbar isOpen={isMobileMenuOpen} setIsOpen={setIsMobileMenuOpen} /> 
               </motion.button>
             </div>
           </div>
-
-          {/* Mobile Navbar */}
-          {isOpen && (
-            <motion.div
-              className="xl:hidden"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-            </motion.div>
-          )}
         </div>
       </div>
     </div>
