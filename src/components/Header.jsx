@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 import SearchButton from "./SearchBtn";
 import LanguageSwitcherButton from "./home/LanguageSwitcherButton";
 import Navbar from "./Navbar";
@@ -17,31 +17,6 @@ const Header = () => {
 
   return (
     <div className="relative bg-white shadow-md">
-      {/* Search Overlay */}
-      {isSearchOpen && (
-        <motion.div
-          className="absolute top-0 left-0 right-0 bg-white shadow-md z-50"
-          initial={{ y: -100 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="max-w-8xl mx-auto px-4 py-4">
-            <div className="flex items-center justify-between">
-              <input
-                type="text"
-                placeholder="Search..."
-                autoFocus
-                className="flex-1 px-4 py-2 mr-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-800"
-              />
-              <FiX
-                className="w-6 h-6 cursor-pointer text-gray-600 hover:text-red-800"
-                onClick={() => setIsSearchOpen(false)}
-              />
-            </div>
-          </div>
-        </motion.div>
-      )}
-
       {/* Main Header Content */}
       <div className={`p-4 ${isSearchOpen ? 'pt-20' : ''}`}>
         <div className="max-w-8xl mx-auto px-4">

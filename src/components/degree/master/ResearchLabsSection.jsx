@@ -7,28 +7,28 @@ import p1 from '../../../assets/master/1.png';
 const ResearchLabsSection = () => {
   const researchLabs = [
     {
-      icon: <MdSchool className="text-red-600 text-xl" />,
+      icon: <MdSchool className="text-red-800 text-xl" />,
       title: 'Cutting-Edge Research Labs',
       description: 'Access state-of-the-art labs and high-performance computing to explore AI, cybersecurity, data science, and more.',
-      bgColor: 'bg-pink-100',
+    
     },
     {
-      icon: <FaUsers className="text-red-600 text-xl" />,
+      icon: <FaUsers className="text-red-800 text-xl" />,
       title: 'Collaborative Research Opportunities',
       description: 'Engage in research collaborations with leading tech companies and universities worldwide, solving real-world challenges.',
-      bgColor: 'bg-pink-100',
+    
     },
     {
-      icon: <FaDollarSign className="text-red-600 text-xl" />,
+      icon: <FaDollarSign className="text-red-800 text-xl" />,
       title: 'Research Grants and Funding',
       description: 'Access research grants, scholarships, and funding opportunities to support your projects and publications.',
-      bgColor: 'bg-pink-100',
+    
     },
     {
-      icon: <FaUserGraduate className="text-red-600 text-xl" />,
+      icon: <FaUserGraduate className="text-red-800 text-xl" />,
       title: 'Dedicated Mentorship & Guidance',
       description: 'Receive tailored guidance from faculty experts to navigate and excel in your research journey.',
-      bgColor: 'bg-pink-100',
+    
     },
   ];
 
@@ -78,7 +78,7 @@ const ResearchLabsSection = () => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: index * 0.2 }}
                 >
-                  <div className={`${lab.bgColor} border border-red-800 rounded-full p-2 mr-4`}>
+                  <div className={`border border-red-800 rounded-full p-2 mr-4`}>
                     {lab.icon}
                   </div>
                   <div>

@@ -7,7 +7,7 @@ import logo from "../assets/img/rupp.png";
 
 const Navbar = ({ isOpen, setIsOpen }) => {
   const [dropdown, setDropdown] = useState(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(isOpen); // Make sure it syncs with the parent state
   const navRef = useRef();
   const location = useLocation();
   const { t } = useTranslation();
@@ -130,52 +130,92 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         ])}
       </div>
 
-      {/* Mobile Menu Dropdown */}
-      <div className={`xl:hidden ${isMobileMenuOpen ? "block" : "hidden"} absolute top-0 left-0 w-full bg-white shadow-lg`}>
-        <button onClick={toggleMobileMenu} className="absolute top-4 right-4 text-2xl">
-          <FiX />
-        </button>
+     {/* Mobile Menu Dropdown */}
+<div
+  className={`xl:hidden ${isMobileMenuOpen ? "block" : "hidden"} absolute top-0 left-0 w-full h-full bg-white shadow-lg z-50`}
+>
+  <div className="flex justify-between items-center p-4">
+    <Link to="/" className="text-xl">
+      <img src={logo} alt="RUPP Logo" className="w-10" />
+    </Link>
+    <button onClick={toggleMobileMenu} className="text-xl">
+      <FiX />
+    </button>
+  </div>
 
-        <Link to="/" className={`block py-2 px-4 text-gray-800 hover:bg-gray-100 ${location.pathname === "/" ? "text-red-900 font-bold" : ""}`}>
-          {t("home")}
-        </Link>
+  <div className="overflow-y-auto">
+    <Link
+      to="/"
+      className={`block py-2 px-4 text-gray-800 hover:bg-gray-100 ${location.pathname === "/" ? "text-red-900 font-bold" : ""}`}
+    >
+      {t("home")}
+    </Link>
 
-        <div className="space-y-2">
-          <button className="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-100" onClick={() => toggleDropdown("about")}>
-            {t("about")} <FiChevronDown className="inline ml-2" />
-          </button>
-          {dropdown === "about" && (
-            <div className="pl-4">
-              <Link to="/about" className="block py-1">{t("aboutWebsite")}</Link>
-              <Link to="/developer" className="block py-1">{t("developerTeam")}</Link>
-            </div>
-          )}
-
-          <button className="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-100" onClick={() => toggleDropdown("programs")}>
-            {t("programs")} <FiChevronDown className="inline ml-2" />
-          </button>
-          {dropdown === "programs" && (
-            <div className="pl-4">
-              <Link to="/programs/bachelor" className="block py-1">{t("bachelor")}</Link>
-              <Link to="/programs/master" className="block py-1">{t("master")}</Link>
-              <Link to="/programs/doctoral" className="block py-1">{t("doctoral")}</Link>
-              <Link to="/programs/diploma" className="block py-1">{t("diploma")}</Link>
-            </div>
-          )}
-
-          <Link to="/contact" className={`block py-2 px-4 text-gray-800 hover:bg-gray-100 ${location.pathname === "/contact" ? "text-red-900 font-bold" : ""}`}>
-            {t("contact")}
+    <div className="space-y-2">
+      <button
+        className="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-100"
+        onClick={() => toggleDropdown("about")}
+      >
+        {t("about")} <FiChevronDown className="inline ml-2" />
+      </button>
+      {dropdown === "about" && (
+        <div className="pl-4">
+          <Link to="/about" className="block py-1">
+            {t("aboutWebsite")}
           </Link>
-
-          <Link to="/admissions" className={`block py-2 px-4 text-gray-800 hover:bg-gray-100 ${location.pathname === "/admissions" ? "text-red-900 font-bold" : ""}`}>
-            {t("admission")}
-          </Link>
-
-          <Link to="/news&events" className={`block py-2 px-4 text-gray-800 hover:bg-gray-100 ${location.pathname === "/news&events" ? "text-red-900 font-bold" : ""}`}>
-            {t("newsEvents")}
+          <Link to="/developer" className="block py-1">
+            {t("developerTeam")}
           </Link>
         </div>
-      </div>
+      )}
+
+      <button
+        className="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-100"
+        onClick={() => toggleDropdown("programs")}
+      >
+        {t("programs")} <FiChevronDown className="inline ml-2" />
+      </button>
+      {dropdown === "programs" && (
+        <div className="pl-4">
+          <Link to="/programs/bachelor" className="block py-1">
+            {t("bachelor")}
+          </Link>
+          <Link to="/programs/master" className="block py-1">
+            {t("master")}
+          </Link>
+          <Link to="/programs/doctoral" className="block py-1">
+            {t("doctoral")}
+          </Link>
+          <Link to="/programs/diploma" className="block py-1">
+            {t("diploma")}
+          </Link>
+        </div>
+      )}
+
+      <Link
+        to="/contact"
+        className={`block py-2 px-4 text-gray-800 hover:bg-gray-100 ${location.pathname === "/contact" ? "text-red-900 font-bold" : ""}`}
+      >
+        {t("contact")}
+      </Link>
+
+      <Link
+        to="/admissions"
+        className={`block py-2 px-4 text-gray-800 hover:bg-gray-100 ${location.pathname === "/admissions" ? "text-red-900 font-bold" : ""}`}
+      >
+        {t("admission")}
+      </Link>
+
+      <Link
+        to="/news&events"
+        className={`block py-2 px-4 text-gray-800 hover:bg-gray-100 ${location.pathname === "/news&events" ? "text-red-900 font-bold" : ""}`}
+      >
+        {t("newsEvents")}
+      </Link>
+    </div>
+  </div>
+</div>
+
     </nav>
   );
 };
