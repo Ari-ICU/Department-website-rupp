@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { RiDoubleQuotesR } from "react-icons/ri";
-import p1 from '../../assets/img/professor/p1.png';
+import p1 from '../../assets/developer/1.png';
 import SocialIcon from '../social/SocialIcon';
 
 const TeamLeader = () => {
@@ -21,7 +21,7 @@ const TeamLeader = () => {
             <div className='container mx-auto px-4'>
                 <div className='space-y-10'>
                     <div className=''>
-                        <h1 className='text-3xl font-semibold '>Team Leader</h1>
+                        <h1 className='text-3xl font-semibold '>Projects Leader </h1>
                     </div>
                     <div className='max-w-5xl mx-auto shadow-lg rounded-2xl items-center p-4'>
                         <div className="flex flex-col lg:flex-row gap-6 items-center">

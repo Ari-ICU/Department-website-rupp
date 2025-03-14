@@ -3,7 +3,13 @@ import { motion } from 'framer-motion';
 import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
 import { RiDoubleQuotesR } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
-import p1 from '../../assets/img/professor/p1.png';
+import p3 from '../../assets/developer/3.png';
+import p1 from '../../assets/developer/alian.png';
+import p2 from '../../assets/developer/2.png';
+import p5 from '../../assets/developer/5.png';
+
+
+
 
 const MemberTeam = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +26,7 @@ const MemberTeam = () => {
     },
     {
       name: "Ms. Meas Liza",
-      image: p1,
+      image: p2,
       position: "Frontend Dev",
       bio: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.  ",
       facebook: "https://facebook.com/example",
@@ -28,16 +34,16 @@ const MemberTeam = () => {
     },
     {
       name: "Ms. Pheng Sokunnidsa",
-      image: p1,
-      position: "Frontend Dev",
+      image: p3,
+      position: "Backend Dev",
       bio: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.  ",
       facebook: "https://facebook.com/example",
       telegram: "https://t.me/example",
     },
     {
       name: "Ms. Tang Kanha",
-      image: p1,
-      position: "Frontend Dev",
+      image: p5,
+      position: "UX/UI",
       bio: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.  ",
       facebook: "https://facebook.com/example",
       telegram: "https://t.me/example",
@@ -45,7 +51,7 @@ const MemberTeam = () => {
     {
       name: "Ms. Nop Maryna",
       image: p1,
-      position: "Frontend Dev",
+      position: "UX/UI",
       bio: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.  ",
       facebook: "https://facebook.com/example",
       telegram: "https://t.me/example",
@@ -64,7 +70,7 @@ const MemberTeam = () => {
       <div className='container mx-auto px-4'>
         <div className='space-y-10'>
           <div>
-            <h1 className='text-3xl font-semibold '>Team Members</h1>
+            <h1 className='text-3xl font-semibold '>Projects Members</h1>
           </div>
           <div className='flex flex-col xl:flex-row xl:flex-wrap gap-8 justify-center'>
             {deputyData.map((deputy, index) => (
@@ -80,7 +86,7 @@ const MemberTeam = () => {
                 {/* Rest of your card content remains the same */}
                 <div className="flex flex-col lg:flex-row gap-6 items-center">
                   {/* Image Container */}
-                  <div className="relative h-72 mb-4 group">
+                  <div className="relative w-full h-72 mb-4 group">
                     <img
                       src={deputy.image}
                       alt={deputy.name}

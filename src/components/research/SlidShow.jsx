@@ -6,8 +6,8 @@ import { MdKeyboardArrowRight, MdKeyboardArrowLeft  } from "react-icons/md";
 
 // Image imports
 import heroImage1 from "../../assets/sliderResearch/1.png";
-import heroImage2 from "../../assets/sliderResearch/1.png";
-import heroImage3 from "../../assets/sliderResearch/1.png";
+import heroImage2 from "../../assets/sliderResearch/2.png";
+import heroImage3 from "../../assets/sliderResearch/3.png";
 
 const SlideShowSection = () => {
   const slides = [

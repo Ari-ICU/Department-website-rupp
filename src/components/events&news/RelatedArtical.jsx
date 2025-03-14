@@ -66,7 +66,7 @@ const RelatedArtical = () => {
                 <div className="py-2">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {events.map((event) => (
-                            <Link to={`/events&news/${event.id}`} key={event.id} className="block">
+                            <Link to={`/news&events/${event.id}`} key={event.id} className="block">
                                 <div className="bg-white rounded-2xl shadow-md flex flex-col xl:flex-row justify-center min-w-96 hover:shadow-lg transition-shadow duration-300">
                                     <div className="mx-auto xl:w-1/2 flex justify-center items-center">
                                         <img

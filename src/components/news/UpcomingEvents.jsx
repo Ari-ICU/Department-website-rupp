@@ -44,7 +44,7 @@ const UpcomingEvents = () => {
         },
     ];
 
-   
+
     return (
         <div className="my-16">
             <div className="container mx-auto px-4">
@@ -77,41 +77,41 @@ const UpcomingEvents = () => {
                 </div>
 
                 {/* Events Section */}
-                  <div className="py-2">
-                                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                                       {events.map((event) => (
-                                           <Link to={`/events&news/${event.id}`} key={event.id} className="block">
-                                               <div className="bg-white rounded-2xl shadow-md flex flex-col xl:flex-row justify-center min-w-96 hover:shadow-lg transition-shadow duration-300">
-                                                   <div className="mx-auto xl:w-1/2 flex justify-center items-center">
-                                                       <img
-                                                           src={event.imageUrl}
-                                                           alt={event.title}
-                                                           className="w-full h-56 object-cover rounded-2xl"
-                                                       />
-                                                   </div>
-               
-                                                   <div className="p-6 w-full md:w-1/2">
-                                                       {event.category && (
-                                                           <span className="text-xs font-semibold text-red-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
-                                                               {event.category}
-                                                           </span>
-                                                       )}
-                                                       <h3 className="mt-2 text-lg font-semibold text-gray-900">
-                                                           {event.title}
-                                                       </h3>
-                                                       <p className="mt-2 text-sm text-gray-600">
-                                                           {event.description}
-                                                       </p>
-                                                       <span className="text-sm text-gray-500 flex items-center gap-4 mt-4">
-                                                           <FaCalendarAlt />
-                                                           {event.date}
-                                                       </span>
-                                                   </div>
-                                               </div>
-                                           </Link>
-                                       ))}
-                                   </div>
-                               </div>
+                <div className="py-2">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        {events.map((event) => (
+                            <Link to={`/news&events/${event.id}`} key={event.id} className="block">
+                                <div className="bg-white rounded-2xl shadow-md flex flex-col xl:flex-row justify-center min-w-96 hover:shadow-lg transition-shadow duration-300">
+                                    <div className="mx-auto xl:w-1/2 flex justify-center items-center">
+                                        <img
+                                            src={event.imageUrl}
+                                            alt={event.title}
+                                            className="w-full h-56 object-cover rounded-2xl"
+                                        />
+                                    </div>
+
+                                    <div className="p-6 w-full md:w-1/2">
+                                        {event.category && (
+                                            <span className="text-xs font-semibold text-red-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
+                                                {event.category}
+                                            </span>
+                                        )}
+                                        <h3 className="mt-2 text-lg font-semibold text-gray-900">
+                                            {event.title}
+                                        </h3>
+                                        <p className="mt-2 text-sm text-gray-600">
+                                            {event.description}
+                                        </p>
+                                        <span className="text-sm text-gray-500 flex items-center gap-4 mt-4">
+                                            <FaCalendarAlt />
+                                            {event.date}
+                                        </span>
+                                    </div>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     );

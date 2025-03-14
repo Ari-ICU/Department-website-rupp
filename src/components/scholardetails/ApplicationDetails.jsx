@@ -1,5 +1,7 @@
 import React from 'react';
-import { TfiPinAlt } from "react-icons/tfi";
+import { PiStudent } from "react-icons/pi";
+import { AiOutlineForm } from "react-icons/ai";
+import { IoDocumentTextOutline } from "react-icons/io5";
 import p1 from '../../assets/bank/app.png';
 import { Link } from 'react-router-dom';
 import { jsPDF } from 'jspdf';
@@ -9,14 +11,17 @@ const applicationDetails = [
     {
         title: "Eligible Candidates",
         description: "This scholarship is available for bachelor's degree students who are currently studying at the Royal University of Phnom Penh (RUPP). It is open to 2nd, 3rd, and 4th-year students for the 2024-2025 academic year.",
+        icon: <PiStudent size={24} />
     },
     {
         title: "How to Apply",
         description: "Applicants must submit their documents in person at the International Relations Office (Room 219A, Building A). The application period runs from the announcement date until March 31, 2025.",
+        icon: <AiOutlineForm size={24}/>
     },
     {
         title: "Documents & Requirements",
         description: "Applicants must provide the required documents as stated in the official announcement. If they do not have an official study certificate, they can use their student ID card as a substitute. For more details, students can contact the International Relations Office via Telegram:",
+        icon: <IoDocumentTextOutline size={24} />,
         link: {
             text: "t.me/iro_rupp",
             url: "https://t.me/iro_rupp"
@@ -30,7 +35,7 @@ const ApplicationDetails = () => {
 
       const viewPdf = (imageUrl) => {
         const doc = new jsPDF();
-        doc.addImage(imageUrl, 'PNG', 10, 10, 180, 120); // Properly scales image
+        doc.addImage(imageUrl, 'PNG', 10, 10, 180, 180); 
         const pdfBlob = doc.output('blob');
         const pdfUrl = URL.createObjectURL(pdfBlob);
         window.open(pdfUrl, '_blank');
@@ -55,7 +60,7 @@ const ApplicationDetails = () => {
                             <div key={index} className="mb-6 flex">
                                 <div className="flex">
                                 <div className="rounded-xl h-12 bg-red-900 p-3 mr-3"> 
-                                    <TfiPinAlt className="text-gray-50 text-2xl" />
+                                    <p className="text-gray-50 text-xl"> {detail.icon} </p> 
                                 </div>
                                     <div className='space-y-4'>
                                         <h3 className="text-xl font-semibold text-gray-700">{detail.title}</h3>

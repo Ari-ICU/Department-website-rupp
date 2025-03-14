@@ -41,7 +41,7 @@ const Footer = () => {
                     >
                         <h3 className="text-lg font-normal mb-4 border-b border-gray-300">Our Pages</h3>
                         <ul className="xl:text-lg text-sm font-light text-gray-50 ">
-                            {["/", "/academics", "/research", "/programs", "/people", "admissions"].map((path, index) => (
+                            {["/", "/research", "/programs"].map((path, index) => (
                                 <motion.li
                                     key={index}
                                     
@@ -61,7 +61,7 @@ const Footer = () => {
                     >
                         <h3 className="text-lg font-normal mb-4 border-b border-gray-300">Quick Links</h3>
                         <ul className="xl:text-lg text-sm  font-light text-gray-50">
-                            {["/about", "/contact", "/events&news", "/privacy", "/services"].map((path, index) => (
+                            {["/about", "/contact", "/news&events"].map((path, index) => (
                                 <motion.li
                                     key={index}
                                     whileHover={{ x: 10 }}

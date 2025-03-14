@@ -82,7 +82,7 @@ const RecentResearch = () => {
                     {buttons.map((button, buttonIndex) => (
                       <button
                         key={buttonIndex}
-                        className="text-black xl:text-[12px] text-[10px] bg-gray-300 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"
+                        className="text-black xl:text-[12px] text-[10px] bg-gray-300/50 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"
                       >
                         {button.icon}
                         {button.label}
