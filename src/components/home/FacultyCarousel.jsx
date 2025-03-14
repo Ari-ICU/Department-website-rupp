@@ -19,7 +19,7 @@ const facultyMembers = [
     { name: 'Albert Lee', position: 'Assistant Professor', image: image4 },
     { name: 'Emily White', position: 'Assistant Professor', image: image5 },
     { name: 'Dr. Heng Sovannrith', position: 'Assistant Professor', image: image1 },
-    
+
 ];
 
 const FacultyCarousel = () => {
@@ -38,7 +38,7 @@ const FacultyCarousel = () => {
                     setScrollPosition(nextScroll);
                 }
             }
-        }, 3000); 
+        }, 3000);
 
         return () => clearInterval(interval);
     }, [scrollPosition]);
@@ -109,42 +109,50 @@ const FacultyCarousel = () => {
                                 transition={{ duration: 0.5, delay: index * 0.2 }}
                                 className="w-96 min-w-96 h-full bg-white rounded-lg shadow-lg p-4 flex flex-col items-center justify-center"
                                 whileHover={{ scale: 1.05 }}
-                             
+
                             >
+                                {/* Image Container */}
                                 <div className="relative w-72 h-72 mb-4 group">
                                     <img
                                         src={faculty.image}
                                         alt={faculty.name}
-                                        className="w-full h-full rounded-2xl object-cover"
+                                        className="w-full h-full rounded-2xl object-cover group-hover:brightness-90 transition-all duration-300"
                                     />
-                                    {/* Social Media Icons with Motion */}
+
+                                    {/* Social Media Overlay */}
                                     <motion.div
                                         initial={{ opacity: 0 }}
                                         whileHover={{ opacity: 1 }}
-                                        transition={{ duration: 0.3 }}
-                                        className="absolute top-2 right-2 space-x-2 space-y-4 text-center bg-gray-400/50 py-6 px-2 rounded-2xl flex flex-col justify-center items-center"
+                                        className="absolute inset-0 bg-black/20 rounded-2xl flex items-center justify-center"
                                     >
-                                        {/* Facebook Link */}
+                                        {/* Social Icons Container */}
+                                        <div className="absolute top-4 right-4 group-hover:bg-black/10 p-2 transition-all duration-300 rounded-2xl">
                                         <motion.div
-                                            whileHover={{ scale: 1.2 }}
-                                            transition={{ duration: 0.3 }}
-                                            className="bg-black p-2 rounded-lg text-center"
+                                            initial={{ y: 20 }}
+                                            animate={{ y: 0 }}
+                                            className=" space-y-2"
                                         >
-                                            <Link to="#" className="text-white text-xl hover:text-blue-600">
-                                                <FaFacebookF />
-                                            </Link>
-                                        </motion.div>
+                                            {/* Facebook Link */}
+                                            <motion.div
+                                                whileHover={{ scale: 1.1 }}
+                                                className="bg-white p-3 rounded-full shadow-lg"
+                                            >
+                                                <Link to="#" className="text-gray-700 hover:text-red-600">
+                                                    <FaFacebookF className="text-xl" />
+                                                </Link>
+                                            </motion.div>
 
-                                        {/* Telegram Link */}
-                                        <motion.div
-                                            whileHover={{ scale: 1.2 }}
-                                            transition={{ duration: 0.3 }}
-                                            className="bg-black p-2 rounded-lg text-center"
-                                        >
-                                            <Link to="#" className="text-white text-xl hover:text-blue-400">
-                                                <FaTelegramPlane />
-                                            </Link>
+                                            {/* Telegram Link */}
+                                            <motion.div
+                                                whileHover={{ scale: 1.1 }}
+                                                className="bg-white p-3 rounded-full shadow-lg"
+                                            >
+                                                <Link to="#" className="text-gray-700 hover:text-red-400">
+                                                    <FaTelegramPlane className="text-xl" />
+                                                </Link>
+                                            </motion.div>
                                         </motion.div>
+                                        </div>
                                     </motion.div>
                                 </div>
                                 <h3 className="text-xl font-semibold">{faculty.name}</h3>

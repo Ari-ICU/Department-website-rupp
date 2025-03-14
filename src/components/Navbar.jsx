@@ -143,7 +143,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           ["/programs/diploma", "Diploma"]
         ])}
 
-        <Link to="/admission" className={`hover:text-red-900 ${location.pathname === "/admission" ? "text-red-900 font-bold" : ""}`}>
+        <Link to="/admissions" className={`hover:text-red-900 ${location.pathname === "/admission" ? "text-red-900 font-bold" : ""}`}>
           Admission
         </Link>
 
@@ -216,7 +216,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
               ])}
 
               <Link
-                to="/admission"
+                to="/admissions"
                 className="block px-4 py-2 hover:text-red-900"
                 onClick={() => setIsOpen(false)}
               >
