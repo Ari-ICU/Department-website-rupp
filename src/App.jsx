@@ -20,6 +20,7 @@ import EventsNewDetails from './pages/EventsNewDetails';
 import Faculty from './pages/Faculty';
 import LabDetails from './pages/LabDetails';
 import DeveloperTeam from './pages/DeveloperTeam';
+import FacultyDetails from './pages/FacultyDetails';
 
 
 
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path='/faculty'  element={<Faculty />}/>
+        <Route path='/faculty/:id' element={<FacultyDetails />} />
         <Route path="/programs" element={<Program />} />
         <Route path="/programs/:degree" element={<Degree />} />
         <Route path='/admissions' element={<Admission />} />

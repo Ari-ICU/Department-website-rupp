@@ -143,7 +143,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           ["/scholars", "scholars"],
         ])}
 
-        {desktopDropdown("academics", academicsResearchDropdownRef, [
+        {desktopDropdown("Academics & Research", academicsResearchDropdownRef, [
           ["/faculty", "faculty"],
           ["/research", "research"],
         ])}

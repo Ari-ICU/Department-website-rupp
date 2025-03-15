@@ -1,34 +1,30 @@
 import React, { useState, useRef, useEffect } from "react";
-import { FiSearch, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
 
-const SearchButton = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const SearchButton = ({ onToggle, data }) => {
   const [query, setQuery] = useState("");
   const inputRef = useRef(null);
   const containerRef = useRef(null);
 
   const toggleSearch = () => {
-    setIsOpen(!isOpen);
-    if (!isOpen) {
-      setTimeout(() => inputRef.current?.focus(), 10);
-    } else {
-      setQuery("");
+    onToggle(); // Toggle search state in Header component
+    if (!inputRef.current) return;
+    if (!inputRef.current.value) {
+      setQuery(""); // Clear input when closing
     }
+    setTimeout(() => inputRef.current?.focus(), 10); // Focus the input when opened
   };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (containerRef.current && !containerRef.current.contains(event.target)) {
-        setIsOpen(false);
-        setQuery("");
+        setQuery(""); // Clear the search input
       }
     };
 
     const handleEscape = (e) => {
       if (e.key === "Escape") {
-        setIsOpen(false);
-        setQuery("");
+        setQuery(""); // Clear the search input
       }
     };
 
@@ -41,18 +37,24 @@ const SearchButton = () => {
     };
   }, []);
 
+  // Filter the global data based on the search query
+  const filteredData = data.filter((item) =>
+    item.name.toLowerCase().includes(query.toLowerCase())
+  );
+
   return (
-    <div className="relative flex items-center" ref={containerRef}>
+    <div className="relative flex justify-center items-center" ref={containerRef}>
       <motion.div
         className="flex items-center gap-2"
         layout
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
+        {/* Only show the input field without the search icon */}
         <motion.div
           className="relative"
           animate={{
-            width: isOpen ? "200px" : "0px",
-            opacity: isOpen ? 1 : 0,
+            width: query ? "500px" : "500px",
+            opacity: 1,
           }}
           transition={{ duration: 0.2 }}
         >
@@ -62,33 +64,31 @@ const SearchButton = () => {
             placeholder="Search..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full px-3 py-1.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-800"
+            className="w-full px-3 py-4 rounded-lg border border-gray-300 text-gray-50 focus:outline-none focus:ring-2 focus:ring-red-800"
           />
-          {isOpen && (
-            <FiX
-              className="absolute right-2 top-2.5 w-4 h-4 cursor-pointer text-gray-500 hover:text-red-800"
-              onClick={() => {
-                setIsOpen(false);
-                setQuery("");
-              }}
-            />
-          )}
         </motion.div>
-
-        <motion.button
-          onClick={toggleSearch}
-          className="text-gray-600 hover:text-red-800 p-1.5 rounded-full transition-colors"
-          whileTap={{ scale: 0.95 }}
-          aria-label={isOpen ? "Close search" : "Open search"}
-        >
-          {isOpen ? (
-            <FiX className="w-5 h-5" />
-          ) : (
-            <FiSearch className="w-5 h-5" />
-          )}
-        </motion.button>
       </motion.div>
+     
+   {/* Show filtered results as a pop-up */}
+{query && (
+  <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-xl bg-white border rounded-lg shadow-md max-h-60 overflow-y-auto z-50">
+    <div className="max-w-xl mx-auto">
+      {filteredData.length > 0 ? (
+        filteredData.map((item, index) => (
+          <div
+            key={index}
+            className="px-4 py-2 text-gray-700 cursor-pointer hover:bg-gray-100"
+          >
+            {item.name}
+          </div>
+        ))
+      ) : (
+        <div className="px-4 py-2 text-gray-500">No results found</div>
+      )}
     </div>
+  </div>
+)}
+</div>
   );
 };
 

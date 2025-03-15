@@ -78,7 +78,7 @@ const SlideShowSection = () => {
         <motion.img
           src={slides[currentSlide].image}
           alt="Background"
-          className="object-contain object-center w-full h-full"
+          className="object-cover object-center w-full h-full"
           key={currentSlide}
          
           whileInView={{ opacity: 1, x: 0 }}

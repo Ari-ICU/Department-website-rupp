@@ -1,8 +1,7 @@
-import React from 'react';
-import { FaSearch, FaFilter, FaCalendarAlt } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaSearch, FaFilter } from 'react-icons/fa';
 import { MdExplore } from 'react-icons/md';
 import { MdComputer } from 'react-icons/md';
-import { AiOutlineRobot } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import image1 from "../../assets/research/3.png";
 import image2 from "../../assets/research/4.png";
@@ -23,17 +22,16 @@ const bottomSections = [
     },
     {
         id: 3,
-        title: 'Data Science and Analytics',
-        description: 'Data Science is rapidly growing, offering promising opportunities.',
+        title: 'Artificial Intelligence',
+        description: 'AI is transforming industries and the world.',
         image: image1,
     },
     {
         id: 4,
-        title: 'Data Science and Analytics',
-        description: 'Data Science is rapidly growing, offering promising opportunities.',
+        title: 'Machine Learning',
+        description: 'Machine Learning is a subset of AI that is revolutionizing industries.',
         image: image1,
     },
-    
     // Add more sections here
 ];
 
@@ -45,24 +43,42 @@ const buttons = [
 const StudentResearch = () => {
     const navigate = useNavigate();
 
+    // State for search and filter
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedFilter, setSelectedFilter] = useState('');
+
+    // Filter sections based on search term and selected filter
+    const filteredSections = bottomSections.filter((section) => {
+        const matchesSearch =
+            section.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            section.description.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesFilter = selectedFilter
+            ? section.title.toLowerCase().includes(selectedFilter.toLowerCase())
+            : true;
+        return matchesSearch && matchesFilter;
+    });
+
     return (
         <div className="my-16">
-            <div className='container mx-auto px-4'>
+            <div className="container mx-auto px-4">
 
                 {/* Header Section */}
                 <div className="flex flex-col xl:flex-row justify-between items-center mb-8">
                     <div className="mb-6 xl:mb-0">
                         <h2 className="text-3xl font-semibold mb-2">Students Research</h2>
                         <p className="text-gray-600 mt-6 max-w-3xl">
-                        A Deep Dive into Computer Science Research: From Fundamentals to Future Innovations
+                            A Deep Dive into Computer Science Research: From Fundamentals to Future Innovations
                         </p>
                     </div>
-                    <div className='flex gap-4 p-2'>
-                        <div className="relative">
+                    <div className="flex gap-4 p-2 items-center">
+                        {/* Search Input */}
+                        <div className="relative flex-1 max-w-md">
                             <input
                                 type="text"
-                                placeholder="Search"
-                                className="border rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring focus:border-blue-300"
+                                placeholder="Search for research..."
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                className="border rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring focus:border-blue-300 w-full"
                             />
                             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <FaSearch className="text-gray-400" />
@@ -70,19 +86,24 @@ const StudentResearch = () => {
                         </div>
 
                         {/* Filter Button */}
-                        <button className="flex items-center gap-2 bg-red-800 text-white xl:px-4 xl:py-2 px-2  rounded-full shadow hover:bg-red-900 cursor-pointer transition">
-                            <FaFilter className='xl:text-lg text-[12px]' />
-                            <span className='text-[12px] xl:text-lg'>Filter</span>
+                        <button
+                            onClick={() => setSelectedFilter(selectedFilter ? '' : 'Data Science')}
+                            className="flex items-center gap-2 bg-red-800 text-white xl:px-4 xl:py-2 px-2 rounded-full shadow hover:bg-red-900 cursor-pointer transition"
+                        >
+                            <FaFilter className="xl:text-lg text-[12px]" />
+                            <span className="text-[12px] xl:text-lg">Filter</span>
                         </button>
                     </div>
                 </div>
                 <FilterComponent />
-                <div className=" mt-12">
+
+                {/* Bottom Sections */}
+                <div className="mt-12">
                     <div className="grid grid-cols-1 xl:grid-cols-2 justify-center gap-10">
-                        {bottomSections.map((section) => (
+                        {filteredSections.map((section) => (
                             <div
                                 key={section.id}
-                                className=" bg-white rounded-lg shadow-md  relative "
+                                className="bg-white rounded-lg shadow-md relative"
                             >
                                 <img
                                     src={section.image}
