@@ -13,7 +13,7 @@ const DepartmentHeader = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto flex flex-col xl:flex-row py-4 items-center justify-between ">
+      <div className="container mx-auto flex flex-col xl:flex-row p-4 items-center justify-between ">
         {/* Left Section with Logo and Text */}
         <Link to='' className=' cursor-pointer'>
           <motion.div
