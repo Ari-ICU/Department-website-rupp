@@ -3,11 +3,13 @@ import { motion } from 'framer-motion';
 import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
 import { RiDoubleQuotesR } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
-import p3 from '../../assets/developer/3.png';
+import a1 from '../../assets/developer/vakhim.png';
+import p3 from '../../assets/developer/nidsa.jpg';
 import p2 from '../../assets/developer/lisa.jpg';
 import p5 from '../../assets/developer/kanha.jpg';
 import p4 from '../../assets/developer/me.jpg';
 import p6 from '../../assets/developer/ryna.png';
+import SocialIcon from '../social/SocialIcon';
 
 
 
@@ -19,6 +21,14 @@ const MemberTeam = () => {
   const [selectedDeputy, setSelectedDeputy] = useState(null);
 
   const deputyData = [
+    {
+      name: "Mr. Leang Vakhim",
+      image: a1,
+      position: "Backend Lead/Frontend Lead",
+      bio: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.  ",
+      facebook: "https://facebook.com/example",
+      telegram: "https://t.me/example",
+    },
     {
       name: "Mr. Thoeurn Ratha",
       image: p4,
@@ -151,49 +161,29 @@ const MemberTeam = () => {
         </div>
       </div>
       {isOpen && selectedDeputy && (
-        <div
-          className="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
-          onClick={closeModal} // Close modal on clicking outside
-        >
-          <div className="bg-white p-6 rounded-2xl shadow-lg max-w-lg" onClick={(e) => e.stopPropagation()}>
-            <div className="relative h-full mb-4 group">
-              <img
-                src={selectedDeputy.image}
-                alt={selectedDeputy.name}
-                className="w-full h-full rounded-2xl object-cover"
-              />
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-                className="absolute top-2 right-2 space-x-2 space-y-4 text-center bg-gray-400/50 py-6 px-2 rounded-2xl flex flex-col justify-center items-center"
-              >
-                {selectedDeputy.facebook && (
-                  <motion.div
-                    whileHover={{ scale: 1.2 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-black p-2 rounded-lg text-center"
-                  >
-                    <Link to={selectedDeputy.facebook} className="text-white text-xl hover:text-red-600">
-                      <FaFacebookF />
-                    </Link>
-                  </motion.div>
-                )}
-                {selectedDeputy.telegram && (
-                  <motion.div
-                    whileHover={{ scale: 1.2 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-black p-2 rounded-lg text-center"
-                  >
-                    <Link to={selectedDeputy.telegram} className="text-white text-xl hover:text-red-400">
-                      <FaTelegramPlane />
-                    </Link>
-                  </motion.div>
-                )}
-              </motion.div>
+          <div
+          className="modal-overlay fixed inset-0 bg-gray-900/75 flex justify-center items-center z-50"
+          onClick={closeModal}
+      >
+          <div className=' container mx-auto'>
+            <div className="bg-white flex items-center gap-10 p-6 rounded-2xl shadow-lg" onClick={(e) => e.stopPropagation()}>
+              <div className="  max-w-md mx-auto  group">
+                <img
+                  src={selectedDeputy.image}
+                  alt={name}
+                  className="w-full h-full rounded-2xl object-contain"
+                />
+              </div>
+              <div className='w-full'>
+                <h2 className="text-2xl font-semibold mb-4">{selectedDeputy.name}</h2>
+                <p className="mb-4">{selectedDeputy.bio}</p>
+                <div className='text-start'>
+                  <SocialIcon />
+
+                </div>
+              </div>
+
             </div>
-            <h2 className="text-2xl font-semibold mb-4">{selectedDeputy.name}</h2>
-            <p className="mb-4">{selectedDeputy.bio}</p>
           </div>
         </div>
       )}

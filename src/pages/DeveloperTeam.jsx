@@ -11,7 +11,7 @@ const DeveloperTeam = () => {
         <div>
             <DeveloperTeamBanner />
             <Overview />
-            <TeamLeader />
+            {/* <TeamLeader /> */}
             <MemberTeam />
         </div>
         <DepartmentHeader />

@@ -27,20 +27,20 @@ const TeamLeader = () => {
                         <div className="flex flex-col lg:flex-row gap-6 items-center">
                             {/* Image Container */}
                             <div className="relative w-full h-96 mb-4 group">
-                                    <img
-                                        src={p1}
-                                        alt={name}
-                                        className="w-full h-full rounded-2xl object-cover group-hover:brightness-90 transition-all duration-300"
-                                    />
+                                <img
+                                    src={p1}
+                                    alt={name}
+                                    className="w-full h-full rounded-2xl object-cover group-hover:brightness-90 transition-all duration-300"
+                                />
 
-                                    {/* Social Media Overlay */}
-                                    <motion.div
-                                        initial={{ opacity: 0 }}
-                                        whileHover={{ opacity: 1 }}
-                                        className="absolute inset-0 bg-black/20 rounded-2xl flex items-center justify-center"
-                                    >
-                                        {/* Social Icons Container */}
-                                        <div className="absolute top-4 right-4 group-hover:bg-black/10 p-2 transition-all duration-300 rounded-2xl">
+                                {/* Social Media Overlay */}
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    whileHover={{ opacity: 1 }}
+                                    className="absolute inset-0 bg-black/20 rounded-2xl flex items-center justify-center"
+                                >
+                                    {/* Social Icons Container */}
+                                    <div className="absolute top-4 right-4 group-hover:bg-black/10 p-2 transition-all duration-300 rounded-2xl">
                                         <motion.div
                                             initial={{ y: 20 }}
                                             animate={{ y: 0 }}
@@ -66,16 +66,16 @@ const TeamLeader = () => {
                                                 </Link>
                                             </motion.div>
                                         </motion.div>
-                                        </div>
-                                    </motion.div>
-                                </div>
+                                    </div>
+                                </motion.div>
+                            </div>
                             <div className='space-y-6 max-w-xl relative'>
                                 <div className='absolute right-0 -top-6 flex justify-end text-right'>
                                     <RiDoubleQuotesR className='text-7xl text-red-900' />
                                 </div>
                                 <h1 className='text-2xl font-semibold '>Mr. Leang Vakhim</h1>
                                 <p>Backend Lead/Frontend Lead</p>
-                                <p className=''>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. 
+                                <p className=''>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
                                 </p>
                                 <button onClick={() => setIsOpen(true)} className='bg-red-900 px-6 py-2 text-gray-50 rounded-2xl'>View</button>
                             </div>
@@ -85,23 +85,30 @@ const TeamLeader = () => {
             </div>
             {isOpen && (
                 <div
-                    className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
-                    onClick={handleOverlayClick} // Close modal when clicking outside
+                    className="modal-overlay fixed inset-0 bg-gray-900/75 flex justify-center items-center z-50"
+                    onClick={handleOverlayClick}
                 >
-                    <div className="bg-white p-6 rounded-2xl container flex justify-center items-center gap-10 shadow-lg " onClick={(e) => e.stopPropagation()}>
-                        <div className="relative mb-4 group">
-                            <img
-                                src={p1}
-                                alt="Asst. Prof. Chi Kuong"
-                                className="w-96 h-72 rounded-2xl object-cover"
-                            />
-                        </div>
-                        <div className='max-w-4xl'>
-                            <h2 className="text-2xl font-semibold mb-4">Asst. Prof. Chi Kuong</h2>
-                            <p className="mb-4">Asst. Prof. Chi Kuong (1989): B.Sc. (Chemistry), RUPP , 1991; Advanced Tools & Techniques in Computer Applications Development (AIT, Thailand), 1995; 2nd AIT-SIDA, Faculty Development Program for Cambodia Educational Institutions, (AIT, Thailand), 1995; Upgrading Program in Computer Science, (Quezon, Philippines), 1996- 97; M.Sc. (Computer Science), Ateneo de Manila University (Philippines), 2000.</p>
-                            <SocialIcon />
-                        </div>
+                    <div className=' container mx-auto'>
+                        <div className="bg-white flex items-center gap-10 p-6 rounded-2xl shadow-lg" onClick={(e) => e.stopPropagation()}>
+                            <div className="relative w-full h-full mb-4 group">
+                                <img
+                                    src={p1}
+                                    alt={name}
+                                    className="w-full h-full rounded-2xl object-contain"
+                                />
+                            </div>
+                            <div>
+                                <h1 className='text-2xl font-semibold '>Mr. Leang Vakhim</h1>
+                                <p>Backend Lead/Frontend Lead</p>
+                                <p className=''>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                                </p>
+                                <div className='text-start'>
+                                    <SocialIcon />
 
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             )}
@@ -109,5 +116,5 @@ const TeamLeader = () => {
     );
 }
 
-export default TeamLeader ;
-    ;
+export default TeamLeader;
+;
