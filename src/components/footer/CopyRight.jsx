@@ -9,9 +9,9 @@ const CopyRight = () => {
     return (
         <footer className='text-center text-gray-200 py-5'>
             <p>
-                &copy; {currentYear} {t("footer.Department of Computer Science. All rights reserved. Developed by")}
+                &copy; {currentYear} {t("footer.Department of Computer Science. All rights reserved. ")}
                 <Link to="/developer" className='text-red-500 hover:underline'>
-                    {t("footer.4th-Year, 25th Generation.")}
+                    {t("footer.Developed by 4th-Year, 25th Generation.")}
                 </Link>
             </p>
         </footer>

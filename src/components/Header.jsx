@@ -67,7 +67,7 @@ const Header = () => {
                 <span className="hidden min-sm:block text-[12px] xl:text-[14px] uppercase 2xl:text-[20px]">
                   <span className="text-lg xl:text-xl uppercase">{t("Partnerships.Faculty of Science")}</span>
                   <br />
-                  Department Of Computer Science
+                  {t("Partnerships.Department Of Computer Science")}
                 </span>
               </Link>
             </motion.div>

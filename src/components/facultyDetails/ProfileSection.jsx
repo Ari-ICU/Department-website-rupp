@@ -1,7 +1,8 @@
 import React from 'react';
 import { BsViewStacked } from "react-icons/bs";
 import SocialIcon from '../social/SocialIcon';
-import profileImage from '../../assets/img/professor/chi-koung.jpg';
+import p2 from '../../assets/img/dr-heng-sovanrith.png';
+
 
 const ProfileSection = () => {
     return (
@@ -15,7 +16,7 @@ const ProfileSection = () => {
                             {/* Image Section */}
                             <div className="relative -bottom-20 w-72 h-72">
                                 <img
-                                    src={profileImage}
+                                    src={p2}
                                     alt="Dr. Heng Sovannrith's Portrait"
                                     className="rounded-full w-full h-full object-cover border-4 border-white shadow-lg"
                                 />
@@ -24,7 +25,7 @@ const ProfileSection = () => {
                             {/* Content Section */}
                             <div className="space-y-4 text-center md:text-left">
                                 <h1 className="text-3xl md:text-4xl font-bold text-gray-100">
-                                    Asst. Prof. Chi Kuong
+                                Asst. Prof. Dr. Heng Sovannarith
                                 </h1>
                                 <h2 className="text-xl md:text-2xl text-gray-100 ">
                                     Assistant Professor

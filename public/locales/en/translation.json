@@ -57,7 +57,7 @@
         "AI in Healthcare Symposium" : "AI in Healthcare Symposium",
         "Exploring the latest advancements in AI for medical applications" :"Exploring the latest advancements in AI for medical applications",
         "15 Sep 2025" : "15 Sep 2025",
-        "Workshop" : "Workshop",
+        "Workshops" : "Workshop",
         "Web Development Workshop": "Web Development Workshop",
         "Hands-on workshop on building responsive web applications." : "Hands-on workshop on building responsive web applications.",
         "05 Oct 2025" : "05 Oct 2025",
@@ -118,7 +118,8 @@
       },
       "Partnerships" : {
         "Our Partnerships" :  "Our Partnerships",
-        "Faculty of Science" : "Faculty of Science"
+        "Faculty of Science" : "Faculty of Science",
+         "Department Of Computer Science" : "Department Of Computer Science"
       },
       "footer": {
         "Our Location":  "Our Location",
@@ -130,8 +131,8 @@
         "About": "About",
         "Contact": "Contact",
         "News&events": "News&events",
-        "Department of Computer Science. All rights reserved. Developed by":  "Department of Computer Science. All rights reserved. Developed by",
-        "4th-Year, 25th Generation." : " 4th-Year, 25th Generation."  
+        "Department of Computer Science. All rights reserved. ":  "Department of Computer Science. All rights reserved. ",
+        "Developed by 4th-Year, 25th Generation." : " 4th-Year, 25th Generation."  
       }
 
 }

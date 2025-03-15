@@ -42,7 +42,7 @@ const DepartmentHeader = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-             {t("Partnerships.Faculty of Science")} <br className='xl:block hidden' /> Department of Computer Science
+             {t("Partnerships.Faculty of Science")} <br className='xl:block hidden' /> {t("Partnerships.Department Of Computer Science")}
             </motion.h2>
 
           </motion.div>

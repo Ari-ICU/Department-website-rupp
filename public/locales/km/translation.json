@@ -57,7 +57,7 @@
     "AI in Healthcare Symposium": "សន្និសីទអំពី AI ក្នុងវិស័យសុខភាព",
     "Exploring the latest advancements in AI for medical applications": "ស្វែងយល់អំពីការរីកចម្រើនថ្មីៗនៃ AI សម្រាប់ការដាក់អនុវត្តនៅក្នុងវិស័យសុខភាព",
     "15 Sep 2025": "15 កញ្ញា ឆ្នាំ 2025",
-    "Workshop": "សិក្ខាសាលា",
+    "Workshops": "សិក្ខាសាលា",
     "Web Development Workshop": "សិក្ខាសាលាអំពីការអភិវឌ្ឍន៍គេហទំព័រ",
     "Hands-on workshop on building responsive web applications.": "សិក្ខាសាលាអនុវត្តជាក់ស្តែងអំពីការបង្កើតកម្មវិធីគេហទំព័រដែលមានលក្ខណៈ responsive",
     "05 Oct 2025": "05 តុលា ឆ្នាំ 2025",
@@ -118,7 +118,8 @@
   },
   "Partnerships": {
     "Our Partnerships": "ដៃគូសហការ​របស់យើង",
-    "Faculty of Science": "មហាវិទ្យាល័យ វិទ្យាសាស្រ្ដ"
+    "Faculty of Science": "មហាវិទ្យាល័យ វិទ្យាសាស្រ្ដ",
+    "Department Of Computer Science" : "ដេប៉ាតឺម៉ង់ព័ត៌មានវិទ្យា"
   },
   "footer": {
     "Our Location": "ទីតាំងរបស់យើង",
@@ -130,7 +131,7 @@
     "About": "អំពីដេប៉ាតឺម៉ង់",
     "Contact": "ទំនាក់ទំនង",
     "News&events": "ព័ត៌មាន និងព្រឹត្តិការណ៍",
-    "Department of Computer Science. All rights reserved. Developed by": "ដេប៉ាតឺម៉ង់ព័ត៌មានវិទ្យា។ រក្សាសិទ្ធិគ្រប់យ៉ាង។ ",
-    "4th-Year, 25th Generation." : "អភិវឌ្ឍដោយនិស្សិតឆ្នាំទី 4 ជំនាន់ទី 25។"
+    "Department of Computer Science. All rights reserved. ": "ដេប៉ាតឺម៉ង់ព័ត៌មានវិទ្យា។ រក្សាសិទ្ធិគ្រប់យ៉ាង។ ",
+    "Developed by 4th-Year, 25th Generation." : "អភិវឌ្ឍដោយនិស្សិតឆ្នាំទី 4 ជំនាន់ទី 25។"
   }
 }
