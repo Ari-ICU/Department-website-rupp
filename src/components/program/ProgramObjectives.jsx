@@ -46,20 +46,21 @@ const ProgramObjectives = () => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="xl:w-1/2 w-full flex flex-col items-center relative order-1 xl:order-2"
                 >
-                    <div className='flex flex-col sm:flex-row items-center'>
-                        {images.map((image, index) => (
-                            <div
-                                key={index}
-                                className={`w-full sm:${index === 0 ? 'w-[325px] h-[211px]' : 'w-[309px] h-[418px]'} `}
-                            >
-                                <img
-                                    src={image.src}
-                                    alt={image.alt}
-                                    className='w-full h-full object-cover rounded-tr-[50px] sm:rounded-tr-[100px]'
-                                />
-                            </div>
-                        ))}
-                    </div>
+                   {/* Image Flex Layout */}
+                <div className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4'>
+                    {images.map((image, index) => (
+                        <div
+                            key={index}
+                            className={`w-full sm:w-auto ${index === 0 ? 'w-[325px] h-[211px] rounded-tl-[50px] sm:rounded-tl-[100px]' : index === 1 ? 'w-[309px] h-[418px] rounded-tr-[50px] sm:rounded-tr-[100px]' : 'w-[309px] h-[418px]'} overflow-hidden rounded-xl shadow-lg`}
+                        >
+                            <img
+                                src={image.src}
+                                alt={image.alt}
+                                className='w-full h-full object-cover'
+                            />
+                        </div>
+                    ))}
+                </div>
 
 
                     <div className='absolute bottom-4 sm:bottom-0 z-10 bg-white p-4 rounded-lg shadow-md w-11/12 sm:w-52 sm:h-34 text-center'>
@@ -86,7 +87,7 @@ const ProgramObjectives = () => {
                         {objectives.map((objective, index) => (
                             <div key={index} className="flex items-start gap-4">
                                <div className="border border-red-800 rounded-full p-2">
-                                    <objective.icon size={24} className="text-red-800" />
+                                    <objective.icon size={24} className="text-red-800  " />
                                 </div>
                                 <div>
                                     <h3 className="text-lg sm:text-xl font-semibold mb-2">{objective.title}</h3>
