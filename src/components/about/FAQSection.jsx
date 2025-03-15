@@ -23,7 +23,7 @@ const FAQSection = () => {
             answer: 'Yes, there are prerequisites for enrolling in this program. Typically, you need a strong background in mathematics and basic programming knowledge. Specific prerequisites may vary depending on the institution.'
         },
         {
-            question: 'What career opportunities are available after completing this program?',
+            question: 'What career opportunities are available after complete the program?',
             answer: 'After completing this program, you can pursue various career opportunities such as software developer, data scientist, systems analyst, web developer, and more. The skills you gain will be applicable in a wide range of industries.'
         },
         {
@@ -63,7 +63,7 @@ const FAQSection = () => {
                             Professor: Inspiring Minds, Nurturing Curiosity, and Shaping the Future <br /> of Knowledge and Innovation
                         </motion.p>
                     </div>
-                    <div className="max-w-[720px]">
+                    <div className="max-w-full">
                         {faqItems.map((faq, index) => (
                             <motion.div
                                 key={index}
