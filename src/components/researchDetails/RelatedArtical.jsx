@@ -64,7 +64,7 @@ const RelatedArtical = () => {
             </button>
           </div>
         </div>
-        <div className="overflow-x-auto mt-12 scrollbar-hide ">
+        <div className="overflow-x-auto  mt-4 scrollbar-hide ">
           <div className="flex space-x-8">
             {bottomSections.map((section) => (
               <div
