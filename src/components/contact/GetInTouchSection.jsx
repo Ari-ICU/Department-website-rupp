@@ -51,7 +51,7 @@ const GetInTouchSection = ({ data = contactData }) => {
                         <img
                             src={world}
                             alt="World Map"
-                            className="w-full h-full mx-auto object-cover rounded-lg "
+                            className="w-full h-full mx-auto object-contain rounded-lg "
                         />
                     </motion.div>
 

@@ -73,8 +73,8 @@ const TuitionSection = () => {
                                 <div className="p-2 bg-red-900 rounded-2xl">
                                     <HiOutlineCurrencyDollar size={50} className="text-white" />
                                 </div>
-                                <p className="text-3xl xl:text-[30px]">
-                                    500$/<span className="text-sm text-gray-500">year</span>
+                                <p >
+                                   <span className="text-3xl xl:text-4xl">500$ </span> /<span className="text-sm text-gray-500">year</span>
                                 </p>
                             </motion.div>
                         </div>
