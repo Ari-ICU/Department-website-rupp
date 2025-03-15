@@ -9,9 +9,9 @@ const BackgroundSection = () => {
             imageUrl: p1, // Replace with the actual path
         },
         {
-            university: "Khon Kaen University (Thailand)",
+            university: "Studied at Ateneo de Manila University  (Philippines)",
             imageUrl: p2, // Replace with the actual path
-            year: "2019",
+            
         },
     ];
     return (
@@ -24,7 +24,7 @@ const BackgroundSection = () => {
                 <div key={index} className="flex items-center mb-4">
                     <img src={bg.imageUrl} alt={bg.university} className="w-12 h-12 mr-4 rounded-full" />
                     <div>
-                        <p className="text-gray-700">Studied at {bg.university} {bg.year && `(${bg.year})`}</p>
+                        <p className="text-gray-700">Studied at {bg.university} </p>
                     </div>
                 </div>
             ))}

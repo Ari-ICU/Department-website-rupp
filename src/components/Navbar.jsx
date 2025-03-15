@@ -69,7 +69,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
               }`}
               onClick={() => setDropdown(null)}
             >
-              {t(text)}
+               {t(`menu.${text}`)} {/* Corrected translation key reference */}
             </Link>
           ))}
         </motion.div>
@@ -115,8 +115,8 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         </Link>
 
         {desktopDropdown("about", aboutDropdownRef, [
-          ["/menu.about", t("menu.aboutWebsite")],
-          ["/developer", t("menu.developerTeam")],
+          ["/menu.about", t("aboutWebsite")],
+          ["/developer", t("developerTeam")],
         ])}
 
         <Link to="/contact" className={`hover:text-red-900 ${location.pathname === "/contact" ? "text-red-900 font-bold" : ""}`}>
@@ -124,10 +124,10 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         </Link>
 
         {desktopDropdown("programs", programDropdownRef, [
-          ["/programs/bachelor", t("menu.bachelor")],
-          ["/programs/master", t("menu.master")],
-          ["/programs/doctoral", t("menu.doctoral")],
-          ["/programs/diploma", t("menu.diploma")],
+          ["/programs/bachelor", "bachelor"],
+          ["/programs/master", "master"],
+          ["/programs/doctoral", "doctoral"],
+          ["/programs/diploma", "diploma"],
         ])}
 
         <Link to="/admissions" className={`hover:text-red-900 ${location.pathname === "/admissions" ? "text-red-900 font-bold" : ""}`}>
@@ -139,13 +139,13 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         </Link>
 
         {desktopDropdown("campusLife", campusLifeDropdownRef, [
-          ["/facilities", t("menu.facilities")],
-          ["/scholars", t("menu.scholars")],
+          ["/facilities", t("facilities")],
+          ["/scholars", t("scholars")],
         ])}
 
         {desktopDropdown("Academics & Research", academicsResearchDropdownRef, [
-          ["/faculty", t("menu.faculty")],
-          ["/research", t("menu.research")],
+          ["/faculty", "faculty"],
+          ["/research", "Research"],
         ])}
       </div>
 

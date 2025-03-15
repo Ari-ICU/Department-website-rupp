@@ -29,11 +29,11 @@ const SocialIcon = () => {
                                     visible: { opacity: 1, y: 0 },
                                 }}
                                 whileHover={{ scale: 1.2, rotate: 5 }}
-                                className=" bg-red-800 p-2 rounded-xl shadow-md cursor-pointer"
+                                className=" bg-red-900 p-2 rounded-xl shadow-md cursor-pointer"
                                 aria-label={`Social Media Icon ${index + 1}`}
                             >
                                 <Link to="/" className="">
-                                    <Icon className="h-5 w-5 bg-white" />
+                                    <Icon className="h-5 w-5 text-white" />
                                 </Link>
                             </motion.div>
                         ))}

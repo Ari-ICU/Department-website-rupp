@@ -5,11 +5,14 @@ import SearchButton from "./SearchBtn";
 import LanguageSwitcherButton from "./home/LanguageSwitcherButton";
 import Navbar from "./Navbar";
 import logo from "../assets/img/rupp.png";
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile menu state
   const [isSearchOpen, setIsSearchOpen] = useState(false); // Search bar state
   const searchContainerRef = useRef(null); // Reference for search container
+    const { t } = useTranslation();
+  
 
   // Sample global data for search (could be replaced by API data)
   const globalData = [
@@ -62,7 +65,7 @@ const Header = () => {
               <Link to="/" className="flex items-center space-x-2">
                 <img src={logo} alt="logo" className="w-14 h-14" />
                 <span className="hidden min-sm:block text-[12px] xl:text-[14px] uppercase 2xl:text-[20px]">
-                  <span className="text-lg xl:text-xl uppercase">Faculty of Science</span>
+                  <span className="text-lg xl:text-xl uppercase">{t("Partnerships.Faculty of Science")}</span>
                   <br />
                   Department Of Computer Science
                 </span>

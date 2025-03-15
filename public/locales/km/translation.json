@@ -27,7 +27,7 @@
     "scholars": "អ្នកឧបត្ថម្ភអាហារូបករណ៍",
     "Academics & Research": "ការសិក្សា និងស្រាវជ្រាវ",
     "faculty": "មហាវិទ្យាល័យ",
-    "research": "ស្រាវជ្រាវ"
+    "Research": "ស្រាវជ្រាវ"
   },
   "service": {
     "About Program": "ស្វែងយល់អំពីកម្មវិធីរបស់យើង",
@@ -105,12 +105,13 @@
     "Exploring Innovative Diagnostic Techniques, Emerging Repair Technologies, and Advanced Troubleshooting Methods to Enhance Efficiency, Reliability, and Longevity in Modern Digital Devices.": "ការស្វែងយល់អំពីបច្ចេកទេសថ្មីៗ បច្ចេកទេសជួសជុលឧបករណ៍តិចណូឡូជីដែលកំពុងចេញថ្មី និងវិធីសាស្ត្រដោះស្រាយបញ្ហាដែលកើតឡើង ដោយបង្កើនប្រសិទ្ធភាព គុណភាពនៃការប្រើប្រាស់ និងអាយុកាលនៃឧបករណ៍ឌីជីថលទំនើបៗ។",
     "Computational Advancements": "ការរីកចម្រើននៃការគណនា",
     "AI & Systems Optimization": "បញ្ញាសិប្បនិម្មិត និងការប្រែប្រួលប្រព័ន្ធ",
+    "Exploring the Intersection of Data, Systems, and Smart Technologies" : "ការស្រាវជ្រាវអំពីចំណុចប្រទាក់រវាងទិន្នន័យប្រព័ន្ធ និងបច្ចេកវិទ្យាឆ្លាតវៃ",
     "Revolutionizing Digital Infrastructure Maintenance": "ភាពប្រសើរឡើងនៃការថែទាំហេដ្ឋារចនាសម្ព័ន្ធឌីជីថល",
     "Investigating the Role of Network Diagnostics, Cloud-Based Repair Tools, and Remote Assistance in Shaping the Future of Efficient Computer Repair, Data Recovery, and System Optimization.": "ការស្រាវជ្រាវអំពីបណ្តាញ ឧបករណ៍ជួសជុលផ្អែកលើបណ្តាញក្លោដ និងជំនួយក្នុងការជួសជុលពីចំម្ងាយ ដើម្បីបង្កើតអនាគតក្នុងការជួសជុលកុំព្យូទ័រឲ្យកាន់តែមានប្រសិទ្ធភាព ការការពារទិន្នន័យ និងការប្រែប្រួលប្រព័ន្ធ។"
   },
   "Meet": {
     "Meet With Our Faculty": "ជួបជាមួយសាស្រ្តាចារ្យរបស់ពួកយើង",
-    "Professor: Inspiring Minds, Nurturing Curiosity, and Shaping the Future of Knowledge and Innovation": "សាស្រ្តាចារ្យ: ជម្រុញការគិត បណ្តុះចំណង់ចំណូលចិត្ត និងបង្កើតអនាគតនៃចំណេះដឹង និងនវានុវត្តន៍",
+    "Inspiring Minds, Nurturing Curiosity, and Shaping the Future of Knowledge and Innovation": "សាស្រ្តាចារ្យ: ជម្រុញការគិត បណ្តុះចំណង់ចំណូលចិត្ត និងបង្កើតអនាគតនៃចំណេះដឹង និងនវានុវត្តន៍",
     "Head of Department": "ប្រធានដេប៉ាតឺម៉ង់",
     "Deputy Head of Department": "អនុប្រធានដេប៉ាតឺម៉ង់",
     "Assistant Professor": "សាស្រ្ដាចារ្យជំនួយ"
@@ -129,6 +130,7 @@
     "About": "អំពីដេប៉ាតឺម៉ង់",
     "Contact": "ទំនាក់ទំនង",
     "News&events": "ព័ត៌មាន និងព្រឹត្តិការណ៍",
-    "© 2025 Department of Computer Science. All rights reserved. Developed by 4th-Year, 25th Generation.": "© 2025 ដេប៉ាតឺម៉ង់ព័ត៌មានវិទ្យា។ រក្សាសិទ្ធិគ្រប់យ៉ាង។ អភិវឌ្ឍដោយនិស្សិតឆ្នាំទី 4 ជំនាន់ទី 25។"
+    "Department of Computer Science. All rights reserved. Developed by": "ដេប៉ាតឺម៉ង់ព័ត៌មានវិទ្យា។ រក្សាសិទ្ធិគ្រប់យ៉ាង។ ",
+    "4th-Year, 25th Generation." : "អភិវឌ្ឍដោយនិស្សិតឆ្នាំទី 4 ជំនាន់ទី 25។"
   }
 }

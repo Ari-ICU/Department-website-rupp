@@ -12,10 +12,10 @@ const AboutSection = () => {
                             <span className="font-semibold">Asst. Prof. Chi Kuong :</span> B.Sc. (Computer Science and Engineering),
                         </p>
                         <p>
-                            <span className="font-semibold">RUPP 2005:</span> B.A. in English (Professional Communication),
+                            <span className="font-semibold">RUPP 2005:</span>  B.Sc (Computer Science and Engineering)
                         </p>
                         <p>
-                            <span className="font-semibold">RUPP 2011:</span> M.Sc. (Computer Science),
+                            <span className="font-semibold">RUPP 2011:</span> B.A. in English (Professional Communication),
                         </p>
                         <p>
                             <span className="font-semibold">Ateneo De Manila University (Philippines), 2010:</span> Ph.D. (Computer Science),

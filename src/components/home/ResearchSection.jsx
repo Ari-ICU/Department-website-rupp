@@ -51,17 +51,13 @@ const buttons = [
 
 const ResearchInnovations = () => {
   const navigate = useNavigate();
-  const location = useLocation();
   const { t } = useTranslation();
-
-   // Determine if the current path is the research page
-   const isResearchPage = location.pathname.includes("/research");
 
   return (
     <div className="my-16">
       <div className="container mx-auto px-4 ">
       <h2 className="xl:text-3xl text-2xl font-bold mb-8">
-          {isResearchPage ? "Current & On-going Research" : "Research & Innovations"}
+       {t("Research.Research & Innovations")}
         </h2>
 
         {researchData.map((item) => (

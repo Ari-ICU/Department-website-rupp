@@ -4,8 +4,10 @@ import { FaTelegramPlane, FaFacebookF } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import logo from "../../assets/img/rupp.png";
+import { useTranslation } from 'react-i18next';
 
 const DepartmentHeader = () => {
+  const { t } = useTranslation();
   return (
     <motion.div
       className="bg-red-900 p-4 "
@@ -40,7 +42,7 @@ const DepartmentHeader = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              Faculty of Science <br className='xl:block hidden' /> Department of Computer Science
+             {t("Partnerships.Faculty of Science")} <br className='xl:block hidden' /> Department of Computer Science
             </motion.h2>
 
           </motion.div>

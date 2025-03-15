@@ -18,7 +18,7 @@ const ResearchProjectsSection = () => {
         },
     ];
     return (
-        <div className='my-16'>
+        <div className='my-16 bg-white rounded-xl shadow-md p-6 m-5'>
             <div className='max-w-4xl mx-auto'>
                 <div className="">
                     <h2 className="text-2xl font-bold mb-5 text-gray-800">

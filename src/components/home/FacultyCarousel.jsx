@@ -82,7 +82,7 @@ const FacultyCarousel = () => {
                             viewport={{ once: true }}
                             className="mt-2 text-gray-900 xl:text-sm text-[12px]"
                         >
-                            {t("Meet.Professor: Inspiring Minds, Nurturing Curiosity, and Shaping the Future <br /> of Knowledge and Innovation")}
+                            {t("Meet.Inspiring Minds, Nurturing Curiosity, and Shaping the Future of Knowledge and Innovation")}
                         </motion.p>
                     </div>
                     <motion.div

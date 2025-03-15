@@ -27,7 +27,7 @@
       "scholars": "Scholars",
       "Academics & Research": "Academics & Research",
       "faculty": "Faculty",
-      "research": "Research"
+      "Research": "Research"
     },
     "service": {
         "About Program": "About Program",
@@ -105,12 +105,13 @@
         "Exploring Innovative Diagnostic Techniques, Emerging Repair Technologies, and Advanced Troubleshooting Methods to Enhance Efficiency, Reliability, and Longevity in Modern Digital Devices." : "Exploring Innovative Diagnostic Techniques, Emerging Repair Technologies, and Advanced Troubleshooting Methods to Enhance Efficiency, Reliability, and Longevity in Modern Digital Devices.",
         "Computational Advancements": "Computational Advancements",
         "AI & Systems Optimization": "AI & Systems Optimization",
+        "Exploring the Intersection of Data, Systems, and Smart Technologies" : "Exploring the Intersection of Data, Systems, and Smart Technologies",
         "Revolutionizing Digital Infrastructure Maintenance":"Revolutionizing Digital Infrastructure Maintenance",
         "Investigating the Role of Network Diagnostics, Cloud-Based Repair Tools, and Remote Assistance in Shaping the Future of Efficient Computer Repair, Data Recovery, and System Optimization." : "Investigating the Role of Network Diagnostics, Cloud-Based Repair Tools, and Remote Assistance in Shaping the Future of Efficient Computer Repair, Data Recovery, and System Optimization."
       },
       "Meet":{
         "Meet With Our Faculty":"Meet With Our Faculty",
-        "Professor: Inspiring Minds, Nurturing Curiosity, and Shaping the Future of Knowledge and Innovation": "Professor: Inspiring Minds, Nurturing Curiosity, and Shaping the Future of Knowledge and Innovation",
+        "Inspiring Minds, Nurturing Curiosity, and Shaping the Future of Knowledge and Innovation": "Professor: Inspiring Minds, Nurturing Curiosity, and Shaping the Future of Knowledge and Innovation",
         "Head of Department": "Head of Department",
         "Deputy Head of Department": "Deputy Head of Department" ,
         "Assistant Professor": "Assistant Professor"
@@ -129,7 +130,8 @@
         "About": "About",
         "Contact": "Contact",
         "News&events": "News&events",
-        "© 2025 Department of Computer Science. All rights reserved. Developed by 4th-Year, 25th Generation.": "© 2025 ដេប៉ាតឺម៉ង់ព័ត៌មានវិទ្យា។ រក្សាសិទ្ធិគ្រប់យ៉ាង។ អភិវឌ្ឍដោយនិស្សិតឆ្នាំទី 4 ជំនាន់ទី 25។"
+        "Department of Computer Science. All rights reserved. Developed by":  "Department of Computer Science. All rights reserved. Developed by",
+        "4th-Year, 25th Generation." : " 4th-Year, 25th Generation."  
       }
 
 }

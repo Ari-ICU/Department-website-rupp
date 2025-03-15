@@ -35,7 +35,7 @@ const ProfileSection = () => {
                                 </div>
                             </div>
                         </div>
-                        <button className="mt-4 bg-gray-50 flex gap-10 text-gray-700 px-6 py-3 rounded-lg transition-colors duration-300">
+                        <button className="mt-4 bg-gray-50 flex gap-10 text-red-900 px-6 py-3 rounded-lg transition-colors duration-300">
                             <BsViewStacked className="text-lg text-red-900" />
                             View Portfolio
 
