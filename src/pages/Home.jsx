@@ -16,7 +16,7 @@ const Homepages = () => {
   return (
     <div className="">
       <SlideShowSection />
-      <div className=" *:mb-16 lg:px-20 px-4 ">
+      <div className="  ">
         <ServiceSection />
         <LatestNews />
         <EventsNews />
@@ -26,10 +26,10 @@ const Homepages = () => {
         <ContactSection />
        
       </div>
-      <div className=" *:mb-16">
+      <div className="">
          <Research />
       </div>
-      <div className="*:mb-16 lg:px-20 px-4 ">
+      <div className=" ">
         <FacultyCarousel />
         <PartnershipSection />
         </div>

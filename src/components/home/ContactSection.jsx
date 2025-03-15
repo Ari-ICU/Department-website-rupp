@@ -4,10 +4,11 @@ import contactImage from "../../assets/model/web-sample-1(3).jpg";
 
 const ContactUs = () => {
   return (
-    <motion.div
+   <div className="my-16">
+     <motion.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      className="container mx-auto"
+      className="container mx-auto px-4"
     >
       <div className="">
         <div className="relative flex flex-col xl:flex-row items-center justify-center">
@@ -123,6 +124,7 @@ const ContactUs = () => {
         </div>
       </div>
     </motion.div>
+   </div>
   );
 };
 

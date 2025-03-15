@@ -56,8 +56,8 @@ const ResearchInnovations = () => {
    const isResearchPage = location.pathname.includes("/research");
 
   return (
-    <div className="">
-      <div className="container mx-auto px-4 py-6">
+    <div className="my-16">
+      <div className="container mx-auto px-4 ">
       <h2 className="xl:text-3xl text-2xl font-bold mb-8">
           {isResearchPage ? "Current & On-going Research" : "Research & Innovations"}
         </h2>

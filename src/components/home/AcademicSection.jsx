@@ -29,9 +29,9 @@ const AcademicSection = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="py-12"
+      className="my-12"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <section className="flex flex-col lg:flex-row items-center gap-12">
           {/* Image Section - Appears first on mobile, second on desktop */}
           <motion.div

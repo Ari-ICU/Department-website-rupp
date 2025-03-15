@@ -27,8 +27,8 @@ const aboutData = {
 
 const AboutSection = () => {
     return (
-        <div className=''>
-            <div className='container mx-auto'>
+        <div className='my-16'>
+            <div className='container mx-auto px-4'>
                 <section className="flex flex-col xl:flex-row items-center mx-auto justify-center gap-6">
                     {/* Text Section with animation */}
                     <motion.div

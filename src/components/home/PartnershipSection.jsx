@@ -17,8 +17,8 @@ const PartnershipSection = () => {
   ];
 
   return (
-    <div className="bg-white">
-      <div className="container mx-auto ">
+    <div className="my-16">
+      <div className="container mx-auto  px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
           {/* Title and "View All" Link */}
           <div className="text-center md:text-left">

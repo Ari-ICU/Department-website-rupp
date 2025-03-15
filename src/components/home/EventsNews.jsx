@@ -42,8 +42,8 @@ const EventsNews = () => {
     ];
 
     return (
-        <div className="bg-white">
-            <div className="container mx-auto">
+        <div className="my-16">
+            <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center mb-8">
                     <div>
                         <h2 className="xl:text-3xl text-xl font-extrabold text-gray-900">
