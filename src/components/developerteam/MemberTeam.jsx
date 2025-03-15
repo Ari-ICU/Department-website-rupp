@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
 import { RiDoubleQuotesR } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
-import a1 from '../../assets/developer/vakhim.png';
+import a1 from '../../assets/developer/vakhim.jpg';
 import p3 from '../../assets/developer/nidsa.jpg';
 import p2 from '../../assets/developer/lisa.jpg';
 import p5 from '../../assets/developer/kanha.jpg';
@@ -83,7 +83,7 @@ const MemberTeam = () => {
       <div className='container mx-auto px-4'>
         <div className='space-y-10'>
           <div>
-            <h1 className='text-3xl font-semibold '>Projects Members</h1>
+            <h1 className='text-3xl font-semibold '> Project teams</h1>
           </div>
           <div className='flex flex-col xl:flex-row xl:flex-wrap gap-8 justify-center'>
             {deputyData.map((deputy, index) => (
