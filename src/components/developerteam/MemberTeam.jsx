@@ -4,10 +4,9 @@ import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
 import { RiDoubleQuotesR } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import p3 from '../../assets/developer/3.png';
-import p1 from '../../assets/developer/alian.png';
-import p2 from '../../assets/developer/2.png';
-import p5 from '../../assets/developer/5.png';
-import p4 from '../../assets/developer/me.png';
+import p2 from '../../assets/developer/lisa.jpg';
+import p5 from '../../assets/developer/kanha.jpg';
+import p4 from '../../assets/developer/me.jpg';
 import p6 from '../../assets/developer/ryna.png';
 
 

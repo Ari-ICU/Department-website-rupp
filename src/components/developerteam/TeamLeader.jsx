@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { RiDoubleQuotesR } from "react-icons/ri";
-import p1 from '../../assets/developer/1.png';
+import p1 from '../../assets/developer/vakhim.png';
 import SocialIcon from '../social/SocialIcon';
 
 const TeamLeader = () => {

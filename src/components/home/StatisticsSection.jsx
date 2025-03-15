@@ -5,7 +5,7 @@ const StatisticsSection = () => {
     const stats = [
         { value: "2,000", rank: "students" },
         { value: 50, rank: "increase enrollment" },
-        { value: "1st", rank: "university" },
+        { value: "1st", rank: "university in cambodia" },
     ];
 
     return (
