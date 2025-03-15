@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MdSchool, MdWork, MdEvent } from 'react-icons/md';
+import { useTranslation } from "react-i18next";
+
 
 const services = [
+  
   {
     title: 'About Program',
     description: 'Balanced curriculum with theory and hands-on learning.',
@@ -40,6 +43,9 @@ const cardVariants = {
 };
 
 const ServiceSection = () => {
+  
+  const { t } = useTranslation();
+
   return (
     <div className='my-16'>
       <motion.section
@@ -61,17 +67,17 @@ const ServiceSection = () => {
                 {/* Icon Container - Fixed size and consistent styling */}
                 <div
                   className="min-w-[64px] flex-shrink-0 text-[40px] w-16 h-16 flex items-center justify-center transition-colors text-red-900 rounded-full border-2 border-red-900/20"
-                  aria-label={service.title}
+                  aria-label={t(`service.${service.title}`)}
                 >
                   {React.cloneElement(service.icon, {
-                    className: "w-[1em] h-[1em]" // Ensure icons scale properly
+                    className: "w-[1em] h-[1em]"
                   })}
                 </div>
 
                 {/* Title and Description */}
                 <div className="text-center md:text-left">
-                  <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
-                  <p className="md:text-base text-gray-600">{service.description}</p>
+                  <h3 className="text-2xl font-semibold mb-2">{t(`service.${service.title}`)}</h3>
+                  <p className="md:text-base text-gray-600">{t(`service.${service.description}`)}</p>
                 </div>
               </div>
             </motion.div>

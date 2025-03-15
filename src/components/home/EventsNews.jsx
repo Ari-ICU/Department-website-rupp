@@ -4,40 +4,44 @@ import { Link } from 'react-router-dom';
 import image1 from '../../assets/new/3.jpg';
 import image2 from '../../assets/new/4.jpg';
 import image3 from '../../assets/new/5.jpg';
+import { useTranslation } from "react-i18next";
+
 
 const EventsNews = () => {
+      const { t } = useTranslation();
+    
     const events = [
         {
             id: 1,
-            title: 'Guest Lecture on Artificial Intelligence',
+            title: t('Events.Guest Lecture on Artificial Intelligence'),
             imageUrl: image1,
-            description: 'Annual university tournament for basketball teams. Come cheer...',
-            date: '22 Aug 2025',
-            category: 'Hackathons',
+            description: t('Events.Annual university tournament for basketball teams. Come cheer...'),
+            date: t('Events.22 Aug 2025'),
+            category: t('Events.Hackathons'),
         },
         {
             id: 2,
-            title: 'AI in Healthcare Symposium',
+            title: t('Events.AI in Healthcare Symposium'),
             imageUrl: image2,
-            description: 'Exploring the latest advancements in AI for medical applications.',
-            date: '15 Sep 2025',
-            category: 'Conferences',
+            description: t('Events.Exploring the latest advancements in AI for medical applications.'),
+            date: t('Events.15 Sep 2025'),
+            category: t('Events.Conferences'),
         },
         {
             id: 3,
-            title: 'Web Development Workshop',
+            title: t('Events.Web Development Workshop'),
             imageUrl: image3,
-            description: 'Hands-on workshop on building responsive web applications.',
-            date: '05 Oct 2025',
-            category: 'Workshops',
+            description: t('Events.Hands-on workshop on building responsive web applications.'),
+            date: t('Events.05 Oct 2025'),
+            category: t('Events.Workshops'),
         },
         {
             id: 4,
-            title: 'Data Science Meetup',
+            title: t('Events.Data Science Meetup'),
             imageUrl: image1,
-            description: 'Networking event for data science enthusiasts and professionals.',
-            date: '20 Oct 2025',
-            category: 'Meetups',
+            description: t('Events.Networking event for data science enthusiasts and professionals.'),
+            date: t('Events.20 Oct 2025'),
+            category: t('Events.Meetups'),
         },
     ];
 
@@ -47,15 +51,15 @@ const EventsNews = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center mb-8">
                     <div>
                         <h2 className="xl:text-3xl text-xl font-extrabold text-gray-900">
-                            Events & News
+                           { t("Events.Events & News")}
                         </h2>
                         <p className="mt-1 xl:text-sm text-[12px] text-gray-500">
-                            Engage with cutting-edge workshops, conferences, and networking opportunities.
+                            { t("Events.Engage with cutting-edge workshops, conferences, and networking opportunities.")}
                         </p>
                     </div>
                     <div className="w-full md:w-auto mt-4 md:mt-0">
                         <Link to='/news&events' className='flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1'>
-                            <span className="mr-2 xl:text-sm text-[12px]">View All</span>
+                            <span className="mr-2 xl:text-sm text-[12px]">{t('News.View All')}</span>
                             <FaArrowRight className="text-red-800" />
                         </Link>
                     </div>

@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import contactImage from "../../assets/model/web-sample-1(3).jpg";
+import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
+  const { t } = useTranslation();
   return (
    <div className="my-16">
      <motion.div
@@ -40,7 +42,7 @@ const ContactUs = () => {
                 viewport={{ once: true }}
                 className="text-2xl font-bold text-center mb-8" // Adjusted text size
               >
-                Contact Us If You Have Any Questions
+               {t("Contact.Contact Us If You Have Any Questions")}
               </motion.h2>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -51,7 +53,7 @@ const ContactUs = () => {
                     viewport={{ once: true }}
                   >
                     <label className="block text-sm font-medium text-gray-700">
-                      First Name*
+                     {t("Contact.First Name*")}
                     </label>
                     <input
                       type="text"
@@ -66,7 +68,7 @@ const ContactUs = () => {
                     viewport={{ once: true }}
                   >
                     <label className="block text-sm font-medium text-gray-700">
-                      Last Name*
+                      {t("Contact.Last Name*")}
                     </label>
                     <input
                       type="text"
@@ -82,7 +84,7 @@ const ContactUs = () => {
                   viewport={{ once: true }}
                 >
                   <label className="block text-sm font-medium text-gray-700">
-                    Email*
+                   {t("Contact.Email*")}
                   </label>
                   <input
                     type="email"
@@ -97,7 +99,7 @@ const ContactUs = () => {
                   viewport={{ once: true }}
                 >
                   <label className="block text-sm font-medium text-gray-700">
-                    Description
+                    {t("Contact.Description")}
                   </label>
                   <textarea
                     rows="4"
@@ -115,7 +117,7 @@ const ContactUs = () => {
                     type="submit"
                     className="py-2 px-6 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-800 hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
                   >
-                    Submit
+                    {t("Contact.Submit")}
                   </button>
                 </motion.div>
               </form>

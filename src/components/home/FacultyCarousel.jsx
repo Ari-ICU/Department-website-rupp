@@ -9,13 +9,14 @@ import image3 from '../../assets/img/professor/pok-leakmony.jpg'
 import image4 from '../../assets/img/professor/kim-no.jpg'
 import image5 from '../../assets/img/professor/meak-kamerane.png'
 import p2 from '../../assets/img/professor/Asst-Prof-Dr-Chor-Chandara.png';
+import { useTranslation } from 'react-i18next';
 
 
 
 const facultyMembers = [
     { name: 'Asst. Prof. Chi Kuong', position: 'Head of Department', image: image2 },
-    { name: 'Mr. Pok LeakMony ', position: 'Deputy Head of Department:', image: image3 },
-    { name: 'Asst. Prof. Dr. Chor Chandara ', position: 'Deputy Head of Department:', image: p2 },
+    { name: 'Mr. Pok LeakMony ', position: 'Deputy Head of Department', image: image3 },
+    { name: 'Asst. Prof. Dr. Chor Chandara ', position: 'Deputy Head of Department', image: p2 },
     { name: 'Asst. Prof. Kim No', position: 'Assistant Professor', image: image4 },
     { name: 'Asst. Prof. Meak Kamerane', position: 'Assistant Professor', image: image5 },
     { name: 'Asst. Prof. Heng Sovannrith', position: 'Assistant Professor', image: image1 },
@@ -25,6 +26,7 @@ const facultyMembers = [
 const FacultyCarousel = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const containerRef = useRef(null);
+    const { t } = useTranslation()
     const cardWidth = 384; // 96 * 4
 
     useEffect(() => {
@@ -71,7 +73,7 @@ const FacultyCarousel = () => {
                             viewport={{ once: true }}
                             className="xl:text-3xl text-xl font-semibold tracking-wide uppercase"
                         >
-                            Meet With Our Faculty
+                           {t("Meet.Meet With Our Faculty")}
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -80,14 +82,14 @@ const FacultyCarousel = () => {
                             viewport={{ once: true }}
                             className="mt-2 text-gray-900 xl:text-sm text-[12px]"
                         >
-                            Professor: Inspiring Minds, Nurturing Curiosity, and Shaping the Future <br /> of Knowledge and Innovation
+                            {t("Meet.Professor: Inspiring Minds, Nurturing Curiosity, and Shaping the Future <br /> of Knowledge and Innovation")}
                         </motion.p>
                     </div>
                     <motion.div
                         className="w-full md:w-auto mt-4 md:mt-0"
                     >
                         <Link to='/faculty' className='flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1'>
-                            <span className="mr-2 xl:text-sm text-[12px]">View All</span>
+                            <span className="mr-2 xl:text-sm text-[12px]">{t("News.View All")}</span>
                             <FaArrowRight className="text-red-800" />
                         </Link>
                     </motion.div>
@@ -156,7 +158,7 @@ const FacultyCarousel = () => {
                                     </motion.div>
                                 </div>
                                 <h3 className="text-xl font-semibold">{faculty.name}</h3>
-                                <p className="text-sm text-gray-500">{faculty.position}</p>
+                                <p className="text-sm text-gray-500">{t(`Meet.${faculty.position}`)}</p>
                             </motion.div>
                         ))}
                     </div>

@@ -23,10 +23,10 @@ const ProfileSection = () => {
 
                             {/* Content Section */}
                             <div className="space-y-4 text-center md:text-left">
-                                <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+                                <h1 className="text-3xl md:text-4xl font-bold text-gray-100">
                                     Asst. Prof. Chi Kuong
                                 </h1>
-                                <h2 className="text-xl md:text-2xl text-gray-50 ">
+                                <h2 className="text-xl md:text-2xl text-gray-100 ">
                                     Assistant Professor
                                 </h2>
                                 <div className='-mt-10'>
@@ -36,7 +36,7 @@ const ProfileSection = () => {
                             </div>
                         </div>
                         <button className="mt-4 bg-gray-50 flex gap-10 text-gray-700 px-6 py-3 rounded-lg transition-colors duration-300">
-                            <BsViewStacked className="text-lg" />
+                            <BsViewStacked className="text-lg text-red-900" />
                             View Portfolio
 
                         </button>

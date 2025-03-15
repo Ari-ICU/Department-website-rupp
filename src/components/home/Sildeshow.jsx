@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { MdExplore } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 // Image imports
 import heroImage1 from "../../assets/img/univ3.jpg";
@@ -12,14 +13,15 @@ import heroImage3 from "../../assets/img/univ4.jpg";
 import logo from "../../assets/img/rupp.png";
 
 const SlideShowSection = () => {
+  const { t } = useTranslation();
+
   const slides = [
     {
       image: heroImage1,
-      title: "Welcome to the Computer Science Department",
-      description:
-        "Join a community of innovators, researchers, and future tech leaders shaping the world of tomorrow.",
-      buttonText1: "About",
-      buttonText2: "Explore Our Program",
+      title: t("slideshow.Welcome to the Computer Science Department"),
+      description: t("slideshow.Join a community of innovators, researchers, and future tech leaders shaping the world of tomorrow."),
+      buttonText1: t("menu.About"),
+      buttonText2: t("menu.Explore Our Program"),
       buttonLink1: "/about",
       buttonLink2: "/programs",
       buttonColor: "bg-red-900",
@@ -27,11 +29,10 @@ const SlideShowSection = () => {
     },
     {
       image: heroImage2,
-      title: "Explore Our Research Programs",
-      description:
-        "Be part of groundbreaking research that shapes the future of technology.",
-      buttonText1: "About",
-      buttonText2: "Explore Our Program",
+      title: t("slideshow.Explore Our Research Programs"),
+      description: t("slideshow.Be part of groundbreaking research that shapes the future of technology."),
+      buttonText1: t("menu.About"),
+      buttonText2: t("menu.Explore Our Program"),
       buttonLink1: "/about",
       buttonLink2: "/programs",
       buttonColor: "bg-red-900",
@@ -39,11 +40,10 @@ const SlideShowSection = () => {
     },
     {
       image: heroImage3,
-      title: "Innovating for the Future",
-      description:
-        "Get ready to be a part of the next generation of tech leaders.",
-      buttonText1: "About",
-      buttonText2: "Explore Our Program",
+      title: t("slideshow.Innovating for the Future"),
+      description: t("slideshow.Get ready to be a part of the next generation of tech leaders."),
+      buttonText1: t("menu.About"),
+      buttonText2: t("menu.Explore Our Program"),
       buttonLink1: "/about",
       buttonLink2: "/programs",
       buttonColor: "bg-red-900",
@@ -56,7 +56,7 @@ const SlideShowSection = () => {
 
   // Auto slide every 5 seconds
   useEffect(() => {
-    if (isPaused) return; // Stop auto-slide if user interacts
+    if (isPaused) return;
 
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -152,7 +152,7 @@ const SlideShowSection = () => {
           {/* Explore Program Button */}
           <Link
             to={slides[currentSlide].buttonLink2}
-            className={`${slides[currentSlide]} border text-white px-8 py-2 xl:text-md text-[12px] xl:text-lg rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg flex items-center justify-center`}
+            className={`border text-white px-8 py-2 xl:text-md text-[12px] xl:text-lg rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg flex items-center justify-center`}
           >
             {slides[currentSlide].buttonText2}
             <MdExplore className="ml-2 items-center" /> 
@@ -161,37 +161,17 @@ const SlideShowSection = () => {
       </div>
 
       {/* Navigation Arrows */}
-      <button
-        onClick={goToPrevious}
-        className="absolute z-20 left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white xl:p-3 p-1 rounded-full hover:bg-opacity-75 cursor-pointer"
-        style={{ pointerEvents: "auto" }}
-        aria-label="Previous Slide"
-      >
+      <button onClick={goToPrevious} className="absolute z-20 left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white xl:p-3 p-1 rounded-full hover:bg-opacity-75 cursor-pointer">
         <MdKeyboardArrowLeft />
       </button>
-      <button
-        onClick={goToNext}
-        className="absolute z-20 right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white xl:p-3 p-1 rounded-full hover:bg-opacity-75 cursor-pointer"
-        style={{ pointerEvents: "auto" }}
-        aria-label="Next Slide"
-      >
+      <button onClick={goToNext} className="absolute z-20 right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white xl:p-3 p-1 rounded-full hover:bg-opacity-75 cursor-pointer">
         <MdKeyboardArrowRight />
       </button>
 
       {/* Navigation Dots */}
       <div className="absolute z-20 bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? "bg-white scale-125 shadow-lg"
-                : "bg-gray-500 hover:bg-gray-400"
-            }`}
-            style={{ pointerEvents: "auto" }}
-            aria-label={`Go to slide ${index + 1}`}
-          ></button>
+          <button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full ${index === currentSlide ? "bg-white scale-125" : "bg-gray-500"}`} aria-label={`Go to slide ${index + 1}`}></button>
         ))}
       </div>
     </div>

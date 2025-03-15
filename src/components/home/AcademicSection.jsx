@@ -3,18 +3,22 @@ import { useNavigate } from 'react-router-dom'
 import { motion } from "framer-motion";
 import { MdExplore } from 'react-icons/md'
 import { MdSchool } from "react-icons/md";
-import image1 from "../../assets/academic/1.png"; 
+import image1 from "../../assets/academic/1.png";
+import { useTranslation } from 'react-i18next';
+
 
 const AcademicSection = () => {
+      const { t } = useTranslation();
+  
   const academicsData = {
-    title: "Academics",
+    title: t("Academics.Academics"),
     description: [
-      "The Computer Science Department offers a comprehensive undergraduate program designed to provide students with a strong foundation in computing principles, programming, and modern technologies.",
-      "Our curriculum emphasizes both theoretical and practical aspects of computer science, equipping graduates with the skills needed for a successful career in the ever-evolving tech industry."
+      t("Academics.The Computer Science Department offers a comprehensive undergraduate program designed to provide students with a strong foundation in computing principles, programming, and modern technologies."),
+      t("Academics.Our curriculum emphasizes both theoretical and practical aspects of computer science, equipping graduates with the skills needed for a successful career in the ever-evolving tech industry.")
     ],
     image: image1,
-    programs: ["Undergraduate Program", "Graduate Program"],
-    buttonLabel: "Explore",
+    programs: [t("Academics.Undergraduate Program"), t("Academics.Graduate Program")],
+    buttonLabel: t("Academics.Explore"),
   };
 
   const navigate = useNavigate();
@@ -92,7 +96,7 @@ const AcademicSection = () => {
               <button 
               onClick={handleBtn}
               className="bg-red-800 cursor-pointer text-white rounded-4xl py-2 px-6 flex items-center hover:bg-red-600 transition duration-300">
-                Explore
+               {t("Academics.Explore")}
                 <MdExplore className="ml-2" />
               </button>
             </motion.div>

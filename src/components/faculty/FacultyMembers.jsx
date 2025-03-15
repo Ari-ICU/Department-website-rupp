@@ -1,8 +1,21 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import p2 from '../../assets/img/dr-heng-sovanrith.png';
 import p3 from '../../assets/img/professor/p1.png';
+import p4 from '../../assets/img/professor/thap-boung.jpg';
+import p5 from '../../assets/img/professor/ly-sokun.jpg';
+import p6 from '../../assets/img/professor/ouk-polyvann.jpg';
+import p7 from '../../assets/img/professor/ung-rithy.jpg';
+
+
+
+
+
+
+
+
 
 const FacultyMembers = () => {
     const deputyData = [
@@ -16,29 +29,38 @@ const FacultyMembers = () => {
             telegram: "https://t.me/example",
         },
         {
-            id: 2, // Added ID for detail page link
-            name: "Asst. Prof. Dr. Chor Chandara",
-            image: p3,
+            id: 2, 
+            name: "Asst. Prof. Dr. Ly Sokun",
+            image: p5,
             position: "Assistant Professor",
-            details: "Asst. Prof. Dr. Heng Sovannarith (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
+            details: "Asst. Prof. Dr. Ly Sokun (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
             facebook: "https://facebook.com/example",
             telegram: "https://t.me/example",
         },
         {
             id: 3, // Added ID for detail page link
-            name: "Asst. Prof. Dr. Chor Chandara",
-            image: p3,
+            name: "Asst. Prof. Dr. Thap Boung",
+            image: p4,
             position: "Assistant Professor",
-            details: "Asst. Prof. Dr. Heng Sovannarith (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
+            details: "Asst. Prof. Dr. Thap Boung (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
             facebook: "https://facebook.com/example",
             telegram: "https://t.me/example",
         },
         {
             id: 4, // Added ID for detail page link
-            name: "Asst. Prof. Dr. Chor Chandara",
-            image: p3,
+            name: "Asst. Prof. Dr. Ouk Polyvann",
+            image: p6,
             position: "Assistant Professor",
-            details: "Asst. Prof. Dr. Heng Sovannarith (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
+            details: "Asst. Prof. Dr. Ouk Polyvann (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
+            facebook: "https://facebook.com/example",
+            telegram: "https://t.me/example",
+        },
+        {
+            id: 5,
+            name: "Asst. Prof. Dr. Ung Rithy",
+            image: p7,
+            position: "Assistant Professor",
+            details: "Asst. Prof. Dr.  Ung Rithy (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
             facebook: "https://facebook.com/example",
             telegram: "https://t.me/example",
         },
@@ -61,33 +83,41 @@ const FacultyMembers = () => {
                                             className="w-full h-full rounded-2xl object-cover group-hover:brightness-90 transition-all duration-300"
                                         />
 
-                                        {/* Social Media Overlay */}
-                                        <div
+                                          {/* Social Media Overlay */}
+                                          <motion.div
+                                            initial={{ opacity: 0 }}
+                                            whileHover={{ opacity: 1 }}
                                             className="absolute inset-0 bg-black/20 rounded-2xl flex items-center justify-center"
                                         >
                                             {/* Social Icons Container */}
                                             <div className="absolute top-4 right-4 group-hover:bg-black/10 p-2 transition-all duration-300 rounded-2xl">
-                                                <div className="space-y-2">
+                                                <motion.div
+                                                    initial={{ y: 20 }}
+                                                    animate={{ y: 0 }}
+                                                    className=" space-y-2"
+                                                >
                                                     {/* Facebook Link */}
-                                                    <div
+                                                    <motion.div
+                                                        whileHover={{ scale: 1.1 }}
                                                         className="bg-white p-3 rounded-full shadow-lg"
                                                     >
-                                                        <Link to={deputy.facebook} className="text-gray-700 hover:text-red-600">
+                                                        <Link to="#" className="text-gray-700 hover:text-red-600">
                                                             <FaFacebookF className="text-xl" />
                                                         </Link>
-                                                    </div>
+                                                    </motion.div>
 
                                                     {/* Telegram Link */}
-                                                    <div
+                                                    <motion.div
+                                                        whileHover={{ scale: 1.1 }}
                                                         className="bg-white p-3 rounded-full shadow-lg"
                                                     >
-                                                        <Link to={deputy.telegram} className="text-gray-700 hover:text-red-400">
+                                                        <Link to="#" className="text-gray-700 hover:text-red-400">
                                                             <FaTelegramPlane className="text-xl" />
                                                         </Link>
-                                                    </div>
-                                                </div>
+                                                    </motion.div>
+                                                </motion.div>
                                             </div>
-                                        </div>
+                                        </motion.div>
                                     </div>
                                     <div className='space-y-6 max-w-md relative text-center'>
                                         <div className='space-y-2'>

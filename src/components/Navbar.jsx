@@ -7,7 +7,7 @@ import logo from "../assets/img/rupp.png";
 
 const Navbar = ({ isOpen, setIsOpen }) => {
   const [dropdown, setDropdown] = useState(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(isOpen); // Sync with the parent state
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(isOpen); 
   const navRef = useRef();
   const location = useLocation();
   const { t } = useTranslation();
@@ -52,7 +52,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
       onMouseLeave={() => setDropdown(null)}
     >
       <button className="flex items-center uppercase">
-        {t(menu)} <FiChevronDown className="ml-1" />
+      {t(`menu.${menu}`)} <FiChevronDown className="inline ml-2" />
       </button>
       {dropdown === menu && (
         <motion.div
@@ -84,7 +84,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         className="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-100"
         onClick={() => toggleDropdown(menu)}
       >
-        {t(menu)} <FiChevronDown className="inline ml-2" />
+        {t(menu.menu)} <FiChevronDown className="inline ml-2" />
       </button>
       {dropdown === menu && (
         <div className="pl-4">
@@ -97,7 +97,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
               }`}
               onClick={() => setDropdown(null)}
             >
-              {t(text)}
+              {t(menu.text)}
             </Link>
           ))}
         </div>
@@ -111,41 +111,41 @@ const Navbar = ({ isOpen, setIsOpen }) => {
       {/* Desktop and Mobile Menu */}
       <div className={`xl:flex space-x-6 uppercase ${isMobileMenuOpen ? "block" : "hidden"}`}>
         <Link to="/" className={`hover:text-red-900 ${location.pathname === "/" ? "text-red-900 font-bold" : ""}`}>
-          {t("home")}
+          {t("menu.home")}
         </Link>
 
         {desktopDropdown("about", aboutDropdownRef, [
-          ["/about", "aboutWebsite"],
-          ["/developer", "developerTeam"],
+          ["/menu.about", t("menu.aboutWebsite")],
+          ["/developer", t("menu.developerTeam")],
         ])}
 
         <Link to="/contact" className={`hover:text-red-900 ${location.pathname === "/contact" ? "text-red-900 font-bold" : ""}`}>
-          {t("contact")}
+          {t("menu.contact")}
         </Link>
 
         {desktopDropdown("programs", programDropdownRef, [
-          ["/programs/bachelor", "bachelor"],
-          ["/programs/master", "master"],
-          ["/programs/doctoral", "doctoral"],
-          ["/programs/diploma", "diploma"],
+          ["/programs/bachelor", t("menu.bachelor")],
+          ["/programs/master", t("menu.master")],
+          ["/programs/doctoral", t("menu.doctoral")],
+          ["/programs/diploma", t("menu.diploma")],
         ])}
 
         <Link to="/admissions" className={`hover:text-red-900 ${location.pathname === "/admissions" ? "text-red-900 font-bold" : ""}`}>
-          {t("admission")}
+          {t("menu.admission")}
         </Link>
 
         <Link to="/news&events" className={`hover:text-red-900 ${location.pathname === "/news&events" ? "text-red-900 font-bold" : ""}`}>
-          {t("newsEvents")}
+          {t("menu.newsEvents")}
         </Link>
 
         {desktopDropdown("campusLife", campusLifeDropdownRef, [
-          ["/facilities", "facilities"],
-          ["/scholars", "scholars"],
+          ["/facilities", t("menu.facilities")],
+          ["/scholars", t("menu.scholars")],
         ])}
 
         {desktopDropdown("Academics & Research", academicsResearchDropdownRef, [
-          ["/faculty", "faculty"],
-          ["/research", "research"],
+          ["/faculty", t("menu.faculty")],
+          ["/research", t("menu.research")],
         ])}
       </div>
 

@@ -4,32 +4,32 @@ import { MdExplore } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import image1 from '../../assets/academic/3.png';
 import image2 from '../../assets/img/a2.png';
-
-// Dynamic content
-const aboutData = {
-    title: "Department of Computer Science",
-    description: "Offers the first Computer Science degree program, designed to provide students with a strong foundation in both theory and practical skills. We ensure that our curriculum aligns with industry standards, equipping graduates with the knowledge needed to succeed in the competitive job market. With a team of highly skilled professors who bring both academic expertise and real-world experience, we prepare students for careers in technology and innovation. We offer:",
-    features: [
-        'Programming (Desktop, Mobile, and Web Application)',
-        'System Analysis & Design and Development',
-        'Software Engineering and IT Project Management',
-        'Database Management',
-        'Computer Networks, Cloud Computing & Cybersecurity',
-        'Artificial Intelligence',
-        'Computer Architecture and Embedded Systems',
-    ],
-    images: [
-        image1,
-        image2
-    ],
-    // buttonText: "Explore",
-};
+import { useTranslation } from 'react-i18next';
 
 const AboutSection = () => {
+    const { t } = useTranslation();
+
+    // Dynamic content
+    const aboutData = {
+        title: t("Department.Department of Computer Science"),
+        description: t("Department.Offers the first Computer Science degree program, designed to provide students with a strong foundation in both theory and practical skills. We ensure that our curriculum aligns with industry standards, equipping graduates with the knowledge needed to succeed in the competitive job market. With a team of highly skilled professors who bring both academic expertise and real-world experience"), // Simplified translation key
+        features: [
+            t('Department.Programming (Desktop, Mobile, and Web Application)'),
+            t('Department.System Analysis & Design and Development'),
+            t('Department.Software Engineering and IT Project Management'),
+            t('Department.Database Management'),
+            t('Department.Computer Networks, Cloud Computing & Cybersecurity'),
+            t('Department.Artificial Intelligence'),
+            t('Department.Computer Architecture and Embedded Systems'),
+        ],
+        images: [image1, image2],
+        // buttonText: "Explore",
+    };
+
     return (
         <div className='my-16'>
             <div className='container mx-auto px-4'>
-                <section className="flex flex-col xl:flex-row items-center mx-auto justify-center gap-6">
+                <section className="flex flex-col xl:flex-row items-center mx-auto gap-6">
                     {/* Text Section with animation */}
                     <motion.div
                         className="text-[16px] order-1 lg:order-2"
@@ -89,7 +89,7 @@ const AboutSection = () => {
 
                     {/* Image Section with animation */}
                     <motion.div
-                        className="container flex items-center gap-6 lg:order-1"
+                        className="flex items-center gap-6 lg:order-1"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}

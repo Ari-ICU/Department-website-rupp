@@ -33,7 +33,7 @@ const SocialIcon = () => {
                                 aria-label={`Social Media Icon ${index + 1}`}
                             >
                                 <Link to="/" className="">
-                                    <Icon className="h-5 w-5 text-gray-50" />
+                                    <Icon className="h-5 w-5 bg-white" />
                                 </Link>
                             </motion.div>
                         ))}

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import image from "../../assets/research/2.png";
 import image1 from "../../assets/research/3.png";
 import image2 from "../../assets/research/4.png";
+import { useTranslation } from "react-i18next";
 
 
 
@@ -51,6 +52,7 @@ const buttons = [
 const ResearchInnovations = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { t } = useTranslation();
 
    // Determine if the current path is the research page
    const isResearchPage = location.pathname.includes("/research");
@@ -90,7 +92,7 @@ const ResearchInnovations = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true, amount: 0.5 }}
                   >
-                    {item.title}
+                  {t(`Research.${item.title}`)}
                   </motion.h3>
                   <motion.h3
                     className="xl:text-2xl text-lg font-semibold mb-4"
@@ -99,7 +101,7 @@ const ResearchInnovations = () => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     viewport={{ once: true, amount: 0.5 }}
                   >
-                    {item.subtitle}
+                    {t(`Research.${item.subtitle}`)}
                   </motion.h3>
                   <motion.p
                     className="mb-4 xl:text-lg text-[12px]"
@@ -108,7 +110,7 @@ const ResearchInnovations = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     viewport={{ once: true, amount: 0.5 }}
                   >
-                    {item.description}
+                    {t(`Research.${item.description}`)}
                   </motion.p>
 
                   <div className="flex flex-col xl:flex-row justify-start items-start gap-3">
@@ -122,7 +124,7 @@ const ResearchInnovations = () => {
                         viewport={{ once: true, amount: 0.5 }}
                       >
                         {btn.icon}
-                        {btn.text}
+                        {t(`Research.${btn.text}`)}
                       </motion.button>
                     ))}
                   </div>
@@ -138,7 +140,7 @@ const ResearchInnovations = () => {
                       viewport={{ once: true, amount: 0.5 }}
                     >
                       <MdExplore className="mr-2" />
-                      {item.exploreText}
+                      {t(`Academics.${item.exploreText}`)}
                     </motion.button>
                   </div>
                 </div>
@@ -175,7 +177,7 @@ const ResearchInnovations = () => {
                       viewport={{ once: true, amount: 0.5 }}
                     >
                       {button.icon}
-                      {button.label}
+                     {t(`Research.${button.label}`)}
                     </motion.button>
                   ))}
                 </div>
@@ -186,7 +188,7 @@ const ResearchInnovations = () => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     viewport={{ once: true, amount: 0.5 }}
                   >
-                    {section.title}
+                    {t(`Research.${section.title}`)}
                   </motion.h3>
                   <motion.p
                     className="mb-4 xl:text-[16px] text-[12px]"
@@ -195,7 +197,7 @@ const ResearchInnovations = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     viewport={{ once: true, amount: 0.5 }}
                   >
-                    {section.description}
+                    {t(`Research.${section.description}`)}
                   </motion.p>
                   <motion.button
                     onClick={() => navigate(`research/${section.id}`)}
@@ -206,7 +208,7 @@ const ResearchInnovations = () => {
                     viewport={{ once: true, amount: 0.5 }}
                   >
                     <MdExplore className="mr-2" />
-                    Explore
+                    {t(`Academics.Explore`)}
                   </motion.button>
                 </div>
               </div>
