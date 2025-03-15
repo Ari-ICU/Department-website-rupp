@@ -171,7 +171,7 @@ const MemberTeam = () => {
                 <img
                   src={selectedDeputy.image}
                   alt={name}
-                  className="w-full h-full rounded-2xl object-contain"
+                  className="w-96 h-96 rounded-2xl object-contain"
                 />
               </div>
               <div className='w-full'>
