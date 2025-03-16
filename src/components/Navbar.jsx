@@ -138,13 +138,15 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           {t("menu.newsEvents")}
         </Link>
 
-        {desktopDropdown("campusLife", campusLifeDropdownRef, [
+        {/* {desktopDropdown("campusLife", campusLifeDropdownRef, [
           ["/facilities", t("facilities")],
           ["/scholars", t("scholars")],
-        ])}
+        ])} */}
 
-        {desktopDropdown("Academics & Research", academicsResearchDropdownRef, [
+        {desktopDropdown("Academics", academicsResearchDropdownRef, [
           ["/faculty", "faculty"],
+          ["/facilities", t("facilities")],
+          ["/scholars", t("scholars")],
           ["/research", "Research"],
         ])}
       </div>
