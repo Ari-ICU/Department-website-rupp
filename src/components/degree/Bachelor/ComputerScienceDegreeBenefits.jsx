@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
 import { FaCheck } from "react-icons/fa";
-import model from "../../../assets/model/web-sample-4_3_-removebg-preview.png.png";
+import model from "../../../assets/model/1.png";
 
 const ComputerScienceDegreeBenefits = () => {
     const benefitsData = [
@@ -78,7 +78,7 @@ const ComputerScienceDegreeBenefits = () => {
                         <motion.img
                             src={model}
                             alt="Computer Science"
-                            className="w-full h-full mx-auto object-cover"
+                            className="w-full h-full mx-auto object-contain"
                             variants={itemVariants}
                         />
                     </motion.div>
