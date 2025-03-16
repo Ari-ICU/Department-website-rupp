@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom'; // Import useLocation
-import banner from "../../assets/img/univ2.jpg";
+import banner from "../../assets/about/3.png";
 import BreadcrumbSection from '../BreadcrumbSection';
 
 const CSAboutSection = () => {
