@@ -7,9 +7,9 @@ import { MdExplore } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
 // Image imports
-import heroImage1 from "../../assets/img/univ3.jpg";
-import heroImage2 from "../../assets/img/univ2.jpg";
-import heroImage3 from "../../assets/img/univ4.jpg";
+import heroImage1 from "../../assets/sliderResearch/4.png";
+import heroImage2 from "../../assets/sliderResearch/5.png";
+import heroImage3 from "../../assets/sliderResearch/6.png";
 import logo from "../../assets/img/rupp.png";
 
 const SlideShowSection = () => {
