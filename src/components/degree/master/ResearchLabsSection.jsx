@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaUsers, FaDollarSign, FaUserGraduate } from 'react-icons/fa';
 import { MdSchool } from 'react-icons/md'
-import p1 from '../../../assets/master/2.png';
+import p1 from "../../../assets/program/banner.png";
+
 
 const ResearchLabsSection = () => {
   const researchLabs = [

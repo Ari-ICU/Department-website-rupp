@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // Import motion from framer-motion
-import edu from "../../assets/program/p1.png";
+import edu from "../../assets/banner/program.png";
 
 const ProgramBanner = () => {
     return (
