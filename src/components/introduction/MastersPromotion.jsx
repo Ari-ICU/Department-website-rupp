@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import m from '../../assets/model/web-sample-6.png';
+import m from '../../assets/program/3-Photoroom.png';
 
 const MastersPromotion = () => {
   // Motion variants for animation
@@ -22,7 +22,7 @@ const MastersPromotion = () => {
           <div class="xl:w-[514px] w-full p-6 relative ">
             <div class="absolute inset-0 border p-2 bg-sky-600 rounded-full w-4 h-4 top-24 left-10"></div>
             <div class="absolute  border p-2 bg-red-300 rounded-full w-12 h-12 top-0 left-32"></div>
-            <div class="absolute  border p-2 bg-red-800 rounded-full w-18 h-18 top-26 right-20"></div>
+            <div class="absolute  border p-2 bg-red-800 rounded-full w-18 h-18 top-26 right-0"></div>
             <img src={m} alt="" class="w-full h-full mx-auto object-cover rounded-lg" />
           </div>
           <motion.div className="text-white p-6 rounded-lg shadow-lg xl:w-[641px] mx-auto"> {/* Added background color and padding */}

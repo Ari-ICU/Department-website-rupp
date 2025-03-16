@@ -10,7 +10,7 @@ import {
   FaArrowRight,
   FaCalendarAlt,
 } from 'react-icons/fa';
-import p1 from '../../assets/admission/1.png';
+import p1 from '../../assets/admission/5.png';
 import { Link } from 'react-router-dom';
 
 const ApplySection = () => {

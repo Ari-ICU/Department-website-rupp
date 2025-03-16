@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MdSchool, MdPeople, MdVerified } from 'react-icons/md';
-import p3 from '../../assets/program/p3.png';
-import p4 from '../../assets/program/p4.png';
+import p3 from '../../assets/admission/6.png';
+import p4 from '../../assets/admission/7.png';
 
 const ProgramObjectives = () => {
     const programData = {

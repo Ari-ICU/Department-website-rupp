@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaChalkboardTeacher, FaLaptopCode, FaBookOpen, FaWifi } from 'react-icons/fa';
-import m1 from '../../assets/facilities/2.png';
+import m1 from '../../assets/facilities/3.png';
 
 const AcademicFacilities = () => {
     const facilities = [

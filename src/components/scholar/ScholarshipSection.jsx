@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { FaFilter, FaSearch, FaCalendarAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import image1 from '../../assets/img/undergraduate/bank/b1.png';
+import aba from '../../assets/bank/aba.png';
+import canadia from '../../assets/bank/canadia.png';
+
+
+
 
 const ScholarshipSection = () => {
     const navigate = useNavigate();
@@ -23,7 +28,7 @@ const ScholarshipSection = () => {
             title: 'ABA Bank Scholarship Program',
             description: 'Financial aid for outstanding students in business and finance.',
             deadline: '15 Apr 2025',
-            imageUrl: image1,
+            imageUrl: aba,
         },
         {
             id: 3,
@@ -39,7 +44,7 @@ const ScholarshipSection = () => {
             title: 'Canadia Bank Education Grant',
             description: 'A scholarship supporting talented students in economics.',
             deadline: '30 Jun 2025',
-            imageUrl: image1,
+            imageUrl: canadia,
         },
     ];
 
@@ -80,20 +85,20 @@ const ScholarshipSection = () => {
                             </div>
                         </div>
 
-                       {/* Filter Dropdown with React Icon */}
-<div className="relative">
-    <FaFilter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-50" />
-    <select
-        className="border rounded-full py-2 pl-10 pr-4 bg-red-800 text-gray-50 focus:outline-none focus:ring focus:border-blue-300 appearance-none"
-        value={selectedTag}
-        onChange={(e) => setSelectedTag(e.target.value)}
-    >
-        <option value="">All Banks</option>
-        {tags.map((tag, index) => (
-            <option key={index} value={tag}>{tag}</option>
-        ))}
-    </select>
-</div>
+                        {/* Filter Dropdown with React Icon */}
+                        <div className="relative">
+                            <FaFilter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-50" />
+                            <select
+                                className="border rounded-full py-2 pl-10 pr-4 bg-red-800 text-gray-50 focus:outline-none focus:ring focus:border-blue-300 appearance-none"
+                                value={selectedTag}
+                                onChange={(e) => setSelectedTag(e.target.value)}
+                            >
+                                <option value="">All Banks</option>
+                                {tags.map((tag, index) => (
+                                    <option key={index} value={tag}>{tag}</option>
+                                ))}
+                            </select>
+                        </div>
                     </div>
                 </div>
 
