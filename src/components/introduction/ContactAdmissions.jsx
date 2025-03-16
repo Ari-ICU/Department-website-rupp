@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import p6 from '../../assets/program/p6.png';
+import p6 from '../../assets/program/7.png';
 
 const ContactAdmissions = () => {
   const containerVariants = {
