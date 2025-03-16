@@ -64,8 +64,8 @@ const Header = () => {
             >
               <Link to="/" className="flex items-center space-x-2">
                 <img src={logo} alt="logo" className="w-14 h-14" />
-                <span className="hidden min-sm:block text-[12px] xl:text-[14px] uppercase 2xl:text-[20px]">
-                  <span className="text-lg xl:text-xl uppercase">{t("Partnerships.Faculty of Science")}</span>
+                <span className="hidden min-sm:block text-[12px] xl:text-[14px] font-semibold uppercase 2xl:text-[20px]">
+                  <span className="text-lg xl:text-xl font-semibold uppercase">{t("Partnerships.Faculty of Science")}</span>
                   <br />
                   {t("Partnerships.Department Of Computer Science")}
                 </span>

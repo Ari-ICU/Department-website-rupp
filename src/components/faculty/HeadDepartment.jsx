@@ -85,7 +85,7 @@ const HeadDepartment = () => {
                                     </div>
                                     <h1 className='text-2xl font-semibold ' id="professor-name">{head.name}</h1>
                                     <p>{head.bio}</p>
-                                    <Link to={`/faculty/${head.id}`}>
+                                    <Link to={`/head/${head.id}`}>
                                         <button className='bg-red-900 px-6 py-2 text-gray-50 rounded-2xl' id="view-button">View</button>
                                     </Link>
                                 </div>
