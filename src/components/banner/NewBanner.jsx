@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
-import news from "../../assets/banner/news.png";
+import news from "../../assets/new/6.png";
 
 const NewBanner = () => {
   const title = "News & Events";
