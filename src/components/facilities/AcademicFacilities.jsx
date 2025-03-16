@@ -37,7 +37,7 @@ const AcademicFacilities = () => {
                             <img
                                 src={m1}
                                 alt="Academic Facilities"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-contain"
                             />
                         </div>
                     </div>
