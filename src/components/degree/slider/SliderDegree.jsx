@@ -5,9 +5,9 @@ import BreadcrumbSection from '../../BreadcrumbSection';
 import { FaSearch, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 // Image imports for different programs
-import s1 from "../../../assets/bachelor/s1.png";
-import s2 from "../../../assets/bachelor/s2.png";
-import s3 from "../../../assets/bachelor/s3.png";
+import s1 from "../../../assets/graduate.png";
+import s2 from "../../../assets/graduate.png";
+import s3 from "../../../assets/graduate.png";
 
 // Program data
 const programData = {
