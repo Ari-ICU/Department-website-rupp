@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // Import motion from framer-motion
 import { HiOutlineCurrencyDollar } from "react-icons/hi2";
-import g from '../../../assets/bachelor/1.png';
+import g from '../../../assets/admission/8.png';
 
 const TuitionSection = () => {
     // Animation variants
@@ -32,7 +32,7 @@ const TuitionSection = () => {
                                 <motion.img
                                     src={g}
                                     alt="Tuition Fee"
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-contain"
                                     variants={itemVariants}
                                 />
                             </div>
