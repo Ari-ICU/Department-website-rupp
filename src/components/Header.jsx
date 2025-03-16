@@ -11,8 +11,8 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile menu state
   const [isSearchOpen, setIsSearchOpen] = useState(false); // Search bar state
   const searchContainerRef = useRef(null); // Reference for search container
-    const { t } = useTranslation();
-  
+  const { t } = useTranslation();
+
 
   // Sample global data for search (could be replaced by API data)
   const globalData = [
@@ -64,11 +64,15 @@ const Header = () => {
             >
               <Link to="/" className="flex items-center space-x-2">
                 <img src={logo} alt="logo" className="w-14 h-14" />
-                <span className="hidden min-sm:block text-[12px] xl:text-[14px] uppercase 2xl:text-[20px]">
-                  <span className="text-lg xl:text-xl uppercase">{t("Partnerships.Faculty of Science")}</span>
-                  <br />
-                  {t("Partnerships.Department Of Computer Science")}
-                </span>
+                <motion.h2
+                  className=" xl:text-xl text-sm "
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {t("Partnerships.Faculty of Science")} <br className='xl:block hidden' /> {t("Partnerships.Department Of Computer Science")}
+                </motion.h2>
               </Link>
             </motion.div>
 

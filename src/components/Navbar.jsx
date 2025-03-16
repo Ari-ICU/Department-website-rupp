@@ -130,9 +130,9 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           ["/programs/diploma", "diploma"],
         ])}
 
-        <Link to="/admissions" className={`hover:text-red-900 ${location.pathname === "/admissions" ? "text-red-900 font-bold" : ""}`}>
+        {/* <Link to="/admissions" className={`hover:text-red-900 ${location.pathname === "/admissions" ? "text-red-900 font-bold" : ""}`}>
           {t("menu.admission")}
-        </Link>
+        </Link> */}
 
         <Link to="/news&events" className={`hover:text-red-900 ${location.pathname === "/news&events" ? "text-red-900 font-bold" : ""}`}>
           {t("menu.newsEvents")}
@@ -145,9 +145,10 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 
         {desktopDropdown("Academics", academicsResearchDropdownRef, [
           ["/faculty", "faculty"],
-          ["/facilities", t("facilities")],
-          ["/scholars", t("scholars")],
+          ["/facilities", "facilities"],
+          ["/scholars", "scholars"],
           ["/research", "Research"],
+          ["/admissions", "admission"],
         ])}
       </div>
 

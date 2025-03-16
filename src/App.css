@@ -15,19 +15,24 @@ button{
 /* body {
     font-family: 'Battambang', sans-serif;
 } */
-
+/* 
 body {
     font-family: 'Noto Sans Khmer', sans-serif;
+} */
+
+h1, h2, h3, h4{
+    font-family: 'Moul', 'Noto Sans Khmer', sans-serif;
 }
-/* 
+
+
 @font-face {
     font-family: 'KhmerCustom';
     src: url('/fonts/Khmer-Busra-Regular.ttf') format('truetype');
 }
 
-.khmer-text {
+p, span{
     font-family: 'KhmerCustom', sans-serif;
-} */
+}
 /*  
 @import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
 
