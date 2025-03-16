@@ -115,7 +115,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         </Link>
 
         {desktopDropdown("about", aboutDropdownRef, [
-          ["/menu.about", t("aboutWebsite")],
+          ["/about", t("aboutWebsite")],
           ["/developer", t("developerTeam")],
         ])}
 

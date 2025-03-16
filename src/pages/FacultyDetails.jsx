@@ -12,7 +12,7 @@ const FacultyDetails = () => {
     <div>
       <div>
         <ProfileSection />
-        <div className='flex justify-center '>
+        <div className='container mx-auto flex justify-center '>
           <div className=''>
             <AboutSection />
             <ResearchProjectsSection />

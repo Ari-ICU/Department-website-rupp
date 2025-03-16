@@ -3,7 +3,7 @@ import React from "react";
 const AboutSection = () => {
     return (
         <section className=" my-16">
-            <div className="max-w-4xl mx-auto space-y-8">
+            <div className="max-w-4xl mx-auto space-y-8 p-4">
                 {/* About Section */}
                 <div className="space-y-6">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900">About</h2>

@@ -1,18 +1,20 @@
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { FaTelegramPlane, FaFacebookF } from 'react-icons/fa';
-import { FaXTwitter } from "react-icons/fa6";
-
+import { FaXTwitter } from 'react-icons/fa6';
 
 const SocialIcon = () => {
+    const { id } = useParams();
+
+    const isFacultyPage = id !== undefined;
+
     return (
-        <div className='my-16'>
-            <div className='max-w-4xl mx-auto  px-4'>
-                {/* Right Section with Social Media Icons */}
-                <div className='flex justify-start'>
+        <div className="my-16">
+            <div className="max-w-4xl mx-auto px-4">
+                <div className="flex justify-start">
                     <motion.div
-                        className="flex  space-x-3"
+                        className="flex space-x-3"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -29,11 +31,13 @@ const SocialIcon = () => {
                                     visible: { opacity: 1, y: 0 },
                                 }}
                                 whileHover={{ scale: 1.2, rotate: 5 }}
-                                className=" bg-red-900 p-2 rounded-xl shadow-md cursor-pointer"
+                                className={`p-2 rounded-xl shadow-md cursor-pointer ${
+                                    isFacultyPage ? 'bg-white' : 'bg-red-800'
+                                }`}
                                 aria-label={`Social Media Icon ${index + 1}`}
                             >
-                                <Link to="/" className="">
-                                    <Icon className="h-5 w-5 text-white" />
+                                <Link to="/">
+                                    <Icon className={`h-5 w-5 ${isFacultyPage ? 'text-red-800' : 'text-white'}`} />
                                 </Link>
                             </motion.div>
                         ))}
@@ -41,7 +45,7 @@ const SocialIcon = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default SocialIcon
+export default SocialIcon;
