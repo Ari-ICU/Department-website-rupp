@@ -7,7 +7,7 @@ import logo from "../assets/img/rupp.png";
 
 const Navbar = ({ isOpen, setIsOpen }) => {
   const [dropdown, setDropdown] = useState(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(isOpen); 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(isOpen);
   const navRef = useRef();
   const location = useLocation();
   const { t } = useTranslation();
@@ -52,7 +52,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
       onMouseLeave={() => setDropdown(null)}
     >
       <button className="flex items-center uppercase">
-      {t(`menu.${menu}`)} <FiChevronDown className="inline ml-2" />
+        {t(`menu.${menu}`)} <FiChevronDown className="inline ml-2" />
       </button>
       {dropdown === menu && (
         <motion.div
@@ -64,12 +64,11 @@ const Navbar = ({ isOpen, setIsOpen }) => {
             <Link
               key={path}
               to={path}
-              className={`block px-4 py-2 hover:text-red-900 ${
-                location.pathname === path ? "text-red-900 font-bold" : ""
-              }`}
+              className={`block px-4 py-2 hover:text-red-900 ${location.pathname === path ? "text-red-900 font-bold" : ""
+                }`}
               onClick={() => setDropdown(null)}
             >
-               {t(`menu.${text}`)} {/* Corrected translation key reference */}
+              {t(`menu.${text}`)} {/* Corrected translation key reference */}
             </Link>
           ))}
         </motion.div>
@@ -92,9 +91,8 @@ const Navbar = ({ isOpen, setIsOpen }) => {
             <Link
               key={path}
               to={path}
-              className={`block py-1 text-gray-800 hover:bg-gray-100 ${
-                location.pathname === path ? "text-red-900 font-bold" : ""
-              }`}
+              className={`block py-1 text-gray-800 hover:bg-gray-100 ${location.pathname === path ? "text-red-900 font-bold" : ""
+                }`}
               onClick={() => setDropdown(null)}
             >
               {t(menu.text)}
@@ -107,21 +105,20 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 
   return (
     <nav ref={navRef} className="container mx-auto relative xl:flex xl:space-x-6 text-sm 2xl:text-base">
-  
+
       {/* Desktop and Mobile Menu */}
       <div className={`xl:flex space-x-6 uppercase ${isMobileMenuOpen ? "block" : "hidden"}`}>
         <Link to="/" className={`hover:text-red-900 ${location.pathname === "/" ? "text-red-900 font-bold" : ""}`}>
           {t("menu.home")}
         </Link>
 
-        {desktopDropdown("about", aboutDropdownRef, [
-          ["/about", t("aboutWebsite")],
-          ["/developer", t("developerTeam")],
+        {desktopDropdown("Academics", academicsResearchDropdownRef, [
+          ["/faculty", "faculty"],
+          ["/facilities", "facilities"],
+          ["/scholars", "scholars"],
+          ["/research", "Research"],
+          ["/admissions", "admission"],
         ])}
-
-        <Link to="/contact" className={`hover:text-red-900 ${location.pathname === "/contact" ? "text-red-900 font-bold" : ""}`}>
-          {t("menu.contact")}
-        </Link>
 
         {desktopDropdown("programs", programDropdownRef, [
           ["/programs/bachelor", "bachelor"],
@@ -143,13 +140,16 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           ["/scholars", t("scholars")],
         ])} */}
 
-        {desktopDropdown("Academics", academicsResearchDropdownRef, [
-          ["/faculty", "faculty"],
-          ["/facilities", "facilities"],
-          ["/scholars", "scholars"],
-          ["/research", "Research"],
-          ["/admissions", "admission"],
-        ])}
+       
+
+       
+         <Link to="/about" className={`hover:text-red-900 ${location.pathname === "/contact" ? "text-red-900 font-bold" : ""}`}>
+          {t("menu.aboutWebsite")}
+        </Link>
+
+        <Link to="/contact" className={`hover:text-red-900 ${location.pathname === "/contact" ? "text-red-900 font-bold" : ""}`}>
+          {t("menu.contact")}
+        </Link>
       </div>
 
       {/* Mobile Menu Dropdown */}

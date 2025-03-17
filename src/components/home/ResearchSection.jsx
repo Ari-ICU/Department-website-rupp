@@ -51,14 +51,17 @@ const buttons = [
 
 const ResearchInnovations = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+    const { t,i18n } = useTranslation();
+             const currentLanguage = i18n.language; 
+       
 
   return (
     <div className="my-16">
       <div className="container mx-auto px-4 ">
-      <h2 className="xl:text-3xl text-2xl font-bold mb-8">
+      <h1  className={`text-2xl font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            lang={currentLanguage}>
        {t("Research.Research & Innovations")}
-        </h2>
+        </h1>
 
         {researchData.map((item) => (
           <motion.div
@@ -70,8 +73,8 @@ const ResearchInnovations = () => {
             transition={{ duration: 0.8 }} // Animation duration
             viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
           >
-            <div className="h-full flex flex-col xl:flex-row gap-10 px-4 py-6 items-center justify-between w-full">
-              <div className="xl:max-w-3xl xl:h-[505px] w-full flex items-center p-2">
+            <div className="h-full flex flex-col xl:flex-row gap-10 px-4 py-4 items-center justify-between w-full">
+              <div className="xl:max-w-3xl  w-full flex items-center p-2">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -81,17 +84,19 @@ const ResearchInnovations = () => {
 
               <div className="flex justify-center items-center xl:max-w-3xl w-full text-left">
                 <div className="text-white mx-auto">
-                  <motion.h3
-                    className="xl:text-2xl text-lg font-semibold mb-2"
+                  <motion.h1
+                    className={`text-lg font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                    lang={currentLanguage}
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true, amount: 0.5 }}
                   >
                   {t(`Research.${item.title}`)}
-                  </motion.h3>
+                  </motion.h1>
                   <motion.h3
-                    className="xl:text-2xl text-lg font-semibold mb-4"
+                    className={`text-2xl font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                    lang={currentLanguage}
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
@@ -179,7 +184,8 @@ const ResearchInnovations = () => {
                 </div>
                 <div>
                   <motion.h3
-                    className="xl:text-xl text-lg font-semibold mb-2"
+                   className={`text-lg font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                   lang={currentLanguage}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                     viewport={{ once: true, amount: 0.5 }}

@@ -8,8 +8,8 @@ import { useTranslation } from 'react-i18next';
 
 
 const AcademicSection = () => {
-      const { t } = useTranslation();
-  
+    const { t,i18n } = useTranslation();
+         const currentLanguage = i18n.language; 
   const academicsData = {
     title: t("Academics.Academics"),
     description: [
@@ -60,7 +60,8 @@ const AcademicSection = () => {
             viewport={{ once: true }}
             className="w-full lg:w-1/2 text-center lg:text-left order-2 lg:order-1"
           >
-            <h2 className="text-3xl font-bold mb-4">{academicsData.title}</h2>
+            <h1 className={`text-2xl font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            lang={currentLanguage}>{academicsData.title}</h1>
             {academicsData.description.map((text, index) => (
               <p key={index} className="text-sm md:text-base text-gray-800 mb-4">
                 {text}

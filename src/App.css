@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-p{
+p, li{
     font-size: 18px;
 }
 button{
@@ -17,9 +17,29 @@ button{
     src: url('/fonts/Moul-Regular.ttf') format('truetype');
 }
 
-h1, h2, h3, h4 {
+/* 
+h1 {
     font-family: 'Moul', sans-serif;
-    font-weight: 300;
+    font-size: 20px;
+} */
+h1.font-khmer{
+    font-family: 'Moul', sans-serif;
+    font-size: 25px;
+}
+
+h2.font-khmer{
+    font-family: 'Moul', sans-serif;
+}
+ h4 {
+    font-family: 'Moul', sans-serif;
+    font-size: 16px;
+}
+
+h3.font-khmer{
+    font-family: 'Moul', sans-serif;
+}
+h5.font-khmer{
+    font-family: 'Moul', sans-serif;
 }
 
 
@@ -28,6 +48,6 @@ h1, h2, h3, h4 {
     src: url('/fonts/NotoSerifKhmer-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
-p, span {
+p, span , li , div{
     font-family: 'KhmerCustom', sans-serif;
 }

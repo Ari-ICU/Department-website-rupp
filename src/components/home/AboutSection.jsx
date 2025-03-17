@@ -6,8 +6,10 @@ import image1 from '../../assets/academic/3.png';
 import image2 from '../../assets/img/a2.png';
 import { useTranslation } from 'react-i18next';
 
+
 const AboutSection = () => {
-    const { t } = useTranslation();
+    const { t,i18n } = useTranslation();
+      const currentLanguage = i18n.language; 
 
     // Dynamic content
     const aboutData = {
@@ -38,17 +40,18 @@ const AboutSection = () => {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true, amount: 0.5 }}
                     >
-                        <motion.h2
-                            className="text-lg xl:text-3xl font-bold mb-4"
+                        <motion.h1
+                            className={`text-2xl font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            lang={currentLanguage}
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
                             viewport={{ once: true, amount: 0.5 }}
                         >
                             {aboutData.title}
-                        </motion.h2>
+                        </motion.h1>
                         <motion.p
-                            className="text-[12px] xl:text-[16px] text-gray-900"
+                            className=" text-gray-900"
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
@@ -60,7 +63,7 @@ const AboutSection = () => {
                             {aboutData.features.map((item, index) => (
                                 <motion.li
                                     key={index}
-                                    className="flex items-center text-[12px] xl:text-[16px]"
+                                    className="flex items-center "
                                     initial={{ opacity: 0, scale: 0.8 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.8, delay: 0.2 * (index + 1) }}

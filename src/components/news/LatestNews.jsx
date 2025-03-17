@@ -7,7 +7,9 @@ import p1 from '../../assets/new/1.png';
 import { useTranslation } from "react-i18next";
 
 const LatestNews = () => {
-  const { t } = useTranslation();
+ const { t,i18n } = useTranslation();
+           const currentLanguage = i18n.language; 
+ 
   const location = useLocation();  // Get current path
   
   // Check if the current path is home (root)
@@ -65,7 +67,8 @@ const LatestNews = () => {
           viewport={{ once: true }}
           className="flex flex-col md:flex-row justify-between items-center mb-8"
         >
-          <h2 className="text-3xl font-semibold mb-8">{isHomePage ? t('News.Latest News & Announcements') : 'Latest News & Announcements'}</h2>
+          <h1 className={`text-2xl font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            lang={currentLanguage}>{isHomePage ? t('News.Latest News & Announcements') : 'Latest News & Announcements'}</h1>
           <motion.div
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -100,7 +103,8 @@ const LatestNews = () => {
                 <span className="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-semibold self-start">
                   {isHomePage ? t(`News.${item.tag}`) : item.tag}
                 </span>
-                <h3 className="text-xl font-semibold mt-2">{isHomePage ? t(`News.${item.title}`) : item.title}</h3>
+                <h3  className={`text-lg font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            lang={currentLanguage}>{isHomePage ? t(`News.${item.title}`) : item.title}</h3>
                 <p className="text-gray-600 mt-2">{isHomePage ? t(`News.${item.description}`) : item.description}</p>
               </div>
             </div>

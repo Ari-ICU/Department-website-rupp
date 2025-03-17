@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { IoMdSearch } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SearchButton from "./SearchBtn";
@@ -11,8 +12,8 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile menu state
   const [isSearchOpen, setIsSearchOpen] = useState(false); // Search bar state
   const searchContainerRef = useRef(null); // Reference for search container
-  const { t } = useTranslation();
-
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language; 
 
   // Sample global data for search (could be replaced by API data)
   const globalData = [
@@ -41,7 +42,7 @@ const Header = () => {
       {/* Show Search input field only on top of the header */}
       {isSearchOpen && (
         <div className="absolute top-0 left-0 w-full bg-red-800 py-4 z-50">
-          <div className="max-w-8xl mx-auto px-4" ref={searchContainerRef}>
+          <div className="max-w-8xl mx-auto px-4 p-4" ref={searchContainerRef}>
             {/* Pass onToggle prop to control the search visibility */}
             <SearchButton
               onToggle={() => setIsSearchOpen(!isSearchOpen)}
@@ -52,7 +53,7 @@ const Header = () => {
       )}
 
       {/* Main Header Content */}
-      <div className={`p-4 ${isSearchOpen ? "pt-24" : ""}`}>
+      <div className={`p-4 ${isSearchOpen ? "pt-34" : ""}`}>
         <div className="max-w-8xl mx-auto px-4">
           <div className="flex justify-between items-center py-2">
             {/* Logo */}
@@ -62,16 +63,17 @@ const Header = () => {
               transition={{ duration: 1 }}
               className="  text-gray-800 cursor-pointer"
             >
-              <Link to="/" className="flex  items-center space-x-2">
+              <Link to="/" className="flex items-center space-x-2">
                 <img src={logo} alt="logo" className="w-14 h-14" />
                 <motion.h2
-                  className=" xl:text-xl font-normal text-sm "
+                  className={`xl:text-lg font-normal text-sm uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-bold"}`}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
+                  lang={currentLanguage}
                 >
-                  {t("Partnerships.Faculty of Science")} <br className='' /> {t("Partnerships.Department Of Computer Science")}
+                  {t("Partnerships.Faculty of Science")} <br className='' /> {t("Department.Department of Computer Science")}
                 </motion.h2>
               </Link>
             </motion.div>
@@ -91,7 +93,7 @@ const Header = () => {
                   aria-label="Open search"
                 >
                   {/* Search icon */}
-                  <span className="text-lg">🔍</span>
+                  <span className="text-xl"><IoMdSearch /></span>
                 </motion.button>
               )}
 

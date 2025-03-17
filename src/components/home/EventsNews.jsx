@@ -8,8 +8,9 @@ import { useTranslation } from "react-i18next";
 
 
 const EventsNews = () => {
-      const { t } = useTranslation();
-    
+     const { t,i18n } = useTranslation();
+           const currentLanguage = i18n.language; 
+     
     const events = [
         {
             id: 1,
@@ -50,9 +51,10 @@ const EventsNews = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center mb-8">
                     <div>
-                        <h2 className="xl:text-3xl text-xl font-extrabold text-gray-900">
+                        <h1   className={`text-2xl font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            lang={currentLanguage}>
                            { t("Events.Events & News")}
-                        </h2>
+                        </h1>
                         <p className="mt-1 xl:text-sm text-[12px] text-gray-500">
                             { t("Events.Engage with cutting-edge workshops, conferences, and networking opportunities.")}
                         </p>
@@ -69,7 +71,7 @@ const EventsNews = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {events.map((event) => (
                             <Link to={`/news&events/${event.id}`} className="block">
-                                <div className="bg-white rounded-2xl shadow-md flex flex-col xl:flex-row justify-center hover:shadow-lg">
+                                <div className="bg-white rounded-2xl p-4 shadow-md flex flex-col xl:flex-row justify-center items-center hover:shadow-lg">
                                     <div className="mx-auto xl:w-1/2 flex justify-center items-center">
                                         <img
                                             src={event.imageUrl}
@@ -84,9 +86,10 @@ const EventsNews = () => {
                                                 {event.category}
                                             </span>
                                         )}
-                                        <h3 className="mt-2 text-lg font-semibold text-gray-900">
+                                        <h5  className={`text-lg font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            lang={currentLanguage}>
                                             {event.title}
-                                        </h3>
+                                        </h5>
                                         <p className="mt-2 text-sm text-gray-800">
                                             {event.description}
                                         </p>

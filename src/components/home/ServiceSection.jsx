@@ -7,19 +7,20 @@ import { useTranslation } from "react-i18next";
 const services = [
   
   {
-    title: 'About Program',
-    description: 'Balanced curriculum with theory and hands-on learning.',
-    icon: <MdSchool />,
+    title: 'Events',
+    description: 'Workshops, hackathons, and networking opportunities.',
+    icon: <MdEvent />,
   },
   {
     title: 'Job Opportunities',
     description: 'Launch your career in tech and innovation.',
     icon: <MdWork />,
   },
+  
   {
-    title: 'Events',
-    description: 'Workshops, hackathons, and networking opportunities.',
-    icon: <MdEvent />,
+    title: 'About Program',
+    description: 'Balanced curriculum with theory and hands-on learning.',
+    icon: <MdSchool />,
   },
 ];
 
@@ -44,7 +45,8 @@ const cardVariants = {
 
 const ServiceSection = () => {
   
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
+          const currentLanguage = i18n.language; 
 
   return (
     <div className='my-16'>
@@ -76,7 +78,8 @@ const ServiceSection = () => {
 
                 {/* Title and Description */}
                 <div className="text-center md:text-left">
-                  <h3 className="text-2xl font-semibold mb-2">{t(`service.${service.title}`)}</h3>
+                  <h3 className={`text-lg font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            lang={currentLanguage}>{t(`service.${service.title}`)}</h3>
                   <p className="md:text-base text-gray-600">{t(`service.${service.description}`)}</p>
                 </div>
               </div>

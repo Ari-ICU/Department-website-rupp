@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import { IoMdSearch } from "react-icons/io";
+
 
 const SearchButton = ({ onToggle, data }) => {
   const [query, setQuery] = useState("");
@@ -45,15 +47,15 @@ const SearchButton = ({ onToggle, data }) => {
   return (
     <div className="relative flex justify-center items-center" ref={containerRef}>
       <motion.div
-        className="flex items-center gap-2"
+        className="flex items-center gap-2 max-w-6xl"
         layout
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
         {/* Only show the input field without the search icon */}
         <motion.div
-          className="relative"
+          className="relative flex items-center"
           animate={{
-            width: query ? "500px" : "500px",
+            width: query ? "1200px" : "1200px",
             opacity: 1,
           }}
           transition={{ duration: 0.2 }}
@@ -64,8 +66,12 @@ const SearchButton = ({ onToggle, data }) => {
             placeholder="Search..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full px-3 py-4 rounded-lg border border-gray-300 text-gray-50 focus:outline-none focus:ring-2 focus:ring-red-800"
+            className="w-full px-6 py-4 rounded-lg border bg-white border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-red-800"
           />
+          <div className="text-2xl absolute right-6 text-gray-500 ">
+          <IoMdSearch />
+          </div>
+          
         </motion.div>
       </motion.div>
      
