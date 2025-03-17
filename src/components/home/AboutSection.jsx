@@ -100,7 +100,7 @@ const AboutSection = () => {
                         {aboutData.images.map((image, index) => (
                             <motion.div
                                 key={index}
-                                className={`p-4 mx-auto flex justify-center items-center ${index === 0 ? "xl:w-[320px] xl:h-[550px]" : "xl:w-[320px] xl:h-[655px]"
+                                className={`p-4 mx-auto flex justify-center items-center ${index === 0 ? "lg:w-[320px] h-full  " : "lg:w-[320px] lg:h-[655px] h-full"
                                     }`}
                                 initial={{ scale: 0.8 }}
                                 whileInView={{ scale: 1 }}
