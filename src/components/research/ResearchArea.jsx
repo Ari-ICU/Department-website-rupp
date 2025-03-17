@@ -90,7 +90,7 @@ const ResearchArea = () => {
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 className="text-lg font-bold">{requirement.title}</h4>
+                                        <h6 className="text-lg font-bold">{requirement.title}</h6>
                                         <p className="text-sm xl:text-lg">{requirement.description}</p>
                                     </div>
                                 </div>

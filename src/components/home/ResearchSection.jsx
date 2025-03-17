@@ -119,7 +119,7 @@ const ResearchInnovations = () => {
                     {item.buttons.map((btn, btnIndex) => (
                       <motion.button
                         key={btnIndex}
-                        className={`text-lg flex items-center bg-gray-900/50 px-4 py-2 rounded-3xl gap-1 font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                        className={`text-md flex items-center bg-gray-900/50 px-4 py-2 rounded-3xl gap-1 font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
                         lang={currentLanguage}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -174,7 +174,7 @@ const ResearchInnovations = () => {
                   {buttons.map((button, btnIndex) => (
                     <motion.button
                       key={btnIndex}
-                      className={`text-lg flex items-center bg-gray-900/50 px-4 py-2 rounded-3xl gap-1 font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                      className={`text-md flex items-center bg-gray-900/50 px-4 py-2 rounded-3xl gap-1 font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
                         lang={currentLanguage}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
