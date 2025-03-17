@@ -73,7 +73,7 @@ const ResearchArea = () => {
                        
                         className="w-full xl:w-1/2 px-4 xl:px-0 order-2 xl:order-1"
                     >
-                        <h3 className="xl:text-4xl text-2xl font-semibold mb-4">
+                        <h3 className="xl:text-3xl text-2xl font-semibold mb-4">
                             Research Areas & Specializations
                         </h3>
 

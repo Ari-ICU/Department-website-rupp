@@ -33,7 +33,7 @@ const FacultyMembers = () => {
         },
         {
             id: 2, // Added ID for detail page link
-            name: "Ass. Prof. Dr. Ouk Khean",
+            name: " Dr. Ouk Khean",
             image: p8,
             position: "Associate Professor",
             details: "Asst. Prof. Dr. Heng Sovannarith (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
