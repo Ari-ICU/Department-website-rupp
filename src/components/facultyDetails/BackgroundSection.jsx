@@ -9,7 +9,7 @@ const BackgroundSection = () => {
             imageUrl: p1, // Replace with the actual path
         },
         {
-            university: "Studied at Studied at khon kaen university (thailand)",
+            university: "Studied at khon kaen university (thailand)",
             imageUrl: p2, // Replace with the actual path
             
         },
