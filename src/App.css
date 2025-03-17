@@ -10,34 +10,18 @@ p{
 button{
     cursor: pointer;
 }
-@import url('https://fonts.googleapis.com/css2?family=Battambang&display=swap');
 
-/* body {
-    font-family: 'Battambang', sans-serif;
-} */
-/* 
-body {
-    font-family: 'Noto Sans Khmer', sans-serif;
-} */
 
 @font-face {
-    font-family: 'KhmerCustom';
+    font-family: 'Moul';
     src: url('/fonts/Moul-Regular.ttf') format('truetype');
 }
 
 h1, h2, h3, h4 {
-    font-family: 'KhmerCustom', sans-serif;
-    font-weight: 700;
+    font-family: 'Moul', sans-serif;
+    font-weight: 300;
 }
-/* @import url('https://fonts.googleapis.com/css2?family=Content:wght@400;700&family=Noto+Serif+Khmer:wght@100..900&family=Odor+Mean+Chey&family=Siemreap&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Content:wght@400;700&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Content:wght@400;700&family=Odor+Mean+Chey&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Content:wght@400;700&family=Odor+Mean+Chey&family=Siemreap&display=swap'); */
-/* p, span {
-    font-family: "Content", system-ui;
-    font-weight: 400;
-    font-style: normal;
-} */
+
 
 @font-face {
     font-family: 'KhmerCustom';
@@ -47,10 +31,3 @@ h1, h2, h3, h4 {
 p, span {
     font-family: 'KhmerCustom', sans-serif;
 }
-
-/*  
-@import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
-
-.moul-text {
-    font-family: 'Moul', sans-serif;
-} */
