@@ -41,7 +41,7 @@ const Footer = () => {
                                     key={index}
                                     className="mb-2 hover:text-red-600"
                                 >
-                                    <Link to={path} className={`hover:text-red-600 ${location.pathname === path ? "text-red-900 font-bold" : ""}`}>
+                                    <Link to={path} className={`hover:text-red-600 ${location.pathname === path ? "text-red-600 font-bold" : ""}`}>
                                         {path === "/"
                                             ? t('footer.Home')
                                             : path === "/research"
@@ -71,7 +71,7 @@ const Footer = () => {
                                     transition={{ duration: 0.2 }}
                                     className="mb-2 hover:text-red-600"
                                 >
-                                    <Link to={path} className={`hover:text-red-600 ${location.pathname === path ? "text-red-900 font-bold" : ""}`}>
+                                    <Link to={path} className={`hover:text-red-600 ${location.pathname === path ? "text-red-600 font-bold" : ""}`}>
                                         {path === "/about" ? t('footer.About') : path === "/contact" ? t('footer.Contact') : t('footer.News&events')}
                                     </Link>
                                 </motion.li>
