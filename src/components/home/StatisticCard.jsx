@@ -8,9 +8,9 @@ const StatisticCard = ({ value, rank }) => {
 
   return (
     <div className="flex flex-col items-center justify-center text-center">
-      <div className={`text-2xl text-gray-50 font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+      <div className={`text-3xl text-gray-50 font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
                             lang={currentLanguage}>{value}</div>
-      <div className={`text-lg text-gray-50 font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+      <div className={`text-xl text-gray-50 font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
                             lang={currentLanguage}>{rank}</div>
     </div>
   );
