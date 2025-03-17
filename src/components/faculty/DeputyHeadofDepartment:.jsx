@@ -22,9 +22,9 @@ const DeputyHeadofDepartment = () => {
         },
         {
             id: 2, // Added unique ID for each deputy
-            name: "Asst. Prof. Dr. Chor Chandara",
+            name: "Dr. Chor Chandara",
             image: p2,
-            bio: "Asst. Prof. Dr. Chor Chandara (1999): B.Sc. (Mathematics), RUPP, 1998; M.Sc. (Information Technology), Build Bright University (Cambodia), 2005.",
+            bio: "Dr. Chor Chandara (1999): B.Sc. (Mathematics), RUPP, 1998; M.Sc. (Information Technology), Build Bright University (Cambodia), 2005.",
             facebook: "https://facebook.com/example",
             telegram: "https://t.me/example",
         },

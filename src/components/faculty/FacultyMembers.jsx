@@ -16,7 +16,8 @@ import { useTranslation } from 'react-i18next';
 
 const FacultyMembers = () => {
      const { t, i18n } = useTranslation();
-                const currentLanguage = i18n.language;
+      const currentLanguage = i18n.language;
+ 
     
     const deputyData = [
         {
@@ -30,7 +31,7 @@ const FacultyMembers = () => {
         },
         {
             id: 2, 
-            name: "Asst. Prof. Dr. Ly Sokun",
+            name: "Mr. Ly Sokun",
             image: p5,
             position: "Assistant Professor",
             details: "Asst. Prof. Dr. Ly Sokun (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
@@ -39,7 +40,7 @@ const FacultyMembers = () => {
         },
         {
             id: 3, // Added ID for detail page link
-            name: "Asst. Prof. Dr. Thap Boung",
+            name: "Mr. Thap Boung",
             image: p4,
             position: "Assistant Professor",
             details: "Asst. Prof. Dr. Thap Boung (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
@@ -48,7 +49,7 @@ const FacultyMembers = () => {
         },
         {
             id: 4, // Added ID for detail page link
-            name: "Asst. Prof. Dr. Ouk Polyvann",
+            name: "Mr. Ouk Polyvann",
             image: p6,
             position: "Assistant Professor",
             details: "Asst. Prof. Dr. Ouk Polyvann (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
@@ -57,7 +58,7 @@ const FacultyMembers = () => {
         },
         {
             id: 5,
-            name: "Asst. Prof. Dr. Ung Rithy",
+            name: "Mr. Ung Rithy",
             image: p7,
             position: "Assistant Professor",
             details: "Asst. Prof. Dr.  Ung Rithy (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
@@ -70,7 +71,7 @@ const FacultyMembers = () => {
         <div className='my-16'>
             <div className='container mx-auto px-4'>
                 <div className='space-y-10'>
-                    <h1  className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                    <h1  className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
                             lang={currentLanguage}>Faculty Members</h1>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
                         {deputyData.map((deputy) => (

@@ -11,8 +11,8 @@ import { useTranslation } from 'react-i18next';
 const departmentHeads = [
     {
         id: 1,
-        name: 'Asst. Prof. Chi Kuong',
-        bio: 'Asst. Prof. Chi Kuong (1989): B.Sc. (Chemistry), RUPP, 1991; Advanced Tools & Techniques in Computer Applications Development (AIT, Thailand), 1995; 2nd AIT-SIDA, Faculty Development Program for Cambodia Educational Institutions, (AIT, Thailand), 1995; Upgrading Program in Computer Science, (Quezon, Philippines), 1996-97; M.Sc. (Computer Science), Ateneo de Manila University (Philippines), 2000.',
+        name: 'Mr. Chi Kuong',
+        bio: 'Mr. Chi Kuong (1989): B.Sc. (Chemistry), RUPP, 1991; Advanced Tools & Techniques in Computer Applications Development (AIT, Thailand), 1995; 2nd AIT-SIDA, Faculty Development Program for Cambodia Educational Institutions, (AIT, Thailand), 1995; Upgrading Program in Computer Science, (Quezon, Philippines), 1996-97; M.Sc. (Computer Science), Ateneo de Manila University (Philippines), 2000.',
         image: p1,
         socialLinks: {
             facebook: '#',
@@ -31,7 +31,7 @@ const HeadDepartment = () => {
             <div className='container mx-auto px-4'>
                 <div className='space-y-10'>
                     <div id="head-department-header">
-                        <h1 className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                        <h1 className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
                             lang={currentLanguage}>Head of Department</h1>
                     </div>
                     {departmentHeads.map((head) => (
