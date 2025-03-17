@@ -58,7 +58,7 @@ const ComputerScienceDegreeBenefits = () => {
                             Unlock Your Future with a Computer Science Degree
                         </motion.h2>
                         <motion.p
-                            className="text-md xl:text-lg text-gray-700"
+                            className="text-md xl:text-lg text-gray-700 text-justify"
                             variants={itemVariants}
                         >
                             Gain in-demand skills, high-paying jobs, and career flexibility in tech.
@@ -117,7 +117,7 @@ const ComputerScienceDegreeBenefits = () => {
 
                                 <div>
                                     <h3 className="text-xl font-semibold">{benefit.title}</h3>
-                                    <p className="text-md">{benefit.description}</p>
+                                    <p className="text-md ">{benefit.description}</p>
                                 </div>
                             </motion.div>
                         ))}

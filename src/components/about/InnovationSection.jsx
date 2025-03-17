@@ -33,7 +33,7 @@ const InnovationSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="text-gray-600 mb-4 text-[12px] xl:text-[14px]"
+                        className="text-gray-600 mb-4 text-[12px] xl:text-[14px] text-justify"
                     >
                         To be Cambodia’s flagship university with regional standing in teaching and learning, research and innovation, and social engagement.
                     </motion.p>
@@ -42,7 +42,7 @@ const InnovationSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="text-gray-600 mb-4 text-[12px] xl:text-[14px]"
+                        className="text-gray-600 mb-4 text-[12px] xl:text-[14px] text-justify"
                     >
                         To contribute to national, regional, and global sustainable development and the preservation of national cultural and natural heritage by:
                     </motion.p>
@@ -52,9 +52,9 @@ const InnovationSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.8 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="space-y-4 text-gray-600 mb-6 text-[12px] xl:text-[14px]"
+                        className="space-y-4 text-gray-600 mb-6 text-[12px] xl:text-[14px] text-justify"
                     >
-                        <li className="flex items-start">
+                        <li className="flex items-start ">
                             <div className='border border-red-800 p-2 rounded-full mr-2'>
                                 <FaCheck className="text-red-800" />
                             </div>

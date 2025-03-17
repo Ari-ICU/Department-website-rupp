@@ -7,7 +7,7 @@ import RelatedArtical from '../components/careerDetails/RelatedArtical'
 
 const CareerDetails = () => {
   return (
-    <div>
+    <div  className='text-justify'>
         <div>
             <CareerBanner />
             <SocialIcon />

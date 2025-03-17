@@ -8,7 +8,7 @@ import GetInTouchSection from "../components/contact/GetInTouchSection"
 const Contact = () => {
     return (
         <div>
-            <div>
+            <div  className='text-justify'>
                 <CSAboutSection />
                 <div className="pb-4 pt-16">
                         <ContactSection />  

@@ -61,7 +61,7 @@ const DegreePage = () => {
 
   return (
     <div>
-      <div>
+      <div >
         {selectedComponents.length === 0 ? (
           <p>No information available for this program.</p>
         ) : (

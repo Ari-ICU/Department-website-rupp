@@ -41,7 +41,7 @@ const Overview = () => {
                             {selectedContent.title}
                         </motion.h2>
                     </div>
-                    <div className="xl:max-w-[769px] w-full mx-auto">
+                    <div className="xl:max-w-[769px] w-full mx-auto text-justify">
                         <motion.p
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}

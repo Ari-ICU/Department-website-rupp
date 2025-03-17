@@ -86,7 +86,7 @@ const Navbar = () => {
            ["/facilities", "facilities"],
           ["/faculty", "faculty"],
           ["/research", "Research"],
-          ["/scholar", "Scholarships"],
+          ["/scholars", "Scholarships"],
           
           
          

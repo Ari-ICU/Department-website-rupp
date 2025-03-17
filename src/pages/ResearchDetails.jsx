@@ -11,7 +11,7 @@ import ProfessorSection from '../components/research/ProfessorSection'
 const ResearchDetails = () => {
   return (
     <div>
-        <div>
+        <div className='text-justify'>
             <ResearchBanner />
             <Overview />
             <FocusAreas />

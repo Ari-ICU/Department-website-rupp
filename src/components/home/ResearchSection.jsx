@@ -105,7 +105,7 @@ const ResearchInnovations = () => {
                     {t(`Research.${item.subtitle}`)}
                   </motion.h3>
                   <motion.p
-                     className={`text-lg font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                     className={`text-lg font-normal mb-4 text-justify  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
                      lang={currentLanguage}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -197,7 +197,7 @@ const ResearchInnovations = () => {
                     {t(`Research.${section.title}`)}
                   </motion.h3>
                   <motion.p
-                     className={`text-lg font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                     className={`text-lg font-normal mb-4 text-justify  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
                      lang={currentLanguage}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}

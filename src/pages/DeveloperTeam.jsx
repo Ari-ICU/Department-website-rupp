@@ -8,7 +8,7 @@ import DepartmentHeader from '../components/home/DepartmentHeader'
 const DeveloperTeam = () => {
   return (
     <div>
-        <div>
+        <div  className='text-justify'>
             <DeveloperTeamBanner />
             <Overview />
             {/* <TeamLeader /> */}

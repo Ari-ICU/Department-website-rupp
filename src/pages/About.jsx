@@ -13,7 +13,7 @@ import StatisticsSection from "../components/home/StatisticsSection"
 
 const About = () => {
   return (
-    <div>
+    <div  >
       
       <CSAboutSection />
       <div className=" ">

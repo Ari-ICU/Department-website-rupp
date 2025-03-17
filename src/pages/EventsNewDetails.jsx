@@ -8,7 +8,7 @@ import DepartmentHeader from '../components/home/DepartmentHeader'
 const EventsNewDetails = () => {
   return (
     <div>
-        <div>
+        <div  className='text-justify'>
             <EventsDetailsBanner />
             <SocialIcon />
             <EventsNewSetion />

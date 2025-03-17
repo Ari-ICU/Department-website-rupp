@@ -90,7 +90,7 @@ const FAQSection = () => {
                                         initial={{ opacity: 0, y: -10 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.3 }}
-                                        className="text-gray-800 mt-4"
+                                        className="text-gray-800 mt-4 text-justify"
                                     >
                                         {faq.answer}
                                     </motion.p>

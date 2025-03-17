@@ -5,7 +5,7 @@ import DepartmentHeader from '../components/home/DepartmentHeader'
 
 const LabDetails = () => {
   return (
-    <div className=""> 
+    <div  className='text-justify'> 
     <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-6'>
             <LabSection />

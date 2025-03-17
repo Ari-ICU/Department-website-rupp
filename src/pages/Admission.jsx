@@ -11,7 +11,7 @@ const Admission = () => {
   console.log("Rendering Admission Page");
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start">
+    <div className="min-h-screen flex flex-col items-center justify-start text-justify">
       {/* Admission Banner */}
       <div className="w-full">
         <AdmissionBanner />

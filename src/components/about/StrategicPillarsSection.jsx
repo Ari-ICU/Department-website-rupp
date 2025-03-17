@@ -59,7 +59,7 @@ const StrategicPillarsSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                     viewport={{ once: true, amount: 0.5 }}
-                    className="text-gray-600 xl:text-lg text-[12px] mb-12"
+                    className="text-gray-600 xl:text-lg text-[12px] mb-12 text-justify"
                 >
                     Strengthening Human Resources, Governance, Curriculum, and Infrastructure to Drive Innovation and Quality Education.
                 </motion.p>
@@ -84,7 +84,7 @@ const StrategicPillarsSection = () => {
                             </motion.div>
                             <div>
                                 <h3 className="text-lg xl:text-xl font-bold text-gray-800 mb-2">{pillar.title}</h3>
-                                <p className="text-gray-600 xl:text-md text-[12px]">{pillar.description}</p>
+                                <p className="text-gray-600 xl:text-md text-[12px] text-justify">{pillar.description}</p>
                             </div>
                         </motion.div>
                     ))}

@@ -61,7 +61,7 @@ const AcademicSection = () => {
             <h1 className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
               lang={currentLanguage}>{academicsData.title}</h1>
             {academicsData.description.map((text, index) => (
-              <p key={index} className="text-sm md:text-base text-gray-800 mb-4">
+              <p key={index} className="text-sm md:text-base text-gray-800 mb-4 text-justify">
                 {text}
               </p>
             ))}

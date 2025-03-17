@@ -50,7 +50,7 @@ const AboutSection = () => {
                             {aboutData.title}
                         </motion.h1>
                         <motion.p
-                            className=" text-gray-900"
+                            className=" text-gray-900 text-justify"
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.4 }}

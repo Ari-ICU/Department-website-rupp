@@ -53,7 +53,7 @@ const TuitionSection = () => {
                         >
                             Tuition Fee & Payment Methods
                         </motion.h2>
-                        <div className="max-w-2xl mx-auto xl:mx-0">
+                        <div className="max-w-2xl mx-auto xl:mx-0 text-justify">
                             <motion.p
                                 className="text-base xl:text-lg text-gray-800 mb-6"
                                 variants={itemVariants}

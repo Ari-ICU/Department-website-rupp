@@ -102,7 +102,7 @@ const AdmissionRequirements = () => {
               {requirements.map((requirement, index) => (
                 <div
                   key={index}
-                  className="mb-4 flex gap-4"
+                  className="mb-4 flex gap-4 text-justify"
                 >
                   <div className="flex items-center justify-center">
                     <div className="border border-red-800 p-2 rounded-4xl mr-2">
