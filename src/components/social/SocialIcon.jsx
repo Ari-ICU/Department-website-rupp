@@ -1,14 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { SlSocialFacebook } from "react-icons/sl";
 import { PiTelegramLogoDuotone } from "react-icons/pi";
 import { FaXTwitter } from 'react-icons/fa6';
 
 const SocialIcon = () => {
-    const { id } = useParams();
+    const location = useLocation();
 
-    const isFacultyPage = id !== undefined;
+    // Check if the current location matches the 'faculty/:id' path
+    const isFacultyPage = location.pathname.startsWith('/faculty/');
 
     return (
         <div className="my-16">
@@ -32,9 +33,7 @@ const SocialIcon = () => {
                                     visible: { opacity: 1, y: 0 },
                                 }}
                                 whileHover={{ scale: 1.2, rotate: 5 }}
-                                className={`p-2 rounded-xl shadow-md cursor-pointer ${
-                                    isFacultyPage ? 'bg-white' : 'bg-red-800'
-                                }`}
+                                className={`p-2 rounded-xl shadow-md cursor-pointer ${isFacultyPage ? 'bg-white' : 'bg-red-800'}`}
                                 aria-label={`Social Media Icon ${index + 1}`}
                             >
                                 <Link to="/">
