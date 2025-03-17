@@ -33,7 +33,7 @@ const ApplicationSteps = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
-      className="bg-gray-100 my-12"
+      className=" my-12"
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

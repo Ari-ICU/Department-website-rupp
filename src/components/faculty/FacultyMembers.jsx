@@ -4,11 +4,12 @@ import { SlSocialFacebook } from "react-icons/sl";
 import { PiTelegramLogoDuotone } from "react-icons/pi";
 import { Link } from 'react-router-dom';
 import p2 from '../../assets/img/dr-heng-sovanrith.png';
-import p3 from '../../assets/img/professor/p1.png';
 import p4 from '../../assets/img/professor/thap-boung.jpg';
 import p5 from '../../assets/img/professor/ly-sokun.jpg';
 import p6 from '../../assets/img/professor/ouk-polyvann.jpg';
 import p7 from '../../assets/img/professor/ung-rithy.jpg';
+import p8 from '../../assets/img/professor/Ass-Prof-Dr-Ouk-Khean.png';
+
 import { useTranslation } from 'react-i18next';
 
 
@@ -18,8 +19,9 @@ const FacultyMembers = () => {
      const { t, i18n } = useTranslation();
       const currentLanguage = i18n.language;
  
-    
+      
     const deputyData = [
+
         {
             id: 1, // Added ID for detail page link
             name: "Dr. Heng Sovannrith",
@@ -30,7 +32,16 @@ const FacultyMembers = () => {
             telegram: "https://t.me/example",
         },
         {
-            id: 2, 
+            id: 2, // Added ID for detail page link
+            name: "Ass. Prof. Dr. Ouk Khean",
+            image: p8,
+            position: "Associate Professor",
+            details: "Asst. Prof. Dr. Heng Sovannarith (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
+            facebook: "https://facebook.com/example",
+            telegram: "https://t.me/example",
+        },
+        {
+            id: 3, 
             name: "Mr. Ly Sokun",
             image: p5,
             position: "Assistant Professor",
@@ -39,7 +50,7 @@ const FacultyMembers = () => {
             telegram: "https://t.me/example",
         },
         {
-            id: 3, // Added ID for detail page link
+            id: 4, // Added ID for detail page link
             name: "Mr. Thap Boung",
             image: p4,
             position: "Assistant Professor",
@@ -48,7 +59,7 @@ const FacultyMembers = () => {
             telegram: "https://t.me/example",
         },
         {
-            id: 4, // Added ID for detail page link
+            id: 5, // Added ID for detail page link
             name: "Mr. Ouk Polyvann",
             image: p6,
             position: "Assistant Professor",
@@ -57,7 +68,7 @@ const FacultyMembers = () => {
             telegram: "https://t.me/example",
         },
         {
-            id: 5,
+            id: 6,
             name: "Mr. Ung Rithy",
             image: p7,
             position: "Assistant Professor",
