@@ -79,7 +79,7 @@ const Header = () => {
             {/* Navbar and Actions */}
             <div className="flex items-center w-auto space-x-4">
               {/* Desktop Navbar */}
-              <div className="hidden 2xl:block">
+              <div className="hidden lg:block">
                 <Navbar isOpen={isMobileMenuOpen} setIsOpen={setIsMobileMenuOpen} />
               </div>
 
