@@ -82,11 +82,15 @@ const Navbar = () => {
         </Link>
 
         {desktopDropdown("Academics", academicsResearchDropdownRef, [
+           ["/admissions", "admission"],
+           ["/research", "Research"],
+           ["/scholar", "Scholarships"],
+           ["/facilities", "facilities"],
           ["/faculty", "faculty"],
-          ["/facilities", "facilities"],
-          ["/scholar", "Scholarships"],
-          ["/research", "Research"],
-          ["/admissions", "admission"],
+          
+          
+         
+         
         ])}
 
         {desktopDropdown("programs", programDropdownRef, [
