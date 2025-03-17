@@ -82,7 +82,7 @@ const FacultyMembers = () => {
         <div className='my-16'>
             <div className='container mx-auto px-4'>
                 <div className='space-y-10'>
-                    <h1  className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                    <h1  className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "" : "font-semibold"}`}
                             lang={currentLanguage}>Faculty Members</h1>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
                         {deputyData.map((deputy) => (

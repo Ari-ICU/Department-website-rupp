@@ -31,7 +31,7 @@ const HeadDepartment = () => {
             <div className='container mx-auto px-4'>
                 <div className='space-y-10'>
                     <div id="head-department-header">
-                        <h1 className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                        <h1 className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "" : "font-semibold"}`}
                             lang={currentLanguage}>Head of Department</h1>
                     </div>
                     {departmentHeads.map((head) => (

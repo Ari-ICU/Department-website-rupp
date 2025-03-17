@@ -99,7 +99,7 @@ const ScholarshipOpportunities = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="xl:text-3xl text-xl font-extrabold text-gray-900"
+                        className="xl:text-3xl text-xl font-semibold text-gray-900"
                     >
                         Check Out Scholarship Opportunities
                     </motion.h2>

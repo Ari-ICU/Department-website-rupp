@@ -38,7 +38,7 @@ const DeputyHeadofDepartment = () => {
             <div className='container mx-auto px-4'>
                 <div className='space-y-10'>
                     <div>
-                        <h1 className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                        <h1 className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "" : "font-semibold"}`}
                             lang={currentLanguage}>Deputy Head of Department:</h1>
                     </div>
                     <div className='flex flex-col xl:flex-row xl:flex-wrap gap-8 justify-center'>
