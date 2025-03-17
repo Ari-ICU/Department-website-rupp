@@ -21,7 +21,7 @@ const ResearchProjectsSection = () => {
         <div className='my-16 bg-white rounded-xl shadow-md'>
             <div className='max-w-4xl mx-auto'>
                 <div className="p-4">
-                    <h2 className="text-2xl font-bold mb-5 text-gray-800">
+                    <h2 className="text-3xl font-bold mb-5 text-gray-800">
                         Research Projects
                     </h2>
 
@@ -36,7 +36,7 @@ const ResearchProjectsSection = () => {
                             <div>
                                 <strong className="text-gray-700">{project.title}</strong>
 
-                                <ul className="ml-6 mt-1 text-gray-600">
+                                <ul className="ml-6 mt-1 text-gray-600 text-justify">
                                     {project.details && <li>{project.details}</li>}
                                     {project.additionalDetails && <li>{project.additionalDetails}</li>}
                                 </ul>

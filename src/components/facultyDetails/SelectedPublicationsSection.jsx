@@ -19,7 +19,7 @@ const SelectedPublicationsSection = () => {
     return (
         <div className="bg-white my-16 rounded-xl shadow-md">
             <div className='max-w-4xl mx-auto p-4'>
-                <h2 className="text-2xl font-semibold mb-6 text-gray-800">
+                <h2 className="text-3xl font-semibold mb-6 text-gray-800">
                     Selected Publications
                 </h2>
 
@@ -34,7 +34,7 @@ const SelectedPublicationsSection = () => {
                         <div>
                             <strong className="text-gray-700">{project.title}</strong>
 
-                            <ul className="ml-6 mt-1 text-gray-600">
+                            <ul className="ml-6 mt-1 text-gray-600 text-justify">
                                 {project.details && <li>{project.details}</li>}
                                 {project.additionalDetails && <li>{project.additionalDetails}</li>}
                             </ul>

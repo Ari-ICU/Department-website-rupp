@@ -10,7 +10,7 @@ import DepartmentHeader from '../components/home/DepartmentHeader'
 const FacultyDetails = () => {
   return (
     <div>
-      <div  className='text-justify'>
+      <div  className=''>
         <ProfileSection />
         <div className='container mx-auto flex justify-center px-4 '>
           <div className=''>

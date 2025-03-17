@@ -5,18 +5,19 @@ import p2 from '../../assets/uni/2.png'
 const BackgroundSection = () => {
     const backgrounds = [
         {
-            university: "Ateneo de Manila University",
+            university: "Studied at Ateneo de Manila University (Philippines)",
             imageUrl: p1, // Replace with the actual path
         },
         {
-            university: "Studied at Ateneo de Manila University  (Philippines)",
+            university: "Studied at Studied at khon kaen university (thailand)",
             imageUrl: p2, // Replace with the actual path
             
         },
     ];
     return (
-        <div className="bg-white rounded-xl shadow-md p-6 m-5">
-            <h2 className="text-2xl font-semibold mb-6 text-gray-800">
+       <div className="my-16">
+         <div className="bg-white rounded-xl shadow-md p-6 m-5">
+            <h2 className="text-3xl font-semibold mb-6 text-gray-800">
                 Background
             </h2>
 
@@ -29,6 +30,7 @@ const BackgroundSection = () => {
                 </div>
             ))}
         </div>
+       </div>
     );
 };
 

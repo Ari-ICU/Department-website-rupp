@@ -4,8 +4,9 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const CourseProjectsSection = () => {
     return (
-        <div className="bg-red-800 rounded-xl p-6 m-5 text-white">
-            <h2 className="text-2xl font-semibold mb-6">
+      <div className="my-16">
+          <div className="bg-red-800 rounded-xl p-6 m-5 text-white">
+            <h2 className="text-3xl font-semibold mb-6">
                 Course Projects, Tools, and Testbeds
             </h2>
 
@@ -33,6 +34,7 @@ const CourseProjectsSection = () => {
                 </div>
             </div>
         </div>
+      </div>
     );
 };
 
