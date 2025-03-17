@@ -6,53 +6,68 @@ import SearchButton from "./SearchBtn";
 import LanguageSwitcherButton from "./home/LanguageSwitcherButton";
 import Navbar from "./Navbar";
 import logo from "../assets/img/rupp.png";
-import { useTranslation } from 'react-i18next';
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile menu state
-  const [isSearchOpen, setIsSearchOpen] = useState(false); // Search bar state
-  const searchContainerRef = useRef(null); // Reference for search container
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const searchContainerRef = useRef(null);
   const { t, i18n } = useTranslation();
-  const currentLanguage = i18n.language; 
+  const currentLanguage = i18n.language;
 
-  // Sample global data for search (could be replaced by API data)
+  const toggleMenu = () => {
+    setIsMobileMenuOpen((prevState) => !prevState);
+  };
+
   const globalData = [
     { name: "Dr. Heng Sovannrith", position: "Assistant Professor" },
     { name: "Asst. Prof. Dr. Chor Chandara", position: "Assistant Professor" },
-    // Add more data here
   ];
 
-  // Close search when clicking outside of the search input
+  // Close the search bar if clicked outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
-        setIsSearchOpen(false); // Close search input when clicking outside
+        setIsSearchOpen(false);
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside); // Detect clicks outside
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside); // Cleanup event listener
+  // Close mobile menu when clicked outside
+  useEffect(() => {
+    const handleClickOutsideMobile = (event) => {
+      if (
+        searchContainerRef.current &&
+        !searchContainerRef.current.contains(event.target) &&
+        !event.target.closest(".mobile-menu")
+      ) {
+        setIsMobileMenuOpen(false);
+      }
     };
+
+    document.addEventListener("mousedown", handleClickOutsideMobile);
+    return () => document.removeEventListener("mousedown", handleClickOutsideMobile);
   }, []);
 
   return (
     <div className="relative bg-white shadow-md">
-      {/* Show Search input field only on top of the header */}
+      {/* Search Bar */}
       {isSearchOpen && (
         <div className="absolute top-0 left-0 w-full bg-red-800 py-4 z-50">
           <div className="max-w-8xl mx-auto px-4 p-4" ref={searchContainerRef}>
-            {/* Pass onToggle prop to control the search visibility */}
             <SearchButton
               onToggle={() => setIsSearchOpen(!isSearchOpen)}
-              data={globalData} // Pass global data here
+              data={globalData}
             />
           </div>
         </div>
       )}
 
-      {/* Main Header Content */}
+      {/* Main Header */}
       <div className={`p-4 ${isSearchOpen ? "pt-34" : ""}`}>
         <div className="max-w-8xl mx-auto px-4">
           <div className="flex justify-between items-center py-2">
@@ -61,58 +76,128 @@ const Header = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
-              className="  text-gray-800 cursor-pointer"
+              className="text-gray-800 cursor-pointer"
             >
               <Link to="/" className="flex items-center space-x-2">
                 <img src={logo} alt="logo" className="w-14 h-14" />
                 <motion.h2
-                  className={`xl:text-lg font-normal text-sm uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-bold"}`}
+                  className={`xl:text-lg font-normal text-sm uppercase hidden sm:block ${
+                    currentLanguage === "km" ? "font-khmer" : "font-bold"
+                  }`}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                   lang={currentLanguage}
                 >
-                  {t("Partnerships.Faculty of Science")} <br className='' /> {t("Department.Department of Computer Science")}
+                  {t("Partnerships.Faculty of Science")} <br /> {t("Department.Department of Computer Science")}
                 </motion.h2>
               </Link>
             </motion.div>
 
-            {/* Navbar and Actions */}
-            <div className="flex items-center w-auto space-x-4">
-              {/* Desktop Navbar */}
+            {/* Desktop Navigation and Actions */}
+            <div className="flex items-center space-x-4">
               <div className="hidden lg:block">
                 <Navbar isOpen={isMobileMenuOpen} setIsOpen={setIsMobileMenuOpen} />
               </div>
 
-              {/* Only show the SearchButton when the search is not open */}
               {!isSearchOpen && (
                 <motion.button
                   onClick={() => setIsSearchOpen(true)}
                   className="text-gray-600 hover:text-red-800 p-1.5 rounded-full transition-colors"
-                  aria-label="Open search"
                 >
-                  {/* Search icon */}
-                  <span className="text-xl"><IoMdSearch /></span>
+                  <IoMdSearch className="text-3xl" />
                 </motion.button>
               )}
 
               <LanguageSwitcherButton />
+
+              {/* Mobile Hamburger Button */}
+              <button
+                onClick={toggleMenu}
+                className="lg:hidden text-gray-600 hover:text-red-800 p-2 rounded-full transition-colors"
+              >
+                {isMobileMenuOpen ? <FaTimes className="text-3xl" /> : <FaBars className="text-3xl" />}
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <motion.nav
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="xl:hidden absolute top-full left-0 w-full bg-white shadow-lg"
-        >
-          <Navbar isMobile /> {/* Your existing Navbar component with mobile prop */}
-        </motion.nav>
+        <div className="mobile-menu lg:hidden fixed top-0 left-0 w-full h-full bg-white shadow-md z-50 overflow-y-auto">
+          <div className="p-6">
+
+          <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="text-gray-800 cursor-pointer"
+            >
+              <Link to="/" className="flex items-center space-x-2">
+                <img src={logo} alt="logo" className="w-14 h-14" />
+                <motion.h2
+                  className={`xl:text-lg font-normal text-sm uppercase block ${
+                    currentLanguage === "km" ? "font-khmer" : "font-bold"
+                  }`}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  lang={currentLanguage}
+                >
+                  {t("Partnerships.Faculty of Science")} <br /> {t("Department.Department of Computer Science")}
+                </motion.h2>
+              </Link>
+            </motion.div>
+            <button
+              onClick={toggleMenu}
+              className="text-gray-600 hover:text-red-800 p-2 rounded-full transition-colors"
+            >
+              <FaTimes className="absolute right-6 top-6 text-3xl" />
+            </button>
+
+            {/* Mobile Navigation Links */}
+            <div className="flex flex-col space-y-4 mt-4 px-6">
+              <Link
+                to="/"
+                className="text-gray-600 hover:text-red-800"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("menu.home")}
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-600 hover:text-red-800"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("menu.about")}
+              </Link>
+              <Link
+                to="/contact"
+                className="text-gray-600 hover:text-red-800"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("menu.contact")}
+              </Link>
+              <Link
+                to="/news&events"
+                className="text-gray-600 hover:text-red-800"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("menu.newsEvents")}
+              </Link>
+              <Link
+                to="/programs"
+                className="text-gray-600 hover:text-red-800"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("menu.programs")}
+              </Link>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

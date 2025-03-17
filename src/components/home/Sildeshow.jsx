@@ -7,8 +7,8 @@ import { MdExplore } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
 // Image imports
-import heroImage1 from "../../assets/sliderResearch/4.png";
-import heroImage2 from "../../assets/sliderResearch/11.png";
+import heroImage1 from "../../assets/sliderResearch/4.jpg";
+import heroImage2 from "../../assets/sliderResearch/14.png";
 import heroImage3 from "../../assets/sliderResearch/8.png";
 import logo from "../../assets/img/rupp.png";
 

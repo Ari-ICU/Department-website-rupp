@@ -1,15 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCheck } from "react-icons/fa";
-import { BsPeople } from "react-icons/bs";
+import { SlPeople } from "react-icons/sl";
 import { PiGraduationCapDuotone } from "react-icons/pi";
 import rupp from "../../assets/about/2.png";
-import { useTranslation } from "react-i18next";
-
 
 const InnovationSection = () => {
-      const { t,i18n } = useTranslation();
-                 const currentLanguage = i18n.language; 
     return (
 
      <div className='my-16'>
@@ -28,8 +24,7 @@ const InnovationSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
-                            lang={currentLanguage}
+                        className="text-lg lg:text-3xl font-bold text-gray-800 mb-4"
                     >
                         Driving Innovation, Education & Impact
                     </motion.h1>
@@ -94,7 +89,7 @@ const InnovationSection = () => {
                             className='flex gap-4 border border-red-800 p-4 rounded-xl items-center'
                         >
                             <div className='border border-red-800 rounded-full p-2'>
-                                <BsPeople size={25} className='text-red-800' />
+                                <SlPeople size={25} className='text-red-800' />
                             </div>
                             <p>Beyond academics, we develop leaders, uphold sustainability, preserve heritage, and expand social engagement.</p>
                         </motion.div>

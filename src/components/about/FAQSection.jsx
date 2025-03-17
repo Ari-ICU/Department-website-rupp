@@ -49,7 +49,7 @@ const FAQSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
                             viewport={{ once: true, amount: 0.5 }}
-                            className="text-xl xl:text-3xl font-bold text-gray-800 mb-6 text-start"
+                            className="text-lg lg:text-3xl font-bold text-gray-800 mb-6 text-start"
                         >
                             Frequently Asked <br /> Questions
                         </motion.h1>

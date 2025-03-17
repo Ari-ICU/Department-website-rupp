@@ -1,12 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useParams } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-
 
 const Overview = () => {
-     const { t, i18n } = useTranslation();
-          const currentLanguage = i18n.language;
     const { degree } = useParams();  // Get the selected degree type from the URL
 
     const overviewContent = {
@@ -40,8 +36,7 @@ const Overview = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
                             viewport={{ once: true }}
-                            className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
-                            lang={currentLanguage}
+                            className="lg:text-3xl w-full text-lg font-extrabold text-gray-900"
                         >
                             {selectedContent.title}
                         </motion.h2>

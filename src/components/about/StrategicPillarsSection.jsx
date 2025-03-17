@@ -1,12 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiUsers, FiSettings, FiHome, FiBookOpen } from 'react-icons/fi';
-import { useTranslation } from "react-i18next";
 
 
 const strategicPillars = [
-
-    
     {
         title: "Human Resources",
         description: "RUPP is committed to building a highly skilled and motivated workforce. We focus on capacity building, professional development, and implementing a professorship system. To enhance research output, we aim to reduce teaching loads while ensuring effective incentive systems for academic excellence.",
@@ -38,8 +35,6 @@ const strategicPillars = [
 ];
 
 const StrategicPillarsSection = () => {
-     const { t,i18n } = useTranslation();
-                         const currentLanguage = i18n.language; 
     return (
     <div className='my-16'>
             <motion.div
@@ -55,8 +50,7 @@ const StrategicPillarsSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true, amount: 0.5 }}
-                    className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
-                    lang={currentLanguage}
+                    className="text-xl lg:text-3xl font-bold text-gray-800 mb-6"
                 >
                     RUPP Strategic Pillars for Growth & Excellence
                 </motion.h2>

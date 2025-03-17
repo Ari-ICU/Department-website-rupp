@@ -50,9 +50,9 @@ const EventsNews = () => {
     return (
         <div className="my-16">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div className="flex flex-col lg:flex-row justify-between items-center mb-8">
                     <div>
-                        <h1   className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                        <h1   className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
                             lang={currentLanguage}>
                            { t("Events.Events & News")}
                         </h1>
@@ -60,7 +60,7 @@ const EventsNews = () => {
                             { t("Events.Engage with cutting-edge workshops, conferences, and networking opportunities.")}
                         </p>
                     </div>
-                    <div className="w-full md:w-auto mt-4 md:mt-0">
+                    <div className="  mt-4 md:mt-0">
                         <Link to='/news&events' className='flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1'>
                             <span className="mr-2 xl:text-sm text-[12px]">{t('News.View All')}</span>
                             <FaArrowRight className="text-red-800" />
@@ -71,9 +71,9 @@ const EventsNews = () => {
                 <div className="py-2">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {events.map((event) => (
-                            <Link to={`/news&events/${event.id}`} className="block">
+                            <Link to={`/news&events/${event.id}`}  key={event.id} className="block">
                                 <div className="bg-white rounded-2xl p-4 shadow-md flex flex-col xl:flex-row justify-center items-center hover:shadow-lg">
-                                    <div className="mx-auto xl:w-1/2 flex justify-center items-center">
+                                    <div className="mx-auto flex justify-center items-center">
                                         <img
                                             src={event.imageUrl}
                                             alt={event.title}
@@ -81,7 +81,7 @@ const EventsNews = () => {
                                         />
                                     </div>
 
-                                    <div className="p-6 w-full md:w-1/2">
+                                    <div className="p-6 w-full ">
                                         {event.category && (
                                             <span className="text-xs font-semibold text-red-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
                                                 {event.category}

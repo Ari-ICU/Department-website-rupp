@@ -74,7 +74,7 @@ const FacultyCarousel = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
                             viewport={{ once: true }}
-                            className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
                             lang={currentLanguage}
                         >
                             {t("Meet.Meet With Our Faculty")}

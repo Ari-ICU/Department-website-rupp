@@ -36,7 +36,7 @@ const LanguageSwitcherButton = () => {
       </motion.button>
 
       {isOpen && (
-        <motion.div className="absolute left-0 mt-2 w-full bg-white shadow-lg rounded-md py-2">
+        <motion.div className="absolute left-0 mt-2 max-w-4xl bg-white shadow-lg rounded-md py-2">
           <motion.button
             onClick={() => toggleLanguage("en")}
             className="flex items-center w-full px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md"

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom'; // Import useLocation
-import banner from "../../assets/about/3.png";
+import banner from "../../assets/banner/2.png";
 import BreadcrumbSection from '../BreadcrumbSection';
 
 const CSAboutSection = () => {
@@ -19,7 +19,7 @@ const CSAboutSection = () => {
       viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-20"></div>
 
       {/* Content */}
       <div className="absolute max-w-4xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">

@@ -58,7 +58,7 @@ const ResearchInnovations = () => {
   return (
     <div className="my-16">
       <div className="container mx-auto px-4 ">
-      <h1  className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+      <h1  className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
                             lang={currentLanguage}>
        {t("Research.Research & Innovations")}
         </h1>
@@ -154,7 +154,7 @@ const ResearchInnovations = () => {
           {bottomSections.map((section, index) => (
             <motion.div
               key={section.id}
-              className="xl:h-[505px] h-full bg-white rounded-lg shadow-md overflow-hidden relative group"
+              className="h-full bg-white rounded-lg shadow-md overflow-hidden relative group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 * index }}

@@ -39,7 +39,6 @@ const AcademicSection = () => {
         <section className="flex flex-col lg:flex-row items-center gap-12">
           {/* Image Section - Appears first on mobile, second on desktop */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
@@ -54,13 +53,12 @@ const AcademicSection = () => {
 
           {/* Left Text Section - Appears second on mobile, first on desktop */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
             className="w-full lg:w-1/2 text-center lg:text-left order-2 lg:order-1"
           >
-            <h1 className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+            <h1 className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
               lang={currentLanguage}>{academicsData.title}</h1>
             {academicsData.description.map((text, index) => (
               <p key={index} className="text-sm md:text-base text-gray-800 mb-4">

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FaSearch, FaFilter, FaCalendarAlt } from 'react-icons/fa';
-import { Link, useNavigate } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
+import { useNavigate } from "react-router-dom";
 import image1 from '../../assets/new/3.jpg';
 import image2 from '../../assets/new/4.jpg';
 import image3 from '../../assets/new/5.jpg';
@@ -10,8 +9,6 @@ const UpcomingEvents = () => {
     const navigate = useNavigate();
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('');
-    const { t, i18n } = useTranslation();
-    const currentLanguage = i18n.language;
 
     const events = [
         { id: 1, title: 'Guest Lecture on Artificial Intelligence', imageUrl: image1, description: 'Annual university tournament for basketball teams. Come cheer...', date: '22 Aug 2025', category: 'Hackathons' },
@@ -36,9 +33,7 @@ const UpcomingEvents = () => {
                 {/* Header Section */}
                 <div className="flex flex-col xl:flex-row justify-between items-center mb-8">
                     <div className="mb-6 xl:mb-0">
-                        <h2 className={`text-3xl font-normal mb-4 ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`} lang={currentLanguage}>
-                            Current & Upcoming Events
-                        </h2>
+                        <h2 className="text-3xl font-semibold mb-2">Current & Upcoming Events</h2>
                         <p className="text-gray-600 mt-6 max-w-3xl">
                             Engage in insightful discussions, network with industry experts, and explore career opportunities through our upcoming academic and professional events.
                         </p>
@@ -58,7 +53,8 @@ const UpcomingEvents = () => {
                             </div>
                         </div>
 
-                        {/* Filter Dropdown */}
+
+                        {/* Filter Dropdown with React Icon */}
                         <div className="relative">
                             <FaFilter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-50" />
                             <select
@@ -77,39 +73,34 @@ const UpcomingEvents = () => {
 
                 {/* Events Section */}
                 <div className="py-2">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        {filteredEvents.map((event) => (
-                            <Link key={event.id} to={`/news&events/${event.id}`} className="block">
-                                <div className="bg-white rounded-2xl p-4 shadow-md flex flex-col xl:flex-row justify-center items-center hover:shadow-lg">
-                                    <div className="mx-auto xl:w-1/2 flex justify-center items-center">
-                                        <img
-                                            src={event.imageUrl}
-                                            alt={event.title}
-                                            className="w-full h-56 object-cover rounded-2xl"
-                                        />
-                                    </div>
-
-                                    <div className="p-6 w-full md:w-1/2">
-                                        {event.category && (
-                                            <span className="text-xs font-semibold text-red-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
-                                                {event.category}
+                    {filteredEvents.length > 0 ? (
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            {filteredEvents.map((event) => (
+                                <button key={event.id} onClick={() => navigate(`/news&events/${event.id}`)} className='text-start'>
+                                    <div className="bg-white rounded-2xl shadow-md flex flex-col xl:flex-row hover:shadow-lg transition-shadow duration-300">
+                                        <div className="mx-auto xl:w-1/2 flex justify-center items-center">
+                                            <img src={event.imageUrl} alt={event.title} className="w-full h-56 object-cover rounded-2xl" />
+                                        </div>
+                                        <div className="p-6 w-full md:w-1/2">
+                                            {event.category && (
+                                                <span className="text-xs font-semibold text-red-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
+                                                    {event.category}
+                                                </span>
+                                            )}
+                                            <h3 className="mt-2 text-lg font-semibold text-gray-900">{event.title}</h3>
+                                            <p className="mt-2 text-sm text-gray-800">{event.description}</p>
+                                            <span className="text-sm text-gray-800 flex items-center gap-4 mt-4">
+                                                <FaCalendarAlt />
+                                                {event.date}
                                             </span>
-                                        )}
-                                        <h5 className={`text-lg font-normal mb-4 ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`} lang={currentLanguage}>
-                                            {event.title}
-                                        </h5>
-                                        <p className="mt-2 text-sm text-gray-800">
-                                            {event.description}
-                                        </p>
-                                        <span className="text-sm text-gray-800 flex items-center gap-2 mt-4">
-                                            <FaCalendarAlt />
-                                            {event.date}
-                                        </span>
+                                        </div>
                                     </div>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
+                                </button>
+                            ))}
+                        </div>
+                    ) : (
+                        <p className="text-center text-gray-600">No events found.</p>
+                    )}
                 </div>
             </div>
         </div>

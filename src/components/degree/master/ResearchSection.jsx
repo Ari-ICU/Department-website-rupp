@@ -4,8 +4,6 @@ import { MdComputer } from 'react-icons/md';
 import { AiOutlineRobot } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import image1 from "../../../assets/banner/research1.png";
-import { useTranslation } from 'react-i18next';
-
 
 
 const bottomSections = [
@@ -50,16 +48,13 @@ const buttons = [
 
 const ResearchSection = () => {
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
-  const currentLanguage = i18n.language;
 
   return (
     <div className="my-16">
       <div className='container mx-auto px-4'>
 
         <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4">
-          <h2 className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
-            lang={currentLanguage}>Current & On-going Research</h2>
+          <h2 className="text-3xl font-semibold">Current & On-going Research</h2>
           <p className="xl:max-w-[600px]">
             Explore groundbreaking research projects across AI, cybersecurity, data science, and more, as we push the boundaries of technology to address real-world challenges.
           </p>

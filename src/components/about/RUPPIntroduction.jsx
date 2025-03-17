@@ -1,12 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import rupp from "../../assets/img/rupp1.png";
-import { useTranslation } from "react-i18next";
-
 
 const RUPPIntroduction = () => {
-      const { t,i18n } = useTranslation();
-                     const currentLanguage = i18n.language; 
     return (
       <div className='my-16'>
           <div className="container mx-auto px-4">
@@ -56,8 +52,7 @@ const RUPPIntroduction = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
-                        lang={currentLanguage}
+                        className="text-lg lg:text-3xl font-bold p-4"
                     >
                         Introduction
                     </motion.h1>

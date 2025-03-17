@@ -19,7 +19,6 @@ const ContactUs = () => {
           <div className="relative flex flex-col xl:flex-row items-center justify-center">
             {/* Image Section (Top on Small Screens, Right Side on Large Screens) */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="xl:max-w-[611px] xl:h-[663px] w-full h-auto flex justify-center items-center order-1 xl:order-2"
@@ -33,7 +32,6 @@ const ContactUs = () => {
 
             {/* Contact Form (Bottom on Small Screens, Left Side on Large Screens) */}
             <motion.div
-              initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="xl:w-[836px] xl:h-[568px] w-full xl:p-6 p-4 bg-white shadow-md rounded-2xl xl:mr-[-100px] z-0 order-2 xl:order-1"
@@ -43,7 +41,7 @@ const ContactUs = () => {
                   initial={{ opacity: 0, y: -20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className={`text-2xl text-center font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                  className={`text-3xl text-center font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
                   lang={currentLanguage}
                 >
                   {t("Contact.Contact Us If You Have Any Questions")}
