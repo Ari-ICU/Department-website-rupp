@@ -9,7 +9,7 @@ const AboutSection = () => {
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900">About</h2>
                     <div className="space-y-4 text-gray-700 leading-relaxed">
                         <p>
-                            <span className="font-semibold">Asst. Prof. Dr. Heng Sovannarith </span>
+                            <span className="font-semibold">Dr. Heng Sovannarith </span>
                         </p>
                         <p>
                             <span className="font-semibold">RUPP 2005:</span>  B.Sc (Computer Science and Engineering)
