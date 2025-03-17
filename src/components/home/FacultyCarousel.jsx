@@ -10,6 +10,8 @@ import image3 from '../../assets/img/professor/pok-leakmony.jpg'
 import image4 from '../../assets/img/professor/kim-no.jpg'
 import image5 from '../../assets/img/professor/meak-kamerane.png'
 import p2 from '../../assets/img/professor/Asst-Prof-Dr-Chor-Chandara.png';
+import p8 from '../../assets/img/professor/Ass-Prof-Dr-Ouk-Khean.png';
+
 import { useTranslation } from 'react-i18next';
 
 
@@ -18,6 +20,7 @@ const facultyMembers = [
     { name: 'Mr. Chi Kuong', position: 'Head of Department', image: image2 },
     { name: 'Mr. Pok LeakMony ', position: 'Deputy Head of Department', image: image3 },
     { name: 'Dr. Chor Chandara ', position: 'Deputy Head of Department', image: p2 },
+    { name: 'Dr. Ouk Khean ', position: 'Associate Professor', image: p8 },
     { name: 'Dr. Heng Sovannrith', position: 'Assistant Professor', image: image1 },
     { name: 'Mr. Kim No', position: 'Assistant Professor', image: image4 },
     { name: 'Mr. Meak Kamerane', position: 'Assistant Professor', image: image5 },
