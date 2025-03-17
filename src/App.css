@@ -48,6 +48,9 @@ h5.font-khmer{
     src: url('/fonts/NotoSerifKhmer-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
-p, span , li , div{
+span , li , div{
+    font-family: 'KhmerCustom', sans-serif;
+}
+p.font-khmer{
     font-family: 'KhmerCustom', sans-serif;
 }

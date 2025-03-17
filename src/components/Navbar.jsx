@@ -84,8 +84,8 @@ const Navbar = () => {
         {desktopDropdown("Academics", academicsResearchDropdownRef, [
           ["/faculty", "faculty"],
           ["/facilities", "facilities"],
-          ["/scholars", "scholars"],
-          ["/research", "research"],
+          ["/scholar", "Scholarship"],
+          ["/research", "Research"],
           ["/admissions", "admission"],
         ])}
 

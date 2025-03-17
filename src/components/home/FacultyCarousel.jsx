@@ -84,7 +84,8 @@ const FacultyCarousel = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.4 }}
                             viewport={{ once: true }}
-                            className="mt-2 text-gray-900 xl:text-sm text-[12px]"
+                            className={`text-sm text-gray-600 font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                            lang={currentLanguage}
                         >
                             {t("Meet.Inspiring Minds, Nurturing Curiosity, and Shaping the Future of Knowledge and Innovation")}
                         </motion.p>
@@ -162,7 +163,8 @@ const FacultyCarousel = () => {
                                     </motion.div>
                                 </div>
                                 <h3 className="text-xl font-semibold">{faculty.name}</h3>
-                                <p className="text-sm text-gray-500">{t(`Meet.${faculty.position}`)}</p>
+                                <p className={`text-sm text-gray-600/80 font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                            lang={currentLanguage}>{t(`Meet.${faculty.position}`)}</p>
                             </motion.div>
                         ))}
                     </div>
