@@ -27,7 +27,7 @@
     "Scholarship": "អាហារូបករណ៍",
     "Academics": "ការអប់រំ",
     "faculty": "សាស្រ្តាចារ្យ",
-    "Research": "ការចុះស្រាវជ្រាវ"
+    "Research": "ការស្រាវជ្រាវ"
   },
   "service": {
     "About Program": "ស្វែងយល់អំពីកម្មវិធីរបស់យើង",
@@ -82,7 +82,7 @@
     "The Computer Science Department offers a comprehensive undergraduate program designed to provide students with a strong foundation in computing principles, programming, and modern technologies.": "ដេប៉ាតឺម៉ង់ព័ត៌មានវិទ្យាផ្តល់នូវកម្មវិធីសិក្សាថ្នាក់បរិញ្ញាបត្រដែលមានវិសាលភាពធំទូលាយ ដើម្បីផ្តល់ឱ្យនិស្សិតនូវមូលដ្ឋានគ្រឺះដ៏រឹងមាំក្នុងគោលការណ៍ ការសរសេរកម្មវិធី និងបច្ចេកវិទ្យាទំនើប។",
     "Our curriculum emphasizes both theoretical and practical aspects of computer science, equipping graduates with the skills needed for a successful career in the ever-evolving tech industry.": "កម្មវិធីសិក្សារបស់យើងផ្តោតលើទាំងទ្រឹស្តី និងការអនុវត្តក្នុងវិស័យវិទ្យាសាស្ត្រកុំព្យូទ័រ ដើម្បីបង្កើតជំនាញចាំបាច់សម្រាប់អាជីពនៅក្នុងឧស្សាហកម្មបច្ចេកវិទ្យាដែលកំពុងតែបន្ដការអភិវឌ្ឍ។",
     "Undergraduate Program": "កម្មវិធីសិក្សាថ្នាក់បរិញ្ញាបត្រ",
-    "Graduate Program": "កម្មវិធីសិក្សាថ្នាក់បរិញ្ញាបត្រជាន់ខ្ពស់",
+    "Graduate Program": "កម្មវិធីក្រោយឧត្តម",
     "Explore": "ស្វែងយល់"
   },
   "Statistics": {
