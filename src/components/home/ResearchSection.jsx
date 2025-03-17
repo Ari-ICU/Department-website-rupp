@@ -105,7 +105,8 @@ const ResearchInnovations = () => {
                     {t(`Research.${item.subtitle}`)}
                   </motion.h3>
                   <motion.p
-                    className="mb-4 xl:text-lg text-[12px]"
+                     className={`text-lg font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                     lang={currentLanguage}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
@@ -114,11 +115,12 @@ const ResearchInnovations = () => {
                     {t(`Research.${item.description}`)}
                   </motion.p>
 
-                  <div className="flex flex-col xl:flex-row justify-start items-start gap-3">
+                  <div className="flex flex-col xl:flex-row justify-start items-start gap-4">
                     {item.buttons.map((btn, btnIndex) => (
                       <motion.button
                         key={btnIndex}
-                        className="text-white xl:text-[16px] text-[12px] py-2 px-4 shadow-md rounded-4xl flex items-center bg-gray-700 hover:bg-gray-600"
+                        className={`text-lg flex items-center bg-gray-900/50 px-4 py-2 rounded-3xl gap-1 font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                        lang={currentLanguage}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 * btnIndex }}
@@ -133,7 +135,8 @@ const ResearchInnovations = () => {
                   <div className="mt-4 flex justify-start">
                     <motion.button
                       id={`${item.id}`}
-                      className="bg-red-900 hover:bg-red-800 xl:text-[16px] text-[12px] text-white py-2 px-6 rounded-4xl flex items-center"
+                      className={`text-lg bg-red-900 hover:bg-red-800  text-white  py-2 px-6 rounded-4xl flex items-center font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                      lang={currentLanguage}
                       onClick={() => navigate(`research/${item.id}`)}
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
@@ -171,7 +174,8 @@ const ResearchInnovations = () => {
                   {buttons.map((button, btnIndex) => (
                     <motion.button
                       key={btnIndex}
-                      className="text-black xl:text-[16px] text-[12px] bg-gray-400/50 py-2 px-4 shadow-md rounded-4xl flex items-center mb-2"
+                      className={`text-lg flex items-center bg-gray-900/50 px-4 py-2 rounded-3xl gap-1 font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                        lang={currentLanguage}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.2 * btnIndex }}
@@ -184,7 +188,7 @@ const ResearchInnovations = () => {
                 </div>
                 <div>
                   <motion.h3
-                   className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                   className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
                    lang={currentLanguage}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
@@ -193,7 +197,8 @@ const ResearchInnovations = () => {
                     {t(`Research.${section.title}`)}
                   </motion.h3>
                   <motion.p
-                    className="mb-4 xl:text-[16px] text-[12px]"
+                     className={`text-lg font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                     lang={currentLanguage}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
@@ -203,7 +208,8 @@ const ResearchInnovations = () => {
                   </motion.p>
                   <motion.button
                     onClick={() => navigate(`research/${section.id}`)}
-                    className="bg-red-900 hover:bg-red-800 xl:text-[16px] text-[12px] text-white py-2 px-6 rounded-4xl flex items-center"
+                    className={`text-lg bg-red-900 hover:bg-red-800  text-white  py-2 px-6 rounded-4xl flex items-center font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                    lang={currentLanguage}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
