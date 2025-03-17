@@ -60,12 +60,12 @@ const Header = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
-              className="not-italic font-medium text-gray-800 cursor-pointer"
+              className="  text-gray-800 cursor-pointer"
             >
-              <Link to="/" className="flex items-center space-x-2">
+              <Link to="/" className="flex  items-center space-x-2">
                 <img src={logo} alt="logo" className="w-14 h-14" />
                 <motion.h2
-                  className=" xl:text-xl text-sm "
+                  className=" xl:text-xl font-normal text-sm "
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
