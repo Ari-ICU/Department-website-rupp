@@ -2,14 +2,14 @@ import React from "react";
 import { useNavigate } from 'react-router-dom'
 import { motion } from "framer-motion";
 import { MdExplore } from 'react-icons/md'
-import { MdSchool } from "react-icons/md";
+import { PiGraduationCapDuotone } from "react-icons/pi";
 import image1 from "../../assets/academic/1.png";
 import { useTranslation } from 'react-i18next';
 
 
 const AcademicSection = () => {
-    const { t,i18n } = useTranslation();
-         const currentLanguage = i18n.language; 
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
   const academicsData = {
     title: t("Academics.Academics"),
     description: [
@@ -23,7 +23,7 @@ const AcademicSection = () => {
 
   const navigate = useNavigate();
 
-  const handleBtn = () =>{
+  const handleBtn = () => {
     navigate('/programs')
   }
 
@@ -60,8 +60,8 @@ const AcademicSection = () => {
             viewport={{ once: true }}
             className="w-full lg:w-1/2 text-center lg:text-left order-2 lg:order-1"
           >
-            <h1 className={`text-2xl font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
-                            lang={currentLanguage}>{academicsData.title}</h1>
+            <h1 className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+              lang={currentLanguage}>{academicsData.title}</h1>
             {academicsData.description.map((text, index) => (
               <p key={index} className="text-sm md:text-base text-gray-800 mb-4">
                 {text}
@@ -80,7 +80,7 @@ const AcademicSection = () => {
                   className="flex items-center gap-4 border border-red-800 p-4 rounded-xl"
                 >
                   <div className="border border-red-800 rounded-full p-2">
-                    <MdSchool size={25} className="text-red-800" />
+                    <PiGraduationCapDuotone size={25} className="text-red-800" />
                   </div>
                   <p className="text-sm md:text-base text-red-800 font-medium">{program}</p>
                 </motion.div>
@@ -94,10 +94,10 @@ const AcademicSection = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              <button 
-              onClick={handleBtn}
-              className="bg-red-800 cursor-pointer text-white rounded-4xl py-2 px-6 flex items-center hover:bg-red-600 transition duration-300">
-               {t("Academics.Explore")}
+              <button
+                onClick={handleBtn}
+                className="bg-red-800 cursor-pointer text-white rounded-4xl py-2 px-6 flex items-center hover:bg-red-600 transition duration-300">
+                {t("Academics.Explore")}
                 <MdExplore className="ml-2" />
               </button>
             </motion.div>

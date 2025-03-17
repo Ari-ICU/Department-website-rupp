@@ -13,6 +13,8 @@ import southernTechLogo from "../../../assets/partner/southern-tech-logo.png";
 import monash from "../../../assets/bachelor/4.png";
 import uts from "../../../assets/bachelor/p1.png";
 import osaka from "../../../assets/bachelor/p2.png";
+import { useTranslation } from 'react-i18next';
+
 
 
 
@@ -29,10 +31,13 @@ const universityLogos = [
 ];
 
 const UniversityPartnerships = () => {
+      const { t, i18n } = useTranslation();
+          const currentLanguage = i18n.language;
     return (
         <div className="bg-white my-16">
             <div className="container mx-auto px-4 text-center">
-                <h2 className="text-3xl font-semibold mb-8">Partnerships With Universities</h2>
+                <h2  className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+              lang={currentLanguage}>Partnerships With Universities</h2>
 
                 {/* Swiper Slider */}
                 <Swiper

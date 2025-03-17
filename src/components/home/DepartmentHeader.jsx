@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaTelegramPlane, FaFacebookF } from 'react-icons/fa';
+import { SlSocialFacebook } from "react-icons/sl";
+import { PiTelegramLogoDuotone } from "react-icons/pi";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import logo from "../../assets/img/rupp.png";
@@ -60,7 +61,7 @@ const DepartmentHeader = () => {
               visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
             }}
           >
-            {[FaTelegramPlane, FaFacebookF, FaXTwitter].map((Icon, index) => (
+            {[PiTelegramLogoDuotone, SlSocialFacebook, FaXTwitter].map((Icon, index) => (
               <motion.div
                 key={index}
                 variants={{

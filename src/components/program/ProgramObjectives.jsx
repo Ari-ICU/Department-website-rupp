@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MdSchool, MdPeople, MdVerified } from 'react-icons/md';
+import { MdVerified } from 'react-icons/md';
+import { BsPeople } from "react-icons/bs";
+import { PiGraduationCapDuotone } from "react-icons/pi";
 import p3 from '../../assets/admission/6.png';
 import p4 from '../../assets/admission/7.png';
 
@@ -16,12 +18,12 @@ const ProgramObjectives = () => {
             {
                 title: "Robust Technical Foundation",
                 description: "Gain expertise in computing theories, programming, software development, AI, cybersecurity, web development, and cloud computing.",
-                icon: MdSchool
+                icon: PiGraduationCapDuotone
             },
             {
                 title: "Professional and Ethical Growth",
                 description: "Develop problem-solving, teamwork, leadership, and ethical awareness to excel in industry, research, and entrepreneurship.",
-                icon: MdPeople
+                icon: BsPeople
             }
         ],
         images: [
@@ -32,14 +34,15 @@ const ProgramObjectives = () => {
     const { programTitle, description, keyMetrics, objectives, images } = programData;
 
     return (
-        <motion.div
+     <div className="my-16">
+           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="container mx-auto px-4"
         >
-            <div className="flex flex-col xl:flex-row items-center gap-8">
+            <div className="flex flex-col lg:flex-row items-center gap-8">
                 {/* Right Column - Key Metrics (Image First in Mobile) */}
                 <motion.div
                     whileInView={{ opacity: 1, x: 0 }}
@@ -47,7 +50,7 @@ const ProgramObjectives = () => {
                     className="xl:w-1/2 w-full flex flex-col items-center relative order-1 xl:order-2"
                 >
                    {/* Image Flex Layout */}
-                <div className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4'>
+                <div className='flex flex-col lg:flex-row  justify-center items-center gap-4'>
                     {images.map((image, index) => (
                         <div
                             key={index}
@@ -63,7 +66,7 @@ const ProgramObjectives = () => {
                 </div>
 
 
-                    <div className='absolute bottom-4 sm:bottom-0 z-10 bg-white p-4 rounded-lg shadow-md w-11/12 sm:w-52 sm:h-34 text-center'>
+                    <div className='absolute bottom-4 sm:bottom-0 z-10 bg-white p-4 rounded-lg shadow-md w-11/12 sm:w-52 sm:h-42 text-center'>
                         <h2 className="text-md sm:text-lg font-bold flex items-center justify-center mb-4">
                             <MdVerified className="mr-2 text-xl sm:text-2xl text-red-700" />
                             Key Metrics
@@ -99,6 +102,7 @@ const ProgramObjectives = () => {
                 </motion.div>
             </div>
         </motion.div>
+     </div>
     );
 };
 

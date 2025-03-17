@@ -10,8 +10,8 @@ const MastersPromotion = () => {
   };
 
   return (
-    <div className="bg-black"> {/* Added padding */}
-      <div className="container mx-auto">
+    <div className="bg-black my-16"> {/* Added padding */}
+      <div className="container mx-auto px-4">
         <motion.div
           className="flex flex-col xl:flex-row items-center justify-center gap-6"
           variants={containerVariants} // Added variants to the outer container

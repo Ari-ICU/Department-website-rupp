@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { IoMdSearch } from "react-icons/io";
 
-
 const SearchButton = ({ onToggle, data }) => {
   const [query, setQuery] = useState("");
   const inputRef = useRef(null);
@@ -45,21 +44,14 @@ const SearchButton = ({ onToggle, data }) => {
   );
 
   return (
-    <div className="relative flex justify-center items-center" ref={containerRef}>
+    <div className="relative flex flex-col justify-center items-center w-full" ref={containerRef}>
       <motion.div
-        className="flex items-center gap-2 max-w-6xl"
+        className="relative flex items-center w-full min-w-[300px] max-w-6xl"
         layout
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
-        {/* Only show the input field without the search icon */}
-        <motion.div
-          className="relative flex items-center"
-          animate={{
-            width: query ? "1200px" : "1200px",
-            opacity: 1,
-          }}
-          transition={{ duration: 0.2 }}
-        >
+        {/* Input Field */}
+        <motion.div className="relative flex items-center w-full">
           <input
             ref={inputRef}
             type="text"
@@ -68,33 +60,32 @@ const SearchButton = ({ onToggle, data }) => {
             onChange={(e) => setQuery(e.target.value)}
             className="w-full px-6 py-4 rounded-lg border bg-white border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-red-800"
           />
-          <div className="text-2xl absolute right-6 text-gray-500 ">
-          <IoMdSearch />
+          <div className="text-2xl absolute right-6 text-gray-500">
+            <IoMdSearch />
           </div>
-          
         </motion.div>
       </motion.div>
-     
-   {/* Show filtered results as a pop-up */}
-{query && (
-  <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-xl bg-white border rounded-lg shadow-md max-h-60 overflow-y-auto z-50">
-    <div className="max-w-xl mx-auto">
-      {filteredData.length > 0 ? (
-        filteredData.map((item, index) => (
-          <div
-            key={index}
-            className="px-4 py-2 text-gray-700 cursor-pointer hover:bg-gray-100"
-          >
-            {item.name}
+
+      {/* Search Results (Same width as input field) */}
+      {query && (
+        <div className="absolute top-14 w-full min-w-[300px] max-w-6xl bg-white border border-gray-300 rounded-lg shadow-md max-h-60 overflow-y-auto z-50">
+          <div className="w-full">
+            {filteredData.length > 0 ? (
+              filteredData.map((item, index) => (
+                <div
+                  key={index}
+                  className="px-4 py-2 text-gray-700 cursor-pointer hover:bg-gray-100"
+                >
+                  {item.name}
+                </div>
+              ))
+            ) : (
+              <div className="px-4 py-2 text-gray-500">No results found</div>
+            )}
           </div>
-        ))
-      ) : (
-        <div className="px-4 py-2 text-gray-500">No results found</div>
+        </div>
       )}
     </div>
-  </div>
-)}
-</div>
   );
 };
 

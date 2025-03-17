@@ -67,7 +67,7 @@ const LatestNews = () => {
           viewport={{ once: true }}
           className="flex flex-col md:flex-row justify-between items-center mb-8"
         >
-          <h1 className={`text-2xl font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+          <h1 className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
                             lang={currentLanguage}>{isHomePage ? t('News.Latest News & Announcements') : 'Latest News & Announcements'}</h1>
           <motion.div
             initial={{ opacity: 0, y: -50 }}
@@ -103,7 +103,7 @@ const LatestNews = () => {
                 <span className="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-semibold self-start">
                   {isHomePage ? t(`News.${item.tag}`) : item.tag}
                 </span>
-                <h3  className={`text-lg font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                <h3  className={`text-lg font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
                             lang={currentLanguage}>{isHomePage ? t(`News.${item.title}`) : item.title}</h3>
                 <p className="text-gray-600 mt-2">{isHomePage ? t(`News.${item.description}`) : item.description}</p>
               </div>

@@ -41,7 +41,7 @@ const AboutSection = () => {
                         viewport={{ once: true, amount: 0.5 }}
                     >
                         <motion.h1
-                            className={`text-2xl font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
                             lang={currentLanguage}
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}

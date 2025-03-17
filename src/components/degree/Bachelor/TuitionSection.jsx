@@ -2,8 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion'; // Import motion from framer-motion
 import { HiOutlineCurrencyDollar } from "react-icons/hi2";
 import g from '../../../assets/admission/8.png';
+import { useTranslation } from 'react-i18next';
+
 
 const TuitionSection = () => {
+     const { t, i18n } = useTranslation();
+              const currentLanguage = i18n.language;
     // Animation variants
     const containerVariants = {
         hidden: { opacity: 0, y: 50 },
@@ -48,7 +52,8 @@ const TuitionSection = () => {
                         viewport={{ once: true, amount: 0.5 }}
                     >
                         <motion.h2
-                            className="text-2xl xl:text-3xl font-semibold mb-4"
+                            className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            lang={currentLanguage}
                             variants={itemVariants}
                         >
                             Tuition Fee & Payment Methods

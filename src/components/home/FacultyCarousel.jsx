@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
+import { SlSocialFacebook } from "react-icons/sl";
+import { PiTelegramLogoDuotone } from "react-icons/pi";
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import image1 from '../../assets/img/dr-heng-sovanrith.png';
@@ -26,8 +27,10 @@ const facultyMembers = [
 const FacultyCarousel = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const containerRef = useRef(null);
-    const { t } = useTranslation()
     const cardWidth = 384; // 96 * 4
+    const { t, i18n } = useTranslation();
+    const currentLanguage = i18n.language;
+
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -71,9 +74,10 @@ const FacultyCarousel = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
                             viewport={{ once: true }}
-                            className="xl:text-3xl text-xl font-semibold tracking-wide uppercase"
+                            className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            lang={currentLanguage}
                         >
-                           {t("Meet.Meet With Our Faculty")}
+                            {t("Meet.Meet With Our Faculty")}
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -129,31 +133,31 @@ const FacultyCarousel = () => {
                                     >
                                         {/* Social Icons Container */}
                                         <div className="absolute top-4 right-4 group-hover:bg-black/10 p-2 transition-all duration-300 rounded-2xl">
-                                        <motion.div
-                                            initial={{ y: 20 }}
-                                            animate={{ y: 0 }}
-                                            className=" space-y-2"
-                                        >
-                                            {/* Facebook Link */}
                                             <motion.div
-                                                whileHover={{ scale: 1.1 }}
-                                                className="bg-white p-3 rounded-full shadow-lg"
+                                                initial={{ y: 20 }}
+                                                animate={{ y: 0 }}
+                                                className=" space-y-2"
                                             >
-                                                <Link to="#" className="text-gray-700 hover:text-red-600">
-                                                    <FaFacebookF className="text-xl" />
-                                                </Link>
-                                            </motion.div>
+                                                {/* Facebook Link */}
+                                                <motion.div
+                                                    whileHover={{ scale: 1.1 }}
+                                                    className="bg-white p-3 rounded-full shadow-lg"
+                                                >
+                                                    <Link to="#" className="text-gray-700 hover:text-red-600">
+                                                        <SlSocialFacebook className="text-xl" />
+                                                    </Link>
+                                                </motion.div>
 
-                                            {/* Telegram Link */}
-                                            <motion.div
-                                                whileHover={{ scale: 1.1 }}
-                                                className="bg-white p-3 rounded-full shadow-lg"
-                                            >
-                                                <Link to="#" className="text-gray-700 hover:text-red-400">
-                                                    <FaTelegramPlane className="text-xl" />
-                                                </Link>
+                                                {/* Telegram Link */}
+                                                <motion.div
+                                                    whileHover={{ scale: 1.1 }}
+                                                    className="bg-white p-3 rounded-full shadow-lg"
+                                                >
+                                                    <Link to="#" className="text-gray-700 hover:text-red-400">
+                                                        <PiTelegramLogoDuotone className="text-xl" />
+                                                    </Link>
+                                                </motion.div>
                                             </motion.div>
-                                        </motion.div>
                                         </div>
                                     </motion.div>
                                 </div>

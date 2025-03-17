@@ -43,7 +43,7 @@ const ContactUs = () => {
                   initial={{ opacity: 0, y: -20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className={`text-2xl text-center font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                  className={`text-2xl text-center font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
                   lang={currentLanguage}
                 >
                   {t("Contact.Contact Us If You Have Any Questions")}

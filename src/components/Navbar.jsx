@@ -143,7 +143,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
        
 
        
-         <Link to="/about" className={`hover:text-red-900 ${location.pathname === "/contact" ? "text-red-900 font-bold" : ""}`}>
+         <Link to="/about" className={`hover:text-red-900 ${location.pathname === "/about" ? "text-red-900 font-bold" : ""}`}>
           {t("menu.aboutWebsite")}
         </Link>
 

@@ -13,7 +13,7 @@ const Program = () => {
     <div>
       <div>
         <ProgramBanner />
-        <div className='*:py-16 '>
+        <div className=' '>
           <Overview />
           <Programs />
           <ProgramObjectives />
@@ -22,7 +22,7 @@ const Program = () => {
           <ContactAdmissions />
         </div>
 
-        <div className='pt-16'>
+        <div className=''>
           <DepartmentHeader />
         </div>
 

@@ -28,7 +28,7 @@ const CSAboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true, amount: 0.5 }}
-          className="xl:text-4xl text-2xl font-bold mb-4"
+          className="xl:text-5xl text-2xl font-bold mb-4"
         >
           {isContactPage ? "Get in Touch: Contact Our CS Department" : "Innovate, Learn, Succeed: About Our CS Department"}
         </motion.h1>

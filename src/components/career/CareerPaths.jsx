@@ -3,9 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaCalendarAlt } from 'react-icons/fa';
 import b1 from '../../assets/bachelor/b1.png';
+import { useTranslation } from 'react-i18next';
+
+
 
 const CareerPaths = () => {
   const navigate = useNavigate();
+    const { t, i18n } = useTranslation();
+                const currentLanguage = i18n.language;
 
   // Variants for animations
   const containerVariants = {
@@ -74,8 +79,10 @@ const CareerPaths = () => {
           >
             <div className="flex flex-col xl:flex-row items-center xl:items-start mb-8">
               <div className="mr-6">
-                <h2 className="text-2xl xl:text-3xl font-semibold mb-2">Career Paths in</h2>
-                <h2 className="text-2xl xl:text-3xl font-semibold">Computer Science</h2>
+                <h2  className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+              lang={currentLanguage}>Career Paths in</h2>
+                <h2 className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+              lang={currentLanguage}>Computer Science</h2>
                 <p className="mt-4 text-gray-800">
                   Graduates of the Computer Science Undergraduate Program can pursue careers in various fields such as
                 </p>

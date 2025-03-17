@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaArrowRight, FaCalendarAlt } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
+import { PiCalendarDots } from "react-icons/pi";
 import { Link } from 'react-router-dom';
 import image1 from '../../assets/new/3.jpg';
 import image2 from '../../assets/new/4.jpg';
@@ -51,7 +52,7 @@ const EventsNews = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center mb-8">
                     <div>
-                        <h1   className={`text-2xl font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                        <h1   className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
                             lang={currentLanguage}>
                            { t("Events.Events & News")}
                         </h1>
@@ -86,15 +87,15 @@ const EventsNews = () => {
                                                 {event.category}
                                             </span>
                                         )}
-                                        <h5  className={`text-lg font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                                        <h5  className={`text-lg font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
                             lang={currentLanguage}>
                                             {event.title}
                                         </h5>
                                         <p className="mt-2 text-sm text-gray-800">
                                             {event.description}
                                         </p>
-                                        <span className="text-sm text-gray-800 flex items-center gap-4 mt-4">
-                                            <FaCalendarAlt />
+                                        <span className="text-sm text-gray-800 flex items-center gap-2 mt-4">
+                                            <PiCalendarDots />
                                             {event.date}
                                         </span>
                                     </div>

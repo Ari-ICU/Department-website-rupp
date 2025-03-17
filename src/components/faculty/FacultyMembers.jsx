@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
+import { SlSocialFacebook } from "react-icons/sl";
+import { PiTelegramLogoDuotone } from "react-icons/pi";
 import { Link } from 'react-router-dom';
 import p2 from '../../assets/img/dr-heng-sovanrith.png';
 import p3 from '../../assets/img/professor/p1.png';
@@ -8,16 +9,15 @@ import p4 from '../../assets/img/professor/thap-boung.jpg';
 import p5 from '../../assets/img/professor/ly-sokun.jpg';
 import p6 from '../../assets/img/professor/ouk-polyvann.jpg';
 import p7 from '../../assets/img/professor/ung-rithy.jpg';
-
-
-
-
-
+import { useTranslation } from 'react-i18next';
 
 
 
 
 const FacultyMembers = () => {
+     const { t, i18n } = useTranslation();
+                const currentLanguage = i18n.language;
+    
     const deputyData = [
         {
             id: 1, // Added ID for detail page link
@@ -70,7 +70,8 @@ const FacultyMembers = () => {
         <div className='my-16'>
             <div className='container mx-auto px-4'>
                 <div className='space-y-10'>
-                    <h1 className='text-3xl font-semibold '>Faculty Members</h1>
+                    <h1  className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            lang={currentLanguage}>Faculty Members</h1>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
                         {deputyData.map((deputy) => (
                             <div key={deputy.id} className='shadow-lg rounded-2xl p-4'>
@@ -102,7 +103,7 @@ const FacultyMembers = () => {
                                                         className="bg-white p-3 rounded-full shadow-lg"
                                                     >
                                                         <Link to="#" className="text-gray-700 hover:text-red-600">
-                                                            <FaFacebookF className="text-xl" />
+                                                            <SlSocialFacebook className="text-xl" />
                                                         </Link>
                                                     </motion.div>
 
@@ -112,7 +113,7 @@ const FacultyMembers = () => {
                                                         className="bg-white p-3 rounded-full shadow-lg"
                                                     >
                                                         <Link to="#" className="text-gray-700 hover:text-red-400">
-                                                            <FaTelegramPlane className="text-xl" />
+                                                            <PiTelegramLogoDuotone className="text-xl" />
                                                         </Link>
                                                     </motion.div>
                                                 </motion.div>

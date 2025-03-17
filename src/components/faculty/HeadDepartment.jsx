@@ -1,9 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
+import { SlSocialFacebook } from "react-icons/sl";
+import { PiTelegramLogoDuotone } from "react-icons/pi";
 import { RiDoubleQuotesR } from "react-icons/ri";
 import { Link } from 'react-router-dom';
 import p1 from '../../assets/img/professor/chi-koung.jpg';
+import { useTranslation } from 'react-i18next';
+
 
 const departmentHeads = [
     {
@@ -20,12 +23,16 @@ const departmentHeads = [
 ];
 
 const HeadDepartment = () => {
+     const { t, i18n } = useTranslation();
+        const currentLanguage = i18n.language;
+    
     return (
         <div className='my-16'>
             <div className='container mx-auto px-4'>
                 <div className='space-y-10'>
                     <div id="head-department-header">
-                        <h1 className='text-3xl font-semibold '>Head of Department</h1>
+                        <h1 className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            lang={currentLanguage}>Head of Department</h1>
                     </div>
                     {departmentHeads.map((head) => (
                         <div key={head.id} className='max-w-5xl mx-auto shadow-lg rounded-2xl items-center p-4' id="head-department-profile">
@@ -61,7 +68,7 @@ const HeadDepartment = () => {
                                                     id="facebook-icon"
                                                 >
                                                     <Link to={head.socialLinks.facebook} className="text-gray-700 hover:text-red-600">
-                                                        <FaFacebookF className="text-xl" />
+                                                        <SlSocialFacebook className="text-xl" />
                                                     </Link>
                                                 </motion.div>
 
@@ -72,7 +79,7 @@ const HeadDepartment = () => {
                                                     id="telegram-icon"
                                                 >
                                                     <Link to={head.socialLinks.telegram} className="text-gray-700 hover:text-red-400">
-                                                        <FaTelegramPlane className="text-xl" />
+                                                        <PiTelegramLogoDuotone className="text-xl" />
                                                     </Link>
                                                 </motion.div>
                                             </motion.div>
@@ -80,10 +87,13 @@ const HeadDepartment = () => {
                                     </motion.div>
                                 </div>
                                 <div className='space-y-6 max-w-xl relative' id="profile-info">
-                                    <div className='absolute right-0 -top-6 flex justify-end text-right'>
+                                  <div className='flex justify-between items-center'>
+                                  <h1 className='text-2xl font-semibold ' id="professor-name">{head.name}</h1>
+
+                                  <div className='text-right'>
                                         <RiDoubleQuotesR className='text-7xl text-red-900' />
                                     </div>
-                                    <h1 className='text-2xl font-semibold ' id="professor-name">{head.name}</h1>
+                                  </div>
                                     <p>{head.bio}</p>
                                     <Link to={`/head/${head.id}`}>
                                         <button className='bg-red-900 px-6 py-2 text-gray-50 rounded-2xl' id="view-button">View</button>

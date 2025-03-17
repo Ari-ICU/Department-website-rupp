@@ -19,8 +19,9 @@ const ContactAdmissions = () => {
   };
 
   return (
-    <motion.div
-      className="container mx-auto  rounded-lg text-center relative"
+   <div className='my-16'>
+     <motion.div
+      className="container mx-auto px-4 rounded-lg text-center relative"
       style={{
         backgroundImage: `url(${p6})`,
         backgroundSize: 'cover',
@@ -60,6 +61,7 @@ const ContactAdmissions = () => {
         </motion.p>
       </motion.div>
     </motion.div>
+   </div>
   );
 };
 

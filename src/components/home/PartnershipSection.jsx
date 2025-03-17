@@ -15,15 +15,19 @@ const PartnershipSection = () => {
     { src: cisco, alt: "Cisco" },
     { src: aws, alt: "AWS" },
   ];
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
-  const { t } = useTranslation()
+
+
   return (
     <div className="my-16">
       <div className="container mx-auto  px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
           {/* Title and "View All" Link */}
           <div className="text-center md:text-left">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-2">{t("Partnerships.Our Partnerships")}</h2>
+            <h2 className={`text-2xl font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+              lang={currentLanguage}>{t("Partnerships.Our Partnerships")}</h2>
           </div>
 
           {/* Vertical Divider (hidden on smaller screens) */}

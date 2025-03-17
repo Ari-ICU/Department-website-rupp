@@ -3,8 +3,12 @@ import { motion } from "framer-motion";
 import { FaCheck } from "react-icons/fa";
 import p3 from "../../assets/admission/4.png";
 import p4 from "../../assets/admission/7.png";
+import { useTranslation } from 'react-i18next';
+
 
 const AdmissionRequirements = () => {
+   const { t, i18n } = useTranslation();
+            const currentLanguage = i18n.language;
   const requirements = [
     "High school diploma (or equivalent) with a strong background in mathematics and science.",
     "Proficiency in English (TOEFL/IELTS scores may be required for international students).",
@@ -88,7 +92,8 @@ const AdmissionRequirements = () => {
               To apply for the Bachelor’s Degree in Computer Science, students
               must meet the following criteria:
             </p>
-            <h2 className="text-2xl xl:text-3xl font-bold mb-4">
+            <h2  className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+              lang={currentLanguage}>
               Admission Requirements
             </h2>
 

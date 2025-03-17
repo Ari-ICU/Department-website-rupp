@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MdSchool, MdWork, MdEvent } from 'react-icons/md';
+import { PiGraduationCapDuotone } from "react-icons/pi";
+import { BsCalendar4Event } from "react-icons/bs";
+import { MdWorkOutline } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
 
@@ -9,18 +11,18 @@ const services = [
   {
     title: 'Events',
     description: 'Workshops, hackathons, and networking opportunities.',
-    icon: <MdEvent />,
+    icon: <BsCalendar4Event />,
   },
   {
     title: 'Job Opportunities',
     description: 'Launch your career in tech and innovation.',
-    icon: <MdWork />,
+    icon: <MdWorkOutline />,
   },
   
   {
     title: 'About Program',
     description: 'Balanced curriculum with theory and hands-on learning.',
-    icon: <MdSchool />,
+    icon: <PiGraduationCapDuotone />,
   },
 ];
 
@@ -78,7 +80,7 @@ const ServiceSection = () => {
 
                 {/* Title and Description */}
                 <div className="text-center md:text-left">
-                  <h3 className={`text-lg font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                  <h3 className={`text-lg font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
                             lang={currentLanguage}>{t(`service.${service.title}`)}</h3>
                   <p className="md:text-base text-gray-600">{t(`service.${service.description}`)}</p>
                 </div>

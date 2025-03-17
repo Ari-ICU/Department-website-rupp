@@ -1,13 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
+import { SlSocialFacebook } from "react-icons/sl";
+import { PiTelegramLogoDuotone } from "react-icons/pi";
 import { RiDoubleQuotesR } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import p1 from '../../assets/img/professor/pok-leakmony.jpg';
 import p2 from '../../assets/img/professor/Asst-Prof-Dr-Chor-Chandara.png';
+import { useTranslation } from 'react-i18next';
+
 
 const DeputyHeadofDepartment = () => {
-   
+
     const deputyData = [
         {
             id: 1, // Added unique ID for each deputy
@@ -27,12 +30,16 @@ const DeputyHeadofDepartment = () => {
         },
     ];
 
+    const { t, i18n } = useTranslation();
+            const currentLanguage = i18n.language;
+
     return (
         <div className='my-16'>
             <div className='container mx-auto px-4'>
                 <div className='space-y-10'>
                     <div>
-                        <h1 className='text-3xl font-semibold '>Deputy Head of Department:</h1>
+                        <h1 className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            lang={currentLanguage}>Deputy Head of Department:</h1>
                     </div>
                     <div className='flex flex-col xl:flex-row xl:flex-wrap gap-8 justify-center'>
                         {deputyData.map((deputy, index) => (
@@ -45,9 +52,9 @@ const DeputyHeadofDepartment = () => {
                                         'xl:mx-auto' : ''}
       `}
                             >
-                                <div className="flex flex-col lg:flex-row gap-6 items-center">
+                                <div className="flex flex-col lg:flex-row gap-4 items-center">
                                     {/* Image Container */}
-                                    <div className="relative h-72 mb-4 group">
+                                    <div className="relative w-full h-72 mb-4 group">
                                         <img
                                             src={deputy.image}
                                             alt={deputy.name}
@@ -73,7 +80,7 @@ const DeputyHeadofDepartment = () => {
                                                         className="bg-white p-3 rounded-full shadow-lg"
                                                     >
                                                         <Link to="#" className="text-gray-700 hover:text-red-600">
-                                                            <FaFacebookF className="text-xl" />
+                                                            <SlSocialFacebook className="text-xl" />
                                                         </Link>
                                                     </motion.div>
 
@@ -83,7 +90,7 @@ const DeputyHeadofDepartment = () => {
                                                         className="bg-white p-3 rounded-full shadow-lg"
                                                     >
                                                         <Link to="#" className="text-gray-700 hover:text-red-400">
-                                                            <FaTelegramPlane className="text-xl" />
+                                                            <PiTelegramLogoDuotone className="text-xl" />
                                                         </Link>
                                                     </motion.div>
                                                 </motion.div>
@@ -91,10 +98,13 @@ const DeputyHeadofDepartment = () => {
                                         </motion.div>
                                     </div>
                                     <div className='space-y-6 max-w-md relative'>
-                                        <div className='absolute right-0 -top-6 flex justify-end text-right'>
-                                            <RiDoubleQuotesR className='text-7xl text-red-900' />
+                                        <div className='flex justify-between items-center' >
+                                            <h1 className='text-2xl font-semibold '>{deputy.name}</h1>
+                                            <div className=' text-right'>
+                                                <RiDoubleQuotesR className='text-7xl text-red-900' />
+                                            </div>
                                         </div>
-                                        <h1 className='text-2xl font-semibold '>{deputy.name}</h1>
+
                                         <p className='text-left'>{deputy.bio}</p>
                                         <Link
                                             to={`/deputy/${deputy.id}`} // Use dynamic route to navigate to the detail page

@@ -58,7 +58,7 @@ const ResearchInnovations = () => {
   return (
     <div className="my-16">
       <div className="container mx-auto px-4 ">
-      <h1  className={`text-2xl font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+      <h1  className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
                             lang={currentLanguage}>
        {t("Research.Research & Innovations")}
         </h1>
@@ -95,7 +95,7 @@ const ResearchInnovations = () => {
                   {t(`Research.${item.title}`)}
                   </motion.h1>
                   <motion.h3
-                    className={`text-2xl font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                    className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
                     lang={currentLanguage}
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -184,7 +184,7 @@ const ResearchInnovations = () => {
                 </div>
                 <div>
                   <motion.h3
-                   className={`text-lg font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                   className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
                    lang={currentLanguage}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}

@@ -22,7 +22,7 @@ const WhyChooseUs = () => {
 
     return (
         <motion.section
-            className="bg-gray-100 py-16"
+            className="bg-gray-100 my-16"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"

@@ -1,11 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCheck } from "react-icons/fa";
-import { FaPeopleGroup } from "react-icons/fa6";
-import { MdSchool } from "react-icons/md";
+import { BsPeople } from "react-icons/bs";
+import { PiGraduationCapDuotone } from "react-icons/pi";
 import rupp from "../../assets/about/2.png";
+import { useTranslation } from "react-i18next";
+
 
 const InnovationSection = () => {
+      const { t,i18n } = useTranslation();
+                 const currentLanguage = i18n.language; 
     return (
 
      <div className='my-16'>
@@ -24,7 +28,8 @@ const InnovationSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="text-lg xl:text-3xl font-bold text-gray-800 mb-4"
+                        className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+                            lang={currentLanguage}
                     >
                         Driving Innovation, Education & Impact
                     </motion.h1>
@@ -77,7 +82,7 @@ const InnovationSection = () => {
                             className='flex gap-4 border border-red-800 p-4 rounded-xl items-center'
                         >
                             <div className='border border-red-800 rounded-full p-2'>
-                                <MdSchool size={25} className='text-red-800' />
+                                <PiGraduationCapDuotone size={25} className='text-red-800' />
                             </div>
                             <p>We strive to enhance teaching and learning while fostering research and innovation to drive technological advancement.</p>
                         </motion.div>
@@ -89,7 +94,7 @@ const InnovationSection = () => {
                             className='flex gap-4 border border-red-800 p-4 rounded-xl items-center'
                         >
                             <div className='border border-red-800 rounded-full p-2'>
-                                <FaPeopleGroup size={25} className='text-red-800' />
+                                <BsPeople size={25} className='text-red-800' />
                             </div>
                             <p>Beyond academics, we develop leaders, uphold sustainability, preserve heritage, and expand social engagement.</p>
                         </motion.div>

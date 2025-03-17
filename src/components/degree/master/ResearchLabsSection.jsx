@@ -3,9 +3,13 @@ import { motion } from 'framer-motion';
 import { FaUsers, FaDollarSign, FaUserGraduate } from 'react-icons/fa';
 import { MdSchool } from 'react-icons/md'
 import p1 from "../../../assets/program/banner.png";
+import { useTranslation } from 'react-i18next';
+
 
 
 const ResearchLabsSection = () => {
+   const { t, i18n } = useTranslation();
+              const currentLanguage = i18n.language;
   const researchLabs = [
     {
       icon: <MdSchool className="text-red-800 text-xl" />,
@@ -62,7 +66,8 @@ const ResearchLabsSection = () => {
           {/* Text and Features Section */}
           <div className="w-full xl:w-[950px] md:pl-8">
             <motion.h2 
-              className="text-3xl xl:text-4xl font-semibold mb-6"
+               className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+               lang={currentLanguage}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}

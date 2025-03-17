@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaCheck } from 'react-icons/fa';
-import { FaUserGraduate } from "react-icons/fa6";
+import { PiGraduationCapDuotone } from "react-icons/pi";
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 // import icon from '../../../assets/icon/1.png';
 
 const StudyOverview = () => {
+     const { t, i18n } = useTranslation();
+      const currentLanguage = i18n.language;
     const { degree } = useParams();  // Get the selected degree (e.g., bachelor, doctoral, etc.)
     const [selectedYear, setSelectedYear] = useState(1);
 
@@ -179,8 +183,9 @@ const StudyOverview = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="text-3xl font-semibold mb-4"
-                >
+                    className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+              lang={currentLanguage}
+            >
                     What We Will Study ({degree.charAt(0).toUpperCase() + degree.slice(1)})
                 </motion.h2>
 
@@ -213,7 +218,7 @@ const StudyOverview = () => {
 
                         >
                             <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-4`}>
-                                <FaUserGraduate size={32} className={`${selectedYear === year.year ? 'text-white' : 'text-black'}`} />
+                                <PiGraduationCapDuotone size={32} className={`${selectedYear === year.year ? 'text-white' : 'text-black'}`} />
                             </div>
                             <h3 className={`text-2xl font-semibold mb-2 text-start ${selectedYear === year.year ? 'text-white' : 'text-black'}`}>
                                 {year.title}
