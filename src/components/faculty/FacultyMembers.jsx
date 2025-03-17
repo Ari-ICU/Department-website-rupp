@@ -22,17 +22,9 @@ const FacultyMembers = () => {
       
     const deputyData = [
 
+       
         {
             id: 1, // Added ID for detail page link
-            name: "Dr. Heng Sovannrith",
-            image: p2,
-            position: "Assistant Professor",
-            details: "Asst. Prof. Dr. Heng Sovannarith (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
-            facebook: "https://facebook.com/example",
-            telegram: "https://t.me/example",
-        },
-        {
-            id: 2, // Added ID for detail page link
             name: " Dr. Ouk Khean",
             image: p8,
             position: "Associate Professor",
@@ -41,7 +33,7 @@ const FacultyMembers = () => {
             telegram: "https://t.me/example",
         },
         {
-            id: 3, 
+            id: 2, 
             name: "Mr. Ly Sokun",
             image: p5,
             position: "Assistant Professor",
@@ -50,7 +42,7 @@ const FacultyMembers = () => {
             telegram: "https://t.me/example",
         },
         {
-            id: 4, // Added ID for detail page link
+            id: 3, // Added ID for detail page link
             name: "Mr. Thap Boung",
             image: p4,
             position: "Assistant Professor",
@@ -59,7 +51,7 @@ const FacultyMembers = () => {
             telegram: "https://t.me/example",
         },
         {
-            id: 5, // Added ID for detail page link
+            id: 4, // Added ID for detail page link
             name: "Mr. Ouk Polyvann",
             image: p6,
             position: "Assistant Professor",
@@ -68,11 +60,20 @@ const FacultyMembers = () => {
             telegram: "https://t.me/example",
         },
         {
-            id: 6,
+            id: 5,
             name: "Mr. Ung Rithy",
             image: p7,
             position: "Assistant Professor",
             details: "Asst. Prof. Dr.  Ung Rithy (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
+            facebook: "https://facebook.com/example",
+            telegram: "https://t.me/example",
+        },
+        {
+            id: 6, // Added ID for detail page link
+            name: "Dr. Heng Sovannrith",
+            image: p2,
+            position: "Assistant Professor",
+            details: "Asst. Prof. Dr. Heng Sovannarith (2007): B.Sc. (Computer Science and Engineering), RUPP, 2005; B.A. in English (Professional Communication), RUPP, 2011; M.Sc. (Computer Science), Ateneo De Manila University (Philippines), 2010; Ph.D. (Computer Science), Khon Kaen University (Thailand), 2019.",
             facebook: "https://facebook.com/example",
             telegram: "https://t.me/example",
         },
