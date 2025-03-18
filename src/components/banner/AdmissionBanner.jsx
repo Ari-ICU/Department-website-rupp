@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
-import admission from "../../assets/admission/9.png";
+import admission from "../../assets/admission/10.png";
 
 const AdmissionBanner = () => {
   const title = "Admission Requirements";
@@ -20,7 +20,7 @@ const AdmissionBanner = () => {
       {/* Fixed Overlay using RGBA */}
       <div
         className="absolute inset-0"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }} // 50% opacity
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }} // 50% opacity
       ></div>
 
       <div className="relative z-10 max-w-5xl px-6">

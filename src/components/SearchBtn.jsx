@@ -68,7 +68,7 @@ const SearchButton = ({ onToggle, data }) => {
 
       {/* Search Results (Same width as input field) */}
       {query && (
-        <div className="absolute top-14 w-full min-w-[300px] max-w-6xl bg-white border border-gray-300 rounded-lg shadow-md max-h-60 overflow-y-auto z-50">
+        <div className="absolute top-14 w-full min-w-[300px] max-w-6xl bg-gray-50 border border-gray-300 rounded-lg shadow-md max-h-60 overflow-y-auto z-50">
           <div className="w-full">
             {filteredData.length > 0 ? (
               filteredData.map((item, index) => (

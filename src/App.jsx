@@ -21,6 +21,7 @@ import Faculty from './pages/Faculty';
 import LabDetails from './pages/LabDetails';
 import DeveloperTeam from './pages/DeveloperTeam';
 import FacultyDetails from './pages/FacultyDetails';
+import NotFoundPage from './pages/404';
 
 
 
@@ -50,6 +51,7 @@ const App = () => {
         <Route path='/facilities' element={<Facilities />} />
         <Route path='/news&events' element={<News />} />
         <Route path='/developer' element={<DeveloperTeam />}/>
+        <Route path='*' element={<NotFoundPage />}/>
       </Routes>
       <Footer />
     </Router>

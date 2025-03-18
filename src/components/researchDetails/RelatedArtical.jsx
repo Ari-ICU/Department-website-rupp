@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { MdExplore } from 'react-icons/md';
 import { MdComputer } from 'react-icons/md';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -48,28 +48,59 @@ const buttons = [
 
 const RelatedArtical = () => {
   const navigate = useNavigate();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const containerRef = useRef(null);
+
+  const handleArrowLeft = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+      if (containerRef.current) {
+        containerRef.current.scrollLeft -= containerRef.current.offsetWidth;
+      }
+    }
+  };
+
+  const handleArrowRight = () => {
+    if (currentIndex < bottomSections.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+      if (containerRef.current) {
+        containerRef.current.scrollLeft += containerRef.current.offsetWidth;
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollLeft = currentIndex * containerRef.current.offsetWidth;
+    }
+  }, [currentIndex]);
 
   return (
     <div className="my-16">
       <div className='container mx-auto px-4'>
-
         <div className='flex justify-between'>
-          <h2 className='text-4xl mb-6 font-semibold'>Students Projects </h2>
+          <h2 className='text-3xl mb-6 font-semibold'>Students Projects </h2>
           <div className="flex justify-between gap-10 items-center">
-            <button className="p-2 bg-pink-100  text-red-900 rounded-full hover:bg-gray-300">
+            <button
+              onClick={handleArrowLeft}
+              className="p-2 bg-pink-100 text-red-900 rounded-full hover:bg-gray-300"
+            >
               <FaChevronLeft />
             </button>
-            <button className="p-2 bg-pink-100  text-red-900  rounded-full hover:bg-gray-300">
+            <button
+              onClick={handleArrowRight}
+              className="p-2 bg-pink-100 text-red-900 rounded-full hover:bg-gray-300"
+            >
               <FaChevronRight />
             </button>
           </div>
         </div>
-        <div className="overflow-x-auto  mt-4 scrollbar-hide ">
+        <div className="overflow-x-auto mt-4 scrollbar-hide" ref={containerRef}>
           <div className="flex space-x-8">
             {bottomSections.map((section) => (
               <div
                 key={section.id}
-                className=" bg-white rounded-lg shadow-md overflow-hidden relative group flex-shrink-0"
+                className="bg-white rounded-lg shadow-md overflow-hidden relative group flex-shrink-0 w-[350px]" // Set a fixed width
               >
                 <img
                   src={section.image}

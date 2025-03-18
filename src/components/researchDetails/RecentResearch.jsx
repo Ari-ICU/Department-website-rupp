@@ -54,7 +54,7 @@ const RecentResearch = () => {
       <div className='container mx-auto px-4'>
 
         <div className='flex justify-between'>
-          <h2 className='text-4xl mb-6 font-semibold'>Recent Research Projects & Publications </h2>
+          <h2 className='text-3xl mb-6 font-semibold'>Recent Research Projects & Publications </h2>
           <div className="flex justify-between gap-10 items-center">
             <button className="p-2 bg-pink-100  text-red-900 rounded-full hover:bg-gray-300">
               <FaChevronLeft />

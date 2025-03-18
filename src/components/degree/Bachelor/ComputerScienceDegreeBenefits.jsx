@@ -25,8 +25,9 @@ const ComputerScienceDegreeBenefits = () => {
     const [selectedBenefitIndex, setSelectedBenefitIndex] = useState(1);
 
     const handleBenefitClick = (index) => {
-        setSelectedBenefitIndex(index === selectedBenefitIndex ? null : index);
-    };
+        
+        console.log("Benefit clicked:", index); 
+      };
 
     // Animation variants
     const containerVariants = {

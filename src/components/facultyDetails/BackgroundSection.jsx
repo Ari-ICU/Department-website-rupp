@@ -5,11 +5,11 @@ import p2 from '../../assets/uni/2.png'
 const BackgroundSection = () => {
     const backgrounds = [
         {
-            university: "Studied at Ateneo de Manila University (Philippines)",
+            university: " Ateneo de Manila University (Philippines)",
             imageUrl: p1, // Replace with the actual path
         },
         {
-            university: "Studied at khon kaen university (thailand)",
+            university: "khon kaen university (thailand)",
             imageUrl: p2, // Replace with the actual path
             
         },
