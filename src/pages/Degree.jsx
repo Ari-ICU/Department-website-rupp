@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import DegreeSlider from '../components/degree/slider/SliderDegree';
 import CareerPaths from '../components/career/CareerPaths';
@@ -11,8 +11,6 @@ import ResearchLabsSection from '../components/degree/master/ResearchLabsSection
 import ResearchSections from '../components/degree/master/ResearchSection';
 import StudyOverview from '../components/degree/overview/StudyOverview';
 import Overview from '../components/degree/overview/Overview';
-
-
 
 const degreeComponents = {
   bachelor: [
@@ -59,6 +57,16 @@ const DegreePage = () => {
   const { degree } = useParams();
 
   const selectedComponents = degreeComponents[degree] || [];
+
+  useEffect(() => {
+    // Set the document title based on the degree type
+    document.title = degree ? `${degree.charAt(0).toUpperCase() + degree.slice(1)} Degree Page - Department of Computer Science`   : 'Degree Page';
+
+    // Clean up function to reset the title when the component unmounts
+    return () => {
+      document.title = 'Degree Page'; // Or your default title
+    };
+  }, [degree]); // Re-run effect when degree changes
 
   return (
     <div>
