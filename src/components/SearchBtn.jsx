@@ -5,6 +5,7 @@ import { IoMdSearch } from "react-icons/io";
 const SearchButton = ({ onToggle, data }) => {
   const [query, setQuery] = useState("");
   const inputRef = useRef(null);
+  const [searchTerm, setSearchTerm] = useState("");
   const containerRef = useRef(null);
 
   const toggleSearch = () => {
@@ -38,10 +39,20 @@ const SearchButton = ({ onToggle, data }) => {
     };
   }, []);
 
-  // Filter the global data based on the search query
-  const filteredData = data.filter((item) =>
-    item.name.toLowerCase().includes(query.toLowerCase())
-  );
+  const [filteredData, setFilteredData] = useState([]);
+
+  // Update filtered data when searchTerm changes
+  useEffect(() => {
+    if (!data || !Array.isArray(data)) {
+      setFilteredData([]); // Ensure filteredData is always an array
+      return;
+    }
+
+    const filtered = data.filter((item) =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredData(filtered);
+  }, [searchTerm, data]);
 
   return (
     <div className="relative flex flex-col justify-center items-center w-full" ref={containerRef}>
