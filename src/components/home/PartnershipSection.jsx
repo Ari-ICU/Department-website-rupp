@@ -26,7 +26,7 @@ const PartnershipSection = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
           {/* Title and "View All" Link */}
           <div className="text-center md:text-left">
-            <h2 className={`text-3xl font-normal mb-4 uppercase ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+            <h2 className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
               lang={currentLanguage}>{t("Partnerships.Our Partnerships")}</h2>
           </div>
 

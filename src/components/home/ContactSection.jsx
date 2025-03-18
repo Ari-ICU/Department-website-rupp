@@ -16,7 +16,7 @@ const ContactUs = () => {
         className="container mx-auto px-4"
       >
         <div className="">
-          <div className="relative flex flex-col xl:flex-row items-center justify-center">
+          <div className="relative flex flex-col xl:flex-row sm:gap-0 gap-6 items-center justify-center">
             {/* Image Section (Top on Small Screens, Right Side on Large Screens) */}
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
