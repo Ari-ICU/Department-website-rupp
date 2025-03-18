@@ -15,7 +15,7 @@ const ResearchDetails = () => {
       <Helmet>
       <title>Research Details Page - Department of Computer Science</title>
       </Helmet>
-        <div className='text-justify'>
+        <div className='lg:text-justify'>
             <ResearchBanner />
             <Overview />
             <FocusAreas />

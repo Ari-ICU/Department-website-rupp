@@ -19,13 +19,13 @@ const EducationSection = () => {
 
             {/* Content */}
             <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-4">
-                <h2 className="text-lg xl:text-3xl font-bold text-white mb-6">
+                <h2 className="text-3xl font-bold text-white mb-6">
                     We Believe That Education Is An
                 </h2>
-                <h2 className="text-lg xl:text-3xl font-bold text-white mb-6">
+                <h2 className="text-3xl font-bold text-white mb-6">
                     Important Aspect In Every
                 </h2>
-                <h2 className="text-lg xl:text-3xl font-bold text-white mb-6">
+                <h2 className="text-3xl font-bold text-white mb-6">
                     Person's Life
                 </h2>
                 <p className="text-gray-200 xl:text-lg text-[14px]">

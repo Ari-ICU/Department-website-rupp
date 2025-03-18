@@ -20,8 +20,9 @@ const ContactAdmissions = () => {
 
   return (
    <div className='my-16'>
-     <motion.div
-      className="container mx-auto px-4 rounded-lg text-center relative"
+    <div className='container mx-auto px-4'>
+    <motion.div
+      className="rounded-lg text-center relative"
       style={{
         backgroundImage: `url(${p6})`,
         backgroundSize: 'cover',
@@ -36,7 +37,7 @@ const ContactAdmissions = () => {
       <div className="absolute inset-0 bg-black/60 rounded-lg"></div>
 
       {/* Content inside the overlay */}
-      <motion.div className="relative p-6 md:p-8 text-white" variants={textVariants}>
+      <motion.div className="relative p-8 text-white" variants={textVariants}>
         <motion.p className="text-lg mb-4" variants={textVariants}>
           For more details, please visit our{' '}
           <Link
@@ -61,6 +62,7 @@ const ContactAdmissions = () => {
         </motion.p>
       </motion.div>
     </motion.div>
+    </div>
    </div>
   );
 };

@@ -116,7 +116,7 @@ const SlideShowSection = () => {
           className="w-24 h-24"
         />
         <motion.h1
-          className="xl:text-5xl text-lg font-bold leading-tight mb- max-w-2xl"
+          className="xl:text-5xl text-4xl font-bold leading-tight mb-6 max-w-2xl"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}

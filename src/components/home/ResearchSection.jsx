@@ -169,12 +169,12 @@ const ResearchInnovations = () => {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
-              <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
-                <div className="flex flex-col justify-center items-end py-4">
+              <div className="absolute inset-0 p-4 flex flex-col justify-between text-white">
+                <div className="flex flex-col justify-center gap-2 items-end">
                   {buttons.map((button, btnIndex) => (
                     <motion.button
                       key={btnIndex}
-                      className={`text-md flex items-center bg-gray-900/50 px-4 py-2 rounded-3xl gap-1 font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                      className={`sm:text-md text-sm flex items-center bg-gray-900/50 px-4 py-2 rounded-3xl font-normal  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
                         lang={currentLanguage}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -188,7 +188,7 @@ const ResearchInnovations = () => {
                 </div>
                 <div>
                   <motion.h3
-                   className={`text-2xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                   className={`text-xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
                    lang={currentLanguage}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
@@ -197,7 +197,7 @@ const ResearchInnovations = () => {
                     {t(`Research.${section.title}`)}
                   </motion.h3>
                   <motion.p
-                     className={`text-lg font-normal mb-4 lg:text-justify  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                     className={`sm:text-lg text-sm font-normal mb-4 lg:text-justify  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
                      lang={currentLanguage}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}

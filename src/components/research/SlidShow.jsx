@@ -90,7 +90,7 @@ const SlideShowSection = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center items-center h-full text-center px-6">
         <motion.h1
-          className="xl:text-3xl text-lg font-bold leading-tight mb-4 max-w-2xl"
+          className="lg:text-4xl text-3xl font-bold leading-tight mb-4 max-w-2xl"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}

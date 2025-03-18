@@ -11,7 +11,7 @@ const Overview = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="text-xl xl:text-3xl font-extrabold text-gray-900"
+                    className="text-3xl font-extrabold text-gray-900"
                 >
                     Overview
                 </motion.h2>

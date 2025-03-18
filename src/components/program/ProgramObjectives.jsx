@@ -83,7 +83,7 @@ const ProgramObjectives = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="xl:w-1/2 w-full order-2 xl:order-1"
                 >
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-4">{programTitle}</h2>
+                    <h2 className="text-3xl font-bold mb-4">{programTitle}</h2>
                     <p className="text-base sm:text-lg mb-6">{description}</p>
 
                     <div className="space-y-6">

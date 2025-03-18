@@ -13,7 +13,7 @@ const Admission = () => {
   console.log("Rendering Admission Page");
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start text-justify">
+    <div className="min-h-screen flex flex-col items-center justify-start ">
       {/* Admission Banner */}
        <Helmet>
               <title>Admission Page - Department of Computer Science</title>

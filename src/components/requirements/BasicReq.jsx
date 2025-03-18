@@ -51,7 +51,7 @@ const BasicRequirements = () => {
                             </div>
 
                             {/* SVG Circle */}
-                            <div className="absolute -bottom-8 xl:-bottom-8 w-[150px] h-[150px] xl:w-[200px] xl:h-[200px]">
+                            <div className="absolute -bottom-8 xl:-bottom-8 w-[150px] h-[150px] lg:w-[200px] lg:h-[200px]">
                                 <svg width="100%" height="100%" viewBox="0 0 400 400">
                                     <defs>
                                         <path
@@ -98,7 +98,7 @@ const BasicRequirements = () => {
                                                           </div>
                                     </div>
                                     <div>
-                                        <p className="text-sm xl:text-lg">{requirement}</p>
+                                        <p className="text-sm xl:text-lg lg:text-justify ">{requirement}</p>
                                     </div>
                                 </div>
                             ))}

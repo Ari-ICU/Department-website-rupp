@@ -19,7 +19,7 @@ const Footer = () => {
                     {/* Location Column with Motion */}
                     <motion.div>
                         <h3 className="text-lg font-normal mb-4 pb-4 border-b border-gray-500/50">{t('footer.Our Location')}</h3>
-                        <div className='h-full '>
+                        <div className='sm:h-full '>
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1734.8315755259034!2d104.89042472626606!3d11.568792400061744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109519fe4077d69%3A0x20138e822e434660!2sRoyal%20University%20of%20Phnom%20Penh!5e0!3m2!1sen!2skh!4v1740962585390!5m2!1sen!2skh"
                                 width="100%"
@@ -33,7 +33,7 @@ const Footer = () => {
                     </motion.div>
 
                     {/* Pages Column with Motion */}
-                    <motion.div>
+                    <motion.div className=''>
                         <h3 className="text-lg font-normal mb-4 pb-4 border-b border-gray-500/50">{t('footer.Our Pages')}</h3>
                         <ul className="xl:text-lg text-sm font-light text-gray-50 ">
                             {["/", "/research", "/programs"].map((path, index) => (

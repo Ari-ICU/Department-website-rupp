@@ -36,12 +36,12 @@ const Overview = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
                             viewport={{ once: true }}
-                            className="lg:text-3xl w-full text-lg font-extrabold text-gray-900"
+                            className=" w-full text-3xl font-extrabold text-gray-900"
                         >
                             {selectedContent.title}
                         </motion.h2>
                     </div>
-                    <div className="xl:max-w-[769px] w-full mx-auto text-justify">
+                    <div className="xl:max-w-[769px] w-full mx-auto sm:text-justify">
                         <motion.p
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}

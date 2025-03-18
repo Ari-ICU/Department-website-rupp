@@ -41,7 +41,7 @@ const TuitionSection = () => {
 
                     {/* Text Section */}
                     <motion.div
-                        className="xl:order-1 order-2 w-full xl:w-1/2 text-center xl:text-left"
+                        className="xl:order-1 order-2 w-full xl:w-1/2  xl:text-left"
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
@@ -53,7 +53,7 @@ const TuitionSection = () => {
                         >
                             Tuition Fee & Payment Methods
                         </motion.h2>
-                        <div className="max-w-2xl mx-auto xl:mx-0 text-justify">
+                        <div className="max-w-2xl mx-auto xl:mx-0 sm:text-justify">
                             <motion.p
                                 className="text-base xl:text-lg text-gray-800 mb-6"
                                 variants={itemVariants}
@@ -67,7 +67,7 @@ const TuitionSection = () => {
                                 We accept all types of payments, including cash (hand-to-hand payment) and online transfers via bank for convenience.
                             </motion.p>
                             <motion.div
-                                className="flex flex-col xl:flex-row items-center justify-center xl:justify-start font-bold text-red-800 mb-4 gap-5"
+                                className="flex flex-row items-center justify-center xl:justify-start font-bold text-red-800 mb-4 gap-5"
                                 variants={itemVariants}
                             >
                                 <div className="p-2 bg-red-900 rounded-2xl">

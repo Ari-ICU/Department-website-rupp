@@ -22,7 +22,7 @@ const WhyChooseUs = () => {
 
     return (
         <motion.section
-            className="bg-gray-100 my-16"
+            className="my-16"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -55,7 +55,7 @@ const WhyChooseUs = () => {
                 >
                     {/* First Card */}
                     <motion.div
-                        className="bg-red-800 text-white rounded-lg p-6 relative"
+                        className="bg-red-800 text-white shadow-lg rounded-lg p-6 relative"
                         variants={itemVariants}
                     >
                         
@@ -74,7 +74,7 @@ const WhyChooseUs = () => {
 
                     {/* Second Card */}
                     <motion.div
-                        className="bg-white rounded-lg p-6 relative"
+                        className="bg-white shadow-lg rounded-lg p-6 relative"
                         variants={itemVariants}
                     >
                         <div className="absolute top-[-40px] right-4 text-7xl opacity-90 text-red-700">
@@ -91,7 +91,7 @@ const WhyChooseUs = () => {
 
                     {/* Third Card */}
                     <motion.div
-                        className="bg-white rounded-lg p-6 relative"
+                        className="bg-white shadow-lg rounded-lg p-6 relative"
                         variants={itemVariants}
                     >
                        <div className="absolute top-[-40px] right-4 text-7xl opacity-90  text-red-700">
@@ -108,7 +108,7 @@ const WhyChooseUs = () => {
 
                     {/* Fourth Card */}
                     <motion.div
-                        className="bg-white rounded-lg p-6 relative"
+                        className="bg-white shadow-lg rounded-lg p-6 relative"
                         variants={itemVariants}
                     >
                          <div className="absolute top-[-40px] right-4 text-7xl opacity-90  text-red-700">

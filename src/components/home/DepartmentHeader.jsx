@@ -8,7 +8,8 @@ import logo from "../../assets/img/rupp.png";
 import { useTranslation } from 'react-i18next';
 
 const DepartmentHeader = () => {
-  const { t } = useTranslation();
+   const { t, i18n } = useTranslation();
+   const currentLanguage = i18n.language;
   return (
     <motion.div
       className="bg-red-900 p-4 "
@@ -37,20 +38,22 @@ const DepartmentHeader = () => {
               transition={{ duration: 0.5 }}
             />
             <motion.h2
-              className="text-white xl:text-xl text-sm font-semibold"
+              className={`text-lg font-normal uppercase text-white ${
+                currentLanguage === "km" ? "font-khmer" : "font-bold"
+              }`}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-             {t("Partnerships.Faculty of Science")} <br className='xl:block hidden' /> {t("Department.Department of Computer Science")}
+             {t("Partnerships.Faculty of Science")} <br className='' /> {t("Department.Department of Computer Science")}
             </motion.h2>
 
           </motion.div>
         </Link>
 
         {/* Right Section with Social Media Icons */}
-        <div className='flex justify-end'>
+        <div className='flex justify-end sm:mt-0 mt-4'>
           <motion.div
             className="flex  space-x-3"
             initial="hidden"

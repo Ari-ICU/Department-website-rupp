@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet';
 
 const CareerDetails = () => {
   return (
-    <div  className='text-justify'>
+    <div  className='sm:text-justify'>
        <Helmet>
         <title>CareerDetails Page - Department of Computer Science</title>
       </Helmet>

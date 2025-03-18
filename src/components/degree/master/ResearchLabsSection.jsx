@@ -46,7 +46,7 @@ const ResearchLabsSection = () => {
     >
       <div className="container mx-auto px-4">
         <motion.div 
-          className="flex flex-col xl:flex-row items-center gap-10"
+          className="flex flex-col lg:flex-row items-center gap-10"
           initial={{ y: 50 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.8 }}
@@ -66,7 +66,7 @@ const ResearchLabsSection = () => {
           {/* Text and Features Section */}
           <div className="w-full xl:w-[950px] md:pl-8">
             <motion.h2 
-               className={`text-3xl font-normal mb-4  ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+               className={`text-3xl font-normal mb-8  ${currentLanguage === 'km' ? "" : ""}`}
                lang={currentLanguage}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

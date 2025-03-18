@@ -29,10 +29,10 @@ const AcademicFacilities = () => {
     return (
         <div className="my-16">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col xl:flex-row items-center ">
+                <div className="flex flex-col lg:flex-row gap-6 items-center ">
                     
                     {/* Image Section */}
-                    <div className="w-full xl:w-[651px] h-full xl:h-[615px] flex justify-center xl:justify-start">
+                    <div className="w-full xl:w-[651px] h-full xl:h-[615px] flex justify-center lg:justify-start">
                         <div className="">
                             <img
                                 src={m1}

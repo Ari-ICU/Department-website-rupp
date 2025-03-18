@@ -69,13 +69,13 @@ const CareerPaths = () => {
         <div className="flex flex-col xl:flex-row gap-8">
           {/* Text content */}
           <motion.div
-            className="w-full xl:w-1/2 text-center xl:text-left"
+            className="w-full xl:w-1/2 text-center"
             variants={itemVariants}
           >
-            <div className="flex flex-col xl:flex-row items-center xl:items-start mb-8">
-              <div className="mr-6">
-                <h2 className="text-2xl xl:text-3xl font-semibold mb-2">Career Paths in</h2>
-                <h2 className="text-2xl xl:text-3xl font-semibold">Computer Science</h2>
+            <div className="flex flex-col lg:flex-row items-start mb-8">
+              <div className="mr-6 text-left">
+                <h2 className="text-3xl font-semibold mb-2">Career Paths in</h2>
+                <h2 className="text-3xl font-semibold">Computer Science</h2>
                 <p className="mt-4 text-gray-800">
                   Graduates of the Computer Science Undergraduate Program can pursue careers in various fields such as
                 </p>

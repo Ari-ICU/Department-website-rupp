@@ -70,9 +70,9 @@ const ScholarshipSection = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col xl:flex-row xl:justify-between items-center gap-8 mb-6">
                     <h2 className="text-2xl font-semibold">Available Scholarships</h2>
-                    <div className='flex gap-4'>
+                    <div className='flex sm:gap-4 '>
                         {/* Search Input */}
-                        <div className="relative">
+                        <div className="relative w-full">
                             <input
                                 type="text"
                                 placeholder="Search"
@@ -86,14 +86,14 @@ const ScholarshipSection = () => {
                         </div>
 
                         {/* Filter Dropdown with React Icon */}
-                        <div className="relative">
+                        <div className="relative w-full">
                             <FaFilter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-50" />
                             <select
-                                className="border rounded-full py-2 pl-10 pr-4 bg-red-800 text-gray-50 focus:outline-none focus:ring focus:border-blue-300 appearance-none"
+                                className="border rounded-full py-2 pl-10   bg-red-800 text-gray-50 focus:outline-none focus:ring focus:border-blue-300 appearance-none"
                                 value={selectedTag}
                                 onChange={(e) => setSelectedTag(e.target.value)}
                             >
-                                <option value="">All Banks</option>
+                                <option value="">All</option>
                                 {tags.map((tag, index) => (
                                     <option key={index} value={tag}>{tag}</option>
                                 ))}

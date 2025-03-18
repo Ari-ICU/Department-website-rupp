@@ -10,21 +10,21 @@ const InnovationSection = () => {
 
      <div className='my-16'>
            <div className="container mx-auto px-4">
-            <div className="flex flex-col xl:flex-row justify-between items-center gap-8">
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
                 {/* Left Section with Text and Icons */}
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
-                    className="max-w-full xl:max-w-[679px] p-6 rounded-lg order-2 xl:order-1"
+                    className="max-w-full xl:max-w-[679px] rounded-lg order-2 lg:order-1"
                 >
                     <motion.h1
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="text-lg lg:text-3xl font-bold text-gray-800 mb-4"
+                        className="text-3xl font-bold text-gray-800 mb-4"
                     >
                         Driving Innovation, Education & Impact
                     </motion.h1>
@@ -33,7 +33,7 @@ const InnovationSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="text-gray-600 mb-4 text-[12px] xl:text-[14px] text-justify"
+                        className="text-gray-600 mb-4 text-[12px] xl:text-[14px] sm:text-justify"
                     >
                         To be Cambodia’s flagship university with regional standing in teaching and learning, research and innovation, and social engagement.
                     </motion.p>
@@ -42,17 +42,16 @@ const InnovationSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="text-gray-600 mb-4 text-[12px] xl:text-[14px] text-justify"
+                        className="text-gray-600 mb-4 text-[12px] xl:text-[14px] sm:text-justify"
                     >
                         To contribute to national, regional, and global sustainable development and the preservation of national cultural and natural heritage by:
                     </motion.p>
 
                     <motion.ul
-                        initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.8 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="space-y-4 text-gray-600 mb-6 text-[12px] xl:text-[14px] text-justify"
+                        className="space-y-4 text-gray-600 mb-6 text-[12px] xl:text-[14px] sm:text-justify"
                     >
                         <li className="flex items-start ">
                             <div className='border border-red-800 p-2 rounded-full mr-2'>
@@ -68,7 +67,7 @@ const InnovationSection = () => {
                         </li>
                     </motion.ul>
 
-                    <div className='grid grid-cols-1 sm:grid-cols-2 justify-center gap-6 mb-6 text-[12px] xl:text-[14px]'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 justify-center gap-6 mb-6 text-[12px] lg:text-[14px]'>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}

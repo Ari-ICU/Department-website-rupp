@@ -62,7 +62,7 @@ const ResearchBanner = () => {
                                     viewport={{ once: true, amount: 0.5 }}
                                     className='max-w-xl *:mb-6'
                                 >
-                                    <h3 className="xl:text-3xl text-lg font-semibold mb-2">
+                                    <h3 className="lg:text-4xl text-3xl font-semibold mb-2">
                                         {section.title}
                                     </h3>
                                     <motion.p

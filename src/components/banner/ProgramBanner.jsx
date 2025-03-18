@@ -23,7 +23,7 @@ const ProgramBanner = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="text-lg xl:text-3xl font-bold text-white mb-6"
+                        className="text-3xl lg:text-4xl font-bold text-white mb-6"
                     >
                         Our Program
                     </motion.h2>

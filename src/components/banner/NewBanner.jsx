@@ -29,7 +29,7 @@ const NewBanner = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true, amount: 0.5 }}
-          className="text-xl sm:text-4xl font-bold drop-shadow-md"
+          className="text-3xl sm:text-4xl font-bold drop-shadow-md"
         >
           {title}
         </motion.h1>
