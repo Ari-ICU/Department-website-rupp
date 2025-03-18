@@ -9,7 +9,7 @@ const News = () => {
   return (
     <div>
       <Helmet>
-      <title>News&Events Page - Department of Computer Science</title>
+      <title>News&Events - Department of Computer Science</title>
       </Helmet>
         <div>
             <NewBanner />

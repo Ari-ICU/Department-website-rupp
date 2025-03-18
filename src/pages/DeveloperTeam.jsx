@@ -10,7 +10,7 @@ const DeveloperTeam = () => {
   return (
     <div>
       <Helmet>
-        <title>Developer Page - Department of Computer Science</title>
+        <title>Developer - Department of Computer Science</title>
       </Helmet>
       <div className='text-justify'>
         <DeveloperTeamBanner />

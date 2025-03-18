@@ -17,7 +17,7 @@ const Homepages = () => {
   return (
     <div className="">
       <Helmet>
-      <title>Home Page - Department of Computer Science</title>
+      <title>Home - Department of Computer Science</title>
       </Helmet>
       <SlideShowSection />
       <div className="  ">

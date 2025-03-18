@@ -12,7 +12,7 @@ const FacultyDetails = () => {
   return (
     <div>
       <Helmet>
-      <title>Faculty Details Page - Department of Computer Science</title>
+      <title>Faculty Details - Department of Computer Science</title>
       </Helmet>
       <div  className=''>
         <ProfileSection />

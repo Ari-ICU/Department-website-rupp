@@ -16,7 +16,7 @@ const Admission = () => {
     <div className="min-h-screen flex flex-col items-center justify-start ">
       {/* Admission Banner */}
        <Helmet>
-              <title>Admission Page - Department of Computer Science</title>
+              <title>Admission - Department of Computer Science</title>
             </Helmet>
       <div className="w-full">
         <AdmissionBanner />

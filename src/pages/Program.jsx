@@ -13,7 +13,7 @@ const Program = () => {
   return (
     <div>
       <Helmet>
-      <title>Programs Page - Department of Computer Science</title>
+      <title>Programs - Department of Computer Science</title>
       </Helmet>
       <div>
         <ProgramBanner />

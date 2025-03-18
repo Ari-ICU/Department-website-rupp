@@ -11,7 +11,7 @@ const CareerDetails = () => {
   return (
     <div  className='sm:text-justify'>
        <Helmet>
-        <title>CareerDetails Page - Department of Computer Science</title>
+        <title>Career Details  - Department of Computer Science</title>
       </Helmet>
         <div>
             <CareerBanner />

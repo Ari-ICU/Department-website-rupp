@@ -11,7 +11,7 @@ const ScholarshipDetails = () => {
   return (
     <div>
       <Helmet>
-      <title>Scholarships Details Page - Department of Computer Science</title>
+      <title>Scholarships Details - Department of Computer Science</title>
       </Helmet>
       <div>
         <ScholarDetailsBanner />

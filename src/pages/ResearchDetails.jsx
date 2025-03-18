@@ -13,7 +13,7 @@ const ResearchDetails = () => {
   return (
     <div>
       <Helmet>
-      <title>Research Details Page - Department of Computer Science</title>
+      <title>Research Details - Department of Computer Science</title>
       </Helmet>
         <div className='lg:text-justify'>
             <ResearchBanner />

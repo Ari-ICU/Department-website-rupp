@@ -11,7 +11,7 @@ const Contact = () => {
     return (
         <div>
             <Helmet>
-                <title>Contact Page - Department of Computer Science</title>
+                <title>Contact - Department of Computer Science</title>
             </Helmet>
             <div className='text-justify'>
                 <CSAboutSection />

@@ -10,7 +10,7 @@ const Faculty = () => {
   return (
     <div>
        <Helmet>
-              <title>Faculty Page - Department of Computer Science</title>
+              <title>Faculty - Department of Computer Science</title>
             </Helmet>
         <div>
             <FacultyBanner />

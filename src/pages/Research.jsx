@@ -12,7 +12,7 @@ const Research = () => {
   return (
     <div>
       <Helmet>
-      <title>Research Page - Department of Computer Science</title>
+      <title>Research - Department of Computer Science</title>
       </Helmet>
       <div>
         <SlideShowSection />

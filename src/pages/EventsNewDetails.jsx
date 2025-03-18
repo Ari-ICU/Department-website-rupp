@@ -11,7 +11,7 @@ const EventsNewDetails = () => {
   return (
     <div>
       <Helmet>
-        <title>News&Events Details Page - Department of Computer Science</title>
+        <title>News&Events Details - Department of Computer Science</title>
       </Helmet>
       <div className='text-justify'>
         <EventsDetailsBanner />

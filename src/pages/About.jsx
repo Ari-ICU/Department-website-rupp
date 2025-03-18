@@ -17,7 +17,7 @@ const About = () => {
   return (
     <div  >
       <Helmet>
-        <title>About Page - Department of Computer Science</title>
+        <title>About - Department of Computer Science</title>
       </Helmet>
       <CSAboutSection />
       <div className=" ">

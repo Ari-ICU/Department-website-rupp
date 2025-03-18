@@ -8,7 +8,7 @@ const LabDetails = () => {
   return (
     <div  className='text-justify'> 
     <Helmet >
-    <title>Lab Details Page - Department of Computer Science</title>
+    <title>Lab Details - Department of Computer Science</title>
     </Helmet>
     <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-6'>
