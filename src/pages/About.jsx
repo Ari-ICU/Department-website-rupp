@@ -9,12 +9,16 @@ import StrategicPillarsSection from "../components/about/StrategicPillarsSection
 import FAQSection from "../components/about/FAQSection";
 import DepartmentHeader from "../components/home/DepartmentHeader";
 import StatisticsSection from "../components/home/StatisticsSection"
+import { Helmet } from 'react-helmet';
 
 
 const About = () => {
+
   return (
     <div  >
-      
+      <Helmet>
+        <title>About Page - Department of Computer Science</title>
+      </Helmet>
       <CSAboutSection />
       <div className=" ">
         <StatisticsSection />
@@ -36,7 +40,7 @@ const About = () => {
         <FacultyCarousel />
         <FAQSection />
       </div>
-    
+
       <DepartmentHeader />
     </div>
   );

@@ -1,20 +1,24 @@
 import React from 'react'
 import DeveloperTeamBanner from '../components/banner/DeveloperTeamBanner'
 import Overview from '../components/developerteam/Overview'
-import TeamLeader from '../components/developerteam/TeamLeader'
 import MemberTeam from '../components/developerteam/MemberTeam'
 import DepartmentHeader from '../components/home/DepartmentHeader'
+import { Helmet } from 'react-helmet';
+
 
 const DeveloperTeam = () => {
   return (
     <div>
-        <div  className='text-justify'>
-            <DeveloperTeamBanner />
-            <Overview />
-            {/* <TeamLeader /> */}
-            <MemberTeam />
-        </div>
-        <DepartmentHeader />
+      <Helmet>
+        <title>Developer Page - Department of Computer Science</title>
+      </Helmet>
+      <div className='text-justify'>
+        <DeveloperTeamBanner />
+        <Overview />
+        {/* <TeamLeader /> */}
+        <MemberTeam />
+      </div>
+      <DepartmentHeader />
     </div>
   )
 }

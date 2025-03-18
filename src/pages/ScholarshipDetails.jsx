@@ -4,11 +4,15 @@ import ScholarDetails from '../components/scholardetails/ScholarsDetails'
 import ImageSection from '../components/scholardetails/ImageSection';
 import DepartmentHeader from '../components/home/DepartmentHeader'
 import ApplicationDetails from '../components/scholardetails/ApplicationDetails';
+import { Helmet } from 'react-helmet';
 
 
 const ScholarshipDetails = () => {
   return (
     <div>
+      <Helmet>
+      <title>Scholarships Details Page - Department of Computer Science</title>
+      </Helmet>
       <div>
         <ScholarDetailsBanner />
         <ScholarDetails />

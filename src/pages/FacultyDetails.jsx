@@ -6,10 +6,14 @@ import SelectedPublicationsSection from '../components/facultyDetails/SelectedPu
 import BackgroundSection from '../components/facultyDetails/BackgroundSection'
 import CourseProjectsSection from '../components/facultyDetails/CourseProjectsSection'
 import DepartmentHeader from '../components/home/DepartmentHeader'
+import { Helmet } from 'react-helmet'
 
 const FacultyDetails = () => {
   return (
     <div>
+      <Helmet>
+      <title>Faculty Details Page - Department of Computer Science</title>
+      </Helmet>
       <div  className=''>
         <ProfileSection />
         <div className='container mx-auto flex justify-center px-4 '>

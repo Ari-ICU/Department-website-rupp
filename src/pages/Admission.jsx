@@ -6,6 +6,8 @@ import BasicRequirements from '../components/requirements/BasicReq';
 import ApplySection from '../components/admission/ApplySection';
 import ImportantDates from '../components/admission/ImportantDates';
 import ScholarshipOpportunities from '../components/scholar/ScholarshipOpportunities';
+import { Helmet } from 'react-helmet';
+
 
 const Admission = () => {
   console.log("Rendering Admission Page");
@@ -13,6 +15,9 @@ const Admission = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-start text-justify">
       {/* Admission Banner */}
+       <Helmet>
+              <title>Admission Page - Department of Computer Science</title>
+            </Helmet>
       <div className="w-full">
         <AdmissionBanner />
       </div>

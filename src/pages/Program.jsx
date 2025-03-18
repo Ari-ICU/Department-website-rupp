@@ -7,10 +7,14 @@ import MastersPromotion from '../components/introduction/MastersPromotion'
 import WhyChooseProgram from '../components/why/WhyChooseProgram'
 import ContactAdmissions from '../components/introduction/ContactAdmissions'
 import DepartmentHeader from '../components/home/DepartmentHeader'
+import { Helmet } from 'react-helmet'
 
 const Program = () => {
   return (
     <div>
+      <Helmet>
+      <title>Programs Page - Department of Computer Science</title>
+      </Helmet>
       <div>
         <ProgramBanner />
         <div className=' '>

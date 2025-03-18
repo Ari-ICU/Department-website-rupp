@@ -13,6 +13,7 @@ import StudyOverview from '../components/degree/overview/StudyOverview';
 import Overview from '../components/degree/overview/Overview';
 
 
+
 const degreeComponents = {
   bachelor: [
     { component: <DegreeSlider /> },

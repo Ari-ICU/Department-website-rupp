@@ -7,10 +7,14 @@ import RecentResearch from '../components/researchDetails/RecentResearch'
 import FocusAreas from '../components/researchDetails/FocusAreas'
 import ProjectReq from '../components/requirements/ProjectRequirements'
 import ProfessorSection from '../components/research/ProfessorSection'
+import { Helmet } from 'react-helmet'
 
 const ResearchDetails = () => {
   return (
     <div>
+      <Helmet>
+      <title>Research Details Page - Department of Computer Science</title>
+      </Helmet>
         <div className='text-justify'>
             <ResearchBanner />
             <Overview />

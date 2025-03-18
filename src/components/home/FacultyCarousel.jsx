@@ -111,6 +111,7 @@ const FacultyCarousel = () => {
                     viewport={{ once: true }}
                     className="overflow-hidden "
                 >
+                    <Link to="/faculty/:id">
                     <div ref={containerRef} className="flex space-x-8 overflow-x-auto py-6 p-4 scroll-smooth">
                         {facultyMembers.map((faculty, index) => (
                             <motion.div
@@ -171,6 +172,7 @@ const FacultyCarousel = () => {
                             </motion.div>
                         ))}
                     </div>
+                    </Link>
                 </motion.div>
             </div>
         </div>

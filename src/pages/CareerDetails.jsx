@@ -4,10 +4,15 @@ import DepartmentHeader from '../components/home/DepartmentHeader'
 import CareerSection from '../components/careerDetails/CareerSection'
 import CareerBanner from '../components/banner/CareerBanner'
 import RelatedArtical from '../components/careerDetails/RelatedArtical'
+import { Helmet } from 'react-helmet';
+
 
 const CareerDetails = () => {
   return (
     <div  className='text-justify'>
+       <Helmet>
+        <title>CareerDetails Page - Department of Computer Science</title>
+      </Helmet>
         <div>
             <CareerBanner />
             <SocialIcon />

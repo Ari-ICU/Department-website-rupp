@@ -11,10 +11,14 @@ import EventsNews from "../components/home/EventsNews";
 import LatestNews from '../components/news/LatestNews'
 import PartnershipSection from  "../components/home/PartnershipSection";
 import DepartmentHeader from "../components/home/DepartmentHeader";
+import { Helmet } from "react-helmet";
 
 const Homepages = () => {
   return (
     <div className="">
+      <Helmet>
+      <title>Home Page - Department of Computer Science</title>
+      </Helmet>
       <SlideShowSection />
       <div className="  ">
         <ServiceSection />
