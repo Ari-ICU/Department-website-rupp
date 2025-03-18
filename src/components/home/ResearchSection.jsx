@@ -197,7 +197,7 @@ const ResearchInnovations = () => {
                     {t(`Research.${section.title}`)}
                   </motion.h3>
                   <motion.p
-                     className={`sm:text-lg text-sm font-normal mb-4 lg:text-justify  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
+                     className={`sm:text-lg text-sm font-normal mb-4 sm:block hidden lg:text-justify  ${currentLanguage === 'km' ? "font-khmer" : ""}`}
                      lang={currentLanguage}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
