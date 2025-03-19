@@ -172,7 +172,8 @@ const Header = () => {
 
           {/* Desktop Navigation and Actions */}
           <div className="flex items-center space-x-4">
-              <div className="hidden lg:block">
+          <div className="">
+              <div className="hidden xl:block">
                 <Navbar isOpen={isMobileMenuOpen} setIsOpen={setIsMobileMenuOpen} />
               </div>
               </div>
@@ -190,11 +191,12 @@ const Header = () => {
               <LanguageSwitcherButton />
               <button
                 onClick={toggleMenu}
-                className="lg:hidden text-gray-600 hover:text-red-800 p-2"
+                className="xl:hidden text-gray-600 hover:text-red-800 p-2"
               >
                 {isMobileMenuOpen ? <FaTimes className="text-3xl" /> : <FaBars className="text-3xl" />}
               </button>
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -203,7 +205,7 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div 
           ref={mobileMenuRef}
-          className="lg:hidden fixed top-0 left-0 w-full h-full bg-white shadow-md z-40 overflow-y-auto"
+          className="xl:hidden fixed top-0 left-0 w-full h-full bg-white shadow-md z-40 overflow-y-auto"
         >
           <div className="p-6 relative">
 
