@@ -8,7 +8,7 @@ const StatisticsSection = () => {
     const stats = [
         { value: "2,000", rank: t("Statistics.Students") },
         { value: 50, rank: t("Statistics.Increase Enrollment") },
-        { value: "1st", rank: t("Statistics.University In Cambodia") },
+        { value: "1<sup class='text-md'>st</sup>", rank: t("Statistics.University In Cambodia") },
     ];
 
     return (
@@ -19,7 +19,7 @@ const StatisticsSection = () => {
                     {stats.map((stat, index) => (
                         <StatisticCard
                             key={index}
-                            value={stat.value}
+                            value={<span dangerouslySetInnerHTML={{ __html: stat.value }} />} 
                             percentage={stat.percentage}
                             rank={stat.rank}
                             className="text-center text-lg font-semibold"
