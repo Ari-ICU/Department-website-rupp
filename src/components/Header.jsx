@@ -146,7 +146,7 @@ const Header = () => {
 
       {/* Main Header */}
       <div className={`p-4 ${isSearchOpen ? "pt-34" : ""}`}>
-        <div className="max-w-8xl mx-auto px-4">
+        <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-2">
             {/* Logo */}
             <motion.div

@@ -15,7 +15,7 @@ const Footer = () => {
     return (
         <motion.footer className="bg-black text-white py-8">
             <div className="container mx-auto px-4 border-b mb-5 pb-20 border-gray-500/50  ">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
                     {/* Location Column with Motion */}
                     <motion.div>
                         <h3 className="text-lg font-normal mb-4 pb-4 border-b border-gray-500/50">{t('footer.Our Location')}</h3>

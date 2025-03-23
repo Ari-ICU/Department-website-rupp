@@ -12,12 +12,12 @@ const DepartmentHeader = () => {
    const currentLanguage = i18n.language;
   return (
     <motion.div
-      className="bg-red-900 p-4 "
+      className="bg-red-900 "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto flex flex-col sm:flex-row p-4 items-center justify-between ">
+      <div className="container mx-auto flex flex-col sm:flex-row px-4 py-8 items-center justify-between ">
         {/* Left Section with Logo and Text */}
         <Link to='' className=' cursor-pointer'>
           <motion.div

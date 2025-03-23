@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 import fortinet from "../../assets/img/fortinet.png";
-import Fauna from "../../assets/img/Fauna.png";
+import Fauna from "../../assets/partner/huawei1.png";
 import cisco from "../../assets/img/cisco.png";
 import aws from "../../assets/img/aws.png";
 
