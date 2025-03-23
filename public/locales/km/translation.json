@@ -40,6 +40,8 @@
   "News": {
     "Latest News & Announcements": "ព័ត៌មាន និងសេចក្តីប្រកាសថ្មីៗ",
     "News": "ព័ត៌មាន",
+    "Events": "ព្រឹត្តិការណ៍សំខាន់ៗ",
+    "Announment" : "សេចក្តីប្រកាសថ្មីៗ",
     "Re-exam schedule for 1st, 2nd students": "កាលវិភាគការប្រឡងឡើងវិញសម្រាប់និស្សិតឆ្នាំទី 1 និងឆ្នាំទី 2",
     "Student office has a new announcement regarding re-exam...": "ការិយាល័យនិស្សិតមានសេចក្តីប្រកាសថ្មីទាក់ទងនឹងការប្រឡងឡើងវិញ…",
     "Semester Break & Holiday Notices": "សេចក្តីជូនដំណឹងអំពីការឈប់សម្រាកនៃឆមាស និងថ្ងៃឈប់សម្រាក",
@@ -86,9 +88,9 @@
     "Explore": "ស្វែងយល់"
   },
   "Statistics": {
-    "students": "និស្សិត",
-    "increase enrollment": "បង្កើនការចុះឈ្មោះសិក្សា",
-    "university in cambodia": "សាកលវិទ្យាល័យនៅកម្ពុជា"
+    "Students": "និស្សិត",
+    "Increase Enrollment": "បង្កើនការចុះឈ្មោះសិក្សា",
+    "University In Cambodia": "សាកលវិទ្យាល័យនៅកម្ពុជា"
   },
   "Contact": {
     "Contact Us If You Have Any Questions": " សូមទាក់ទងមកពួកយើង ប្រសិនបើអ្នកមានសំណួរ",

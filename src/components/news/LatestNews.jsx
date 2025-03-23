@@ -26,13 +26,13 @@ const LatestNews = () => {
             title: 'Semester Break & Holiday Notices',
             description: 'A new semester break for 4th year students will be hosted on 21 Jun...',
             imageUrl: p1,
-            tag: 'News',
+            tag: 'Events',
         },
         {
             title: 'Re-exam schedule for 1st, 2nd students',
             description: 'Student office has a new announcement regarding re-exam...',
             imageUrl: p1,
-            tag: 'News',
+            tag: 'Announment',
         },
         {
             title: 'Semester Break & Holiday Notices',
@@ -69,7 +69,7 @@ const LatestNews = () => {
                 >
                     <h1 className={`text-3xl font-normal mb-4 ${currentLanguage === 'km' && isHomePage ? "font-khmer" : "font-semibold"}`}
                         lang={currentLanguage}>
-                        {isHomePage ? t('News.Latest News & Announcements') : 'Latest News & Announcements'}
+                        {isHomePage ? t('News.Latest News & Announcements') : 'Announcements'}
                     </h1>
                     <motion.div
                         initial={{ opacity: 0, y: -50 }}
