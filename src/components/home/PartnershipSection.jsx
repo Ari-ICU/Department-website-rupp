@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
-import fortinet from "../../assets/img/fortinet.png";
-import Fauna from "../../assets/partner/huawei1.png";
-import cisco from "../../assets/img/cisco.png";
-import aws from "../../assets/img/aws.png";
+import fortinet from "../../assets/partner/fortinet.png";
+import Fauna from "../../assets/partner/huawei.png";
+import cisco from "../../assets/partner/cisco.png";
+import aws from "../../assets/partner/aws.png";
 
 const PartnershipSection = () => {
   const partners = [
