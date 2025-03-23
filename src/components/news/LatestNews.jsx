@@ -69,7 +69,7 @@ const LatestNews = () => {
                 >
                     <h1 className={`text-3xl font-normal mb-4 ${currentLanguage === 'km' && isHomePage ? "font-khmer" : "font-semibold"}`}
                         lang={currentLanguage}>
-                        {isHomePage ? t('News.Latest News & Announcements') : 'Announcements'}
+                        {isHomePage ? t('News.Announcements') : 'Announcements'}
                     </h1>
                     <motion.div
                         initial={{ opacity: 0, y: -50 }}
