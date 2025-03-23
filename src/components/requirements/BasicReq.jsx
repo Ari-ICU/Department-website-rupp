@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaCheck } from "react-icons/fa";
 import p3 from "../../assets/admission/4.png";
-import p4 from "../../assets/model/web-sample-4(3).jpg";
+import p4 from "../../assets/admission/11.png";
 
 const BasicRequirements = () => {
     const requirements = [

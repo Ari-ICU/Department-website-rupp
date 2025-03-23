@@ -99,7 +99,7 @@ const ScholarshipOpportunities = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="xl:text-3xl text-xl font-semibold text-gray-900"
+                        className="text-3xl font-semibold text-gray-900"
                     >
                         Check Out Scholarship Opportunities
                     </motion.h2>
@@ -123,44 +123,55 @@ const ScholarshipOpportunities = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                     viewport={{ once: true }}
-                    className="overflow-x-auto py-2"
+                    className=" py-2"
                 >
-                    <div ref={scrollContainerRef} className="flex space-x-6">
-                        {events.map((event, index) => (
-                            <motion.div
-                                key={event.id}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.2 }}
-                                viewport={{ once: true }}
-                                className="bg-white rounded-2xl shadow-md overflow-hidden flex justify-center items-center flex-shrink-0 max-w-xl "
-                                whileHover={{ scale: 1.05 }}
-                            >
-                                <div className="w-full h-full p-2 flex justify-center items-center">
-                                    <img src={event.imageUrl} alt={event.title} className="w-full h-full object-cover rounded-2xl" />
-                                </div>
-
-                                <div className="p-6 w-full">
-                                    {event.category && (
-                                        <span className="text-xs font-semibold text-red-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
-                                            {event.category}
-                                        </span>
-                                    )}
-                                    <h3 className="mt-2 text-lg font-semibold text-gray-900">{event.title}</h3>
-                                    <p className="mt-2 text-sm text-gray-800">{event.description}</p>
-                                    <span className="text-sm text-gray-800">{event.date}</span>
-                                    <div className="mt-4">
-                                        <button
-                                            className="bg-red-800 hover:bg-red-900 text-white py-2 px-4 rounded-xl"
-                                            onClick={() => navigate(`/scholars/${event.id}`)}
-                                        >
-                                            View Detail
-                                        </button>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        ))}
+                    {/* Add overflow container with calculated width */}
+                    <div className="overflow-x-auto pb-4">
+                        <div
+                            ref={scrollContainerRef}
+                            className="flex gap-6 pb-4 " 
+                        >
+                            {events.map((event, index) => (
+                              <motion.div
+                              key={event.id}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              transition={{ duration: 0.5, delay: index * 0.2 }}
+                              viewport={{ once: true }}
+                              className="bg-white rounded-2xl p-2 shadow-md flex flex-col sm:flex-row justify-between items-center flex-shrink-0"
+                              
+                          >
+                              {/* Image Section */}
+                              <div className="w-78 h-full flex justify-center items-center overflow-hidden rounded-2xl">
+                                  <img src={event.imageUrl} alt={event.title} className="w-full h-full object-cover" />
+                              </div>
+                          
+                              {/* Content Section */}
+                              <div className="p-4 sm:p-6 w-78">
+                                  {event.category && (
+                                      <span className="text-xs font-semibold text-red-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
+                                          {event.category}
+                                      </span>
+                                  )}
+                                  <h3 className="mt-2 text-base sm:text-lg lg:text-xl font-semibold text-gray-900">{event.title}</h3>
+                                  <p className="mt-2 text-sm sm:text-base text-gray-800">{event.description}</p>
+                                  <span className="text-sm sm:text-base text-gray-800">{event.date}</span>
+                                  <div className="mt-4">
+                                      <button
+                                          className="bg-red-800 hover:bg-red-900 text-white py-2 px-4 rounded-xl text-sm sm:text-base"
+                                          onClick={() => navigate(`/scholars/${event.id}`)}
+                                      >
+                                          View Detail
+                                      </button>
+                                  </div>
+                              </div>
+                          </motion.div>
+                          
+                            ))}
+                        </div>
                     </div>
                 </motion.div>
+
+
             </div>
         </div>
     );
