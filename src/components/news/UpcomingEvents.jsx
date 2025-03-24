@@ -33,20 +33,20 @@ const UpcomingEvents = () => {
                 {/* Header Section */}
                 <div className="flex flex-col xl:flex-row justify-between items-center mb-8">
                     <div className="mb-6 xl:mb-0">
-                        <h2 className="text-3xl font-semibold mb-2">Current & Upcoming Events</h2>
+                        <h2 className="text-3xl font-semibold mb-2">Events</h2>
                         <p className="text-gray-600 mt-6 max-w-3xl">
                             Engage in insightful discussions, network with industry experts, and explore career opportunities through our upcoming academic and professional events.
                         </p>
                     </div>
-                    <div className='flex gap-4 p-2'>
+                    <div className='w-full flex flex-col sm:flex-row gap-4 p-2'>
                         {/* Search Input */}
-                        <div className="relative">
+                        <div className="relative w-full sm:order-1 order-2">
                             <input
                                 type="text"
                                 placeholder="Search events..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                className="border rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring focus:border-blue-300"
+                                className="border w-full rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring focus:border-blue-300"
                             />
                             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <FaSearch className="text-gray-400" />
@@ -55,14 +55,14 @@ const UpcomingEvents = () => {
 
 
                         {/* Filter Dropdown with React Icon */}
-                        <div className="relative">
+                        <div className="relative sm:order-2 order-1">
                             <FaFilter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-50" />
                             <select
                                 className="border rounded-full py-2 pl-10 pr-4 bg-red-800 text-gray-50 focus:outline-none focus:ring focus:border-blue-300 appearance-none"
                                 value={selectedCategory}
                                 onChange={(e) => setSelectedCategory(e.target.value)}
                             >
-                                <option value="">All Categories</option>
+                                <option value="">All</option>
                                 {categories.map((category, index) => (
                                     <option key={index} value={category}>{category}</option>
                                 ))}
@@ -74,14 +74,14 @@ const UpcomingEvents = () => {
                 {/* Events Section */}
                 <div className="py-2">
                     {filteredEvents.length > 0 ? (
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {filteredEvents.map((event) => (
                                 <button key={event.id} onClick={() => navigate(`/news&events/${event.id}`)} className='text-start'>
-                                    <div className="bg-white rounded-2xl shadow-md flex flex-col xl:flex-row hover:shadow-lg transition-shadow duration-300">
-                                        <div className="mx-auto xl:w-1/2 flex justify-center items-center">
-                                            <img src={event.imageUrl} alt={event.title} className="w-full h-56 object-cover rounded-2xl" />
+                                    <div className="bg-white rounded-2xl shadow-md flex flex-col lg:flex-row hover:shadow-lg transition-shadow duration-300">
+                                        <div className="mx-auto w-full flex justify-center items-center">
+                                            <img src={event.imageUrl} alt={event.title} className="w-full h-full md:h-56 object-cover rounded-2xl" />
                                         </div>
-                                        <div className="p-6 w-full md:w-1/2">
+                                        <div className="p-6 w-full">
                                             {event.category && (
                                                 <span className="text-xs font-semibold text-red-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
                                                     {event.category}
