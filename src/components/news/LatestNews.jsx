@@ -71,18 +71,20 @@ const LatestNews = () => {
                         lang={currentLanguage}>
                         {isHomePage ? t('News.Announcements') : 'Announcements'}
                     </h1>
-                    <motion.div
-                        initial={{ opacity: 0, y: -50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.6 }}
-                        viewport={{ once: true }}
-                        className="w-full md:w-auto mt-4 md:mt-0"
-                    >
-                        <Link to='/news&events' className='flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1'>
-                            <span className="mr-2 xl:text-sm text-[12px]">{isHomePage ? t('News.View All') : 'View All'}</span>
-                            <FaArrowRight className="text-red-800" />
-                        </Link>
-                    </motion.div>
+                    {isHomePage && (
+                        <motion.div
+                            initial={{ opacity: 0, y: -50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.6 }}
+                            viewport={{ once: true }}
+                            className="w-full md:w-auto mt-4 md:mt-0"
+                        >
+                            <Link to='/news&events' className='flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1'>
+                                <span className="mr-2 xl:text-sm text-[12px]">{t('News.View All')}</span>
+                                <FaArrowRight className="text-red-800" />
+                            </Link>
+                        </motion.div>
+                    )}
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6">

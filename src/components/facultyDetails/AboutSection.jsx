@@ -31,7 +31,7 @@ const AboutSection = () => {
                 {/* Contact Section */}
                 <div className="space-y-4 ">
                     <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Contact Info</h3>
-                    <div className="space-y-2 flex items-center gap-6">
+                    <div className="space-y-2 flex flex-col sm:flex-row items-center gap-6">
                         <p className="text-red-700 hover:text-red-600 p-2 px-6 bg-pink-100 rounded-full transition-colors">
                         <span className="font-normal">098 989 898</span>
                         </p>

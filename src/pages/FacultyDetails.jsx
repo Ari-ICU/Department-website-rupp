@@ -16,7 +16,7 @@ const FacultyDetails = () => {
       </Helmet>
       <div  className=''>
         <ProfileSection />
-        <div className='container mx-auto flex justify-center px-4 '>
+        <div className='container mx-auto flex flex-col md:flex-row justify-center px-4 '>
           <div className=''>
             <AboutSection />
             <ResearchProjectsSection />

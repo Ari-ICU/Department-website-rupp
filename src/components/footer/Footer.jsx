@@ -35,13 +35,14 @@ const Footer = () => {
                     {/* Pages Column with Motion */}
                     <motion.div className=''>
                         <h3 className="text-lg font-normal mb-4 pb-4 border-b border-gray-500/50">{t('footer.Our Pages')}</h3>
-                        <ul className="xl:text-lg text-sm font-light text-gray-50 ">
+                        <ul className="xl:text-lg text-sm font-light text-gray-300 ">
                             {["/", "/research", "/programs"].map((path, index) => (
                                 <motion.li
                                     key={index}
-                                    className="mb-2 hover:text-red-600"
+                                    whileHover={{ x: 10 }}
+                                    className="mb-2 hover:text-red-900"
                                 >
-                                    <Link to={path} className={`hover:text-red-600 ${location.pathname === path ? "text-red-600 font-bold" : ""}`}>
+                                    <Link to={path} className={`hover:text-red-900 ${location.pathname === path ? "text-red-800 font-bold" : ""}`}>
                                         {path === "/"
                                             ? t('footer.Home')
                                             : path === "/research"
@@ -63,15 +64,15 @@ const Footer = () => {
                             {t('footer.Quick Links')}
                         </h3>
 
-                        <ul className="xl:text-lg text-sm font-light text-gray-50">
+                        <ul className="xl:text-lg text-sm font-light text-gray-300">
                             {["/about", "/contact", "/news&events"].map((path, index) => (
                                 <motion.li
                                     key={index}
                                     whileHover={{ x: 10 }}
                                     transition={{ duration: 0.2 }}
-                                    className="mb-2 hover:text-red-600"
+                                    className="mb-2 hover:text-red-900"
                                 >
-                                    <Link to={path} className={`hover:text-red-600 ${location.pathname === path ? "text-red-600 font-bold" : ""}`}>
+                                    <Link to={path} className={`hover:text-red-900 ${location.pathname === path ? "text-red-800 font-bold" : ""}`}>
                                         {path === "/about" ? t('footer.About') : path === "/contact" ? t('footer.Contact') : t('footer.News&events')}
                                     </Link>
                                 </motion.li>

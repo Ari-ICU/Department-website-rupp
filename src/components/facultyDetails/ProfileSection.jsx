@@ -3,47 +3,70 @@ import { BsViewStacked } from "react-icons/bs";
 import SocialIcon from '../social/SocialIcon';
 import p2 from '../../assets/img/dr-heng-sovanrith.png';
 
-
 const ProfileSection = () => {
     return (
-        <section className="bg-gray-50 h-[400px]">
-            <div className='bg-red-800'>
-                <div className="container mx-auto px-4">
-                    <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-8">
-                        <div className='flex gap-20 items-end'>
-
-
-                            {/* Image Section */}
-                            <div className="relative -bottom-20 w-72 h-72">
-                                <img
-                                    src={p2}
-                                    alt="Dr. Heng Sovannrith's Portrait"
-                                    className="rounded-full w-full h-full object-cover border-4 border-white shadow-lg"
-                                />
+        <section className="bg-gray-50 h-full md:h-[400px]">
+            {/* Cover Photo Area */}
+            <div className='bg-red-800 lg:h-[300px] h-64 sm:h-80 relative'>
+                <div className="max-w-6xl mx-auto px-4">
+                    {/* Profile Content Container */}
+                    <div className="flex flex-col md:flex-row items-end md:items-center justify-between gap-6 pt-16">
+                        {/* Profile Image + Info */}
+                        <div className="flex flex-1 items-end gap-0 md:gap-6 w-full">
+                            {/* Profile Image */}
+                            <div className="absolute md:relative -bottom-20 left-1/2 md:left-auto transform -translate-x-1/2 md:translate-x-0">
+                                <div className="w-40 h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 border-4 border-white rounded-full overflow-hidden shadow-xl">
+                                    <img
+                                        src={p2}
+                                        alt="Dr. Heng Sovannrith's Portrait"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
                             </div>
 
-                            {/* Content Section */}
-                            <div className="space-y-4 text-center md:text-left">
-                                <h1 className="text-3xl md:text-4xl font-bold text-gray-100">
-                                Dr. Heng Sovannarith
+                            {/* Profile Info */}
+                            <div className="hidden md:flex flex-col ml-4 md:ml-6 flex-1 text-white pb-4">
+                                <h1 className="text-2xl lg:text-4xl font-bold mb-2">
+                                    Dr. Heng Sovannarith
                                 </h1>
-                                <h2 className="text-xl md:text-2xl text-gray-100 ">
+                                <h2 className="text-lg lg:text-xl text-gray-200">
                                     Assistant Professor
                                 </h2>
-                                <div className='-mt-10'>
+                                <div className="mt-4">
                                     <SocialIcon />
-
                                 </div>
                             </div>
                         </div>
-                        <button className="mt-4 bg-gray-50 flex gap-10 text-red-900 px-6 py-3 rounded-lg transition-colors duration-300">
-                            <BsViewStacked className="text-lg text-red-900" />
-                            View Portfolio
 
-                        </button>
+                        {/* Action Button - Desktop */}
+                        <div className="hidden md:flex items-center gap-4">
+                            <button className="bg-white hover:bg-gray-100 text-red-900 px-6 py-3 rounded-lg transition-colors duration-300 flex items-center gap-2 shadow-md">
+                                <BsViewStacked className="text-lg" />
+                                <span>View Portfolio</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            {/* Mobile Profile Info */}
+            <div className="md:hidden pt-24 px-4 text-center">
+                <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                    Dr. Heng Sovannarith
+                </h1>
+                <h2 className="text-lg text-gray-600 mb-4">
+                    Assistant Professor
+                </h2>
+                <div className="flex justify-center -my-10 ">
+                    <SocialIcon />
+                </div>
+                <button className="w-full max-w-xs mx-auto bg-red-800 hover:bg-red-900 text-white px-6 py-3 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 shadow-md">
+                    <BsViewStacked className="text-lg" />
+                    <span>View Portfolio</span>
+                </button>
+            </div>
+
+           
         </section>
     );
 };

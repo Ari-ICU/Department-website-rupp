@@ -7,10 +7,10 @@ const CopyRight = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className='text-center text-gray-200 py-5'>
+        <footer className='text-center text-gray-300 py-5'>
             <p className="tracking-wide">
                 &copy; {currentYear} {t("footer.Department of Computer Science. All rights reserved. Developed by ")}
-                <Link to="/developer" className="text-red-500 hover:underline ">
+                <Link to="/developer" className="text-red-800 hover:underline ">
                     {t("footer.4th-Year, 25th Generation.")}
                 </Link>
             </p>

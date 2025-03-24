@@ -30,7 +30,7 @@ const facultyMembers = [
 const FacultyCarousel = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const containerRef = useRef(null);
-    const cardWidth = 384; // 96 * 4
+    const cardWidth = 370; // 96 * 4
     const { t, i18n } = useTranslation();
     const currentLanguage = i18n.language;
 
@@ -109,26 +109,28 @@ const FacultyCarousel = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
-                    className="overflow-hidden "
+                    className="overflow-hidden"
                 >
                     <Link to="/faculty/:id">
-                    <div ref={containerRef} className="flex space-x-8 overflow-x-auto py-6 p-4 scroll-smooth">
-                        {facultyMembers.map((faculty, index) => (
-                            <motion.div
-                                key={index}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5, delay: index * 0.2 }}
-                                className="w-96 min-w-96 h-full bg-white rounded-lg shadow-lg p-4 flex flex-col items-center justify-center"
-                                whileHover={{ scale: 1.05 }}
-
-                            >
-                                {/* Image Container */}
-                                <div className="relative w-72 h-72 mb-4 group">
-                                    <img
-                                        src={faculty.image}
-                                        alt={faculty.name}
-                                        className="w-full h-full rounded-2xl object-cover group-hover:brightness-90 transition-all duration-300"
-                                    />
+                        <div 
+                            ref={containerRef} 
+                            className="flex snap-x snap-mandatory overflow-x-auto py-6 px-4 scroll-smooth gap-4 md:gap-8"
+                        >
+                            {facultyMembers.map((faculty, index) => (
+                                <motion.div
+                                    key={index}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                                    className="min-w-[300px] sm:min-w-[50px] flex-shrink-0 snap-center mx-2 bg-white rounded-lg shadow-lg p-4 flex flex-col items-center justify-center"
+                                    whileHover={{ scale: 1.05 }}
+                                >
+                                    {/* Image Container */}
+                                    <div className="relative w-48 h-48 md:w-72 md:h-72 mb-4 group">
+                                        <img
+                                            src={faculty.image}
+                                            alt={faculty.name}
+                                            className="w-full h-full rounded-2xl object-cover group-hover:brightness-90 transition-all duration-300"
+                                        />
 
                                     {/* Social Media Overlay */}
                                     <motion.div
