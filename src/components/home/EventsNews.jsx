@@ -60,24 +60,26 @@ const EventsNews = () => {
                             { t("Events.Engage with cutting-edge workshops, conferences, and networking opportunities.")}
                         </p>
                     </div>
-                    <div className="  mt-4 md:mt-0">
-                        <Link to='/news&events' className='flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1'>
-                            <span className="mr-2 xl:text-sm text-[12px]">{t('News.View All')}</span>
+                    <div
+                        className="w-full md:w-auto mt-4 md:mt-0"
+                    >
+                        <Link to='/faculty' className='flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1'>
+                            <span className="mr-2 xl:text-sm text-[12px]">{t("News.View All")}</span>
                             <FaArrowRight className="text-red-800" />
                         </Link>
                     </div>
                 </div>
 
                 <div className="py-2">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {events.map((event) => (
                             <Link to={`/news&events/${event.id}`}  key={event.id} className="block">
-                                <div className="bg-white rounded-2xl p-4 shadow-md flex flex-col xl:flex-row justify-center items-center hover:shadow-lg">
-                                    <div className="mx-auto flex justify-center items-center">
+                                <div className="bg-white rounded-2xl p-4 shadow-md flex lg:flex-row flex-col justify-center items-center hover:shadow-lg">
+                                    <div className="mx-auto w-full flex justify-center items-center">
                                         <img
                                             src={event.imageUrl}
                                             alt={event.title}
-                                            className="w-full h-56 object-cover rounded-2xl"
+                                            className="w-full h-full md:h-56 object-cover rounded-2xl"
                                         />
                                     </div>
 

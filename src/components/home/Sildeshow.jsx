@@ -138,7 +138,7 @@ const SlideShowSection = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex gap-4"
+          className="flex flex-col sm:flex-row gap-4"
         >
           {/* About Button */}
           <Link

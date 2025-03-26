@@ -40,16 +40,16 @@ const ResearchArea = () => {
             >
                
 
-                <div className=" h-full flex flex-col xl:flex-row items-center gap-8 py-8 xl:py-0">
+                <div className=" h-auto flex flex-col lg:flex-row items-center gap-8 py-8 lg:py-0">
                     {/* Left Column - Image Content */}
                     <motion.div
                        
-                        className="w-full xl:w-1/2 lg:h-[479px] mx-auto h-[360px] order-1 xl:order-2"
+                        className="w-full lg:w-1/2 sm:h-[540px] h-[330px] mx-auto order-1 lg:order-2"
                     >
                         <div className="relative flex flex-col items-center justify-center">
-                            <div className="flex items-center justify-center gap-4 xl:gap-6 w-full">
+                            <div className="flex items-center justify-center gap-4 lg:gap-6 w-full">
                                 {/* Left Image */}
-                                <div className="h-[200px] w-[150px] lg:h-[347px] lg:w-[265px] transition transform -translate-y-2">
+                                <div className="h-full w-full md:h-[347px] md:w-[265px] transition transform -translate-y-2">
                                     <img
                                         src={p3}
                                         alt="Research 1"
@@ -57,7 +57,7 @@ const ResearchArea = () => {
                                     />
                                 </div>
                                 {/* Right Image */}
-                                <div className="h-[250px] w-[150px] lg:w-[254px] lg:h-[381px] transition transform translate-y-22">
+                                <div className="h-full w-full md:w-[254px] md:h-[381px] transition transform translate-y-22">
                                     <img
                                         src={p4}
                                         alt="Research 2"
@@ -71,9 +71,9 @@ const ResearchArea = () => {
                     {/* Right Column - Text Content */}
                     <motion.div
                        
-                        className="w-full xl:w-1/2 px-4 xl:px-0 order-2 xl:order-1"
+                        className="w-full lg:w-1/2 px-4 lg:px-0 order-2 lg:order-1"
                     >
-                        <h3 className="xl:text-3xl text-2xl font-semibold mb-4">
+                        <h3 className="text-3xl font-semibold mb-4">
                             Research Areas & Specializations
                         </h3>
 

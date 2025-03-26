@@ -99,7 +99,7 @@ const StudentResearch = () => {
 
                 {/* Bottom Sections */}
                 <div className="mt-12">
-                    <div className="grid grid-cols-1 xl:grid-cols-2 justify-center gap-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-10">
                         {filteredSections.map((section) => (
                             <div
                                 key={section.id}

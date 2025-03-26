@@ -22,12 +22,12 @@ const LanguageSwitcherButton = () => {
         {i18n.language === "en" ? (
           <>
             <Flag code="US" className="w-6 h-6" />
-            <span>English</span>
+            <span className=" hidden sm:block">English</span>
           </>
         ) : (
           <>
             <Flag code="KH" className="w-6 h-6" />
-            <span>ខ្មែរ</span>
+            <span className=" hidden sm:block">ខ្មែរ</span>
           </>
         )}
         <motion.div animate={{ rotate: isOpen ? 180 : 0 }}>
@@ -42,7 +42,7 @@ const LanguageSwitcherButton = () => {
             className="flex items-center w-full px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md"
           >
             <Flag code="US" className="w-6 h-6 mr-2" />
-            <span>English</span>
+            <span className=" hidden sm:block">English</span>
           </motion.button>
 
           <motion.button
@@ -50,7 +50,7 @@ const LanguageSwitcherButton = () => {
             className="flex items-center w-full px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md"
           >
             <Flag code="KH" className="w-6 h-6 mr-2" />
-            <span>ខ្មែរ</span>
+            <span className=" hidden sm:block">ខ្មែរ</span>
           </motion.button>
         </motion.div>
       )}

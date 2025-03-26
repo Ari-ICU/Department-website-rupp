@@ -92,7 +92,7 @@ const AdmissionRequirements = () => {
               To apply for the Bachelor’s Degree in Computer Science, students
               must meet the following criteria:
             </p>
-            <h2  className={`text-3xl font-normal mb-4 py-2 ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
+            <h2  className={`text-3xl font-normal mb-4 py-2 ${currentLanguage === 'km' ? "" : ""}`}
               lang={currentLanguage}>
               Admission Requirements
             </h2>

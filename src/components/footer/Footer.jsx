@@ -42,7 +42,7 @@ const Footer = () => {
                                     whileHover={{ x: 10 }}
                                     className="mb-2 hover:text-red-900"
                                 >
-                                    <Link to={path} className={`hover:text-red-900 ${location.pathname === path ? "text-red-800 font-bold" : ""}`}>
+                                    <Link to={path} className={`hover:text-red-900 ${location.pathname === path ? "text-red-900 font-semibold" : ""}`}>
                                         {path === "/"
                                             ? t('footer.Home')
                                             : path === "/research"
@@ -72,7 +72,7 @@ const Footer = () => {
                                     transition={{ duration: 0.2 }}
                                     className="mb-2 hover:text-red-900"
                                 >
-                                    <Link to={path} className={`hover:text-red-900 ${location.pathname === path ? "text-red-800 font-bold" : ""}`}>
+                                    <Link to={path} className={`hover:text-red-900 ${location.pathname === path ? "text-red-900 font-semibold" : ""}`}>
                                         {path === "/about" ? t('footer.About') : path === "/contact" ? t('footer.Contact') : t('footer.News&events')}
                                     </Link>
                                 </motion.li>

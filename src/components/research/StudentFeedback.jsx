@@ -41,14 +41,14 @@ const StudentFeedback = () => {
     <div className="my-16">
       <div className="container mx-auto px-4 bg-red-900 text-gray-50 rounded-3xl">
         <div className="py-16">
-          <div className="flex w-full h-full xl:h-[572px] overflow-hidden relative transition-all duration-500">
+          <div className="flex w-full h-full overflow-hidden relative transition-all duration-500">
             <button
               onClick={prevFeedback}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 rounded-full p-2 shadow-md bg-white text-gray-700 hover:bg-gray-200"
             >
               <FaChevronLeft />
             </button>
-            <div className="flex flex-col xl:flex-row px-4 xl:px-20 w-full">
+            <div className="flex flex-col lg:flex-row px-4 lg:px-20 w-full h-full">
               {/* Left - Text Content */}
               <div className="flex-1 xl:p-10 flex flex-col justify-center">
                 <h2 className="text-2xl font-semibold mb-4">
@@ -63,7 +63,7 @@ const StudentFeedback = () => {
               </div>
 
               {/* Right - Image */}
-              <div className="flex-1 relative flex justify-center">
+              <div className="flex-1 relative flex justify-cente h-full">
                 <div className="absolute bg-pink-100 -top-6 rounded-3xl h-full w-[403px] right-0 "></div>
                 <div className="absolute right-10 top-6 h-full w-[403px] rounded-3xl">
                   <img

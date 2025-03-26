@@ -153,7 +153,7 @@ const ResearchInnovations = () => {
           </motion.div>
         ))}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 h-full">
           {bottomSections.map((section, index) => (
             <motion.div
               key={section.id}
