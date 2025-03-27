@@ -15,9 +15,9 @@ const Admission = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-start ">
       {/* Admission Banner */}
-       <Helmet>
-              <title>Admission - Department of Computer Science</title>
-            </Helmet>
+      <Helmet>
+        <title>Admission - Department of Computer Science</title>
+      </Helmet>
       <div className="w-full">
         <AdmissionBanner />
       </div>
@@ -47,7 +47,7 @@ const Admission = () => {
         <ScholarshipOpportunities />
       </section>
 
-    
+
     </div>
   );
 };

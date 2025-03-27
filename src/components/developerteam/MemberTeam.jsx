@@ -143,10 +143,13 @@ const MemberTeam = () => {
                     </motion.div>
                   </div>
                   <div className='space-y-6 max-w-md relative'>
-                    <div className='absolute right-0 -top-6 flex justify-end text-right'>
-                      <RiDoubleQuotesR className='text-7xl text-red-900' />
+                    <div className='flex justify-between items-center'>
+                     
+                      <h1 className='text-2xl text-left font-semibold '>{deputy.name}</h1>
+                      <div className=' flex justify-end text-right'>
+                        <RiDoubleQuotesR className='text-7xl text-red-900' />
+                      </div>
                     </div>
-                    <h1 className='text-2xl font-semibold '>{deputy.name}</h1>
                     <p>{deputy.position}</p>
                     <p className='text-left'>{deputy.bio}</p>
                     <button
@@ -161,10 +164,10 @@ const MemberTeam = () => {
         </div>
       </div>
       {isOpen && selectedDeputy && (
-          <div
+        <div
           className="modal-overlay fixed inset-0 bg-gray-900/75 flex justify-center items-center z-50"
           onClick={closeModal}
-      >
+        >
           <div className=' container mx-auto'>
             <div className="bg-white flex items-center gap-10 p-6 rounded-2xl shadow-lg" onClick={(e) => e.stopPropagation()}>
               <div className="  max-w-md mx-auto  group">

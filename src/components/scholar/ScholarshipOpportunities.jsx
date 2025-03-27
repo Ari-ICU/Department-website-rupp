@@ -109,7 +109,7 @@ const ScholarshipOpportunities = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
                         viewport={{ once: true }}
-                        className="mt-4 xl:mt-0"
+                        className="mt-4 sm:mt-0"
                     >
                         <Link to="/scholars" className="flex text-red-800 hover:text-red-900 items-center border-b border-red-800 pb-1">
                             <span className="mr-2 xl:text-sm text-[12px]">View All</span>
@@ -118,58 +118,52 @@ const ScholarshipOpportunities = () => {
                     </motion.div>
                 </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
-                    viewport={{ once: true }}
-                    className=" py-2"
-                >
-                    {/* Add overflow container with calculated width */}
-                    <div className="overflow-x-auto pb-4">
-                        <div
-                            ref={scrollContainerRef}
-                            className="flex gap-6 pb-4 " 
-                        >
-                            {events.map((event, index) => (
-                              <motion.div
-                              key={event.id}
-                              whileInView={{ opacity: 1, x: 0 }}
-                              transition={{ duration: 0.5, delay: index * 0.2 }}
-                              viewport={{ once: true }}
-                              className="bg-white rounded-2xl p-2 shadow-md flex flex-col sm:flex-row justify-between items-center flex-shrink-0"
-                              
-                          >
-                              {/* Image Section */}
-                              <div className="w-78 h-full flex justify-center items-center overflow-hidden rounded-2xl">
-                                  <img src={event.imageUrl} alt={event.title} className="w-full h-full object-cover" />
-                              </div>
-                          
-                              {/* Content Section */}
-                              <div className="p-4 sm:p-6 w-78">
-                                  {event.category && (
-                                      <span className="text-xs font-semibold text-red-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
-                                          {event.category}
-                                      </span>
-                                  )}
-                                  <h3 className="mt-2 text-base sm:text-lg lg:text-xl font-semibold text-gray-900">{event.title}</h3>
-                                  <p className="mt-2 text-sm sm:text-base text-gray-800">{event.description}</p>
-                                  <span className="text-sm sm:text-base text-gray-800">{event.date}</span>
-                                  <div className="mt-4">
-                                      <button
-                                          className="bg-red-800 hover:bg-red-900 text-white py-2 px-4 rounded-xl text-sm sm:text-base"
-                                          onClick={() => navigate(`/scholars/${event.id}`)}
-                                      >
-                                          View Detail
-                                      </button>
-                                  </div>
-                              </div>
-                          </motion.div>
-                          
-                            ))}
-                        </div>
+
+                {/* Add overflow container with calculated width */}
+                <div className="overflow-x-auto pb-4 w-[320px] sm:w-full mx-auto">
+                    <div
+                        ref={scrollContainerRef}
+                        className="flex gap-6 pb-4 "
+                    >
+                        {events.map((event, index) => (
+                            <motion.div
+                                key={event.id}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.2 }}
+                                viewport={{ once: true }}
+                                className="bg-white rounded-2xl p-2 shadow-md flex flex-col sm:flex-row justify-between items-center w-96 sm:w-full"
+
+                            >
+                                {/* Image Section */}
+                                <div className="w-78 h-full flex justify-center items-center overflow-hidden rounded-2xl">
+                                    <img src={event.imageUrl} alt={event.title} className="w-full h-full object-cover" />
+                                </div>
+
+                                {/* Content Section */}
+                                <div className="p-4 sm:p-6 w-78">
+                                    {event.category && (
+                                        <span className="text-xs font-semibold text-red-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
+                                            {event.category}
+                                        </span>
+                                    )}
+                                    <h3 className="mt-2 text-base sm:text-lg lg:text-xl font-semibold text-gray-900">{event.title}</h3>
+                                    <p className="mt-2 text-sm sm:text-base text-gray-800">{event.description}</p>
+                                    <span className="text-sm sm:text-base text-gray-800">{event.date}</span>
+                                    <div className="mt-4">
+                                        <button
+                                            className="bg-red-800 hover:bg-red-900 text-white py-2 px-4 rounded-xl text-sm sm:text-base"
+                                            onClick={() => navigate(`/scholars/${event.id}`)}
+                                        >
+                                            View Detail
+                                        </button>
+                                    </div>
+                                </div>
+                            </motion.div>
+
+                        ))}
                     </div>
-                </motion.div>
+                </div>
+
 
 
             </div>
