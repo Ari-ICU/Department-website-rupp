@@ -44,7 +44,7 @@ const ResearchArea = () => {
                     {/* Left Column - Image Content */}
                     <motion.div
                        
-                        className="w-full lg:w-1/2 sm:h-[540px] h-[330px] mx-auto order-1 lg:order-2"
+                        className="w-full lg:w-1/2 sm:h-[540px] h-[400px] mx-auto order-1 lg:order-2"
                     >
                         <div className="relative flex flex-col items-center justify-center">
                             <div className="flex items-center justify-center gap-4 lg:gap-6 w-full">
