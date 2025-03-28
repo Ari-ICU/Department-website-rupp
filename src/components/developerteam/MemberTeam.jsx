@@ -168,13 +168,13 @@ const MemberTeam = () => {
           className="modal-overlay fixed inset-0 bg-gray-900/75 flex justify-center items-center z-50"
           onClick={closeModal}
         >
-          <div className=' container mx-auto'>
-            <div className="bg-white flex items-center gap-10 p-6 rounded-2xl shadow-lg" onClick={(e) => e.stopPropagation()}>
-              <div className="  max-w-md mx-auto  group">
+          <div className=' sm:container mx-auto'>
+            <div className="bg-white flex flex-col sm:flex-row items-center gap-10 p-6 rounded-2xl shadow-lg" onClick={(e) => e.stopPropagation()}>
+              <div className=" max-w-md mx-auto  group">
                 <img
                   src={selectedDeputy.image}
                   alt={name}
-                  className="w-96 h-96 rounded-2xl object-contain"
+                  className="w-96 sm:h-96 h-72 rounded-2xl object-contain"
                 />
               </div>
               <div className='w-full'>

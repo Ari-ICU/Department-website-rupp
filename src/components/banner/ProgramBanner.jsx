@@ -17,7 +17,7 @@ const ProgramBanner = () => {
                 <div className="absolute inset-0 bg-black opacity-50"></div>
 
                 {/* Content */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full">
                     <motion.h2
                         initial={{ opacity: 0, y: -50 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ const ProgramBanner = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        className="text-gray-50 text-[14px] xl:text-lg"
+                        className="text-gray-50 text-[14px] lg:text-lg"
                     >
                         Explore our curriculum, admission process, career opportunities, and advanced study options to shape your future.
                     </motion.p>

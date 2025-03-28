@@ -70,7 +70,7 @@ const ScholarshipSection = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col xl:flex-row xl:justify-between items-center gap-8 mb-6">
                     <h2 className="text-2xl font-semibold">Available Scholarships</h2>
-                    <div className='flex sm:gap-4 '>
+                    <div className='flex flex-col sm:flex-row gap-6 sm:gap-4 '>
                         {/* Search Input */}
                         <div className="relative w-full">
                             <input
