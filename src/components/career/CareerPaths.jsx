@@ -91,14 +91,14 @@ const CareerPaths = () => {
 
           {/* Career paths cards */}
           <motion.div
-            className="flex space-x-4 w-full xl:w-1/2 overflow-x-auto snap-x snap-mandatory"
+            className="flex space-x-4 w-full sm:w-1/2 overflow-x-auto snap-x snap-mandatory"
             variants={containerVariants}
           >
             {careerPaths.map((path, index) => (
               <motion.div
                 key={path.id}
                 onClick={() => navigate(`/career/${path.id}`)}
-                className="snap-start cursor-pointer relative w-80 flex-shrink-0 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="snap-start cursor-pointer relative sm:w-80 w-70  flex-shrink-0 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }} // Add hover effect
               >

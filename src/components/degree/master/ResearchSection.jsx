@@ -70,7 +70,7 @@ const ResearchSection = () => {
                 <img
                   src={section.image}
                   alt={section.title}
-                  className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-72 sm:w-full h-96  object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">

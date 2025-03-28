@@ -53,7 +53,7 @@ const ResearchLabsSection = () => {
         >
           {/* Image Section */}
           <motion.div 
-            className="lg:w-[330px] xl:w-[400px] h-[552px] mb-8 md:mb-0"
+            className="lg:w-[500px] w-auto  h-[552px] mb-8 md:mb-0"
             whileHover={{ scale: 1.05 }}
           >
             <img 

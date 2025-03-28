@@ -60,7 +60,7 @@ const DegreePage = () => {
 
   useEffect(() => {
     // Set the document title based on the degree type
-    document.title = degree ? `${degree.charAt(0).toUpperCase() + degree.slice(1)} Degree - Department of Computer Science`   : 'Degree Page';
+    document.title = degree ? `${degree.charAt(0).toUpperCase() + degree.slice(1)} Degree - Department of Computer Science`   : 'Programs - Department of Computer Science';
 
     // Clean up function to reset the title when the component unmounts
     return () => {
