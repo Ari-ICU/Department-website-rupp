@@ -66,13 +66,13 @@ const CareerPaths = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
       >
-        <div className="flex flex-col xl:flex-row gap-8">
+        <div className="flex flex-col sm:flex-row gap-8">
           {/* Text content */}
           <motion.div
-            className="w-full xl:w-1/2 text-center"
+            className="w-full sm:w-1/2 text-center"
             variants={itemVariants}
           >
-            <div className="flex flex-col lg:flex-row items-start mb-8">
+            <div className="flex flex-col sm:flex-row items-start mb-8">
               <div className="mr-6 text-left">
                 <h2 className="text-3xl font-semibold mb-2">Career Paths in</h2>
                 <h2 className="text-3xl font-semibold">Computer Science</h2>

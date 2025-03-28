@@ -53,7 +53,7 @@ const RecentResearch = () => {
     <div className="my-16">
       <div className='container mx-auto px-4'>
 
-        <div className='flex justify-between'>
+        <div className='flex flex-col sm:flex-row justify-between'>
           <h2 className='text-3xl mb-6 font-semibold'>Recent Research Projects & Publications </h2>
           <div className="flex justify-between gap-10 items-center">
             <button className="p-2 bg-pink-100  text-red-900 rounded-full hover:bg-gray-300">
@@ -69,7 +69,7 @@ const RecentResearch = () => {
             {bottomSections.map((section) => (
               <div
                 key={section.id}
-                className=" bg-white rounded-lg shadow-md overflow-hidden relative group flex-shrink-0"
+                className=" bg-white rounded-lg shadow-md overflow-hidden relative group flex-shrink-0 sm:w-96 w-70"
               >
                 <img
                   src={section.image}

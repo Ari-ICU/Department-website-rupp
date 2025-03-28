@@ -78,7 +78,7 @@ const RelatedArtical = () => {
   return (
     <div className="my-16">
       <div className='container mx-auto px-4'>
-        <div className='flex justify-between'>
+        <div className='flex flex-col sm:flex-row justify-between'>
           <h2 className='text-3xl mb-6 font-semibold'>Students Projects </h2>
           <div className="flex justify-between gap-10 items-center">
             <button
@@ -100,7 +100,7 @@ const RelatedArtical = () => {
             {bottomSections.map((section) => (
               <div
                 key={section.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden relative group flex-shrink-0 w-[350px]" // Set a fixed width
+                className="bg-white rounded-lg shadow-md overflow-hidden relative group flex-shrink-0 sm:w-96 w-70" // Set a fixed width
               >
                 <img
                   src={section.image}

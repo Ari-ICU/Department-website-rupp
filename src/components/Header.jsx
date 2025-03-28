@@ -205,7 +205,7 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div 
           ref={mobileMenuRef}
-          className="xl:hidden fixed top-0 left-0 w-full h-full bg-white shadow-md z-40 overflow-y-auto"
+          className="xl:hidden uppercase fixed top-0 left-0 w-full h-full bg-white shadow-md z-40 overflow-y-auto"
         >
           <div className="p-6 relative">
 
@@ -232,7 +232,7 @@ const Header = () => {
             </motion.div>
             <button
               onClick={toggleMenu}
-              className="absolute right-6 top-6 text-gray-600 hover:text-red-800"
+              className="absolute right-6 top-2 text-gray-600 hover:text-red-800"
             >
               <FaTimes className="text-3xl" />
             </button>

@@ -21,7 +21,7 @@ const ProfessorSection = () => {
             <div className="container mx-auto px-4">
                 <div className='flex flex-col md:flex-row items-center gap-10'>
                     {/* Image Section */}
-                    <div className=" h-[517px] lg:w-[476px] w-full ">
+                    <div className=" h-full sm:h-[517px] sm:w-[476px] w-full ">
                         <img
                             src={imageUrl}
                             alt={`Professor ${professorName}`}
@@ -38,7 +38,7 @@ const ProfessorSection = () => {
                         {/* Contact Info */}
                         <div className="mt-6">
                             <h6 className="text-lg font-medium mb-2">Contact Info</h6>
-                            <div className="flex items-center space-x-4">
+                            <div className="flex flex-col sm:flex-row sm:space-y-0 space-y-4 items-center space-x-4">
                                 <Link
                                     href={`tel:${contactPhone}`}
                                     className="bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm"
