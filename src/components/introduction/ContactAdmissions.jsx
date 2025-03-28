@@ -37,7 +37,7 @@ const ContactAdmissions = () => {
       <div className="absolute inset-0 bg-black/60 rounded-lg"></div>
 
       {/* Content inside the overlay */}
-      <motion.div className="relative p-8 text-white" variants={textVariants}>
+      <motion.div className="relative sm:p-20 p-10 text-white" variants={textVariants}>
         <motion.p className="text-lg mb-4" variants={textVariants}>
           For more details, please visit our{' '}
           <Link
