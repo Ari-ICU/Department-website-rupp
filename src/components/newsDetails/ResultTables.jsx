@@ -72,6 +72,10 @@ const ResultTable = () => {
     <div className="my-10">
       <div className="container mx-auto px-4">
         <h1 className="text-2xl font-bold mb-4">Overall Result</h1>
+        <p className="text-gray-600 mb-6">
+          Engage in insightful discussions, network with industry experts, and explore career
+          opportunities through our upcoming academic and professional events.
+        </p>
 
         <div className="overflow-x-auto bg-white rounded-lg shadow-md">
           <table className="w-full border-collapse">
