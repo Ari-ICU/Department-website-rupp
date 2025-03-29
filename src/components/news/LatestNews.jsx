@@ -1,5 +1,4 @@
 import React from 'react';
-import { jsPDF } from 'jspdf';
 import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
@@ -10,52 +9,39 @@ const LatestNews = () => {
     const { t, i18n } = useTranslation();
     const currentLanguage = i18n.language;
     const location = useLocation();
-
-    // Check if the current path is "/"
     const isHomePage = location.pathname === "/";
 
-    // News items
+    // News items with unique IDs
     const newsItems = [
         {
+            id: 1,
             title: 'Re-exam schedule for 1st, 2nd students',
             description: 'Student office has a new announcement regarding re-exam...',
             imageUrl: p1,
             tag: 'News',
         },
         {
+            id: 2,
             title: 'Semester Break & Holiday Notices',
             description: 'A new semester break for 4th year students will be hosted on 21 Jun...',
             imageUrl: p1,
             tag: 'Events',
         },
         {
+            id: 3,
             title: 'Re-exam schedule for 1st, 2nd students',
             description: 'Student office has a new announcement regarding re-exam...',
             imageUrl: p1,
-            tag: 'Announment',
+            tag: 'Announcement',
         },
         {
+            id: 4,
             title: 'Semester Break & Holiday Notices',
             description: 'A new semester break for 4th year students will be hosted on 21 Jun...',
             imageUrl: p1,
             tag: 'News',
         }
     ];
-
-    const viewPdf = (imageUrl) => {
-        const img = new Image();
-        img.src = imageUrl;
-        img.onload = () => {
-            const doc = new jsPDF();
-            const aspectRatio = img.width / img.height;
-            const imgWidth = 180;
-            const imgHeight = imgWidth / aspectRatio;
-            doc.addImage(img, 'PNG', 10, 10, imgWidth, imgHeight);
-            const pdfBlob = doc.output('blob');
-            const pdfUrl = URL.createObjectURL(pdfBlob);
-            window.open(pdfUrl, '_blank');
-        };
-    };
 
     return (
         <div className="my-16">
@@ -88,15 +74,14 @@ const LatestNews = () => {
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6">
-                    {newsItems.map((item, index) => (
-                        <div key={index} className="bg-white rounded-lg flex flex-col xl:flex-row shadow-md overflow-hidden">
-                            {/* Image Section */}
+                    {newsItems.map((item) => (
+                        <Link to={`/news/${item.id}`} key={item.id} className="bg-white rounded-lg flex flex-col xl:flex-row shadow-md overflow-hidden">
+                            {/* Image Section with Dynamic ID Link */}
                             <div className="p-3 w-full xl:w-[313px] h-auto xl:h-[221px]">
                                 <img
                                     src={item.imageUrl}
                                     alt="News"
                                     className="w-full h-full object-cover cursor-pointer rounded-lg"
-                                    onClick={() => viewPdf(item.imageUrl)}
                                 />
                             </div>
 
@@ -111,7 +96,7 @@ const LatestNews = () => {
                                 </h3>
                                 <p className="text-gray-600 mt-2">{isHomePage ? t(`News.${item.description}`) : item.description}</p>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

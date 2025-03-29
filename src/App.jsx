@@ -21,6 +21,7 @@ import Faculty from './pages/Faculty';
 import LabDetails from './pages/LabDetails';
 import DeveloperTeam from './pages/DeveloperTeam';
 import FacultyDetails from './pages/FacultyDetails';
+import NewsDetails from './pages/NewsDetails';
 import NotFoundPage from './pages/404';
 
 
@@ -47,9 +48,10 @@ const App = () => {
         <Route path='/research/:id' element={<ResearchDetails />} />
         <Route path='/researchlab/:id' element={<LabDetails />}/>
         <Route path='/career/:id' element={<CareerDetails />} />
-        <Route path='/news&events/:id'  element={<EventsNewDetails /> }/>
-        <Route path='/facilities' element={<Facilities />} />
         <Route path='/news&events' element={<News />} />
+        <Route path='/news&events/:id'  element={<EventsNewDetails /> }/>
+        <Route path='/news/:id' element={<NewsDetails />} />
+        <Route path='/facilities' element={<Facilities />} />
         <Route path='/developer' element={<DeveloperTeam />}/>
         <Route path='*' element={<NotFoundPage />}/>
       </Routes>
