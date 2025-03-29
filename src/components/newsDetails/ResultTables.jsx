@@ -112,7 +112,7 @@ const ResultTable = () => {
         <div className="flex justify-center mt-6 space-x-2">
           <button
             onClick={() => handlePageChange(currentPage - 1)}
-            className={`px-3 py-1 border rounded-md text-gray-700 hover:bg-gray-200 ${
+            className={`sm:px-3 py-1 border rounded-md text-gray-700 hover:bg-gray-200 ${
               currentPage === 1 && "opacity-50 cursor-not-allowed"
             }`}
           >
@@ -150,7 +150,7 @@ const ResultTable = () => {
 
           <button
             onClick={() => handlePageChange(currentPage + 1)}
-            className={`px-3 py-1 border rounded-md text-gray-700 hover:bg-gray-200 ${
+            className={`sm:px-3 py-1 border rounded-md text-gray-700 hover:bg-gray-200 ${
               currentPage === totalPages && "opacity-50 cursor-not-allowed"
             }`}
           >
