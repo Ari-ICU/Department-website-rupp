@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const FooterNotfound = () => {
     return (
         <div className="border-t border-gray-800 py-6">
-            <div className="container mx-auto px-6 text-center items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+            <div className="max-w-4xl mx-auto px-6 text-center items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
                 <div>
                     <p className="text-gray-700 font-semibold">You can contact us:</p>
                 </div>
