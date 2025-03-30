@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { PiCalendarDots } from "react-icons/pi";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import image1 from '../../assets/new/3.jpg';
 import image2 from '../../assets/new/4.jpg';
 import image3 from '../../assets/new/5.jpg';
@@ -12,41 +12,40 @@ const EventsNews = () => {
     const navigate = useNavigate();
     const currentLanguage = i18n.language;
 
-    // Memoize translated events to avoid unnecessary recalculations
-    const events = useMemo(() => [
+    const events = [
         {
             id: 1,
-            title: t('Events.Guest Lecture on Artificial Intelligence'),
+            title: 'Events.Guest Lecture on Artificial Intelligence',
             imageUrl: image1,
-            description: t('Events.Annual university tournament for basketball team.'),
-            date: t('Events.22 Aug 2025'),
-            category: t('Events.Hackathons'),
+            description: 'Events.Annual university tournament for basketball team.',
+            date: 'Events.22 Aug 2025',
+            category: 'Events.Hackathons',
         },
         {
             id: 2,
-            title: t('Events.AI in Healthcare Symposium'),
+            title: 'Events.AI in Healthcare Symposium',
             imageUrl: image2,
-            description: t('Events.Exploring the latest advancements in AI for medical applications'),
-            date: t('Events.15 Sep 2025'),
-            category: t('Events.Conferences'),
+            description: 'Events.Exploring the latest advancements in AI for medical applications',
+            date: 'Events.15 Sep 2025',
+            category: 'Events.Conferences',
         },
         {
             id: 3,
-            title: t('Events.Web Development Workshop'),
+            title: 'Events.Web Development Workshop',
             imageUrl: image3,
-            description: t('Events.Hands-on workshop on building responsive web applications.'),
-            date: t('Events.05 Oct 2025'),
-            category: t('Events.Workshops'),
+            description: 'Events.Hands-on workshop on building responsive web applications.',
+            date: 'Events.05 Oct 2025',
+            category: 'Events.Workshops',
         },
         {
             id: 4,
-            title: t('Events.Data Science Meetup'),
+            title: 'Events.Data Science Meetup',
             imageUrl: image1,
-            description: t('Events.Networking event for data science enthusiasts and professionals'),
-            date: t('Events.20 Oct 2025'),
-            category: t('Events.Meetups'),
+            description: 'Events.Networking event for data science enthusiasts and professionals',
+            date: 'Events.20 Oct 2025',
+            category: 'Events.Meetups',
         },
-    ], [t]); // Only recompute when the `t` function changes
+    ];
 
     return (
         <div className="my-16">
@@ -77,9 +76,9 @@ const EventsNews = () => {
                 <div className="py-2">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {events.map((event) => (
-                            <div
+                            <Link
+                                to={`/news&events/${event.id}`}
                                 key={event.id}
-                                onClick={() => navigate(`/news&events/${event.id}`)}
                                 className="block cursor-pointer"
                             >
                                 <div className="bg-white rounded-2xl p-4 shadow-md flex lg:flex-row flex-col justify-center items-center hover:shadow-lg">
@@ -88,32 +87,32 @@ const EventsNews = () => {
                                             src={event.imageUrl}
                                             alt={event.title}
                                             className="w-full h-full md:h-56 object-cover rounded-2xl"
-                                            loading="lazy" // Lazy load images
+                                            loading="lazy"
                                         />
                                     </div>
 
                                     <div className="p-6 w-full ">
                                         {event.category && (
                                             <span className="text-xs font-semibold text-red-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
-                                                {event.category}
+                                                {t(event.category)}
                                             </span>
                                         )}
                                         <h5
                                             className={`text-lg font-normal mb-4 ${currentLanguage === 'km' ? "font-khmer" : "font-semibold"}`}
                                             lang={currentLanguage}
                                         >
-                                            {event.title}
+                                            {t(event.title)}
                                         </h5>
                                         <p className="mt-2 text-sm text-gray-800">
-                                            {event.description}
+                                            {t(event.description)}
                                         </p>
                                         <span className="text-sm text-gray-800 flex items-center gap-2 mt-4">
                                             <PiCalendarDots />
-                                            {event.date}
+                                            {t(event.date)}
                                         </span>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

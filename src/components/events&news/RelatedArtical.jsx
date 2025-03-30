@@ -45,19 +45,17 @@ const RelatedArtical = () => {
         },
     ];
 
-
-
     return (
         <div className="my-16">
             <div className="container mx-auto px-4">
                 {/* Header Section */}
-                <div className='flex justify-between'>
-                    <h2 className='text-4xl mb-6 font-semibold'>Related Artical </h2>
+                <div className='flex  flex-col sm:flex-row justify-between'>
+                    <h2 className='text-4xl mb-6 font-semibold'>Related Articles</h2>
                     <div className="flex justify-between gap-10 items-center">
-                        <button className="p-2 bg-pink-100  text-red-900 rounded-full hover:bg-gray-300">
+                        <button className="p-2 bg-pink-100 text-red-900 rounded-full hover:bg-gray-300">
                             <FaChevronLeft />
                         </button>
-                        <button className="p-2 bg-pink-100  text-red-900  rounded-full hover:bg-gray-300">
+                        <button className="p-2 bg-pink-100 text-red-900 rounded-full hover:bg-gray-300">
                             <FaChevronRight />
                         </button>
                     </div>
@@ -65,11 +63,15 @@ const RelatedArtical = () => {
 
                 {/* Events Section */}
                 <div className="py-2">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2  gap-8">
                         {events.map((event) => (
-                           <button onClick={() => navigate(`/news&events/${event.id}`)} className='text-start'>
-                                <div className="bg-white rounded-2xl shadow-md flex flex-col xl:flex-row justify-center min-w-96 hover:shadow-lg transition-shadow duration-300">
-                                    <div className="mx-auto xl:w-1/2 flex justify-center items-center">
+                            <button
+                                key={event.id}
+                                onClick={() => navigate(`/news&events/${event.id}`)}
+                                className="text-start"
+                            >
+                                <div className="bg-white rounded-2xl shadow-md flex flex-col lg:flex-row justify-center hover:shadow-lg transition-shadow duration-300">
+                                    <div className="mx-auto w-full lg:w-1/2 flex justify-center items-center">
                                         <img
                                             src={event.imageUrl}
                                             alt={event.title}
@@ -77,7 +79,7 @@ const RelatedArtical = () => {
                                         />
                                     </div>
 
-                                    <div className="p-6 w-full md:w-1/2">
+                                    <div className="p-6 w-full lg:w-1/2">
                                         {event.category && (
                                             <span className="text-xs font-semibold text-red-600 uppercase bg-indigo-100 px-2 py-1 rounded-full">
                                                 {event.category}

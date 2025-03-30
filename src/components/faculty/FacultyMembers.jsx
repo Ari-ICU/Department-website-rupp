@@ -21,8 +21,6 @@ const FacultyMembers = () => {
  
       
     const deputyData = [
-
-       
         {
             id: 1, // Added ID for detail page link
             name: " Dr. Ouk Khean",
