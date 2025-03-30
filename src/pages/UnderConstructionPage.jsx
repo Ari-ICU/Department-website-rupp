@@ -24,7 +24,7 @@ const UnderConstructionPage = () => {
       <CogIcon className="absolute top-8 sm:top-10 right-4 sm:right-8 text-gray-500 w-8 h-8 sm:w-12 sm:h-12 animate-spin" />
 
       {/* Main Content */}
-      <div className='relative bg-pink-100 h-64 sm:h-56 shadow-lg 
+      <div className='relative bg-red-100 h-64 sm:h-56 shadow-lg 
               rounded-tl-[200px] sm:rounded-tl-[300px] lg:rounded-tl-[400px] 
               rounded-tr-[100px] sm:rounded-tr-[150px] lg:rounded-tr-[200px]
               rounded-bl-[300px] sm:rounded-bl-[350px] lg:rounded-bl-[400px]
