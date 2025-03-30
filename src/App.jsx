@@ -28,7 +28,7 @@ import FooterNotfound from './components/footer/FooterNotfound';
 
 const AppContent = () => {
   const location = useLocation();
-  
+
   // Define valid paths to check against
   const validPaths = [
     "/",
@@ -53,11 +53,12 @@ const AppContent = () => {
     "/underconstruction",
   ];
 
-
-  // Check if the current page is "Under Construction"
+  // Check if the current page is "Under Construction" or NotFound page
   const isUnderConstruction = location.pathname === "/underconstruction";
-  const isNotFoundPage = location.pathname !== "/" || location.pathname === "/underconstruction" && !validPaths.includes(location.pathname);
-
+  const isNotFoundPage = !validPaths.some(path => {
+    const regex = new RegExp("^" + path.replace(/:\w+/g, '\\w+') + "$");
+    return regex.test(location.pathname);
+  });
 
   return (
     <>
@@ -89,14 +90,15 @@ const AppContent = () => {
         <Route path="/facilities" element={<Facilities />} />
         <Route path="/developer" element={<DeveloperTeam />} />
         <Route path="/underconstruction" element={<UnderConstructionPage />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/*" element={<NotFoundPage />} />
       </Routes>
 
-      {/* Show FooterNotfound only on 404 pages */}
-      {isNotFoundPage ? <FooterNotfound /> : <Footer />}
+      {/* Show FooterNotfound only on 404 or Under Construction pages */}
+      {isUnderConstruction || isNotFoundPage ? <FooterNotfound /> : <Footer />}
     </>
   );
 };
+
 
 
 

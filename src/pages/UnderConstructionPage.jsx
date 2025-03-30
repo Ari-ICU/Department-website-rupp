@@ -36,18 +36,17 @@ const UnderConstructionPage = () => {
             </p>
 
             {/* Button */}
-            <button className="mt-6 bg-red-800 hover:bg-red-900 text-white px-8 py-3 
+            <button
+            onClick={() => window.location.href = '/'}
+             className="mt-6 bg-red-800 hover:bg-red-900 text-white px-8 py-1 sm:py-3 
                          rounded-lg font-semibold transition-all flex items-center 
-                         justify-center gap-2 mx-auto">
+                         justify-center gap-2 mx-auto text-base sm:text-lg">
               <HomeIcon className="w-5 h-5" />
               Back Home
             </button>
           </div>
         </div>
       </div>
-
-
-
 
       {/* SVG */}
       <div className="w-full sm:mt-0 mt-14 flex justify-center items-center">
