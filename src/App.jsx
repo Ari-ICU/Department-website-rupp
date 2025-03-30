@@ -28,15 +28,46 @@ import FooterNotfound from './components/footer/FooterNotfound';
 
 const AppContent = () => {
   const location = useLocation();
+  
+  // Define valid paths to check against
+  const validPaths = [
+    "/",
+    "/about",
+    "/contact",
+    "/faculty",
+    "/faculty/:id",
+    "/programs",
+    "/programs/:degree",
+    "/admissions",
+    "/scholars",
+    "/scholars/:id",
+    "/research",
+    "/research/:id",
+    "/researchlab/:id",
+    "/career/:id",
+    "/news&events",
+    "/news&events/:id",
+    "/news/:id",
+    "/facilities",
+    "/developer",
+    "/underconstruction",
+  ];
 
-  // Check if the current route is not found (404)
-  const isNotFoundPage = location.pathname !== "/" && !validPaths.includes(location.pathname);
+
+  // Check if the current page is "Under Construction"
+  const isUnderConstruction = location.pathname === "/underconstruction";
+  const isNotFoundPage = location.pathname !== "/" || location.pathname === "/underconstruction" && !validPaths.includes(location.pathname);
+
 
   return (
     <>
-      <div className="sticky top-0 z-50">
-        <Header />
-      </div>
+      {/* Only show Header if not on the Under Construction page */}
+      {!isUnderConstruction && (
+        <div className="sticky top-0 z-50">
+          <Header />
+        </div>
+      )}
+
       <Routes>
         <Route path="/" element={<Homepages />} />
         <Route path="/about" element={<About />} />
@@ -57,7 +88,7 @@ const AppContent = () => {
         <Route path="/news/:id" element={<NewsDetails />} />
         <Route path="/facilities" element={<Facilities />} />
         <Route path="/developer" element={<DeveloperTeam />} />
-        <Route path="/undercontruction" element={<UnderConstructionPage />} />
+        <Route path="/underconstruction" element={<UnderConstructionPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
 
@@ -66,30 +97,6 @@ const AppContent = () => {
     </>
   );
 };
-
-// Define valid paths to check against
-const validPaths = [
-  "/",
-  "/about",
-  "/contact",
-  "/faculty",
-  "/faculty/:id",
-  "/programs",
-  "/programs/:degree",
-  "/admissions",
-  "/scholars",
-  "/scholars/:id",
-  "/research",
-  "/research/:id",
-  "/researchlab/:id",
-  "/career/:id",
-  "/news&events",
-  "/news&events/:id",
-  "/news/:id",
-  "/facilities",
-  "/developer",
-  "/undercontruction",
-];
 
 
 
