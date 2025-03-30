@@ -81,7 +81,7 @@ const CareerPaths = () => {
                 </p>
               </div>
               <button
-                onClick={() => navigate(`/career/${careerPaths[0].id}`)} // Navigate to the first career path
+                // onClick={() => navigate(`/career/${careerPaths[0].id}`)} // Navigate to the first career path
                 className="bg-red-700 text-white cursor-pointer p-3 rounded-lg flex items-center justify-center flex-shrink-0 mt-4 xl:mt-0 hover:bg-red-800 transition duration-300"
               >
                 <FaArrowRight className="h-6 w-6" />
