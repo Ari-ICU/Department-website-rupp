@@ -1,10 +1,24 @@
 import React from 'react';
 import { HomeIcon, CogIcon, StarIcon, SparklesIcon, HandThumbUpIcon } from '@heroicons/react/24/outline';
+import { Helmet } from 'react-helmet';
 
 const UnderConstructionPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center px-6 relative text-center">
+      <Helmet>
+        <title>Under Construction</title>
+        <meta name="description" content="This page is currently under construction." />
+        <link rel="canonical" href="/under-construction" />
+        <meta property="og:title" content="Under Construction" />
+        <meta property="og:description" content="This page is currently under construction." />
+        <meta property="og:image" content="/path/to/image.jpg" />
+        <meta property="og:url" content="/under-construction" />
+        <meta name="twitter:title" content="Under Construction" />
+        <meta name="twitter:description" content="This page is currently under construction." />
+        <meta name="twitter:image" content="/path/to/image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       {/* Decorative Elements */}
       <StarIcon className="hidden md:block absolute top-38 md:top-76 left-10 md:left-80 text-red-500 w-8 h-8 md:w-12 md:h-12 animate-pulse" />
       <CogIcon className="absolute top-8 sm:top-10 right-4 sm:right-8 text-gray-500 w-8 h-8 sm:w-12 sm:h-12 animate-spin" />
