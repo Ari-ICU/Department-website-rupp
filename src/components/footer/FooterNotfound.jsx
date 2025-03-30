@@ -12,10 +12,10 @@ const FooterNotfound = () => {
                 </div>
                 <div className="flex items-center justify-center gap-2">
                     <FaPhone className="text-gray-700" />
-                    <p className="text-gray-700">+855 12345678</p>
+                    <p className="text-gray-600">+855 12345678</p>
                 </div>
                 <div className="flex items-center justify-center gap-2">
-                    <FaEnvelope className="text-gray-700" />
+                    <FaEnvelope className="text-gray-600" />
                     <Link to="mailto:rupp@gmail.com" className="text-gray-700 hover:underline">
                         ruppdcs@gmail.com
                     </Link>
