@@ -101,7 +101,7 @@ const InnovationSection = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true, amount: 0.5 }}
-                    className='container mx-auto w-full xl:w-[600px] h-auto xl:h-[510px] md:h-[350px] order-1 xl:order-2'
+                    className='container mx-auto w-full lg:w-[600px] h-auto lg:h-[510px] md:h-[350px] order-1 lg:order-2'
                 >
                     <img
                         src={rupp}

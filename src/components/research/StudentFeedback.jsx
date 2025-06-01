@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import p1 from '../../assets/research/7.png';
-import p2 from '../../assets/research/8.jpg';
+import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import p1 from "../../assets/research/7.png";
+import p2 from "../../assets/research/8.jpg";
 
 const feedbackData = [
   {
@@ -22,6 +24,8 @@ const feedbackData = [
 
 const StudentFeedback = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
   const nextFeedback = () => {
     setCurrentIndex((prevIndex) =>
@@ -35,52 +39,106 @@ const StudentFeedback = () => {
     );
   };
 
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
   const { name, text, image } = feedbackData[currentIndex];
 
   return (
-    <div className="my-16">
-      <div className="container mx-auto px-4 bg-red-900 text-gray-50 rounded-3xl">
-        <div className="py-16">
-          <div className="flex w-full h-full overflow-hidden relative transition-all duration-500">
+    <div className="my-8 sm:my-12 lg:my-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 bg-red-900 text-gray-50 rounded-3xl">
+        <div className="py-8 sm:py-12 lg:py-16 relative">
+          <div
+            className="flex flex-col lg:flex-row items-center w-full h-full overflow-hidden"
+            role="region"
+            aria-label="Student feedback carousel"
+          >
+            {/* Navigation Buttons */}
             <button
               onClick={prevFeedback}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 rounded-full p-2 shadow-md bg-white text-gray-700 hover:bg-gray-200"
+              className="absolute left-4 sm:left-6 top-1/2 transform -translate-y-1/2 rounded-full p-2 sm:p-3 bg-white text-gray-700 hover:bg-gray-200 shadow-md z-10"
+              aria-label={t("Carousel.Previous slide")}
             >
-              <FaChevronLeft />
+              <FaChevronLeft className="text-sm sm:text-base" />
             </button>
-            <div className="flex flex-col lg:flex-row px-4 lg:px-20 w-full h-full">
-              {/* Left - Text Content */}
-              <div className="flex-1 xl:p-10 flex flex-col justify-center">
-                <h2 className="text-2xl font-semibold mb-4">
-                  Student Feedback on Research Experience
-                </h2>
-                {text.map((paragraph, index) => (
-                  <p key={index} className="mb-2 text-sm text-gray-200 leading-relaxed">
-                    {`"${paragraph}"`}
-                  </p>
-                ))}
-                <h2 className="text-sm font-semibold mt-4">{name}</h2>
-              </div>
-
-              {/* Right - Image */}
-              <div className="flex-1 relative flex justify-cente h-full">
-                <div className="absolute bg-pink-100 -top-6 rounded-3xl h-full w-[403px] right-0 "></div>
-                <div className="absolute right-10 top-6 h-full w-[403px] rounded-3xl">
-                  <img
-                    src={image}
-                    alt={name}
-                    className="w-full h-full object-cover rounded-lg shadow-md"
-                  />
-                </div>
-              </div>
-            </div>
-
             <button
               onClick={nextFeedback}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 rounded-full p-2 shadow-md bg-white text-gray-700 hover:bg-gray-200"
+              className="absolute right-4 sm:right-6 top-1/2 transform -translate-y-1/2 rounded-full p-2 sm:p-3 bg-white text-gray-700 hover:bg-gray-200 shadow-md z-10"
+              aria-label={t("Carousel.Next slide")}
             >
-              <FaChevronRight />
+              <FaChevronRight className="text-sm sm:text-base" />
             </button>
+
+            {/* Content */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                className="flex flex-col lg:flex-row items-center w-full"
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.5 }}
+              >
+                {/* Left - Text Content */}
+                <div className="w-full lg:w-1/2 px-4 sm:px-6 lg:px-10 py-6 sm:py-8 flex flex-col justify-center order-2 lg:order-1">
+                  <h2
+                    className={`text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6 ${
+                      currentLanguage === "km" ? "font-khmer" : ""
+                    }`}
+                    lang={currentLanguage}
+                  >
+                    {t("Research.Student Feedback on Research Experience")}
+                  </h2>
+                  {text.map((paragraph, index) => (
+                    <p
+                      key={index}
+                      className={`mb-3 sm:mb-4 text-xs sm:text-sm lg:text-base text-gray-200 leading-relaxed line-clamp-6 sm:line-clamp-none ${
+                        currentLanguage === "km" ? "font-khmer" : ""
+                      }`}
+                      lang={currentLanguage}
+                    >
+                      {`"${paragraph}"`}
+                    </p>
+                  ))}
+                  <h2
+                    className={`text-sm sm:text-base lg:text-lg font-semibold mt-4 ${
+                      currentLanguage === "km" ? "font-khmer" : ""
+                    }`}
+                    lang={currentLanguage}
+                  >
+                    {name}
+                  </h2>
+                </div>
+
+                {/* Right - Image */}
+                <div className="w-full lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2 relative px-4 sm:px-6">
+                  <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] aspect-[4/3] rounded-3xl overflow-hidden">
+                    <div className="absolute inset-0 bg-pink-100 transform -translate-x-3 -translate-y-3 rounded-3xl z-0"></div>
+                    <img
+                      src={image}
+                      alt={name}
+                      className="relative w-full h-full object-cover rounded-lg shadow-md z-10"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Slide Indicators */}
+            <div className="flex justify-center mt-4 sm:mt-6">
+              {feedbackData.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full mx-1 sm:mx-2 ${
+                    currentIndex === index ? "bg-white" : "bg-gray-400"
+                  }`}
+                  onClick={() => goToSlide(index)}
+                  aria-label={t(`Carousel.Go to slide ${index + 1}`)}
+                  aria-current={currentIndex === index ? "true" : "false"}
+                ></button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

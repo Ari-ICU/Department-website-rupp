@@ -34,7 +34,7 @@ const ApplySection = () => {
         { icon: <FaTwitter />, link: 'https://twitter.com/your-profile' },
         { icon: <FaInstagram />, link: 'https://www.instagram.com/your-profile' },
         { icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/your-profile' },
-      ],
+      ],s
     },
   };
 

@@ -12,6 +12,7 @@ import LatestNews from '../components/news/LatestNews'
 import PartnershipSection from  "../components/home/PartnershipSection";
 import DepartmentHeader from "../components/home/DepartmentHeader";
 import { Helmet } from "react-helmet";
+import News from "../components/home/News";
 
 const Homepages = () => {
   return (
@@ -38,8 +39,7 @@ const Homepages = () => {
       <SlideShowSection />
       <div className="  ">
         <ServiceSection />
-        <LatestNews />
-        <EventsNews />
+       <News />
         <AboutSection />
         <AcademicSection />
         <StatisticsSection />
