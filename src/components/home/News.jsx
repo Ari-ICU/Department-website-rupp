@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaSearch } from 'react-icons/fa';
 
 const News = () => {
   const [activeTab, setActiveTab] = useState('Announcement');
@@ -76,7 +76,7 @@ const News = () => {
     <div className="container mx-auto p-3 sm:p-5">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
         {/* Header */}
-        <div className="mb-4 md:mb-0">
+        <div className="w-full mb-4 md:mb-0">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">Latest News & Announcements</h1>
           <p className="text-xs sm:text-sm text-gray-600 mt-2">
             Engage in insightful discussions, network with industry experts, and explore career opportunities through our upcoming academic and professional events
@@ -84,15 +84,18 @@ const News = () => {
         </div>
 
         {/* Search Bar */}
-        <div className="w-full md:w-auto">
-          <input
-            type="text"
-            placeholder="Search news..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full md:max-w-xs px-3 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-600 text-sm"
-          />
-        </div>
+       <div className="w-full md:w-1/2 relative">
+  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+    <FaSearch size={16} className="sm:w-5 sm:h-5" />
+  </span>
+  <input
+    type="text"
+    placeholder="Search news..."
+    value={searchQuery}
+    onChange={(e) => setSearchQuery(e.target.value)}
+    className="w-full pl-10 pr-3 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-600 text-sm"
+  />
+</div>
       </div>
 
       {/* Tabs */}
